@@ -1,0 +1,21 @@
+.banner {
+    width: 100%; 
+}
+
+.logo {
+    width: 15%; 
+    margin-left: 3%; 
+    margin-top: 3%; 
+
+}
+
+.navbar-customize {
+    color:  white; 
+    margin: 26%; 
+    font-weight: bold; 
+    font-size: 150%;
+}
+
+a:hover {
+    color:#f7b643;  
+}
