@@ -53697,7 +53697,7 @@ var Header = function (_Component) {
                         { className: 'navbar-end' },
                         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                             'a',
-                            { className: 'is-tab is-hidden-mobile navbar-customize' },
+                            { className: 'is-tab is-hidden-mobile is-active navbar-customize' },
                             'Products'
                         ),
                         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
@@ -53709,6 +53709,21 @@ var Header = function (_Component) {
                             'a',
                             { className: 'is-tab is-hidden-mobile is-active navbar-customize' },
                             'Resellers'
+                        )
+                    )
+                ),
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                    'div',
+                    { className: 'navbar-brand is-overlay' },
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        'nav',
+                        { className: 'navbar', role: 'navigation', 'aria-label': 'main navigation' },
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                            'a',
+                            { role: 'button', className: 'navbar-burger', 'aria-label': 'menu', 'aria-expanded': 'false' },
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('span', { 'aria-hidden': 'true' }),
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('span', { 'aria-hidden': 'true' }),
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('span', { 'aria-hidden': 'true' })
                         )
                     )
                 )
