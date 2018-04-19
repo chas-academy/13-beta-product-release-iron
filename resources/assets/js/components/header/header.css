@@ -1,3 +1,8 @@
+body {
+    font-family: 'Oswald', sans-serif; 
+}
+
+
 .banner {
     width: 100%; 
 }
@@ -13,9 +18,15 @@
     color:  white; 
     margin: 26%; 
     font-weight: bold; 
-    font-size: 150%;
+    font-size: 2em;
 }
 
 a:hover {
     color:#f7b643;  
+}
+
+.burger-customize {
+    background-color: transparent;
+    margin-left: 88%; 
+    
 }

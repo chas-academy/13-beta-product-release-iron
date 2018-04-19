@@ -18,8 +18,8 @@ import megamate_gulsvart from './megamate_gulsvart.png';
                             </div>
                         </div>
                         <div className="navbar-brand is-overlay">
-                            <nav className="navbar" role="navigation" aria-label="main navigation">
-                                <a role="button" className="navbar-burger" aria-label="menu" aria-expanded="false">
+                            <nav className="navbar is-overlay burger-customize" role="navigation" aria-label="main navigation">
+                                <a role="button" className="navbar-burger is-overlay" aria-label="menu" aria-expanded="false">
                                     <span aria-hidden="true"></span>
                                     <span aria-hidden="true"></span>
                                     <span aria-hidden="true"></span>

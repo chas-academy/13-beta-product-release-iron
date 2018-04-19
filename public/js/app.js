@@ -53656,7 +53656,7 @@ module.exports = ReactDOMInvalidARIAHook;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__header_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__header_css__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__flagga_jpg__ = __webpack_require__(224);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__flagga_jpg___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__flagga_jpg__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__megamate_gulsvart_png__ = __webpack_require__(228);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__megamate_gulsvart_png__ = __webpack_require__(225);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__megamate_gulsvart_png___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__megamate_gulsvart_png__);
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
@@ -53717,10 +53717,10 @@ var Header = function (_Component) {
                     { className: 'navbar-brand is-overlay' },
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                         'nav',
-                        { className: 'navbar', role: 'navigation', 'aria-label': 'main navigation' },
+                        { className: 'navbar is-overlay burger-customize', role: 'navigation', 'aria-label': 'main navigation' },
                         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                             'a',
-                            { role: 'button', className: 'navbar-burger', 'aria-label': 'menu', 'aria-expanded': 'false' },
+                            { role: 'button', className: 'navbar-burger is-overlay', 'aria-label': 'menu', 'aria-expanded': 'false' },
                             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('span', { 'aria-hidden': 'true' }),
                             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('span', { 'aria-hidden': 'true' }),
                             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('span', { 'aria-hidden': 'true' })
@@ -53776,7 +53776,7 @@ exports = module.exports = __webpack_require__(221)(false);
 
 
 // module
-exports.push([module.i, ".banner {\n    width: 100%; \n}\n\n.logo {\n    width: 15%; \n    margin-left: 3%; \n    margin-top: 3%; \n\n}\n\n.navbar-customize {\n    color:  white; \n    margin: 26%; \n    font-weight: bold; \n    font-size: 150%;\n}\n\na:hover {\n    color:#f7b643;  \n}\n", ""]);
+exports.push([module.i, "body {\n    font-family: 'Oswald', sans-serif; \n}\n\n\n.banner {\n    width: 100%; \n}\n\n.logo {\n    width: 15%; \n    margin-left: 3%; \n    margin-top: 3%; \n\n}\n\n.navbar-customize {\n    color:  white; \n    margin: 26%; \n    font-weight: bold; \n    font-size: 2em;\n}\n\na:hover {\n    color:#f7b643;  \n}\n\n.burger-customize {\n    background-color: transparent;\n    margin-left: 88%; \n    \n}\n", ""]);
 
 // exports
 
@@ -54324,18 +54324,16 @@ module.exports = function (css) {
 module.exports = "/images/flagga.jpg?c28689da0d9383145ba005d88b3dc730";
 
 /***/ }),
-/* 225 */,
+/* 225 */
+/***/ (function(module, exports) {
+
+module.exports = "/images/megamate_gulsvart.png?2ce56c6b811e334bded09307eb572b02";
+
+/***/ }),
 /* 226 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
-
-/***/ }),
-/* 227 */,
-/* 228 */
-/***/ (function(module, exports) {
-
-module.exports = "/images/megamate_gulsvart.png?011a786bd4af2cf2ae746b7c42ae9a59";
 
 /***/ })
 /******/ ]);
