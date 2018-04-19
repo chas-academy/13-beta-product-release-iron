@@ -22,3 +22,15 @@
     padding-top: 5px;
 }
 
+.column {
+    padding: 5em;
+}
+
+.image img {
+    width: auto;
+    padding-top: 5em;
+}
+
+img#Gubbe {
+    align-content: center;
+}
