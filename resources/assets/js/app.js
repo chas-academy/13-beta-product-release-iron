@@ -15,4 +15,4 @@ require('./bootstrap');
 
 require('./components/Index');
 
-import Voucher from './components/voucher/Voucher';
+import Voucher from './components/voucher';
