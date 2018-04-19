@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import './vision.css';
+import Gubbe from './Gubbe.png';
+import MegaMateFlagga from './MegaMateFlagga.jpg';
 
  class Vision extends Component {
     render() {
         return (
             <div>
-                <div className="columns">
+                <div className="columns is-desktop">
                     <div className="column is-half">
                         <h1 className="vision-title">Mega Vision</h1>
                         <h2 className="vision-subtitle">Mega Matè was created from our love of dance, Africa and the club scene.</h2>
@@ -18,16 +20,20 @@ import './vision.css';
                                                         the bottle a tribute to Africa where the founder’s wife has her roots. 
                                                         Mega Mate was born and we headed off to the dance floors, festivals and clubs.</p>
                     </div>
-                </div> 
 
-                <div className="coloumns">
                     <div className="coloumn is-half">
-                    <figure className="image">
-                </figure>
+                        <figure className="image is-horizontal-center">
+                            <img id='Gubbe' src={Gubbe} />
+                        </figure>
                     </div>
                 </div>
 
-        
+                <section className="containter">
+                <figure className="image">
+                <img src={MegaMateFlagga} />
+                </figure>
+            </section>
+
 
             </div>
         );
