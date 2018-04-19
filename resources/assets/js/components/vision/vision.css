@@ -1,0 +1,24 @@
+.vision-title, .vision-subtitle, .vision-paragraph  {
+    font-family: 'Oswald', sans-serif;
+    color: black;
+}
+
+.vision-title {
+    font-size: 4em;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.vision-subtitle {
+    font-size: 2em;
+    text-transform: uppercase;
+    color: red;
+    line-height: 1.3em;
+}
+
+.vision-paragraph  {
+    font-size: 1.5em;
+    line-height: 1.3em;
+    padding-top: 5px;
+}
+
