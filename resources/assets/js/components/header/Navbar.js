@@ -6,7 +6,7 @@ import './navbar.css';
     render() {
         return (
             <div>
-                <h1>Hi im a Navbar</h1>
+                <h1>Hi im a beast</h1>
             </div>
         );
     }
