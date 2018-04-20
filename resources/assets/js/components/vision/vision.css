@@ -26,11 +26,12 @@
     padding: 5em;
 }
 
-.image img {
+img#megaMateFlagga {
     width: auto;
     padding-top: 5em;
 }
 
-img#Gubbe {
+img#gubbe {
     align-content: center;
+    padding-top: 5em;
 }
