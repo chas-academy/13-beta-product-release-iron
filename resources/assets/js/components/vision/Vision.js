@@ -23,14 +23,14 @@ import MegaMateFlagga from './MegaMateFlagga.jpg';
 
                     <div className="coloumn is-half">
                         <figure className="image is-horizontal-center">
-                            <img id='Gubbe' src={Gubbe} />
+                            <img id='gubbe' src={Gubbe} />
                         </figure>
                     </div>
                 </div>
 
                 <section className="containter">
                 <figure className="image">
-                <img src={MegaMateFlagga} />
+                <img id='megaMateFlagga' src={MegaMateFlagga} />
                 </figure>
             </section>
 

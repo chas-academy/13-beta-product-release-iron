@@ -10247,7 +10247,7 @@ module.exports = getHostComponentFromComposite;
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(91);
-module.exports = __webpack_require__(224);
+module.exports = __webpack_require__(226);
 
 
 /***/ }),
@@ -41127,7 +41127,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom__ = __webpack_require__(64);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react_dom__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__vision_Vision_js__ = __webpack_require__(226);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__vision_Vision_js__ = __webpack_require__(218);
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -53644,9 +53644,145 @@ var ReactDOMInvalidARIAHook = {
 module.exports = ReactDOMInvalidARIAHook;
 
 /***/ }),
-/* 218 */,
-/* 219 */,
-/* 220 */,
+/* 218 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(56);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom__ = __webpack_require__(64);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react_dom__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__vision_css__ = __webpack_require__(219);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__vision_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__vision_css__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Gubbe_png__ = __webpack_require__(224);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Gubbe_png___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__Gubbe_png__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__MegaMateFlagga_jpg__ = __webpack_require__(225);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__MegaMateFlagga_jpg___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__MegaMateFlagga_jpg__);
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+
+
+
+
+
+
+var Vision = function (_Component) {
+    _inherits(Vision, _Component);
+
+    function Vision() {
+        _classCallCheck(this, Vision);
+
+        return _possibleConstructorReturn(this, (Vision.__proto__ || Object.getPrototypeOf(Vision)).apply(this, arguments));
+    }
+
+    _createClass(Vision, [{
+        key: 'render',
+        value: function render() {
+            return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                'div',
+                null,
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                    'div',
+                    { className: 'columns is-desktop' },
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        'div',
+                        { className: 'column is-half' },
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                            'h1',
+                            { className: 'vision-title' },
+                            'Mega Vision'
+                        ),
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                            'h2',
+                            { className: 'vision-subtitle' },
+                            'Mega Mat\xE8 was created from our love of dance, Africa and the club scene.'
+                        ),
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                            'p',
+                            { className: 'vision-paragraph' },
+                            'After over 20 years of working in restaurants and clubs, our frustration, that there was no energy generating, refreshing and tasty alcohol-free beverage specifically made for the dance floor got too much. We knew that the base for our drink would be tea, the spice ginger and the bottle a tribute to Africa where the founder\u2019s wife has her roots. Mega Mate was born and we headed off to the dance floors, festivals and clubs.'
+                        )
+                    ),
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        'div',
+                        { className: 'coloumn is-half' },
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                            'figure',
+                            { className: 'image is-horizontal-center' },
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { id: 'gubbe', src: __WEBPACK_IMPORTED_MODULE_3__Gubbe_png___default.a })
+                        )
+                    )
+                ),
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                    'section',
+                    { className: 'containter' },
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        'figure',
+                        { className: 'image' },
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { id: 'megaMateFlagga', src: __WEBPACK_IMPORTED_MODULE_4__MegaMateFlagga_jpg___default.a })
+                    )
+                )
+            );
+        }
+    }]);
+
+    return Vision;
+}(__WEBPACK_IMPORTED_MODULE_0_react__["Component"]);
+
+/* harmony default export */ __webpack_exports__["a"] = (Vision);
+
+/***/ }),
+/* 219 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(220);
+if(typeof content === 'string') content = [[module.i, content, '']];
+// Prepare cssTransformation
+var transform;
+
+var options = {}
+options.transform = transform
+// add the styles to the DOM
+var update = __webpack_require__(222)(content, options);
+if(content.locals) module.exports = content.locals;
+// Hot Module Replacement
+if(false) {
+	// When the styles change, update the <style> tags
+	if(!content.locals) {
+		module.hot.accept("!!../../../../../node_modules/css-loader/index.js!./vision.css", function() {
+			var newContent = require("!!../../../../../node_modules/css-loader/index.js!./vision.css");
+			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+			update(newContent);
+		});
+	}
+	// When the module is disposed, remove the <style> tags
+	module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 220 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(221)(false);
+// imports
+
+
+// module
+exports.push([module.i, ".vision-title, .vision-subtitle, .vision-paragraph  {\n    font-family: 'Oswald', sans-serif;\n    color: black;\n}\n\n.vision-title {\n    font-size: 4em;\n    text-transform: uppercase;\n    font-weight: 600;\n}\n\n.vision-subtitle {\n    font-size: 2em;\n    text-transform: uppercase;\n    color: red;\n    line-height: 1.3em;\n}\n\n.vision-paragraph  {\n    font-size: 1.5em;\n    line-height: 1.3em;\n    padding-top: 5px;\n}\n\n.column {\n    padding: 5em;\n}\n\nimg#megaMateFlagga {\n    width: auto;\n    padding-top: 5em;\n}\n\nimg#gubbe {\n    align-content: center;\n    padding-top: 5em;\n}", ""]);
+
+// exports
+
+
+/***/ }),
 /* 221 */
 /***/ (function(module, exports) {
 
@@ -54186,159 +54322,19 @@ module.exports = function (css) {
 /* 224 */
 /***/ (function(module, exports) {
 
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-/* 225 */,
-/* 226 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(56);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom__ = __webpack_require__(64);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react_dom__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__vision_css__ = __webpack_require__(227);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__vision_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__vision_css__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Gubbe_png__ = __webpack_require__(229);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Gubbe_png___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__Gubbe_png__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__MegaMateFlagga_jpg__ = __webpack_require__(230);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__MegaMateFlagga_jpg___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__MegaMateFlagga_jpg__);
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-
-
-
-
-
-
-var Vision = function (_Component) {
-    _inherits(Vision, _Component);
-
-    function Vision() {
-        _classCallCheck(this, Vision);
-
-        return _possibleConstructorReturn(this, (Vision.__proto__ || Object.getPrototypeOf(Vision)).apply(this, arguments));
-    }
-
-    _createClass(Vision, [{
-        key: 'render',
-        value: function render() {
-            return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                'div',
-                null,
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                    'div',
-                    { className: 'columns is-desktop' },
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                        'div',
-                        { className: 'column is-half' },
-                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                            'h1',
-                            { className: 'vision-title' },
-                            'Mega Vision'
-                        ),
-                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                            'h2',
-                            { className: 'vision-subtitle' },
-                            'Mega Mat\xE8 was created from our love of dance, Africa and the club scene.'
-                        ),
-                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                            'p',
-                            { className: 'vision-paragraph' },
-                            'After over 20 years of working in restaurants and clubs, our frustration, that there was no energy generating, refreshing and tasty alcohol-free beverage specifically made for the dance floor got too much. We knew that the base for our drink would be tea, the spice ginger and the bottle a tribute to Africa where the founder\u2019s wife has her roots. Mega Mate was born and we headed off to the dance floors, festivals and clubs.'
-                        )
-                    ),
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                        'div',
-                        { className: 'coloumn is-half' },
-                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                            'figure',
-                            { className: 'image is-horizontal-center' },
-                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { id: 'Gubbe', src: __WEBPACK_IMPORTED_MODULE_3__Gubbe_png___default.a })
-                        )
-                    )
-                ),
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                    'section',
-                    { className: 'containter' },
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                        'figure',
-                        { className: 'image' },
-                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { src: __WEBPACK_IMPORTED_MODULE_4__MegaMateFlagga_jpg___default.a })
-                    )
-                )
-            );
-        }
-    }]);
-
-    return Vision;
-}(__WEBPACK_IMPORTED_MODULE_0_react__["Component"]);
-
-/* harmony default export */ __webpack_exports__["a"] = (Vision);
-
-/***/ }),
-/* 227 */
-/***/ (function(module, exports, __webpack_require__) {
-
-// style-loader: Adds some css to the DOM by adding a <style> tag
-
-// load the styles
-var content = __webpack_require__(228);
-if(typeof content === 'string') content = [[module.i, content, '']];
-// Prepare cssTransformation
-var transform;
-
-var options = {}
-options.transform = transform
-// add the styles to the DOM
-var update = __webpack_require__(222)(content, options);
-if(content.locals) module.exports = content.locals;
-// Hot Module Replacement
-if(false) {
-	// When the styles change, update the <style> tags
-	if(!content.locals) {
-		module.hot.accept("!!../../../../../node_modules/css-loader/index.js!./vision.css", function() {
-			var newContent = require("!!../../../../../node_modules/css-loader/index.js!./vision.css");
-			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-			update(newContent);
-		});
-	}
-	// When the module is disposed, remove the <style> tags
-	module.hot.dispose(function() { update(); });
-}
-
-/***/ }),
-/* 228 */
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(221)(false);
-// imports
-
-
-// module
-exports.push([module.i, ".vision-title, .vision-subtitle, .vision-paragraph  {\n    font-family: 'Oswald', sans-serif;\n    color: black;\n}\n\n.vision-title {\n    font-size: 4em;\n    text-transform: uppercase;\n    font-weight: 600;\n}\n\n.vision-subtitle {\n    font-size: 2em;\n    text-transform: uppercase;\n    color: red;\n    line-height: 1.3em;\n}\n\n.vision-paragraph  {\n    font-size: 1.5em;\n    line-height: 1.3em;\n    padding-top: 5px;\n}\n\n.column {\n    padding: 5em;\n}\n\n.image img {\n    width: auto;\n    padding-top: 5em;\n}\n\nimg#Gubbe {\n    align-content: center;\n}", ""]);
-
-// exports
-
-
-/***/ }),
-/* 229 */
-/***/ (function(module, exports) {
-
 module.exports = "/images/Gubbe.png?c2db926693cab23839c934d03da3ec7d";
 
 /***/ }),
-/* 230 */
+/* 225 */
 /***/ (function(module, exports) {
 
 module.exports = "/images/MegaMateFlagga.jpg?c28689da0d9383145ba005d88b3dc730";
+
+/***/ }),
+/* 226 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
 
 /***/ })
 /******/ ]);
