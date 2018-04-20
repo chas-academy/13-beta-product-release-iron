@@ -14,8 +14,5 @@ require('./bootstrap');
  */
 
 require('./components/Index');
-<<<<<<< 3a58e2c6b7eb32b940786201fbffc529d8d9e288
-=======
 
 import Voucher from './components/voucher';
->>>>>>> voucher styling
