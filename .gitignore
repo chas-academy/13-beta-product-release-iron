@@ -13,6 +13,8 @@ Homestead.yaml
 npm-debug.log
 yarn-error.log
 .env
+/db
 /public/db/
 /public/js/app.js
 /public/css/app.css
+/DS_Store
