@@ -3,12 +3,19 @@ import ReactDOM from 'react-dom';
 import './header.css';
 import flagga from './flagga.jpg'; 
 import megamate_gulsvart from './megamate_gulsvart.png'; 
+import ReactPlayer from 'react-player'; 
 
  class Header extends Component {
     render() {
         return (
             <header className="App-header">
-              <img src={flagga} className="banner is-mobile" alt="flag" /> 
+              <div>
+                <video   style={{
+      objectFit: 'cover',
+      width: '100%',
+      height: '100%',
+    }}className="banner" src="http://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp4" autoPlay/>
+              </div>
                     <img src={megamate_gulsvart} className="logo navbar-brand is-mobile is-overlay" alt="logo" />   
                         <div className="navbar-menu is-overlay"> 
                             <div className="navbar-end">
@@ -27,6 +34,7 @@ import megamate_gulsvart from './megamate_gulsvart.png';
                             </nav>
                             </div>
             </header>
+            //  <img src={flagga} className="banner is-mobile" alt="flag" />
         );
     }
 }
