@@ -40,7 +40,8 @@ class Voucher extends Component {
                     onRequestClose={this.handleCloseModal}
                     >
                     <h1 className="title has-text-centered">Mega party at Trädgården</h1>
-                    {/* <img className="" src="">Place img here</img> */}
+                    <h2 className="subtitle has-text-centered">Lördag 23 juni!</h2>
+                    <p className="has-text-centered">Gäller vid lilla baren mellan 21:00-23:30</p>
                     <div className="buttons has-addons is-right">
                         <button onClick={this.handleCloseModal} className="modalButton">Close</button>
                     </div>
