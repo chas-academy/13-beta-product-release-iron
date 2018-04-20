@@ -1,0 +1,15 @@
+.background {
+    background-color:#fff;
+}
+
+.productSite {
+    display:flex;
+    justify-content: space-around;
+}
+
+.productInfo {
+    padding-top: 17em;
+}
+.productInfo h3 {
+    color: rgb(219, 219, 0);
+}

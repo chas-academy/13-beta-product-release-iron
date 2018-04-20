@@ -41128,7 +41128,11 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom__ = __webpack_require__(64);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react_dom__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__header_Navbar_js__ = __webpack_require__(218);
+<<<<<<< HEAD
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__events_Events_js__ = __webpack_require__(224);
+=======
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__products_Products_js__ = __webpack_require__(224);
+>>>>>>> Created product component
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -41158,7 +41162,11 @@ var Index = function (_Component) {
                 'div',
                 null,
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__header_Navbar_js__["a" /* default */], null),
+<<<<<<< HEAD
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__events_Events_js__["a" /* default */], null)
+=======
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__products_Products_js__["a" /* default */], null)
+>>>>>>> Created product component
             );
         }
     }]);
@@ -53649,6 +53657,7 @@ module.exports = ReactDOMInvalidARIAHook;
 /***/ }),
 /* 218 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
+<<<<<<< HEAD
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(56);
@@ -53668,6 +53677,27 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 
 
+=======
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(56);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom__ = __webpack_require__(64);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react_dom__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__navbar_css__ = __webpack_require__(219);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__navbar_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__navbar_css__);
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+
+
+
+>>>>>>> Created product component
 
 var Navbar = function (_Component) {
     _inherits(Navbar, _Component);
@@ -53687,7 +53717,11 @@ var Navbar = function (_Component) {
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                     'h1',
                     null,
+<<<<<<< HEAD
                     'Hi im a Navbar'
+=======
+                    'Hi im a beast'
+>>>>>>> Created product component
                 )
             );
         }
@@ -54290,10 +54324,17 @@ module.exports = function (css) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom__ = __webpack_require__(64);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react_dom__);
+<<<<<<< HEAD
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__eventsBackground_jpg__ = __webpack_require__(227);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__eventsBackground_jpg___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__eventsBackground_jpg__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Events_css__ = __webpack_require__(228);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Events_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__Events_css__);
+=======
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__JungleGinger_png__ = __webpack_require__(228);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__JungleGinger_png___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__JungleGinger_png__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__prod_css__ = __webpack_require__(229);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__prod_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__prod_css__);
+>>>>>>> Created product component
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -54307,6 +54348,7 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 
 
+<<<<<<< HEAD
 
 var Events = function (_Component) {
     _inherits(Events, _Component);
@@ -54318,10 +54360,23 @@ var Events = function (_Component) {
     }
 
     _createClass(Events, [{
+=======
+var Products = function (_Component) {
+    _inherits(Products, _Component);
+
+    function Products() {
+        _classCallCheck(this, Products);
+
+        return _possibleConstructorReturn(this, (Products.__proto__ || Object.getPrototypeOf(Products)).apply(this, arguments));
+    }
+
+    _createClass(Products, [{
+>>>>>>> Created product component
         key: 'render',
         value: function render() {
             return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                 'div',
+<<<<<<< HEAD
                 { className: 'events' },
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div', { className: 'bg-image' }),
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
@@ -54384,20 +54439,61 @@ var Events = function (_Component) {
                         'h2',
                         { className: 'title is-4' },
                         'PAST EVENTS'
+=======
+                { className: 'background' },
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                    'div',
+                    { className: 'productSite' },
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        'div',
+                        { className: 'productInfo' },
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                            'h2',
+                            { className: 'title is-1' },
+                            'Mega Product'
+                        ),
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                            'h3',
+                            { className: 'title is-3' },
+                            'Loui Jama - Mega Mate'
+                        ),
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                            'h4',
+                            { className: 'title is-6' },
+                            'Brukar du g\xE5 hem tidigt n\xE4r ni \xE4r ute och festar? vill du drycka mega god juice din mega blatte?'
+                        )
+                    ),
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        'div',
+                        { className: 'jungelImg' },
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { src: __WEBPACK_IMPORTED_MODULE_2__JungleGinger_png___default.a })
+>>>>>>> Created product component
                     )
                 )
             );
         }
     }]);
 
+<<<<<<< HEAD
     return Events;
 }(__WEBPACK_IMPORTED_MODULE_0_react__["Component"]);
 
 /* harmony default export */ __webpack_exports__["a"] = (Events);
+=======
+    return Products;
+}(__WEBPACK_IMPORTED_MODULE_0_react__["Component"]);
 
-//TODO: This is an example
+/* harmony default export */ __webpack_exports__["a"] = (Products);
+>>>>>>> Created product component
 
 /***/ }),
+/* 225 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+<<<<<<< HEAD
 /* 225 */
 /***/ (function(module, exports) {
 
@@ -54412,12 +54508,27 @@ module.exports = "/images/eventsBackground.jpg?52c5cde90083e1e34f2e7139ee2e8264"
 
 /***/ }),
 /* 228 */
+=======
+/* 226 */,
+/* 227 */,
+/* 228 */
+/***/ (function(module, exports) {
+
+module.exports = "/images/JungleGinger.png?cac6083edc75be6de58e8a37d49d33cc";
+
+/***/ }),
+/* 229 */
+>>>>>>> Created product component
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
+<<<<<<< HEAD
 var content = __webpack_require__(229);
+=======
+var content = __webpack_require__(230);
+>>>>>>> Created product component
 if(typeof content === 'string') content = [[module.i, content, '']];
 // Prepare cssTransformation
 var transform;
@@ -54431,8 +54542,13 @@ if(content.locals) module.exports = content.locals;
 if(false) {
 	// When the styles change, update the <style> tags
 	if(!content.locals) {
+<<<<<<< HEAD
 		module.hot.accept("!!../../../../../node_modules/css-loader/index.js!./Events.css", function() {
 			var newContent = require("!!../../../../../node_modules/css-loader/index.js!./Events.css");
+=======
+		module.hot.accept("!!../../../../../node_modules/css-loader/index.js!./prod.css", function() {
+			var newContent = require("!!../../../../../node_modules/css-loader/index.js!./prod.css");
+>>>>>>> Created product component
 			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 			update(newContent);
 		});
@@ -54442,16 +54558,26 @@ if(false) {
 }
 
 /***/ }),
+<<<<<<< HEAD
 /* 229 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var escape = __webpack_require__(230);
+=======
+/* 230 */
+/***/ (function(module, exports, __webpack_require__) {
+
+>>>>>>> Created product component
 exports = module.exports = __webpack_require__(221)(false);
 // imports
 exports.push([module.i, "@import url(/eventsBackground.jpg);", ""]);
 
 // module
+<<<<<<< HEAD
 exports.push([module.i, "/* .events {\r\n    background-image: url('./eventsBackground.jpg');\r\n    display: inline;\r\n    background-size: cover; \r\n    background-position: center;\r\n    top: 0;\r\n    bottom: 0;\r\n    width: 100%;\r\n    z-index: -1;\r\n} */\r\n\r\n/* .backgroundOverlay {\r\n    background: rgba(243, 55, 55, 0.7);\r\n    background-size: cover;\r\n    top: 0;\r\n    bottom: 0;\r\n    width: 120rem;\r\n    height: 1080px;\r\n    z-index: 1;\r\n} */\r\n\r\n.events {\r\n    min-height: 58.3437em;\r\n    color: #fff;\r\n    max-width: 100%;\r\n}\r\n\r\n.events .bg-image {\r\n    position: absolute;\r\n    background: #333 url(" + escape(__webpack_require__(227)) + ");\r\n    background-position: center;\r\n    background-repeat: no-repeat;\r\n    background-size: cover;\r\n    width: 100%;\r\n    height: 58.3437em;\r\n    z-index: -1;\r\n}\r\n\r\n.megaTitle {\r\n    padding: 5em;\r\n}\r\n\r\nh1,h2,h3 {\r\n    color: #fff !important;\r\n}\r\n\r\n.pastEvents h2 {\r\n    margin-left: 56em;\r\n    margin-top: 5em;\r\n}\r\n\r\nbutton {\r\n    margin-left: 71em;\r\n}\r\n", ""]);
+=======
+exports.push([module.i, ".background {\n    background-color:#fff;\n}\n\n.productSite {\n    display:flex;\n    justify-content: space-around;\n}\n\n.productInfo {\n    padding-top: 17em;\n}\n.productInfo h3 {\n    color: rgb(219, 219, 0);\n}", ""]);
+>>>>>>> Created product component
 
 // exports
 
