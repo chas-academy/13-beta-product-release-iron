@@ -19,3 +19,9 @@ Route::get('/', function () {
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
 });
+
+//Route for vouchers
+Route::get('/voucher', function() {
+    return view('voucher');
+});
+
