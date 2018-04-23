@@ -10256,8 +10256,7 @@ module.exports = __webpack_require__(225);
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_voucher__ = __webpack_require__(234);
-
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_voucher_Index_js__ = __webpack_require__(245);
 /**
  * First we will load all of this project's JavaScript dependencies which
  * includes React and other helpers. It's a great starting point while
@@ -41133,6 +41132,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom__ = __webpack_require__(64);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react_dom__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__header_Navbar_js__ = __webpack_require__(218);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__resellers_index_js__ = __webpack_require__(237);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__vision_Vision_js__ = __webpack_require__(240);
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -41145,34 +41146,38 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 
 
+
+
 var Index = function (_Component) {
-    _inherits(Index, _Component);
+  _inherits(Index, _Component);
 
-    function Index() {
-        _classCallCheck(this, Index);
+  function Index() {
+    _classCallCheck(this, Index);
 
-        return _possibleConstructorReturn(this, (Index.__proto__ || Object.getPrototypeOf(Index)).apply(this, arguments));
+    return _possibleConstructorReturn(this, (Index.__proto__ || Object.getPrototypeOf(Index)).apply(this, arguments));
+  }
+
+  _createClass(Index, [{
+    key: "render",
+    value: function render() {
+      return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        "div",
+        null,
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__header_Navbar_js__["a" /* default */], null),
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4__vision_Vision_js__["a" /* default */], null),
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__resellers_index_js__["a" /* default */], null)
+      );
     }
+  }]);
 
-    _createClass(Index, [{
-        key: 'render',
-        value: function render() {
-            return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                'div',
-                null,
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__header_Navbar_js__["a" /* default */], null)
-            );
-        }
-    }]);
-
-    return Index;
+  return Index;
 }(__WEBPACK_IMPORTED_MODULE_0_react__["Component"]);
 
 /* harmony default export */ __webpack_exports__["default"] = (Index);
 
 
-if (document.getElementById('app')) {
-    __WEBPACK_IMPORTED_MODULE_1_react_dom___default.a.render(__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Index, null), document.getElementById('app'));
+if (document.getElementById("app")) {
+  __WEBPACK_IMPORTED_MODULE_1_react_dom___default.a.render(__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Index, null), document.getElementById("app"));
 }
 
 /***/ }),
@@ -54299,7 +54304,477 @@ module.exports = function (css) {
 /* 231 */,
 /* 232 */,
 /* 233 */,
-/* 234 */
+/* 234 */,
+/* 235 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(236);
+if(typeof content === 'string') content = [[module.i, content, '']];
+// Prepare cssTransformation
+var transform;
+
+var options = {}
+options.transform = transform
+// add the styles to the DOM
+var update = __webpack_require__(222)(content, options);
+if(content.locals) module.exports = content.locals;
+// Hot Module Replacement
+if(false) {
+	// When the styles change, update the <style> tags
+	if(!content.locals) {
+		module.hot.accept("!!../../../../../node_modules/css-loader/index.js!./Voucher.css", function() {
+			var newContent = require("!!../../../../../node_modules/css-loader/index.js!./Voucher.css");
+			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+			update(newContent);
+		});
+	}
+	// When the module is disposed, remove the <style> tags
+	module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 236 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(221)(false);
+// imports
+
+
+// module
+exports.push([module.i, ".modalButton {\r\n    position: absolute;\r\n    bottom: 2%;\r\n}", ""]);
+
+// exports
+
+
+/***/ }),
+/* 237 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(56);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom__ = __webpack_require__(64);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react_dom__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__resellers_css__ = __webpack_require__(238);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__resellers_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__resellers_css__);
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+
+
+
+
+var Resellers = function (_Component) {
+  _inherits(Resellers, _Component);
+
+  function Resellers() {
+    _classCallCheck(this, Resellers);
+
+    return _possibleConstructorReturn(this, (Resellers.__proto__ || Object.getPrototypeOf(Resellers)).apply(this, arguments));
+  }
+
+  _createClass(Resellers, [{
+    key: "render",
+    value: function render() {
+      return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        "div",
+        null,
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          "section",
+          { className: "section find-us" },
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            "h1",
+            { className: "find-us-title" },
+            "FIND US"
+          )
+        ),
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          "section",
+          { className: "section resellers" },
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            "div",
+            { className: "container stockmalmo" },
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+              "h2",
+              { className: "cityName" },
+              "Stockholm"
+            ),
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+              "ul",
+              null,
+              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                "li",
+                { className: "locationName" },
+                "Klara Strand Caf\xE9"
+              ),
+              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                "li",
+                { className: "locationName" },
+                "ICA kvantum, Liljeholmen"
+              ),
+              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                "li",
+                { className: "locationName" },
+                "Folk & Friends"
+              ),
+              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                "li",
+                { className: "locationName" },
+                "Tr\xE4dg\xE5rden/Huset under bron"
+              ),
+              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                "li",
+                { className: "locationName" },
+                "Mikkeller Baren"
+              ),
+              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                "li",
+                { className: "locationName" },
+                "Brill (Bondeg)"
+              ),
+              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                "li",
+                { className: "locationName" },
+                "Dice Caf\xE9"
+              ),
+              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                "li",
+                { className: "locationName" },
+                "Studentk\xE5ren DISK, Kista"
+              ),
+              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                "li",
+                { className: "locationName" },
+                "Kitchen & Table, Norrtull"
+              )
+            ),
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+              "h2",
+              { className: "cityName" },
+              "Malm\xF6"
+            ),
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+              "ul",
+              null,
+              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                "li",
+                { className: "locationName" },
+                "Far I Hatten"
+              ),
+              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                "li",
+                { className: "locationName" },
+                "ICA Supermarket, M\xF6llan"
+              ),
+              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                "li",
+                { className: "locationName" },
+                "Nya Tr\xF6ls Bar & Restaurang"
+              ),
+              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                "li",
+                { className: "locationName" },
+                "Grand Hatt \xD6l & Mat"
+              )
+            )
+          ),
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            "div",
+            { className: "container uppriga" },
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+              "h2",
+              { className: "cityName" },
+              "Uppsala"
+            ),
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+              "ul",
+              null,
+              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                "li",
+                { className: "locationName" },
+                "Taps Beer Bar"
+              ),
+              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                "li",
+                { className: "locationName" },
+                "Uppsala Teknolog- och Naturvetark\xE5r"
+              ),
+              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                "li",
+                { className: "locationName" },
+                "ICA Supermarket"
+              )
+            ),
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+              "h2",
+              { className: "cityName" },
+              "\xD6vriga I Sverige"
+            ),
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+              "ul",
+              null,
+              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                "li",
+                { className: "locationName" },
+                "ICA Supermarket \xC5lidhem, Ume\xE5"
+              ),
+              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                "li",
+                { className: "locationName" },
+                "Ekolsunds Slott"
+              ),
+              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                "li",
+                { className: "locationName" },
+                "Vita Saluhalv, N\xE4ssj\xF6"
+              ),
+              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                "li",
+                { className: "locationName" },
+                "Chapter House, V\xE4xj\xF6"
+              ),
+              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                "li",
+                { className: "locationName" },
+                "Hallen K\xF6tt & Delikatesser, Helsingborg"
+              ),
+              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                "li",
+                { className: "locationName" },
+                "Jernbruket, Floda"
+              ),
+              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                "li",
+                null,
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                  "a",
+                  { href: "suEOdc" },
+                  "Link"
+                )
+              )
+            )
+          )
+        ),
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          "section",
+          { className: "section" },
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("iframe", { src: "https://www.google.com/maps/d/u/0/embed?mid=1H_1me5Q-O9JUNyENiVQ9Y44UnqMVV8kd" })
+        )
+      );
+    }
+  }]);
+
+  return Resellers;
+}(__WEBPACK_IMPORTED_MODULE_0_react__["Component"]);
+
+/* harmony default export */ __webpack_exports__["a"] = (Resellers);
+
+/***/ }),
+/* 238 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(239);
+if(typeof content === 'string') content = [[module.i, content, '']];
+// Prepare cssTransformation
+var transform;
+
+var options = {}
+options.transform = transform
+// add the styles to the DOM
+var update = __webpack_require__(222)(content, options);
+if(content.locals) module.exports = content.locals;
+// Hot Module Replacement
+if(false) {
+	// When the styles change, update the <style> tags
+	if(!content.locals) {
+		module.hot.accept("!!../../../../../node_modules/css-loader/index.js!./resellers.css", function() {
+			var newContent = require("!!../../../../../node_modules/css-loader/index.js!./resellers.css");
+			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+			update(newContent);
+		});
+	}
+	// When the module is disposed, remove the <style> tags
+	module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 239 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(221)(false);
+// imports
+
+
+// module
+exports.push([module.i, ".find-us-title {\r\n  font-size: 2.5em;\r\n  font-weight: bold;\r\n}\r\n\r\n.resellers {\r\n  display: flex;\r\n}\r\n\r\n.cityName {\r\n  font-size: 2em;\r\n  font-weight: bold;\r\n}\r\n\r\n.locationName {\r\n  padding-top: 5px;\r\n  font-size: 20px;\r\n}\r\n\r\niframe {\r\n  height: 480px;\r\n  width: 100%;\r\n}\r\n\r\n@media only screen and (max-width: 700px) {\r\n  .resellers {\r\n    display: inline-block;\r\n  }\r\n}\r\n", ""]);
+
+// exports
+
+
+/***/ }),
+/* 240 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(56);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom__ = __webpack_require__(64);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react_dom__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__vision_css__ = __webpack_require__(241);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__vision_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__vision_css__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Gubbe_png__ = __webpack_require__(243);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Gubbe_png___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__Gubbe_png__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__MegaMateFlagga_jpg__ = __webpack_require__(244);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__MegaMateFlagga_jpg___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__MegaMateFlagga_jpg__);
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+
+
+
+
+
+
+var Vision = function (_Component) {
+    _inherits(Vision, _Component);
+
+    function Vision() {
+        _classCallCheck(this, Vision);
+
+        return _possibleConstructorReturn(this, (Vision.__proto__ || Object.getPrototypeOf(Vision)).apply(this, arguments));
+    }
+
+    _createClass(Vision, [{
+        key: 'render',
+        value: function render() {
+            return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                'div',
+                null,
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                    'div',
+                    { className: 'columns is-desktop' },
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        'div',
+                        { className: 'column is-half' },
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                            'h1',
+                            { className: 'vision-title' },
+                            'Mega Vision'
+                        ),
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                            'h2',
+                            { className: 'vision-subtitle' },
+                            'Mega Mat\xE8 was created from our love of dance, Africa and the club scene.'
+                        ),
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                            'p',
+                            { className: 'vision-paragraph' },
+                            'After over 20 years of working in restaurants and clubs, our frustration, that there was no energy generating, refreshing and tasty alcohol-free beverage specifically made for the dance floor got too much. We knew that the base for our drink would be tea, the spice ginger and the bottle a tribute to Africa where the founder\u2019s wife has her roots. Mega Mate was born and we headed off to the dance floors, festivals and clubs.'
+                        )
+                    ),
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        'div',
+                        { className: 'coloumn is-half' },
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                            'figure',
+                            { className: 'image is-horizontal-center' },
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { id: 'gubbe', src: __WEBPACK_IMPORTED_MODULE_3__Gubbe_png___default.a })
+                        )
+                    )
+                ),
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                    'section',
+                    { className: 'containter' },
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        'figure',
+                        { className: 'image' },
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { id: 'megaMateFlagga', src: __WEBPACK_IMPORTED_MODULE_4__MegaMateFlagga_jpg___default.a })
+                    )
+                )
+            );
+        }
+    }]);
+
+    return Vision;
+}(__WEBPACK_IMPORTED_MODULE_0_react__["Component"]);
+
+/* harmony default export */ __webpack_exports__["a"] = (Vision);
+
+/***/ }),
+/* 241 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(242);
+if(typeof content === 'string') content = [[module.i, content, '']];
+// Prepare cssTransformation
+var transform;
+
+var options = {}
+options.transform = transform
+// add the styles to the DOM
+var update = __webpack_require__(222)(content, options);
+if(content.locals) module.exports = content.locals;
+// Hot Module Replacement
+if(false) {
+	// When the styles change, update the <style> tags
+	if(!content.locals) {
+		module.hot.accept("!!../../../../../node_modules/css-loader/index.js!./vision.css", function() {
+			var newContent = require("!!../../../../../node_modules/css-loader/index.js!./vision.css");
+			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+			update(newContent);
+		});
+	}
+	// When the module is disposed, remove the <style> tags
+	module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 242 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(221)(false);
+// imports
+
+
+// module
+exports.push([module.i, ".vision-title, .vision-subtitle, .vision-paragraph  {\r\n    font-family: 'Oswald', sans-serif;\r\n    color: black;\r\n}\r\n\r\n.vision-title {\r\n    font-size: 4em;\r\n    text-transform: uppercase;\r\n    font-weight: 600;\r\n}\r\n\r\n.vision-subtitle {\r\n    font-size: 2em;\r\n    text-transform: uppercase;\r\n    color: red;\r\n    line-height: 1.3em;\r\n}\r\n\r\n.vision-paragraph  {\r\n    font-size: 1.5em;\r\n    line-height: 1.3em;\r\n    padding-top: 5px;\r\n}\r\n\r\n.column {\r\n    padding: 5em;\r\n}\r\n\r\nimg#megaMateFlagga {\r\n    width: auto;\r\n    padding-top: 5em;\r\n}\r\n\r\nimg#gubbe {\r\n    align-content: center;\r\n    padding-top: 5em;\r\n}", ""]);
+
+// exports
+
+
+/***/ }),
+/* 243 */
+/***/ (function(module, exports) {
+
+module.exports = "/images/Gubbe.png?c2db926693cab23839c934d03da3ec7d";
+
+/***/ }),
+/* 244 */
+/***/ (function(module, exports) {
+
+module.exports = "/images/MegaMateFlagga.jpg?7956e8f96e0a3e5a9453f09f946bcf84";
+
+/***/ }),
+/* 245 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -54428,51 +54903,6 @@ var Voucher = function (_Component) {
 if (document.getElementById('voucher')) {
     __WEBPACK_IMPORTED_MODULE_1_react_dom___default.a.render(__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Voucher, null), document.getElementById('voucher'));
 }
-
-/***/ }),
-/* 235 */
-/***/ (function(module, exports, __webpack_require__) {
-
-// style-loader: Adds some css to the DOM by adding a <style> tag
-
-// load the styles
-var content = __webpack_require__(236);
-if(typeof content === 'string') content = [[module.i, content, '']];
-// Prepare cssTransformation
-var transform;
-
-var options = {}
-options.transform = transform
-// add the styles to the DOM
-var update = __webpack_require__(222)(content, options);
-if(content.locals) module.exports = content.locals;
-// Hot Module Replacement
-if(false) {
-	// When the styles change, update the <style> tags
-	if(!content.locals) {
-		module.hot.accept("!!../../../../../node_modules/css-loader/index.js!./Voucher.css", function() {
-			var newContent = require("!!../../../../../node_modules/css-loader/index.js!./Voucher.css");
-			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-			update(newContent);
-		});
-	}
-	// When the module is disposed, remove the <style> tags
-	module.hot.dispose(function() { update(); });
-}
-
-/***/ }),
-/* 236 */
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(221)(false);
-// imports
-
-
-// module
-exports.push([module.i, ".modalButton {\r\n    position: absolute;\r\n    bottom: 2%;\r\n}", ""]);
-
-// exports
-
 
 /***/ })
 /******/ ]);
