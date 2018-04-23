@@ -25,7 +25,11 @@
     },
     "dependencies": {
         "react-modal": "^3.4.2",
+<<<<<<< HEAD
         "react-player": "^1.4.0",
         "react-video-cover": "^1.2.0"
+=======
+        "react-player": "^1.4.0"
+>>>>>>> addreact player.
     }
 }

@@ -6,6 +6,7 @@ import Vision from "./vision/Vision.js";
 import Header from "./header/Header.js"
 import Footer from "./footer/index.js";
 
+import Products from "./products/Products.js";
 
 export default class Index extends Component {
   render() {
@@ -13,6 +14,7 @@ export default class Index extends Component {
       <div>
         <Header />
         <Vision />
+        <Products />
         <Events />
         <Resellers />
         <Footer />
