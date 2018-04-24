@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
-import "./vision.css";
-import Gubbe from "./Gubbe.png";
-//import MegaMateFlagga from "./MegaMateFlagga.jpg";
+import '../styles/styles.css';
+import Gubbe from "../images/Gubbe.png";
+import MegaMateFlagga from "../images/MegaMateFlagga.jpg";
 
 class Vision extends Component {
   render() {
@@ -35,7 +35,7 @@ class Vision extends Component {
 
         <section className="containter">
           <figure className="image">
-            {/*<img id="megaMateFlagga" src={MegaMateFlagga} /> */}
+            {<img id="megaMateFlagga" src={MegaMateFlagga} /> }
           </figure>
         </section>
       </div>

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-// import Bottle from './JungleGinger.png';
-import "./prod.css"
+import Bottle from '../images/JungleGinger.png';
+import '../styles/styles.css';
 
 class Products extends Component {
 
@@ -14,9 +14,9 @@ class Products extends Component {
                         <h3 className="title is-3">Loui Jama - Mega Mate</h3>
                         <h4 className="title is-6">Brukar du gå hem tidigt när ni är ute och festar? vill du drycka mega god juice din mega blatte?</h4>
                     </div>
-                    {/* <div className="jungelImg">
+                    { <div className="jungelImg">
                         <img src={Bottle} />
-                    </div> */}
+                    </div> }
                 </div>
             </div>
         );

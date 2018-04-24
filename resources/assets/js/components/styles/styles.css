@@ -1,0 +1,288 @@
+/* Voucher */ 
+
+.modalButton {
+    position: absolute;
+    bottom: 2%;
+}
+
+
+/* header */ 
+  body {
+    font-family: 'Oswald', sans-serif; 
+}
+
+
+.banner {
+    width: 100%; 
+}
+
+.logo {
+    width: 15%; 
+    margin-left: 3%; 
+    margin-top: 3%; 
+
+}
+
+.navbar-customize {
+    color:  white; 
+    margin: 26%; 
+    font-weight: bold; 
+    font-size: 2em;
+}
+
+a:hover {
+    color:#f7b643;  
+}
+
+.burger-customize {
+    background-color: transparent;
+    margin-left: 88%; 
+    
+}
+
+.homepage-hero-module {
+    border-right: none;
+    border-left: none;
+    position: relative;
+}
+
+.no-video .video-container video,
+.touch .video-container video {
+    display: none;
+
+}
+.no-video .video-container .poster,
+.touch .video-container .poster {
+    display: block !important;
+}
+.video-container {
+    position: relative;
+    bottom: 0%;
+    left: 0%;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    background: #000;
+}
+.video-container .poster img {
+    width: 100%;
+    bottom: 0;
+    position: absolute;
+}
+.video-container .filter {
+    z-index: 100;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.4);
+    width: 100%;
+}
+.video-container video {
+    position: absolute;
+    z-index: 0;
+    bottom: 0;
+}
+.video-container video.fillWidth {
+    width: 100%;
+}
+
+
+ /* Vision */ 
+
+ .vision-title, .vision-subtitle, .vision-paragraph  {
+    font-family: 'Oswald', sans-serif;
+    color: black;
+}
+
+.vision-title {
+    font-size: 4em;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.vision-subtitle {
+    font-size: 2em;
+    text-transform: uppercase;
+    color: red;
+    line-height: 1.3em;
+}
+
+.vision-paragraph  {
+    font-size: 1.5em;
+    line-height: 1.3em;
+    padding-top: 5px;
+}
+
+.column {
+    padding: 5em;
+}
+
+img#megaMateFlagga {
+    width: auto;
+    padding-top: 5em;
+}
+
+img#gubbe {
+    align-content: center;
+    padding-top: 5em;
+}
+
+
+/* Products CSS */ 
+
+.background {
+    background-color:#fff;
+}
+
+.productSite {
+    display:flex;
+    justify-content: space-around;
+}
+
+.productInfo {
+    padding-top: 17em;
+}
+.productInfo h3 {
+    color: rgb(219, 219, 0);
+}
+
+
+/* events css */ 
+
+@import '/eventsBackground.jpg';
+/* .events {
+    background-image: url('./eventsBackground.jpg');
+    display: inline;
+    background-size: cover; 
+    background-position: center;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: -1;
+} */
+
+/* .backgroundOverlay {
+    background: rgba(243, 55, 55, 0.7);
+    background-size: cover;
+    top: 0;
+    bottom: 0;
+    width: 120rem;
+    height: 1080px;
+    z-index: 1;
+} */
+
+.events {
+    min-height: 58.3437em;
+    color: #fff;
+    max-width: 100%;
+}
+
+.events .bg-image {
+    position: absolute;
+    background: #333 url('../images/eventsBackground.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 58.3437em;
+    z-index: -1;
+}
+
+.megaTitle {
+    padding: 5em;
+}
+
+h1,h2,h3 {
+    color: #fff !important;
+}
+
+.pastEvents h2 {
+    margin-left: 56em;
+    margin-top: 5em;
+}
+
+button {
+    margin-left: 71em;
+}
+
+
+
+/*  Resellers */ 
+
+.find-us-title {
+    font-size: 2.5em;
+    font-weight: bold;
+  }
+  
+  .resellers {
+    display: flex;
+  }
+  
+  .cityName {
+    font-size: 2em;
+    font-weight: bold;
+  }
+  
+  .locationName {
+    padding-top: 5px;
+    font-size: 20px;
+  }
+  
+  iframe {
+    height: 480px;
+    width: 100%;
+  }
+  
+  @media only screen and (max-width: 700px) {
+    .resellers {
+      display: inline-block;
+    }
+  }
+
+  
+
+
+/* css footer */ 
+
+.footer {
+    background-color: orange;
+    display: flex;
+  }
+  
+  .footer-title {
+    font-size: 2em;
+    font-weight: bold;
+  }
+  
+  .footer-p {
+    font-size: 1.5em;
+  }
+  
+  .footer-title,
+  .footer-p {
+    color: white;
+  }
+  
+  .logo {
+    height: 4rem;
+  }
+  
+  .logo-link {
+    padding: 5px;
+  }
+  
+  .footer-news {
+    color: white;
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-top: 1em;
+  }
+  
+  #control-input {
+    width: 80%;
+  }
+  
+  #input-field,
+  #news-button {
+    height: 4em;
+  }
+
+  

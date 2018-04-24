@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
-import "./footer.css";
-import SodaLogo from "./SodaFactory.png";
-import FbLogo from "./fb.svg";
-import InstaLogo from "./insta.svg";
+import '../styles/styles.css';
+import SodaLogo from "../images/SodaFactory.png";
+import FbLogo from "../images/fb.svg";
+import InstaLogo from "../images/insta.svg";
 
 class Footer extends Component {
   render() {
