@@ -19,6 +19,7 @@ body {
     margin: 26%; 
     font-weight: bold; 
     font-size: 2em;
+    z-index: 1000;
 }
 
 a:hover {

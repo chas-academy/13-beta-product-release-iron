@@ -7,7 +7,7 @@ import './Events.css';
  class Events extends Component {
     render() {
         return (
-            <div className="events">
+            <div id="events" className="events">
                 <div className="bg-image"></div>
                 {/* <div className="backgroundOverlay"></div>  */}
                 <div className="megaTitle block">

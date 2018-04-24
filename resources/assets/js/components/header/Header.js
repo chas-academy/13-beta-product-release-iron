@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import './header.css';
-import flagga from './flagga.jpg'; 
 import megamate_gulsvart from './megamate_gulsvart.png'; 
-import ReactPlayer from 'react-player'; 
+import ReactPlayer from 'react-player';
 
  class Header extends Component {
     render() {
         return (
+            <div>
             <header className="App-header">
               <div>
                 <video   style={{
@@ -19,9 +19,9 @@ import ReactPlayer from 'react-player';
                     <img src={megamate_gulsvart} className="logo navbar-brand is-mobile is-overlay" alt="logo" />   
                         <div className="navbar-menu is-overlay"> 
                             <div className="navbar-end">
-                                <a className="is-tab is-hidden-mobile is-active navbar-customize" >Products</a>
-                                <a className="is-tab is-hidden-mobile is-active navbar-customize" >Events</a>
-                                <a className="is-tab is-hidden-mobile is-active navbar-customize" >Resellers</a>
+                                <a href="#productinfo" className="is-tab is-hidden-mobile is-active navbar-customize">Products</a>
+                                <a href="#events" className="is-tab is-hidden-mobile is-active navbar-customize" >Events</a>
+                                <a href="#find-us" className="is-tab is-hidden-mobile is-active navbar-customize" >Resellers</a>
                             </div>
                         </div>
                         <div className="navbar-brand is-overlay">
@@ -34,7 +34,7 @@ import ReactPlayer from 'react-player';
                             </nav>
                             </div>
             </header>
-            //  <img src={flagga} className="banner is-mobile" alt="flag" />
+          </div>
         );
     }
 }

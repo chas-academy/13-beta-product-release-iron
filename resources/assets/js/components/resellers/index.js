@@ -7,7 +7,7 @@ class Resellers extends Component {
     return (
       <div>
         <section className="section find-us">
-          <h1 className="find-us-title">FIND US</h1>
+          <h1 id="find-us" className="find-us-title">FIND US</h1>
         </section>
         <section className="section resellers">
           <div className="container stockmalmo">
