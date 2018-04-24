@@ -1,3 +1,5 @@
+
+
 /* Voucher */ 
 
 .modalButton {
@@ -147,7 +149,7 @@ img#gubbe {
 
 /* events css */ 
 
-@import '/eventsBackground.jpg';
+@import '/megaMate_eventsbg.png';
 /* .events {
     background-image: url('./eventsBackground.jpg');
     display: inline;
@@ -177,7 +179,7 @@ img#gubbe {
 
 .events .bg-image {
     position: absolute;
-    background: #333 url('../images/eventsBackground.jpg');
+    background: #333 url('../images/megaMate_eventsbg.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;

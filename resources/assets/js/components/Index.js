@@ -8,7 +8,6 @@ import Resellers from "./resellers/index.js";
 import Footer from "./footer/index.js";
 
 
-
 export default class Index extends Component {
   render() {
     return (

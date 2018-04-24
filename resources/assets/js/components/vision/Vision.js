@@ -1,8 +1,8 @@
-import React, { Component } from "react";
-import ReactDOM from "react-dom";
+import React, { Component } from 'react';
+import ReactDOM from 'react-dom';
 import '../styles/styles.css';
-import Gubbe from "../images/Gubbe.png";
-import MegaMateFlagga from "../images/MegaMateFlagga.jpg";
+import Gubbe from '../images/megaMate_gubbe.png';
+import MegaMateFlagga from '../images/megaMate_flagga.png';
 
 class Vision extends Component {
   render() {

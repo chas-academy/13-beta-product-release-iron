@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import '../styles/styles.css';
-import megamate_gulsvart from '../images/Megamate_gulsvart.png';
+import megamate_gulsvart from '../images/megaMate_loggo.png';
 import ReactPlayer from 'react-player'; 
 
  class Header extends Component {
