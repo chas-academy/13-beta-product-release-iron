@@ -1,12 +1,12 @@
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
-import Events from "./events/Events.js"
-import Resellers from "./resellers/index.js";
+import Header from "./header/Header.js";
 import Vision from "./vision/Vision.js";
-import Header from "./header/Header.js"
+import Products from "./products/Products.js";
+import Events from "./events/Events.js";
+import Resellers from "./resellers/index.js";
 import Footer from "./footer/index.js";
 
-import Products from "./products/Products.js";
 
 export default class Index extends Component {
   render() {

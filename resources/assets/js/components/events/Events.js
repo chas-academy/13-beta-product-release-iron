@@ -1,15 +1,14 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-
-import eventsBackground from './eventsBackground.jpg';
-import './Events.css';
+import eventsBackground from '../images/megaMate_eventsbg.png';
+import '../styles/styles.css';
 
  class Events extends Component {
     render() {
         return (
             <div className="events">
                 <div className="bg-image"></div>
-                {/* <div className="backgroundOverlay"></div>  */}
+                { <div className="backgroundOverlay"></div> }
                 <div className="megaTitle block">
                     <h2 className="title is-1">MEGA EVENTS</h2>
                     <h2 className="title is-4">UPCOMING</h2>
