@@ -1,17 +1,17 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import '../styles/styles.css';
-import Gubbe from '../images/megaMate_gubbe.png';
+import ImgGubbe from '../images/megaMate_gubbe.png';
 import MegaMateFlagga from '../images/megaMate_flagga.png';
 
 class Vision extends Component {
   render() {
     return (
-      <div>
-        <div className="columns is-desktop">
+      <div className="vision">
+        <div className="columns">
           <div className="column is-half">
-            <h1 className="vision-title">Mega Vision</h1>
-            <h2 className="vision-subtitle">
+            <h1 className="title is-1 vision-title">Mega Vision</h1>
+            <h2 className="title is-3 vision-subtitle">
               Mega Matè was created from our love of dance, Africa and the club
               scene.
             </h2>
@@ -28,7 +28,7 @@ class Vision extends Component {
 
           <div className="coloumn is-half">
             <figure className="image is-horizontal-center">
-              <img id="gubbe" src={Gubbe} />
+              <img id="gubbe" src={ImgGubbe} />
             </figure>
           </div>
         </div>

@@ -8,6 +8,7 @@ import InstaLogo from '../images/insta.svg';
 class Footer extends Component {
   render() {
     return (
+      <div>
       <footer className="footer">
         <div className="container">
           <div className="content">
@@ -16,13 +17,13 @@ class Footer extends Component {
           </div>
           <div className="content">
             <a className="logo-link" href="#">
-              <img className="logo" src={SodaLogo} />
+              <img className="footer-logo" src={SodaLogo} />
             </a>
             <a className="logo-link" href="#">
-              <img className="logo" src={InstaLogo} />
+              <img className="footer-logo" src={InstaLogo} />
             </a>
             <a className="logo-link" href="#">
-              <img className="logo" src={FbLogo} />
+              <img className="footer-logo" src={FbLogo} />
             </a>
           </div>
         </div>
@@ -42,11 +43,14 @@ class Footer extends Component {
                 <a id="news-button" className="button is-info">
                   Submit
                 </a>
-              </div>
+        </div> 
+
+              
             </div>
           </div>
-        </div>
+        </div> 
       </footer>
+      </div>
     );
   }
 }
