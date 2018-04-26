@@ -8,7 +8,8 @@ import '../styles/styles.css';
 class Products extends Component {
     render() {
       return (
-        <div className="products" id="products">
+				<div className="products" id="products">
+				
           <div className="columns">
             <div className="column is-half">
               <h1 className="title is-1">Mega Products</h1>
@@ -16,30 +17,27 @@ class Products extends Component {
               <p className="title is-6">
                 Ingredients</p>
             </div>
-  
             <div className="coloumn is-half">
               <figure className="image is-horizontal-center">
                 <img id="louiJama" src={LouiJama} />
               </figure>
             </div>
-            </div>
+          </div>
 
-            <div className="columns">
+          <div className="columns">
             <div className="column is-half">
-            <h1 className="title is-1">Mega Products</h1>
-            <h2 className="title is-3">Jungle Ginger - Mega Mate</h2>
-            <p className="title is-6">
-              Ingredients</p>
-          </div>
-
-          <div className="coloumn is-half">
-            <figure className="image is-horizontal-center">
-              <img id="jungleGinger" src={JungleGinger} />
-            </figure>
-          </div>
+            	<h1 className="title is-1">Mega Products</h1>
+           		<h2 className="title is-3">Jungle Ginger - Mega Mate</h2>
+            	<p className="title is-6">Ingredients</p>
+          	</div>
+						<div className="coloumn is-half">
+							<figure className="image is-horizontal-center">
+								<img id="jungleGinger" src={JungleGinger} />
+							</figure>
+						</div>
+					</div>
+					 
         </div>
-            
-          </div>
       );
     }
   }

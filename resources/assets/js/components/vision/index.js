@@ -25,7 +25,6 @@ class Vision extends Component {
               to the dance floors, festivals and clubs.
             </p>
           </div>
-
           <div className="coloumn is-half">
             <figure className="image is-horizontal-center">
               <img id="gubbe" src={ImgGubbe} />
@@ -38,6 +37,7 @@ class Vision extends Component {
             {<img id="megaMateFlagga" src={MegaMateFlagga} /> }
           </figure>
         </section>
+
       </div>
     );
   }
