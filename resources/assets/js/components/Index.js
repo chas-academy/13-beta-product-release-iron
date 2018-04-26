@@ -9,20 +9,20 @@ import Footer from './Footer';
 
 
 export default class Index extends Component {
-  render() {
-    return (
-      <div>
-        <Header />
-        <Vision />
-        <Products />
-        <Events />
-        <Resellers />
-        <Footer />
-      </div>
-    );
-  }
+	render() {
+		return (
+			<div>
+				<Header />
+				<Vision />
+				<Products />
+				<Events />
+				<Resellers />
+				<Footer />
+			</div>
+		);
+	}
 }
 
 if (document.getElementById("app")) {
-  ReactDOM.render(<Index />, document.getElementById("app"));
+	ReactDOM.render(<Index />, document.getElementById("app"));
 }
