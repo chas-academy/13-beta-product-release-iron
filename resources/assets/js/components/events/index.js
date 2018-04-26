@@ -35,7 +35,6 @@ import '../styles/styles.css';
 						</div>
 
 					</div>
-
         );
     }
 }
