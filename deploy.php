@@ -35,10 +35,31 @@ task('build', function () {
     run('cd {{release_path}} && build');
 });
 
+task('artisan:migrate:fresh', function () {
+    run('{{bin/php}} {{release_path}}/artisan migrate:fresh --seed');
+  });
+
+desc('Dump autoload before seed');
+task('dump-autoload', function () {
+    $output = run('cd {{release_path}} && composer install');
+    writeln('<info>' . $output . '</info>');
+});
+
 // [Optional] if deploy fails automatically unlock.
 after('deploy:failed', 'deploy:unlock');
-
 // Migrate database before symlink new release.
+before('deploy:symlink', 'artisan:migrate:fresh');
+after('artisan:migrate:fresh', 'dump-autoload');
+after('dump-autoload', 'build');
+desc('Clear config cache');
+task('artisan:config:clear', function() {
+  run('{{bin/php}} {{release_path}}/artisan config:clear');
+});
+after('deploy:symlink', 'artisan:config:clear');
 
-before('deploy:symlink', 'artisan:migrate');
+desc('Restart PHP-FPM service');
+task('php-fpm:restart', function () {
+    run('sudo service php7.2-fpm reload');
+});
+after('deploy:symlink', 'php-fpm:restart');
 
