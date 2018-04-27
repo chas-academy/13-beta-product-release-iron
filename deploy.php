@@ -31,6 +31,10 @@ host('teamiron.me')
     
 // Tasks
 
+task('install-npm', function () {
+    run('cd {{release_path}} && npm install');
+});
+
 task('build', function () {
     run('cd {{release_path}} && npm run production');
 });
@@ -50,7 +54,8 @@ after('deploy:failed', 'deploy:unlock');
 // Migrate database before symlink new release.
 before('deploy:symlink', 'artisan:migrate:fresh');
 after('artisan:migrate:fresh', 'dump-autoload');
-after('dump-autoload', 'build');
+after('dump-autoload', 'install-npm');
+after('install-npm', 'build');
 desc('Clear config cache');
 task('artisan:config:clear', function() {
   run('{{bin/php}} {{release_path}}/artisan config:clear');
