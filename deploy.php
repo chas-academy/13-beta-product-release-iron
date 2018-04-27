@@ -32,7 +32,7 @@ host('teamiron.me')
 // Tasks
 
 task('build', function () {
-    run('cd {{release_path}} && build');
+    run('cd {{release_path}} && npm run production');
 });
 
 task('artisan:migrate:fresh', function () {
