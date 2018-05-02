@@ -220,7 +220,7 @@ iframe {
 /* css footer */ 
 .footer {
 	background-color: #FAB418;
-	display: flex;
+	display: flex; 
 }
 
 .footer-title {
@@ -228,8 +228,16 @@ iframe {
 	font-weight: bold;
 }
 
+#footer-title {
+	margin-bottom: 0.1em; 
+}
+
+.footer-container {
+	margin-left: 1rem; 
+}
+
 .footer-p {
-	font-size: 1.5em;
+	font-size: 1.2em;
 }
 
 .footer-title,
@@ -238,7 +246,7 @@ iframe {
 }
 
 .footer-logo{
-	height: 3rem;
+	color: white; 
 }
 
 .logo-link {
@@ -248,8 +256,11 @@ iframe {
 .footer-news {
 	color: white;
 	font-size: 1.5em;
-	font-weight: bold;
 	margin-top: 1em;
+}
+
+.newsletter-container {
+	margin-top: 3em; 
 }
 
 #control-input {
@@ -258,7 +269,18 @@ iframe {
 
 #input-field,
 #news-button {
-	height: 2em;
+	height: 2em; 
+}
+
+#input-field {
+	background-color: transparent; 
+	border-color: transparent; 
+}
+
+#news-button {
+	background-color: white; 
+	color: #FAB418;
+	margin-left: 1em;  
 }
 
 
