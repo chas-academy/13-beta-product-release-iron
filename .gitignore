@@ -10,4 +10,6 @@
 npm-debug.log
 yarn-error.log
 /DS_Store
+/public/js/app.js
+/public/css/app.css
 .env
