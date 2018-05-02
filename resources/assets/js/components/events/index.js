@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import eventsBackground from '../images/megaMate_eventsbg.png';
+
 import '../styles/styles.css';
 
  class Events extends Component {
