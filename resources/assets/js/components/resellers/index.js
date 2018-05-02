@@ -59,4 +59,5 @@ class Resellers extends Component {
 		);
 	}
 }
+
 export default Resellers;

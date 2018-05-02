@@ -13,9 +13,8 @@ class Products extends Component {
 		  <div className="columns">
 			<div className="column is-half">
 			  <h1 className="title is-1">Mega Products</h1>
-			  <h2 className="title is-3">Loui Jama - Mega Mate</h2>
-			  <p className="title is-6">
-				Ingredients</p>
+			  <h2 className="title is-3" id="louiJama">Loui Jama - Mega Mate</h2>
+			  <p className="title is-6">Ingredients</p>
 			</div>
 			<div className="coloumn is-half">
 			  <figure className="image is-horizontal-center">
@@ -26,9 +25,9 @@ class Products extends Component {
 
 		  <div className="columns">
 			<div className="column is-half">
-				<h1 className="title is-1">Mega Products</h1>
-		   		<h2 className="title is-3">Jungle Ginger - Mega Mate</h2>
+		   	<h2 className="title is-3" id="jungleGinger">Jungle Ginger - Mega Mate</h2>
 				<p className="title is-6">Ingredients</p>
+
 		  	</div>
 						<div className="coloumn is-half">
 							<figure className="image is-horizontal-center">
@@ -40,5 +39,6 @@ class Products extends Component {
 		</div>
 	  );
 	}
-  }
-  export default Products;
+}
+
+export default Products;
