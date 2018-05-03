@@ -22,6 +22,8 @@ class Header extends Component {
 										<a href="#products" className="is-tab is-hidden-mobile is-active navbar-customize">Products</a>
 										<a href="#events" className="is-tab is-hidden-mobile is-active navbar-customize">Events</a>
 										<a href="#resellers" className="is-tab is-hidden-mobile is-active navbar-customize">Resellers</a>
+										<a href="#footer" className="is-tab is-hidden-mobile is-active navbar-customize">Contact</a>
+
 									</div>
 								</div>
 								
