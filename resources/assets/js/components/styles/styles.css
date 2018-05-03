@@ -273,13 +273,18 @@ iframe {
 }
 
 #input-field {
-	background-color: transparent; 
-	border-color: transparent; 
-	border-bottom: 1px solid white; 
-	padding-left: 0em; 
-	padding-bottom: 0em; 
-	color: white; 
+	background-color: #FAB418;
+  border-color: #FAB418;
+  border-bottom: 1px solid white;
+  padding-left: 0em;
+  padding-bottom: 0em;
+  box-shadow: unset;
+	
 }
+
+#input-field::placeholder {
+	color: white;
+} 
 
 #news-button {
 	background-color: white; 
