@@ -220,7 +220,6 @@ iframe {
 /* css footer */ 
 .footer {
 	background-color: #FAB418;
-	display: flex; 
 }
 
 .footer-title {
@@ -233,7 +232,8 @@ iframe {
 }
 
 .footer-container {
-	margin-left: 1rem; 
+	margin-left: 1rem;
+	width: 100%; 
 }
 
 .footer-p {
@@ -257,10 +257,13 @@ iframe {
 	color: white;
 	font-size: 1.5em;
 	margin-top: 1em;
+	width: 100%; 
 }
 
 .newsletter-container {
-	margin-top: 3em; 
+	margin-top: 1em; 
+	width: 100%;
+	margin-left: 1em; 
 }
 
 #control-input {
@@ -278,7 +281,7 @@ iframe {
   border-bottom: 1px solid white;
   padding-left: 0em;
   padding-bottom: 0em;
-  box-shadow: unset;
+	box-shadow: unset;
 	
 }
 
