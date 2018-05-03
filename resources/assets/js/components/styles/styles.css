@@ -4,7 +4,6 @@ body {
 	margin: 0px;
 }
 
-
 .title.is-1 {
 	font-size: 3em;
 	text-transform: uppercase;
@@ -30,10 +29,12 @@ body {
 
 .title.is-3.resellers-subtitle {
 	color: #4A754A;
-	padding-top: 0.7em;
-	padding-bottom: 0.7em;
 }
 
+.title:not(:last-child), .subtitle:not(:last-child) {
+	margin-top: 2rem;
+	margin-bottom: 0.5rem;
+}
 
 #events-button,
 .footer {
@@ -240,11 +241,7 @@ iframe {
 
 /* css footer */ 
 .footer {
-<<<<<<< HEAD
 	background-color: #FAB418;
-=======
-	display: flex;
->>>>>>> worked on styling
 }
 
 .footer-title {
@@ -342,9 +339,4 @@ iframe {
 		padding-top: 0px;
 	
 	}
-}
-
-
-.dropdown-content, .dropdown-item, #ingred {
-	overflow: visible;
 }
