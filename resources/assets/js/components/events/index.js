@@ -18,7 +18,7 @@ import '../styles/styles.css';
 
 						<div className="container Block events-placeholder">
 							<h4 className="title is-4 events-name">5 Maj / Möllan Festival / Malmö</h4>
-							<p className="events-p">Mitt Möllan is aa transforming place. It was once a shopping mall Galleria Leonard, a date and dark shopping mall from the 1960's with a few tenants.<br/> Now transformed into a bustling hub and meeting place for the citys's creatives. Mitt Möllan is inspired by the real people and culture of Malmö, which is curious, vibrant and diverse.</p>
+							<p className="events-p">Mitt Möllan is a transforming place. It was once a shopping mall Galleria Leonard, a date and dark shopping mall from the 1960's with a few tenants.<br/> Now transformed into a bustling hub and meeting place for the citys's creatives. Mitt Möllan is inspired by the real people and culture of Malmö, which is curious, vibrant and diverse.</p>
 							<button className="button" id="events-button">Join the party!</button>
 						</div>
 
