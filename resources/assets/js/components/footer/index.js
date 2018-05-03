@@ -17,13 +17,13 @@ class Footer extends Component {
 							<p className="footer-p">info@mega-mate.com</p>
 						</div>
 						<div className="content">
-							<a className="logo-link" href="#">
+							<a className="logo-link" href="https://www.facebook.com/megamate.sodafactory/" target="_blank">
 								<p className="footer-logo">Facebook</p>
 							</a>
-							<a className="logo-link" href="#">
+							<a className="logo-link" href="https://www.instagram.com/mega_mate/" target="_blank">
 							<p className="footer-logo">Instagram</p>
 							</a>
-							<a className="logo-link" href="#">
+							<a className="logo-link" href="https://www.sodafactory.se" target="_blank">
 							<p className="footer-logo">SodaFactory</p>
 							</a>
 						</div>

@@ -58276,7 +58276,7 @@ var Footer = function (_Component) {
 							{ className: 'content' },
 							__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
 								'a',
-								{ className: 'logo-link', href: '#' },
+								{ className: 'logo-link', href: 'https://www.facebook.com/megamate.sodafactory/', target: '_blank' },
 								__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
 									'p',
 									{ className: 'footer-logo' },
@@ -58285,7 +58285,7 @@ var Footer = function (_Component) {
 							),
 							__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
 								'a',
-								{ className: 'logo-link', href: '#' },
+								{ className: 'logo-link', href: 'https://www.instagram.com/mega_mate/', target: '_blank' },
 								__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
 									'p',
 									{ className: 'footer-logo' },
@@ -58294,7 +58294,7 @@ var Footer = function (_Component) {
 							),
 							__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
 								'a',
-								{ className: 'logo-link', href: '#' },
+								{ className: 'logo-link', href: 'https://www.sodafactory.se', target: '_blank' },
 								__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
 									'p',
 									{ className: 'footer-logo' },
