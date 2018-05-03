@@ -4,10 +4,6 @@ body {
 	margin: 0px;
 }
 
-h1, 
-p {
-	color: black; 
-}
 
 .title.is-1 {
 	font-size: 3em;
@@ -18,15 +14,26 @@ p {
 .title.is-3 {
 	font-size: 2em;
 	text-transform: uppercase;
-	color: #E43E28
 }
 
-#louiJama {
+.title.is-3.vision-subtitle {
+	color: #E43E28;
+}
+
+.title.is-3.louiJama-subtitle {
 	color: #FAB418;
 }
-#jungleGinger {
-	color: #6698BA;
+
+.title.is-3.jungleGinger-subtitle {
+	color: #305A80;
 }
+
+.title.is-3.resellers-subtitle {
+	color: #4A754A;
+	padding-top: 0.7em;
+	padding-bottom: 0.7em;
+}
+
 
 #events-button,
 .footer {
@@ -119,11 +126,6 @@ a:hover {
 
 
 /* Vision */ 
-.vision-title, .vision-subtitle, .vision-paragraph  {
-	font-family: 'Oswald', sans-serif;
-	color: black;
-}
-
 .vision-paragraph  {
 	font-size: 1.5em;
 	line-height: 1.3em;
@@ -135,20 +137,26 @@ a:hover {
 }
 
 img#gubbe, #louiJama, #jungleGinger {
-	align-content: center;
 	padding-top: 50px;
+	margin-left: auto;
+	margin-right: auto;
 }
     
+
 
 /* Image Section */ 
 img#megaMateFlagga {
 	padding-top: 5em;
-}
-
+} 
 
 /* Products CSS */ 
 .background {
 	background-color:#fff;
+}
+
+#ingred {
+	font-size: 0.8em;
+	font-weight: 200;
 }
 
 .productSite {
@@ -158,14 +166,6 @@ img#megaMateFlagga {
 
 .productInfo {
 	padding-top: 17em;
-}
-
-.louiJama {
-	color: #FAB418;
-}
-
-.jungleGinger {
-	color: #6698BA;
 }
 
 
@@ -183,6 +183,10 @@ img#megaMateFlagga {
 .past-events-title,
 .events-p {
   color: white;
+}
+
+.title.is-4.events-name {
+	font-size: 2em;
 }
 
 .past-events-title {
@@ -221,7 +225,7 @@ img#megaMateFlagga {
 
 .locationName {
 	padding-top: 5px;
-	font-size: 20px;
+	font-size: 1.2em;
 }
 
 iframe {
@@ -330,4 +334,17 @@ iframe {
 	}
 }
 
+/* media */
+@media screen and (max-width: 768px) {
+	img#gubbe {
+		width: 60%;
+		display: block;
+		padding-top: 0px;
+	
+	}
+}
 
+
+.dropdown-content, .dropdown-item, #ingred {
+	overflow: visible;
+}

@@ -55828,6 +55828,11 @@ var Header = function (_Component) {
 								'a',
 								{ href: '#resellers', className: 'is-tab is-hidden-mobile is-active navbar-customize' },
 								'Resellers'
+							),
+							__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+								'a',
+								{ href: '#contact', className: 'is-tab is-hidden-mobile is-active navbar-customize' },
+								'Contact'
 							)
 						)
 					),
@@ -55866,7 +55871,7 @@ exports = module.exports = __webpack_require__(235)(false);
 
 
 // module
-exports.push([module.i, "body {\n\tfont-family: 'Oswald', sans-serif; \n\tpadding: 0px;\n\tmargin: 0px;\n}\n\nh1, \np {\n\tcolor: black; \n}\n\nh1 {\n\tfont-size: 4em;\n\ttext-transform: uppercase;\n\tfont-weight: 600;\n}\n\nh2 {\n\tfont-size: 2em;\n\ttext-transform: uppercase;\n\tcolor: red;\n\tline-height: 1.3em;\n}\n\n\n/* Voucher */ \n.modalButton {\n\tposition: absolute;\n\tbottom: 2%;\n}\n\n\n/* header */ \n.banner {\n\twidth: 100%; \n}\n\n.megamate-logo {\n\twidth: 20%;\n\tmargin-left: 3%; \n\tmargin-top: 3%; \n}\n\n.navbar-customize {\n\tcolor:  white; \n\tmargin: 26%; \n\tfont-weight: bold; \n\tfont-size: 2em;\n\tz-index: 1000;\n}\n\na:hover {\n\tcolor: #FAB418;  \n}\n\n.burger-customize {\n\tbackground-color: transparent;\n\tmargin-left: 88%; \n}\n\n.homepage-hero-module {\n\tborder-right: none;\n\tborder-left: none;\n\tposition: relative;\n}\n\n.no-video .video-container video,\n.touch .video-container video {\n\tdisplay: none;\n}\n\n.no-video .video-container .poster,\n.touch .video-container .poster {\n\tdisplay: block !important;\n}\n\n.video-container {\n\tposition: relative;\n\tbottom: 0%;\n\tleft: 0%;\n\theight: 100%;\n\twidth: 100%;\n\toverflow: hidden;\n\tbackground: #000;\n}\n\n.video-container .poster img {\n\twidth: 100%;\n\tbottom: 0;\n\tposition: absolute;\n}\n\n.video-container .filter {\n\tz-index: 100;\n\tposition: absolute;\n\tbackground: rgba(0, 0, 0, 0.4);\n\twidth: 100%;\n}\n\n.video-container video {\n\tposition: absolute;\n\tz-index: 0;\n\tbottom: 0;\n}\n\n.video-container video.fillWidth {\n\twidth: 100%;\n}\n\n\n/* Vision */ \n.vision-title, .vision-subtitle, .vision-paragraph  {\n\tfont-family: 'Oswald', sans-serif;\n\tcolor: black;\n}\n\n.vision-paragraph  {\n\tfont-size: 1.5em;\n\tline-height: 1.3em;\n\tpadding-top: 5px;\n}\n\n.column {\n\tpadding: 5em;\n}\n\nimg#gubbe, #louiJama, #jungleGinger {\n\talign-content: center;\n\tpadding-top: 5em;\n}\n    \n\n/* Image Section */ \nimg#megaMateFlagga {\n\tpadding-top: 5em;\n}\n\n\n/* Products CSS */ \n.background {\n\tbackground-color:#fff;\n}\n\n.productSite {\n\tdisplay:flex;\n\tjustify-content: space-around;\n}\n\n.productInfo {\n\tpadding-top: 17em;\n}\n\n.productInfo h3 {\n\tcolor: #FAB418;\n}\n\n\n/* events css */\n\n.events {\n\tmin-height: 58.3437em;\n\tcolor: #fff;\n\tmax-width: 100%;\n}\n\n.events-title,\n.events-subtitle,\n.events-name,\n.past-events-title,\n.events-p {\n  color: white;\n}\n\n.past-events-title {\n\ttext-align: right;\n\tpadding-right: 50px;\n\tpadding-top: 100px;\n}\n\n.events .bg-image {\n\tposition: absolute;\n\tbackground: #333 url(" + escape(__webpack_require__(236)) + ");\n\tbackground-position: center;\n\tbackground-repeat: no-repeat;\n\tbackground-size: cover;\n\twidth: 100%;\n\theight: 58.3437em;\n\tz-index: -1;\n}\n\n.megaTitle {\n\tpadding: 5em;\n}\n\n.events-placeholder {\n\t\tpadding: 10px 50px 5px 50px;\n} \n\n#events-button {\n\tbackground-color: #FAB418;\n\tcolor: white;\n}\n\n/*  Resellers */ \n.map {\n  padding: 0;\n}\n\n.locationName {\n\tpadding-top: 5px;\n\tfont-size: 20px;\n}\n\niframe {\n\theight: 400px;\n\twidth: 100%;\n\tpadding: 0;\n}\n\n/* css footer */ \n.footer {\n\tbackground-color: #FAB418;\n\tdisplay: flex;\n}\n\n.footer-title {\n\tfont-size: 2em;\n\tfont-weight: bold;\n}\n\n.footer-p {\n\tfont-size: 1.5em;\n}\n\n.footer-title,\n.footer-p {\n\tcolor: white;\n}\n\n.footer-logo{\n\theight: 3rem;\n}\n\n.logo-link {\n\tpadding: 5px;\n}\n\n.footer-news {\n\tcolor: white;\n\tfont-size: 1.5em;\n\tfont-weight: bold;\n\tmargin-top: 1em;\n}\n\n#control-input {\n\twidth: 80%;\n}\n\n#input-field,\n#news-button {\n\theight: 2em;\n}\n\n\n", ""]);
+exports.push([module.i, "body {\n\tfont-family: 'Oswald', sans-serif; \n\tpadding: 0px;\n\tmargin: 0px;\n}\n\n\n.title.is-1 {\n\tfont-size: 3em;\n\ttext-transform: uppercase;\n\tfont-weight: 600;\n}\n\n.title.is-3 {\n\tfont-size: 2em;\n\ttext-transform: uppercase;\n}\n\n.title.is-3.vision-subtitle {\n\tcolor: #E43E28;\n}\n\n.title.is-3.louiJama-subtitle {\n\tcolor: #FAB418;\n}\n\n.title.is-3.jungleGinger-subtitle {\n\tcolor: #305A80;\n}\n\n.title.is-3.resellers-subtitle {\n\tcolor: #4A754A;\n\tpadding-top: 0.7em;\n\tpadding-bottom: 0.7em;\n}\n\n\n#events-button,\n.footer {\n\tbackground-color: #FAB418;\n}\n\n/* Voucher */ \n.modalButton {\n\tposition: absolute;\n\tbottom: 2%;\n}\n\n/* header */ \n.banner {\n\twidth: 100%; \n}\n\n.megamate-logo {\n\twidth: 10%;\n\tmargin-left: 3%; \n\tmargin-top: 3%; \n}\n\n.navbar-customize {\n\tcolor: white; \n\tmargin-top: 26%;\n\tmargin-left: 10%;\n\tfont-weight: 600;\n\tfont-size: 1em;\n\tletter-spacing: 0.05em;\n\tz-index: 1000;\n\ttext-transform: uppercase;  \n}\n\na:hover {\n\tcolor: #FAB418;  \n}\n\n.burger-customize {\n\tbackground-color: transparent;\n\tmargin-left: 88%; \n}\n\n.homepage-hero-module {\n\tborder-right: none;\n\tborder-left: none;\n\tposition: relative;\n}\n\n.no-video .video-container video,\n.touch .video-container video {\n\tdisplay: none;\n}\n\n.no-video .video-container .poster,\n.touch .video-container .poster {\n\tdisplay: block !important;\n}\n\n.video-container {\n\tposition: relative;\n\tbottom: 0%;\n\tleft: 0%;\n\theight: 100%;\n\twidth: 100%;\n\toverflow: hidden;\n\tbackground: #000;\n}\n\n.video-container .poster img {\n\twidth: 100%;\n\tbottom: 0;\n\tposition: absolute;\n}\n\n.video-container .filter {\n\tz-index: 100;\n\tposition: absolute;\n\tbackground: rgba(0, 0, 0, 0.4);\n\twidth: 100%;\n}\n\n.video-container video {\n\tposition: absolute;\n\tz-index: 0;\n\tbottom: 0;\n}\n\n.video-container video.fillWidth {\n\twidth: 100%;\n}\n\n\n/* Vision */ \n.vision-paragraph  {\n\tfont-size: 1.5em;\n\tline-height: 1.3em;\n\tpadding-top: 5px;\n}\n\n.column {\n\tpadding: 5em;\n}\n\nimg#gubbe, #louiJama, #jungleGinger {\n\tpadding-top: 50px;\n\tmargin-left: auto;\n\tmargin-right: auto;\n}\n    \n\n\n/* Image Section */ \nimg#megaMateFlagga {\n\tpadding-top: 5em;\n} \n\n/* Products CSS */ \n.background {\n\tbackground-color:#fff;\n}\n\n#ingred {\n\tfont-size: 0.8em;\n\tfont-weight: 200;\n}\n\n.productSite {\n\tdisplay:flex;\n\tjustify-content: space-around;\n}\n\n.productInfo {\n\tpadding-top: 17em;\n}\n\n\n/* events css */\n\n.events {\n\tmin-height: 58.3437em;\n\tcolor: #fff;\n\tmax-width: 100%;\n}\n\n.events-title,\n.events-subtitle,\n.events-name,\n.past-events-title,\n.events-p {\n  color: white;\n}\n\n.title.is-4.events-name {\n\tfont-size: 2em;\n}\n\n.past-events-title {\n\ttext-align: right;\n\tpadding-right: 50px;\n\tpadding-top: 100px;\n}\n\n.events .bg-image {\n\tposition: absolute;\n\tbackground: #333 url(" + escape(__webpack_require__(236)) + ");\n\tbackground-position: center;\n\tbackground-repeat: no-repeat;\n\tbackground-size: cover;\n\twidth: 100%;\n\theight: 58.3437em;\n\tz-index: -1;\n}\n\n.megaTitle {\n\tpadding: 5em;\n}\n\n.events-placeholder {\n\t\tpadding: 10px 50px 5px 50px;\n} \n\n#events-button {\n\tcolor: white;\n}\n\n/*  Resellers */ \n.map {\n  padding: 0;\n}\n\n.locationName {\n\tpadding-top: 5px;\n\tfont-size: 1.2em;\n}\n\niframe {\n\theight: 400px;\n\twidth: 100%;\n\tpadding: 0;\n}\n\n/* css footer */ \n.footer {\n\tdisplay: flex;\n}\n\n.footer-title {\n\tfont-size: 2em;\n\tfont-weight: bold;\n}\n\n.footer-p {\n\tfont-size: 1.5em;\n}\n\n.footer-title,\n.footer-p {\n\tcolor: white;\n}\n\n.footer-logo{\n\theight: 3rem;\n}\n\n.logo-link {\n\tpadding: 5px;\n}\n\n.footer-news {\n\tcolor: white;\n\tfont-size: 1.5em;\n\tfont-weight: bold;\n\tmargin-top: 1em;\n}\n\n#control-input {\n\twidth: 80%;\n}\n\n#input-field,\n#news-button {\n\theight: 2em;\n}\n\n/* media */\n@media screen and (max-width: 768px) {\n\timg#gubbe {\n\t\twidth: 60%;\n\t\tdisplay: block;\n\t\tpadding-top: 0px;\n\t\n\t}\n}\n\n\n.dropdown-content, .dropdown-item, #ingred {\n\toverflow: visible;\n}", ""]);
 
 // exports
 
@@ -57876,13 +57881,47 @@ var Products = function (_Component) {
 						),
 						__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
 							'h2',
-							{ className: 'title is-3' },
+							{ className: 'title is-3 louiJama-subtitle' },
 							'Loui Jama - Mega Mate'
 						),
 						__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
 							'p',
 							{ className: 'title is-6' },
-							'Ingredients'
+							'Loui Jama is a mega dance party drink'
+						),
+						__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+							'div',
+							{ 'class': 'dropdown is-hoverable' },
+							__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+								'div',
+								{ 'class': 'dropdown-trigger is-active' },
+								__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+									'button',
+									{ 'class': 'button ingredbtn', 'aria-haspopup': 'true', 'aria-controls': 'dropdown-menu4' },
+									__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+										'span',
+										null,
+										'Ingredients'
+									)
+								)
+							),
+							__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+								'div',
+								{ 'class': 'dropdown-menu', id: 'dropdown-menu4', role: 'menu' },
+								__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+									'div',
+									{ 'class': 'dropdown-content' },
+									__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+										'div',
+										{ 'class': 'dropdown-item' },
+										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+											'p',
+											{ className: 'title is-6', id: 'ingred' },
+											'33cl Energidryck Ingredienser: vatten, \xE4pplejuice fr\xE5n koncentrat (10%), socker, arom, syra (E330, E331), mate extrakt, koffein, konserveringsmedel (E202) H\xF6g koffeinhalt. Rekommenderas ej f\xF6r barn och gravida eller ammande kvinnor'
+										)
+									)
+								)
+							)
 						)
 					),
 					__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
@@ -57902,13 +57941,8 @@ var Products = function (_Component) {
 						'div',
 						{ className: 'column is-half' },
 						__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-							'h1',
-							{ className: 'title is-1' },
-							'Mega Products'
-						),
-						__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
 							'h2',
-							{ className: 'title is-3' },
+							{ className: 'title is-3 jungleGinger-subtitle' },
 							'Jungle Ginger - Mega Mate'
 						),
 						__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
@@ -58010,18 +58044,6 @@ var Events = function (_Component) {
 						'h4',
 						{ className: 'title is-4 events-name' },
 						'5 Maj / M\xF6llan Festival / Malm\xF6'
-					),
-					__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-						'p',
-						{ className: 'events-p' },
-						'Mitt M\xF6llan is aa transforming place. It was once a shopping mall Galleria Leonard, a date and dark shopping mall from the 1960\'s with a few tenants.',
-						__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('br', null),
-						' Now transformed into a bustling hub and meeting place for the citys\'s creatives. Mitt M\xF6llan is inspired by the real people and culture of Malm\xF6, which is curious, vibrant and diverse.'
-					),
-					__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-						'button',
-						{ className: 'button', id: 'events-button' },
-						'Join the party!'
 					)
 				),
 				__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
@@ -58059,8 +58081,6 @@ var Events = function (_Component) {
 }(__WEBPACK_IMPORTED_MODULE_0_react__["Component"]);
 
 /* harmony default export */ __webpack_exports__["a"] = (Events);
-
-//TODO: This is an example
 
 /***/ }),
 /* 257 */
@@ -58105,15 +58125,15 @@ var Resellers = function (_Component) {
 					{ className: 'columns' },
 					__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
 						'div',
-						{ className: 'column is-half' },
+						{ className: 'column is-half is-desktop' },
 						__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
 							'h1',
-							{ className: 'title is-1 vision-title' },
+							{ className: 'title is-1 resellers-title' },
 							'Resellers'
 						),
 						__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
 							'h2',
-							{ className: 'title is-3 vision-subtitle' },
+							{ className: 'title is-3 resellers-subtitle' },
 							'Stockholm'
 						),
 						__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
@@ -58167,7 +58187,7 @@ var Resellers = function (_Component) {
 						),
 						__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
 							'h2',
-							{ className: 'title is-3 vision-subtitle' },
+							{ className: 'title is-3 resellers-subtitle' },
 							'Malm\xF6'
 						),
 						__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
@@ -58193,10 +58213,14 @@ var Resellers = function (_Component) {
 								{ className: 'locationName' },
 								'Grand Hatt \xD6l & Mat'
 							)
-						),
+						)
+					),
+					__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+						'div',
+						{ className: 'column is-half is-desktop' },
 						__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
 							'h2',
-							{ className: 'title is-3 vision-subtitle' },
+							{ className: 'title is-3 resellers-subtitle' },
 							'Uppsala'
 						),
 						__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
@@ -58220,7 +58244,7 @@ var Resellers = function (_Component) {
 						),
 						__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
 							'h2',
-							{ className: 'title is-3 vision-subtitle' },
+							{ className: 'title is-3 resellers-subtitle' },
 							'\xD6vriga platser'
 						),
 						__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
@@ -58260,9 +58284,13 @@ var Resellers = function (_Component) {
 								'li',
 								null,
 								__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-									'a',
-									{ href: 'suEOdc' },
-									'Link'
+									'button',
+									null,
+									__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+										'a',
+										{ href: 'https://www.mat.se/butik/loui-jama-mega-mate-soda-factory-sthlm-33cl', target: '_blank' },
+										'Buy Online'
+									)
 								)
 							)
 						)
@@ -58463,109 +58491,109 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 
 var Voucher = function (_Component) {
-  _inherits(Voucher, _Component);
+	_inherits(Voucher, _Component);
 
-  function Voucher() {
-    _classCallCheck(this, Voucher);
+	function Voucher() {
+		_classCallCheck(this, Voucher);
 
-    var _this = _possibleConstructorReturn(this, (Voucher.__proto__ || Object.getPrototypeOf(Voucher)).call(this));
+		var _this = _possibleConstructorReturn(this, (Voucher.__proto__ || Object.getPrototypeOf(Voucher)).call(this));
 
-    _this.state = {
-      showModal: false
-    };
+		_this.state = {
+			showModal: false
+		};
 
-    _this.handleOpenModal = _this.handleOpenModal.bind(_this);
-    _this.handleCloseModal = _this.handleCloseModal.bind(_this);
-    return _this;
-  }
+		_this.handleOpenModal = _this.handleOpenModal.bind(_this);
+		_this.handleCloseModal = _this.handleCloseModal.bind(_this);
+		return _this;
+	}
 
-  _createClass(Voucher, [{
-    key: 'handleOpenModal',
-    value: function handleOpenModal() {
-      this.setState({ showModal: true });
-    }
-  }, {
-    key: 'handleCloseModal',
-    value: function handleCloseModal() {
-      this.setState({ showModal: false });
-    }
-  }, {
-    key: 'componentWillMount',
-    value: function componentWillMount() {
-      __WEBPACK_IMPORTED_MODULE_2_react_modal___default.a.setAppElement('body');
-    }
-  }, {
-    key: 'render',
-    value: function render() {
-      return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-        'section',
-        { className: 'hero is-fullheight is-primary is-bold' },
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-          'div',
-          { className: 'hero-body' },
-          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            'div',
-            { className: 'container has-text-centered' },
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-              'a',
-              { onClick: this.handleOpenModal, className: 'button is-large is-link is-rounded' },
-              'Get mega voucher'
-            ),
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div', { id: 'offerVoucher' })
-          )
-        ),
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-          __WEBPACK_IMPORTED_MODULE_2_react_modal___default.a,
-          {
-            isOpen: this.state.showModal,
-            contentLabel: 'Voucher for mega mat\xE9',
-            onRequestClose: this.handleCloseModal
-          },
-          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            'h1',
-            { className: 'title has-text-centered' },
-            'Mega party at Tr\xE4dg\xE5rden'
-          ),
-          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            'h2',
-            { className: 'subtitle has-text-centered' },
-            'L\xF6rdag 23 juni!'
-          ),
-          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            'p',
-            { className: 'has-text-centered' },
-            'G\xE4ller vid lilla baren mellan 21:00-23:30'
-          ),
-          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            'div',
-            { className: 'buttons has-addons is-right' },
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-              'button',
-              { onClick: this.handleCloseModal, className: 'modalButton' },
-              'Close'
-            )
-          )
-        ),
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-          'div',
-          { className: 'level-right' },
-          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            'a',
-            { className: 'button is-info is-outlined', href: 'http://localhost:8000' },
-            'Go to homepage'
-          )
-        )
-      );
-    }
-  }]);
+	_createClass(Voucher, [{
+		key: 'handleOpenModal',
+		value: function handleOpenModal() {
+			this.setState({ showModal: true });
+		}
+	}, {
+		key: 'handleCloseModal',
+		value: function handleCloseModal() {
+			this.setState({ showModal: false });
+		}
+	}, {
+		key: 'componentWillMount',
+		value: function componentWillMount() {
+			__WEBPACK_IMPORTED_MODULE_2_react_modal___default.a.setAppElement('body');
+		}
+	}, {
+		key: 'render',
+		value: function render() {
+			return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+				'section',
+				{ className: 'hero is-fullheight is-primary is-bold' },
+				__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+					'div',
+					{ className: 'hero-body' },
+					__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+						'div',
+						{ className: 'container has-text-centered' },
+						__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+							'a',
+							{ onClick: this.handleOpenModal, className: 'button is-large is-link is-rounded' },
+							'Get mega voucher'
+						),
+						__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div', { id: 'offerVoucher' })
+					)
+				),
+				__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+					__WEBPACK_IMPORTED_MODULE_2_react_modal___default.a,
+					{
+						isOpen: this.state.showModal,
+						contentLabel: 'Voucher for mega mat\xE9',
+						onRequestClose: this.handleCloseModal
+					},
+					__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+						'h1',
+						{ className: 'title has-text-centered' },
+						'Mega party at Tr\xE4dg\xE5rden'
+					),
+					__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+						'h2',
+						{ className: 'subtitle has-text-centered' },
+						'L\xF6rdag 23 juni!'
+					),
+					__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+						'p',
+						{ className: 'has-text-centered' },
+						'G\xE4ller vid lilla baren mellan 21:00-23:30'
+					),
+					__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+						'div',
+						{ className: 'buttons has-addons is-right' },
+						__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+							'button',
+							{ onClick: this.handleCloseModal, className: 'modalButton' },
+							'Close'
+						)
+					)
+				),
+				__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+					'div',
+					{ className: 'level-right' },
+					__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+						'a',
+						{ className: 'button is-info is-outlined', href: 'http://localhost:8000' },
+						'Go to homepage'
+					)
+				)
+			);
+		}
+	}]);
 
-  return Voucher;
+	return Voucher;
 }(__WEBPACK_IMPORTED_MODULE_0_react__["Component"]);
 
 /* unused harmony default export */ var _unused_webpack_default_export = (Voucher);
 
 if (document.getElementById('voucher')) {
-  __WEBPACK_IMPORTED_MODULE_1_react_dom___default.a.render(__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Voucher, null), document.getElementById('voucher'));
+	__WEBPACK_IMPORTED_MODULE_1_react_dom___default.a.render(__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Voucher, null), document.getElementById('voucher'));
 }
 
 /***/ }),
