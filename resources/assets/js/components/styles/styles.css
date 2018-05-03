@@ -217,6 +217,10 @@ iframe {
 	padding: 0;
 }
 
+.vision-subtitle {
+	margin-top: 1.5rem; 
+}
+
 /* css footer */ 
 .footer {
 	background-color: #FAB418;
