@@ -62,15 +62,12 @@ p.title.is-6 {
 	border-radius: 0;
 }
 
-#lji, 
-#jgi {
+.toggle-btn {
+	border-style: none;
 	color: black;
-	width: 20%;
+	font-size: 3em;
 }
 
-#louiJamaIngredients {
-	display: none;
-}
 
 /* voucher */ 
 .modalButton {

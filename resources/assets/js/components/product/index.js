@@ -21,9 +21,6 @@ class Product extends Component {
 
 	render() {
 
-		const listItems = this.props.productData.ingredientsList.map((val, i) => 
-		<li key={i}>{val}</li>
-		);
 
 	  return (
 				<div className="columns">
@@ -31,7 +28,7 @@ class Product extends Component {
 						<h2 className={"title is-3 "+this.props.productData.subtitleClass}>{this.props.productData.subtitle}</h2>
 						<p className="title is-6">{this.props.productData.description}</p>
 						
-						<button name="lji" id="lji"
+						<button className="toggle-btn"
 						 onClick={this.toggleShowIngredientsListClick}
 						>
 						{(this.state.showIngredientsList &&
@@ -40,7 +37,9 @@ class Product extends Component {
 
 						<div>
 						{this.state.showIngredientsList &&
-							<ul>{listItems}</ul>			
+							<ul>{this.props.productData.ingredientsList.map((val, i) => 
+								<li key={i}>{val}</li>
+								)}</ul>			
 						}
 						</div>
 					</div>
