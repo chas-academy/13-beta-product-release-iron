@@ -28,8 +28,8 @@ class Resellers extends Component {
 								<li className="locationName">Nya Tröls Bar & Restaurang</li>
 								<li className="locationName">Grand Hatt Öl & Mat</li>
 							</ul>
-							</div>
-							<div className="column is-half is-desktop">
+					</div>
+					<div className="column is-half is-desktop">
 						<h2 className="title is-3 resellers-subtitle uppsala">Uppsala</h2>            
 							<ul>
 								<li className="locationName">Taps Beer Bar</li>

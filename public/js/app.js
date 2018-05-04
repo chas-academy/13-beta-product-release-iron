@@ -43774,7 +43774,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react_dom__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Header__ = __webpack_require__(232);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Vision__ = __webpack_require__(247);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__Products__ = __webpack_require__(250);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__productlist__ = __webpack_require__(274);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__Events__ = __webpack_require__(253);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__Resellers__ = __webpack_require__(254);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__Footer__ = __webpack_require__(255);
@@ -43812,7 +43812,7 @@ var Index = function (_Component) {
 				null,
 				__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__Header__["a" /* default */], null),
 				__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__Vision__["a" /* default */], null),
-				__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4__Products__["a" /* default */], null),
+				__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4__productlist__["a" /* default */], null),
 				__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_5__Events__["a" /* default */], null),
 				__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_6__Resellers__["a" /* default */], null),
 				__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_7__Footer__["a" /* default */], null)
@@ -55871,7 +55871,7 @@ exports = module.exports = __webpack_require__(271)(false);
 
 
 // module
-exports.push([module.i, "body {\n\tfont-family: 'Oswald', sans-serif; \n\tpadding: 0px;\n\tmargin: 0px;\n}\n\n/* titles */ \n.title.is-1 {\n\tpadding-top: 1em;\n\tfont-size: 3em;\n\ttext-transform: uppercase;\n\tfont-weight: 600;\n}\n\n.title.is-3 {\n\tfont-size: 1.8em;\n\ttext-transform: uppercase;\n}\n\np.title.is-6 {\n\tfont-size: 1em;\n\tmargin-top: 1em;\n}\n\n.title.is-3.vision-subtitle {\n\tcolor: #E43E28;\n}\n\n.title.is-3.louiJama-subtitle {\n\tcolor: #FAB418;\n}\n\n.title.is-3.jungleGinger-subtitle {\n\tcolor: #305A80;\n}\n\n.title.is-3.resellers-subtitle {\n\tcolor: #4A754A;\n}\n\n.title:not(:last-child), .subtitle:not(:last-child) {\n\tmargin-top: 2rem;\n\tmargin-bottom: 0.5rem;\n}\n\n/* buttons */ \n#events-button,\n.footer {\n\tbackground-color: #FAB418;\n}\n\n.button {\n\tfont-family: 'Oswald', sans-serif;\n}\n\n/* voucher */ \n.modalButton {\n\tposition: absolute;\n\tbottom: 2%;\n}\n\n/* header */ \n.banner {\n\twidth: 100%; \n}\n\n.megamate-logo {\n\twidth: 10%;\n\tmargin-left: 3%; \n\tmargin-top: 3%; \n}\n\n.navbar-customize {\n\tcolor: white; \n\tmargin: 10%; \n\tfont-weight: bold; \n\tfont-size: 2em;\n\tz-index: 1000;\n\ttext-transform: uppercase;  \n}\n\na:hover {\n\tcolor: #FAB418;  \n}\n\n.burger-customize {\n\tbackground-color: transparent;\n\tmargin-left: 88%; \n}\n\n.homepage-hero-module {\n\tborder-right: none;\n\tborder-left: none;\n\tposition: relative;\n}\n\n.no-video .video-container video,\n.touch .video-container video {\n\tdisplay: none;\n}\n\n.no-video .video-container .poster,\n.touch .video-container .poster {\n\tdisplay: block !important;\n}\n\n.video-container {\n\tposition: relative;\n\tbottom: 0%;\n\tleft: 0%;\n\theight: 100%;\n\twidth: 100%;\n\toverflow: hidden;\n\tbackground: #000;\n}\n\n.video-container .poster img {\n\twidth: 100%;\n\tbottom: 0;\n\tposition: absolute;\n}\n\n.video-container .filter {\n\tz-index: 100;\n\tposition: absolute;\n\tbackground: rgba(0, 0, 0, 0.4);\n\twidth: 100%;\n}\n\n.video-container video {\n\tposition: absolute;\n\tz-index: 0;\n\tbottom: 0;\n}\n\n.video-container video.fillWidth {\n\twidth: 100%;\n}\n\n\n/* Vision */ \n.vision-paragraph {\n\tfont-size: 1.2em;\n\tline-height: 1.3em;\n\tpadding-top: 5px;\n}\n\n.column {\n\tpadding: 0em 5em 0em 5em;\n}\n\nimg#gubbe, #louiJama, #jungleGinger {\n\tmargin-left: auto;\n\tmargin-right: auto;\n}\n\nimg#gubbe {\n\twidth: 50%;\n\tpadding-top: 3em;\n}\n    \n/* image section */ \nimg#megaMateFlagga {\n\tpadding-top: 5em;\n}  \n\n/* products */ \n.background {\n\tbackground-color:#fff;\n}\n\n#ingred {\n\tfont-size: 0.8em;\n\tfont-weight: 200;\n}\n\n.productSite {\n\tdisplay:flex;\n\tjustify-content: space-around;\n}\n\n.productInfo {\n\tpadding-top: 17em;\n}\n\n\n/* events css */\n.events {\n\tmin-height: 58.3437em;\n\tcolor: #fff;\n\tmax-width: 100%;\n}\n\n.events-title,\n.events-subtitle,\n.events-name,\n.past-events-title,\n.events-p {\n  color: white;\n}\n\n.title.is-4.events-name {\n\tfont-size: 1.8em;\n}\n\n.past-events-title {\n\ttext-align: right;\n\tpadding-right: 50px;\n\tpadding-top: 100px;\n}\n\n.events .bg-image {\n\tposition: absolute;\n\tbackground: #333 url(" + escape(__webpack_require__(273)) + ");\n\tbackground-position: center;\n\tbackground-repeat: no-repeat;\n\tbackground-size: cover;\n\twidth: 100%;\n\theight: 58.3437em;\n\tz-index: -1;\n}\n\n.megaTitle {\n\tpadding: 5em;\n}\n\n.events-placeholder {\n\t\tpadding: 10px 50px 5px 50px;\n} \n\n#events-button {\n\tcolor: white;\n}\n\n/*  Resellers */ \n.map {\n  padding-top: 5em;\n}\n\n.locationName {\n\tpadding-top: 5px;\n\tfont-size: 1.2em;\n}\n\niframe {\n\theight: 400px;\n\twidth: 100%;\n\tpadding: 0;\n}\n\n.buyOnline {\n\tmargin-top: 2em;\n\tbackground-color: #FAB418; \n\tborder-color: transparent;\n\twidth: 200px;\n\tbox-shadow: 0 8px 16px 0 rgba(0,0,0,0.05), 0 6px 20px 0 rgba(0,0,0,0.05);\n}\n\n#buyOnline-btn {\n\tcolor: white;\n\t\n}\n\n/* css footer */ \n.footer {\n\tbackground-color: #FAB418;\n\tpadding-bottom: 3rem;\n}\n\n.footer-title {\n\tfont-size: 2em;\n\tfont-weight: bold;\n}\n\n#footer-title {\n\tmargin-bottom: 0.1em; \n}\n\n.footer-container {\n\tmargin-left: 1rem;\n\twidth: 100%; \n}\n\n.footer-p {\n\tfont-size: 1.2em;\n}\n\n.footer-title,\n.footer-p {\n\tcolor: white;\n}\n\n.footer-logo{\n\tcolor: white; \n}\n\n.logo-link {\n\tpadding: 5px;\n}\n\n.footer-news {\n\tcolor: white;\n\tfont-size: 1.5em;\n\tmargin-top: 1em;\n\twidth: 100%; \n}\n\n.newsletter-container {\n\tmargin-top: 1em; \n\twidth: 100%;\n\tmargin-left: 1em; \n}\n\n#control-input {\n\twidth: 80%;\n}\n\n#input-field,\n#news-button {\n\theight: 2em; \n}\n\n#input-field {\n\tbackground-color: #FAB418;\n  border-color: #FAB418;\n  border-bottom: 1px solid white;\n  padding-left: 0em;\n  padding-bottom: 0em;\n\tbox-shadow: unset;\n\t\n}\n\n#input-field::placeholder {\n\tcolor: white;\n} \n\n#news-button {\n\tbackground-color: white; \n\tcolor: #FAB418;\n\tmargin-left: 1em;  \n\tbox-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);\n}\n\n/* media query */ \n@media screen and (min-width: 800px) {\n\t.footer {\n\t\tdisplay: flex; \n\t}\n\t.footer-container {\n\t\twidth: 50%; \n\t}\n\n\t.newsletter-container {\n\t\twidth: 50%;\n\t}\n}\n\n@media screen and (min-width: 768px) {\n\timg#gubbe {\n\t\twidth: 80%;\n\t\tmargin-top: auto;\n\t\tmargin-bottom: auto;\n\t}\n\n\t.title.is-3.title.is-3.resellers-subtitle.uppsala {\n\t\tpadding-top: 6.4em;\n\t}\n}\n\n", ""]);
+exports.push([module.i, "body, button, input, select, textarea {\n\tfont-family: 'Oswald', sans-serif; \n}\n\nbody {\n\tpadding: 0px;\n\tmargin: 0px;\n}\n\n/* titles */ \n.title.is-1 {\n\tpadding-top: 1em;\n\tfont-size: 2.8em;\n\ttext-transform: uppercase;\n\tfont-weight: 600;\n}\n\n.title.is-3 {\n\tfont-size: 1.8em;\n\ttext-transform: uppercase;\n}\n\np.title.is-6 {\n\tfont-size: 1em;\n\tmargin-top: 1em;\n}\n\n.title.is-3.vision-subtitle {\n\tcolor: #E43E28;\n}\n\n.title.is-3.louiJama-subtitle {\n\tcolor: #FAB418;\n}\n\n.title.is-3.jungleGinger-subtitle {\n\tcolor: #305A80;\n}\n\n.title.is-3.resellers-subtitle {\n\tcolor: #4A754A;\n}\n\n.title.is-1.events-title {\n\tmargin-top: 0;\n\n\n\n}\n.title:not(:last-child), .subtitle:not(:last-child) {\n\tmargin-top: 2rem;\n\tmargin-bottom: 0.5rem;\n}\n\n/* buttons */ \n#events-button,\n.footer {\n\tbackground-color: #FAB418;\n}\n\n.button {\n\tborder-radius: 0;\n}\n\n#lji, \n#jgi {\n\tcolor: black;\n\twidth: 20%;\n}\n\n#louiJamaIngredients {\n\tdisplay: none;\n}\n\n/* voucher */ \n.modalButton {\n\tposition: absolute;\n\tbottom: 2%;\n}\n\n/* header */ \n.banner {\n\twidth: 100%; \n}\n\n.megamate-logo {\n\twidth: 10%;\n\tmargin-left: 3%; \n\tmargin-top: 3%; \n}\n\n.navbar-customize {\n\tcolor: white; \n\tmargin: 10%; \n\tfont-weight: bold; \n\tfont-size: 2em;\n\tz-index: 1000;\n\ttext-transform: uppercase;  \n}\n\na:hover {\n\tcolor: #FAB418;  \n}\n\n.burger-customize {\n\tbackground-color: transparent;\n\tmargin-left: 88%; \n}\n\n.homepage-hero-module {\n\tborder-right: none;\n\tborder-left: none;\n\tposition: relative;\n}\n\n.no-video .video-container video,\n.touch .video-container video {\n\tdisplay: none;\n}\n\n.no-video .video-container .poster,\n.touch .video-container .poster {\n\tdisplay: block !important;\n}\n\n.video-container {\n\tposition: relative;\n\tbottom: 0%;\n\tleft: 0%;\n\theight: 100%;\n\twidth: 100%;\n\toverflow: hidden;\n\tbackground: #000;\n}\n\n.video-container .poster img {\n\twidth: 100%;\n\tbottom: 0;\n\tposition: absolute;\n}\n\n.video-container .filter {\n\tz-index: 100;\n\tposition: absolute;\n\tbackground: rgba(0, 0, 0, 0.4);\n\twidth: 100%;\n}\n\n.video-container video {\n\tposition: absolute;\n\tz-index: 0;\n\tbottom: 0;\n}\n\n.video-container video.fillWidth {\n\twidth: 100%;\n}\n\n\n/* Vision */ \n.vision-paragraph {\n\tfont-size: 1.2em;\n\tline-height: 1.3em;\n\tpadding-top: 5px;\n}\n\n.column {\n\tpadding: 0em 5em 0em 5em;\n}\n\nimg#gubbe, #louiJama, #jungleGinger {\n\tmargin-left: auto;\n\tmargin-right: auto;\n}\n\nimg#gubbe {\n\twidth: 50%;\n\tpadding-top: 3em;\n}\n    \n/* image section */ \nimg#megaMateFlagga {\n\tpadding-top: 5em;\n}  \n\n/* products */ \n.background {\n\tbackground-color:#fff;\n}\n\n.productSite {\n\tdisplay:flex;\n\tjustify-content: space-around;\n}\n\n.productInfo {\n\tpadding-top: 17em;\n}\n\n\n/* events css */\n.events {\n\tmin-height: 40em;\n\tcolor: #fff;\n\tmax-width: 100%;\n}\n\n.events-title,\n.events-subtitle,\n.events-name,\n.past-events-title,\n.events-p {\n  color: white;\n}\n\n.title.is-4.events-name {\n\tfont-size: 1.8em;\n}\n\n.events .bg-image {\n\tposition: absolute;\n\tbackground: #333 url(" + escape(__webpack_require__(273)) + ");\n\tbackground-position: center;\n\tbackground-repeat: no-repeat;\n\tbackground-size: cover;\n\twidth: 100%;\n\theight: 40em;\n\tz-index: -1;\n}\n\n.megaTitle {\n\tpadding: 5em;\n}\n\n.events-placeholder {\n\t\tpadding: 10px 50px 5px 50px;\n} \n\n#events-button {\n\tcolor: white;\n}\n\n/*  Resellers */ \n.map {\n  padding-top: 5em;\n}\n\n.locationName {\n\tpadding-top: 5px;\n\tfont-size: 1.2em;\n}\n\niframe {\n\theight: 400px;\n\twidth: 100%;\n\tpadding: 0;\n}\n\n.buyOnline {\n\tmargin-top: 2em;\n\tbackground-color: #FAB418; \n\tborder-color: transparent;\n\twidth: 200px;\n\tbox-shadow: 0 8px 16px 0 rgba(0,0,0,0.05), 0 6px 20px 0 rgba(0,0,0,0.05);\n}\n\n#buyOnline-btn {\n\tcolor: white;\n}\n\n/* css footer */ \n.footer {\n\tbackground-color: #FAB418;\n\tpadding-bottom: 3rem;\n\ttext-align: center;\n}\n\n.footer-title {\n\tfont-size: 2em;\n\tfont-weight: bold;\n\ttext-align: center;\n}\n\n#footer-title {\n\tmargin-bottom: 0.1em; \n}\n\n.footer-container {\n\tmargin-left: 1rem;\n\twidth: 100%; \n}\n\n.footer-p {\n\tfont-size: 1.2em;\n}\n\n.footer-title,\n.footer-p {\n\tcolor: white;\n}\n\n.footer-logo{\n\tcolor: white; \n}\n\n.logo-link {\n\tpadding: 5px;\n}\n\n.footer-news {\n\tcolor: white;\n\tfont-size: 1.5em;\n\tmargin-top: 1em;\n\twidth: 100%; \n}\n\n.newsletter-container {\n\tmargin-top: 1em; \n\twidth: 100%;\n\tmargin-left: 1em; \n}\n\n#control-input {\n\twidth: 80%;\n}\n\n#input-field,\n#news-button {\n\theight: 2em; \n}\n\n#input-field {\n\tbackground-color: #FAB418;\n  border-color: #FAB418;\n  border-bottom: 1px solid white;\n  padding-left: 0em;\n  padding-bottom: 0em;\n\tbox-shadow: unset;\n\t\n}\n\n#input-field::placeholder {\n\tcolor: white;\n} \n\n#news-button {\n\tbackground-color: white; \n\tcolor: #FAB418;\n\tmargin-left: 1em;  \n\tbox-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);\n}\n\n/* mediaQuery Desktop */ \n@media screen and (min-width: 800px) {\n\t.footer {\n\t\tdisplay: flex; \n\t}\n\t.footer-container {\n\t\twidth: 50%; \n\t}\n\n\t.newsletter-container {\n\t\twidth: 50%;\n\t}\n}\n\n@media screen and (min-width: 768px) {\n\timg#gubbe {\n\t\twidth: 80%;\n\t\tmargin-top: auto;\n\t\tmargin-bottom: auto;\n\t}\n\n\t.title.is-3.title.is-3.resellers-subtitle.uppsala {\n\t\tpadding-top: 6.4em;\n\t}\n}\n\n/* mediaQuery Mobile */ \n@media screen and (max-width: 568px) {\n\t#gubbe {\n\t\tdisplay: none; \n\t}\n}", ""]);
 
 // exports
 
@@ -57715,152 +57715,7 @@ module.exports = "/images/megaMate_gubbe.png?f0843aaf1e66a0d78496758744e7dc80";
 module.exports = "/images/megaMate_flagga.png?4fc67d83fc4a112725ff1217a26d9c49";
 
 /***/ }),
-/* 250 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom__ = __webpack_require__(15);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react_dom__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__images_megaMate_louiJama_png__ = __webpack_require__(251);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__images_megaMate_louiJama_png___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__images_megaMate_louiJama_png__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__images_megaMate_jungleGinger_png__ = __webpack_require__(252);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__images_megaMate_jungleGinger_png___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__images_megaMate_jungleGinger_png__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__styles_styles_css__ = __webpack_require__(20);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__styles_styles_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__styles_styles_css__);
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-
-
-
-
-
-
-var Products = function (_Component) {
-	_inherits(Products, _Component);
-
-	function Products() {
-		_classCallCheck(this, Products);
-
-		return _possibleConstructorReturn(this, (Products.__proto__ || Object.getPrototypeOf(Products)).apply(this, arguments));
-	}
-
-	_createClass(Products, [{
-		key: 'render',
-		value: function render() {
-			return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-				'div',
-				{ className: 'products', id: 'products' },
-				__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-					'div',
-					{ className: 'columns' },
-					__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-						'div',
-						{ className: 'column is-half' },
-						__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-							'h1',
-							{ className: 'title is-1' },
-							'Mega Products'
-						),
-						__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-							'h2',
-							{ className: 'title is-3 louiJama-subtitle' },
-							'Loui Jama'
-						),
-						__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-							'p',
-							{ className: 'title is-6' },
-							'Loui Jama is a mega dance party drink'
-						),
-						__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-							'div',
-							{ 'class': 'dropdown is-hoverable' },
-							__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-								'div',
-								{ 'class': 'dropdown-trigger is-active' },
-								__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-									'button',
-									{ 'class': 'button ingredbtn', 'aria-haspopup': 'true', 'aria-controls': 'dropdown-menu4' },
-									__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-										'span',
-										null,
-										'Ingredients'
-									)
-								)
-							),
-							__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-								'div',
-								{ 'class': 'dropdown-menu', id: 'dropdown-menu4', role: 'menu' },
-								__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-									'div',
-									{ 'class': 'dropdown-content' },
-									__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-										'div',
-										{ 'class': 'dropdown-item' },
-										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-											'p',
-											{ className: 'title is-6', id: 'ingred' },
-											'33cl Energidryck Ingredienser: vatten, \xE4pplejuice fr\xE5n koncentrat (10%), socker, arom, syra (E330, E331), mate extrakt, koffein, konserveringsmedel (E202) H\xF6g koffeinhalt. Rekommenderas ej f\xF6r barn och gravida eller ammande kvinnor'
-										)
-									)
-								)
-							)
-						)
-					),
-					__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-						'div',
-						{ className: 'coloumn is-half' },
-						__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-							'figure',
-							{ className: 'image is-horizontal-center' },
-							__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { id: 'louiJama', src: __WEBPACK_IMPORTED_MODULE_2__images_megaMate_louiJama_png___default.a })
-						)
-					)
-				),
-				__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-					'div',
-					{ className: 'columns' },
-					__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-						'div',
-						{ className: 'column is-half' },
-						__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-							'h2',
-							{ className: 'title is-3 jungleGinger-subtitle' },
-							'Jungle Ginger'
-						),
-						__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-							'p',
-							{ className: 'title is-6' },
-							'Ingredients'
-						)
-					),
-					__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-						'div',
-						{ className: 'coloumn is-half' },
-						__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-							'figure',
-							{ className: 'image is-horizontal-center' },
-							__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { id: 'jungleGinger', src: __WEBPACK_IMPORTED_MODULE_3__images_megaMate_jungleGinger_png___default.a })
-						)
-					)
-				)
-			);
-		}
-	}]);
-
-	return Products;
-}(__WEBPACK_IMPORTED_MODULE_0_react__["Component"]);
-
-/* harmony default export */ __webpack_exports__["a"] = (Products);
-
-/***/ }),
+/* 250 */,
 /* 251 */
 /***/ (function(module, exports) {
 
@@ -57915,7 +57770,7 @@ var Events = function (_Component) {
 				__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div', { className: 'backgroundOverlay' }),
 				__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
 					'div',
-					{ className: 'megaTitle block' },
+					{ className: 'megaTitle' },
 					__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
 						'h1',
 						{ className: 'title is-1 events-title' },
@@ -57929,7 +57784,7 @@ var Events = function (_Component) {
 				),
 				__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
 					'div',
-					{ className: 'container Block events-placeholder' },
+					{ className: 'container events-placeholder' },
 					__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
 						'h4',
 						{ className: 'title is-4 events-name' },
@@ -57938,7 +57793,7 @@ var Events = function (_Component) {
 				),
 				__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
 					'div',
-					{ className: 'container Block events-placeholder' },
+					{ className: 'container events-placeholder' },
 					__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
 						'h4',
 						{ className: 'title is-4 events-name' },
@@ -57947,20 +57802,11 @@ var Events = function (_Component) {
 				),
 				__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
 					'div',
-					{ className: 'container Block events-placeholder' },
+					{ className: 'container events-placeholder' },
 					__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
 						'h4',
 						{ className: 'title is-4 events-name' },
 						'23 July / Tr\xE4dg\xE5rden / Stockholm'
-					)
-				),
-				__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-					'div',
-					{ className: 'pastEvents' },
-					__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-						'h2',
-						{ className: 'title is-3 past-events-title' },
-						'Past events'
 					)
 				)
 			);
@@ -59879,6 +59725,206 @@ module.exports = function escape(url) {
 /***/ (function(module, exports) {
 
 module.exports = "/images/megaMate_eventsbg.png?7330b8c5eb1feaefa848c047066a5216";
+
+/***/ }),
+/* 274 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom__ = __webpack_require__(15);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react_dom__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__product___ = __webpack_require__(275);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__images_megaMate_louiJama_png__ = __webpack_require__(251);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__images_megaMate_louiJama_png___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__images_megaMate_louiJama_png__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__images_megaMate_jungleGinger_png__ = __webpack_require__(252);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__images_megaMate_jungleGinger_png___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__images_megaMate_jungleGinger_png__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__styles_styles_css__ = __webpack_require__(20);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__styles_styles_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5__styles_styles_css__);
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+
+
+
+
+
+
+
+var ProductList = function (_Component) {
+	_inherits(ProductList, _Component);
+
+	function ProductList() {
+		_classCallCheck(this, ProductList);
+
+		var _this = _possibleConstructorReturn(this, (ProductList.__proto__ || Object.getPrototypeOf(ProductList)).call(this));
+
+		_this.state = {
+			productList: [{
+				subtitle: 'Loui Jama',
+				subtitleClass: 'louiJama-subtitle',
+				description: 'Loui Jama is a mega dance party drink',
+				ingredientsList: ["Water", "Applejuice", "Sugar", "Arom", "Syra"],
+				imageUrl: __WEBPACK_IMPORTED_MODULE_3__images_megaMate_louiJama_png___default.a
+			}, {
+				subtitle: 'Jungle Ginger',
+				subtitleClass: 'jungleGinger-subtitle',
+				description: 'Drink Mix is a mega dance party drink',
+				ingredientsList: ["Water", "Applejuice", "Sugar", "Arom", "Syra"],
+				imageUrl: __WEBPACK_IMPORTED_MODULE_4__images_megaMate_jungleGinger_png___default.a
+			}]
+		};
+		return _this;
+	}
+
+	_createClass(ProductList, [{
+		key: 'render',
+		value: function render() {
+			return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+				'div',
+				{ className: 'products', id: 'products' },
+				__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+					'div',
+					{ className: 'columns' },
+					__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+						'div',
+						{ className: 'column is-half' },
+						__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+							'h1',
+							{ className: 'title is-1' },
+							'Mega Products'
+						)
+					)
+				),
+				this.state.productList.map(function (val, i) {
+					return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__product___["a" /* default */], { key: val.subtitle, productData: val });
+				})
+			);
+		}
+	}]);
+
+	return ProductList;
+}(__WEBPACK_IMPORTED_MODULE_0_react__["Component"]);
+
+/* harmony default export */ __webpack_exports__["a"] = (ProductList);
+
+/***/ }),
+/* 275 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom__ = __webpack_require__(15);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react_dom__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__images_megaMate_louiJama_png__ = __webpack_require__(251);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__images_megaMate_louiJama_png___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__images_megaMate_louiJama_png__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__images_megaMate_jungleGinger_png__ = __webpack_require__(252);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__images_megaMate_jungleGinger_png___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__images_megaMate_jungleGinger_png__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__styles_styles_css__ = __webpack_require__(20);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__styles_styles_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__styles_styles_css__);
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+
+
+
+
+
+
+var Product = function (_Component) {
+	_inherits(Product, _Component);
+
+	function Product(props) {
+		_classCallCheck(this, Product);
+
+		var _this = _possibleConstructorReturn(this, (Product.__proto__ || Object.getPrototypeOf(Product)).call(this, props));
+
+		_this.state = {
+			showIngredientsList: false
+		};
+		_this.toggleShowIngredientsListClick = _this.toggleShowIngredientsListClick.bind(_this);
+		return _this;
+	}
+
+	_createClass(Product, [{
+		key: 'toggleShowIngredientsListClick',
+		value: function toggleShowIngredientsListClick() {
+			this.setState({ showIngredientsList: !this.state.showIngredientsList });
+		}
+	}, {
+		key: 'render',
+		value: function render() {
+
+			var listItems = this.props.productData.ingredientsList.map(function (val, i) {
+				return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+					'li',
+					{ key: i },
+					val
+				);
+			});
+
+			return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+				'div',
+				{ className: 'columns' },
+				__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+					'div',
+					{ className: 'column is-half' },
+					__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+						'h2',
+						{ className: "title is-3 " + this.props.productData.subtitleClass },
+						this.props.productData.subtitle
+					),
+					__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+						'p',
+						{ className: 'title is-6' },
+						this.props.productData.description
+					),
+					__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+						'button',
+						{ name: 'lji', id: 'lji',
+							onClick: this.toggleShowIngredientsListClick
+						},
+						this.state.showIngredientsList && "-" || "+"
+					),
+					__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+						'div',
+						null,
+						this.state.showIngredientsList && __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+							'ul',
+							null,
+							listItems
+						)
+					)
+				),
+				__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+					'div',
+					{ className: 'coloumn is-half' },
+					__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+						'figure',
+						{ className: 'image is-horizontal-center' },
+						__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { src: this.props.productData.imageUrl })
+					)
+				)
+			);
+		}
+	}]);
+
+	return Product;
+}(__WEBPACK_IMPORTED_MODULE_0_react__["Component"]);
+
+/* harmony default export */ __webpack_exports__["a"] = (Product);
 
 /***/ })
 /******/ ]);

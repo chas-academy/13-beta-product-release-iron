@@ -11,25 +11,21 @@ class Events extends Component {
 				<div className="bg-image"></div>
 				{ <div className="backgroundOverlay"></div> }
 
-				<div className="megaTitle block">
+				<div className="megaTitle">
 					<h1 className="title is-1 events-title">Mega Events</h1>
 					<h2 className="title is-3 events-subtitle">Upcoming</h2>
 				</div>
 
-				<div className="container Block events-placeholder">
+				<div className="container events-placeholder">
 					<h4 className="title is-4 events-name">5 Maj / Möllan Festival / Malmö</h4>
 				</div>
 
-				<div className="container Block events-placeholder">
+				<div className="container events-placeholder">
 					<h4 className="title is-4 events-name">14 June / Mega Party / Stockholm</h4>
 				</div>
 
-				<div className="container Block events-placeholder">
+				<div className="container events-placeholder">
 					<h4 className="title is-4 events-name">23 July / Trädgården / Stockholm</h4>
-				</div>
-
-				<div className="pastEvents">
-					<h2 className="title is-3 past-events-title">Past events</h2>
 				</div>
 
 			</div>
