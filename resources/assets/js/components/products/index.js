@@ -13,7 +13,7 @@ class Products extends Component {
 		  <div className="columns">
 			<div className="column is-half">
 			  <h1 className="title is-1">Mega Products</h1>
-			  <h2 className="title is-3 louiJama-subtitle">Loui Jama - Mega Mate</h2>
+			  <h2 className="title is-3 louiJama-subtitle">Loui Jama</h2>
 			  <p className="title is-6">Loui Jama is a mega dance party drink</p>
 	
 				<div class="dropdown is-hoverable">
@@ -46,7 +46,7 @@ class Products extends Component {
 
 		  <div className="columns">
 			<div className="column is-half">
-		   	<h2 className="title is-3 jungleGinger-subtitle">Jungle Ginger - Mega Mate</h2>
+		   	<h2 className="title is-3 jungleGinger-subtitle">Jungle Ginger</h2>
 				<p className="title is-6">Ingredients</p>
 				</div>
 				

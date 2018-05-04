@@ -30,7 +30,7 @@ class Resellers extends Component {
 							</ul>
 							</div>
 							<div className="column is-half is-desktop">
-						<h2 className="title is-3 resellers-subtitle">Uppsala</h2>            
+						<h2 className="title is-3 resellers-subtitle uppsala">Uppsala</h2>            
 							<ul>
 								<li className="locationName">Taps Beer Bar</li>
 								<li className="locationName">Uppsala Teknolog- och Naturvetarkår</li>
@@ -45,8 +45,8 @@ class Resellers extends Component {
 								<li className="locationName">Hallen Kött & Delikatesser, Helsingborg</li>
 								<li className="locationName">Jernbruket, Floda</li>
 								<li>
-								<button>
-									<a href="https://www.mat.se/butik/loui-jama-mega-mate-soda-factory-sthlm-33cl" target="_blank">Buy Online</a>
+								<button className="button buyOnline">
+									<a  id="buyOnline-btn" href="https://www.mat.se/butik/loui-jama-mega-mate-soda-factory-sthlm-33cl" target="_blank">Buy Online</a>
 									</button>
 								</li>
 							</ul>
