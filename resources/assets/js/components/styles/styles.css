@@ -276,6 +276,7 @@ iframe {
 	font-size: 2em;
 	font-weight: bold;
 	text-align: center;
+	text-transform: uppercase;
 }
 
 #footer-title {
@@ -370,6 +371,14 @@ iframe {
 
 	.title.is-3.title.is-3.resellers-subtitle.uppsala {
 		padding-top: 6.4em;
+	}
+
+	.footer {
+		text-align: left;
+	}
+
+	.footer-title {
+		text-align: left;
 	}
 }
 
