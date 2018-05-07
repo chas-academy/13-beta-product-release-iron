@@ -7,7 +7,6 @@ import Events from './Events';
 import Resellers from './Resellers';
 import Footer from './Footer';
 
-
 export default class Index extends Component {
 	render() {
 		return (

@@ -24,6 +24,7 @@
         "react-dom": "^15.4.2"
     },
     "dependencies": {
+        "react-burger-menu": "^2.4.4",
         "react-fontawesome": "^1.6.1",
         "react-modal": "^3.4.2",
         "react-player": "^1.4.0",
