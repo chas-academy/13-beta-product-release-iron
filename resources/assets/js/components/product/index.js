@@ -23,7 +23,7 @@ class Product extends Component {
 
 
 	  return (
-				<div className="columns">
+				<div className="columns" id="products">
 					<div className="column is-half">
 						<h2 className={"title is-3 "+this.props.productData.subtitleClass}>{this.props.productData.subtitle}</h2>
 						<p className="title is-6">{this.props.productData.description}</p>
