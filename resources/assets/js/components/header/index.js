@@ -13,7 +13,7 @@ class Header extends Component {
   render () {
     return (
 			<div>
-      <Menu width={ '20%' } right>
+      <Menu id="burger-menu" width={ '20%' } right>
         <a  className="menu-item" href="#products">Products</a>
         <a  className="menu-item" href="#events">Events</a>
         <a  className="menu-item" href="#resellers">Resellers</a>
