@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import Header from './Header';
 import Vision from './Vision';
-import Products from './Products';
+import ProductList from './productlist';
 import Events from './Events';
 import Resellers from './Resellers';
 import Footer from './Footer';
@@ -14,7 +14,7 @@ export default class Index extends Component {
 			<div>
 				<Header />
 				<Vision />
-				<Products />
+				<ProductList />
 				<Events />
 				<Resellers />
 				<Footer />

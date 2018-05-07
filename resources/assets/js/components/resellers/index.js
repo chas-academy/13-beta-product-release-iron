@@ -7,9 +7,9 @@ class Resellers extends Component {
 		return (
 			<div className="resellers" id="resellers">
 				<div className="columns">
-					<div className="column is-half">
-						<h1 className="title is-1 vision-title">Resellers</h1>
-						<h2 className="title is-3 vision-subtitle">Stockholm</h2>            
+					<div className="column is-half is-desktop">
+						<h1 className="title is-1 resellers-title">Resellers</h1>
+						<h2 className="title is-3 resellers-subtitle">Stockholm</h2>            
 							<ul>
 								<li className="locationName">Klara Strand Café</li>
 								<li className="locationName">ICA kvantum, Liljeholmen</li>
@@ -21,22 +21,22 @@ class Resellers extends Component {
 								<li className="locationName">Studentkåren DISK, Kista</li>
 								<li className="locationName">Kitchen & Table, Norrtull</li>
 							</ul>
-						<h2 className="title is-3 vision-subtitle">Malmö</h2>            
+						<h2 className="title is-3 resellers-subtitle">Malmö</h2>            
 							<ul>
 								<li className="locationName">Far I Hatten</li>
 								<li className="locationName">ICA Supermarket, Möllan</li>
 								<li className="locationName">Nya Tröls Bar & Restaurang</li>
 								<li className="locationName">Grand Hatt Öl & Mat</li>
 							</ul>
-						<h2 className="title is-3 vision-subtitle">Uppsala</h2>            
+					</div>
+					<div className="column is-half is-desktop">
+						<h2 className="title is-3 resellers-subtitle uppsala">Uppsala</h2>            
 							<ul>
 								<li className="locationName">Taps Beer Bar</li>
-								<li className="locationName">
-									Uppsala Teknolog- och Naturvetarkår
-								</li>
+								<li className="locationName">Uppsala Teknolog- och Naturvetarkår</li>
 								<li className="locationName">ICA Supermarket</li>
 							</ul>
-						<h2 className="title is-3 vision-subtitle">Övriga platser</h2>            
+						<h2 className="title is-3 resellers-subtitle">Övriga platser</h2>            
 							<ul>
 								<li className="locationName">ICA Supermarket Ålidhem, Umeå</li>
 								<li className="locationName">Ekolsunds Slott</li>
@@ -45,7 +45,9 @@ class Resellers extends Component {
 								<li className="locationName">Hallen Kött & Delikatesser, Helsingborg</li>
 								<li className="locationName">Jernbruket, Floda</li>
 								<li>
-									<a href="suEOdc">Link</a>
+								<button className="button buyOnline">
+									<a  id="buyOnline-btn" href="https://www.mat.se/butik/loui-jama-mega-mate-soda-factory-sthlm-33cl" target="_blank">Buy Online</a>
+									</button>
 								</li>
 							</ul>
 					</div>
@@ -59,4 +61,5 @@ class Resellers extends Component {
 		);
 	}
 }
+
 export default Resellers;

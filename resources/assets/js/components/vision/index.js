@@ -42,4 +42,5 @@ class Vision extends Component {
 		);
 	}
 }
+
 export default Vision;
