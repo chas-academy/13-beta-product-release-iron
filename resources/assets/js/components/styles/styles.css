@@ -92,7 +92,8 @@ p.title.is-6 {
 	font-weight: bold; 
 	font-size: 2em;
 	z-index: 1000;
-	text-transform: uppercase;  
+	text-transform: uppercase;
+	height: 2em;  
 }
 
 a:hover {
@@ -337,7 +338,6 @@ iframe {
 	
 }
 
-<<<<<<< HEAD
 #input-field::placeholder {
 	color: white;
 } 
@@ -389,7 +389,6 @@ iframe {
 		display: none; 
 	}
 }
-=======
 /* Position and sizing of burger button */
 .bm-burger-button {
   position: fixed;
@@ -438,4 +437,3 @@ iframe {
   background: rgba(0, 0, 0, 0.3);
 }	
 
->>>>>>> add hamburger-nav
