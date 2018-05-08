@@ -13,10 +13,13 @@ class Header extends Component {
   render () {
     return (
 			<div>
-      <Menu width={ '20%' } right>
-        <a id="home" className="menu-item" href="/">Products</a>
-        <a id="about" className="menu-item" href="/about">Events</a>
-        <a id="contact" className="menu-item" href="/contact">Resellers</a>
+      <Menu id="burger-menu" width={ '20%' } right>
+        <a  className="menu-item" href="#products">Products</a>
+        <a  className="menu-item" href="#events">Events</a>
+        <a  className="menu-item" href="#resellers">Resellers</a>
+        <a  className="menu-item" href="#contact">Contact</a>
+
+
 				{/* <a onClick={ this.showSettings } className="menu-item--big" href="">Settings</a> */}
 				</Menu>
 
