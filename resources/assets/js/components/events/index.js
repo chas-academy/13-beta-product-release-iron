@@ -8,7 +8,7 @@ import { debug } from 'util';
 	 constructor(){
 		 super();
 		 this.state = {
-			 test: [],
+			 events: [],
 		 };
 		}
 		componentDidMount() {
@@ -18,11 +18,10 @@ import { debug } from 'util';
 			 return response.json();
 		 })
 		 .then(function(data) {
-			 console.log(data);
-			 now.setState({ test: data });
+			 now.setState({ events: data });
 		 }).catch(function(error) {
 			console.log(error);
-	});
+		});
 
 		}
 		
@@ -39,8 +38,8 @@ import { debug } from 'util';
 					 		<h2 className="title is-3 events-subtitle">Upcoming</h2>
 					 	</div>
 
-							{this.state.test && this.state.test.length > 0 ? (
-								this.state.test.map((keyName, keyIndex) => {
+							{this.state.events && this.state.events.length > 0 ? (
+								this.state.events.map((keyName, keyIndex) => {
 									return (
 					 					<div className="container Block events-placeholder" key = {`${keyName.id}`}>
 											<h4 className="title is-4 events-name">{keyName.date} / {keyName.eventName} / {keyName.city}</h4>

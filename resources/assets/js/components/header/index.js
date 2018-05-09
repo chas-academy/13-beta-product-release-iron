@@ -6,10 +6,28 @@ import ReactPlayer from 'react-player';
 import { slide as Menu } from 'react-burger-menu';
 
 class Header extends Component {
+  constructor(){
+    super();
+    this.state = {
+      header: "",
+    };
+   }
   showSettings (event) {
     event.preventDefault();
   }
-
+  componentDidMount() {
+    const now = this;
+   fetch('/api/header')
+   .then(function(response) {
+     return response.json();
+   })
+   .then(function(data) {
+     console.log(data);
+     now.setState({ header: data[0].videoUrl });
+   }).catch(function(error) {
+    console.log(error);
+  });
+}
   render () {
     return (
 			<div>
@@ -22,7 +40,7 @@ class Header extends Component {
 
 						<div className="Video">
  						<video style={{ objectFit: 'cover', width: '100%', height: '100%' }}		
- 								className="banner" src="http://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp4" autoPlay/>
+ 								className="banner" src={this.state.header} autoPlay/>
 
 								 <img src={megamate_gulsvart} className="megamate-logo navbar-brand is-mobile is-overlay" alt="logo" />
 						</div>
