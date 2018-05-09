@@ -28,3 +28,5 @@ Route::get('/products', 'ProductController@getAll');
 Route::get('/resellercity', 'ResellerCityController@getAll');
 Route::get('/event', 'EventController@getAll');
 Route::get('/header', 'HeaderController@getAll');
+Route::get('/vision', 'VisionController@getAll');
+Route::get('/banner', 'VisionController@getBanner');
