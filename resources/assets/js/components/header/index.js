@@ -7,10 +7,28 @@ import ReactPlayer from 'react-player';
 import { slide as Menu } from 'react-burger-menu';
 
 class Header extends Component {
+  constructor(){
+    super();
+    this.state = {
+      header: "",
+    };
+   }
   showSettings (event) {
     event.preventDefault();
   }
-
+  componentDidMount() {
+    const now = this;
+   fetch('/api/header')
+   .then(function(response) {
+     return response.json();
+   })
+   .then(function(data) {
+     console.log(data);
+     now.setState({ header: data[0].videoUrl });
+   }).catch(function(error) {
+    console.log(error);
+  });
+}
   render () {
     return (
 			<header>
