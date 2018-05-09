@@ -11,24 +11,7 @@ class ProductList extends Component {
 	constructor() {
 		super();
 		this.state = {
-			productList: [
-				// {
-				// subtitle: 'Loui Jama',
-				// subtitleClass: 'louiJama-subtitle',
-				// description: 'Loui Jama is a mega dance party drink',
-				// ingredientsList: ["Water", "Applejuice", "Sugar", "Arom", "Syra"],
-				// imageUrl: LouiJama
-				// },
-				
-				// {
-				// 	subtitle: 'Jungle Ginger',
-				// 	subtitleClass: 'jungleGinger-subtitle',
-				// 	description: 'Drink Mix is a mega dance party drink',
-				// 	ingredientsList: ["Water", "Applejuice", "Sugar", "Arom", "Syra"],
-				// 	imageUrl: JungleGinger
-				// } 
-
-			],
+			productList: [],
 		}
 	}
 	componentDidMount() {
@@ -38,7 +21,6 @@ class ProductList extends Component {
 				return response.json();
 			})
 			.then(function(data) {
-				console.log(data);
 				now.setState({ productList: data});
 			})
 			.catch(function(error) {

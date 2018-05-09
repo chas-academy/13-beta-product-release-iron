@@ -67880,24 +67880,7 @@ var ProductList = function (_Component) {
 		var _this = _possibleConstructorReturn(this, (ProductList.__proto__ || Object.getPrototypeOf(ProductList)).call(this));
 
 		_this.state = {
-			productList: [
-				// {
-				// subtitle: 'Loui Jama',
-				// subtitleClass: 'louiJama-subtitle',
-				// description: 'Loui Jama is a mega dance party drink',
-				// ingredientsList: ["Water", "Applejuice", "Sugar", "Arom", "Syra"],
-				// imageUrl: LouiJama
-				// },
-
-				// {
-				// 	subtitle: 'Jungle Ginger',
-				// 	subtitleClass: 'jungleGinger-subtitle',
-				// 	description: 'Drink Mix is a mega dance party drink',
-				// 	ingredientsList: ["Water", "Applejuice", "Sugar", "Arom", "Syra"],
-				// 	imageUrl: JungleGinger
-				// } 
-
-			]
+			productList: []
 		};
 		return _this;
 	}
@@ -67909,7 +67892,6 @@ var ProductList = function (_Component) {
 			fetch('/api/products').then(function (response) {
 				return response.json();
 			}).then(function (data) {
-				console.log(data);
 				now.setState({ productList: data });
 			}).catch(function (error) {
 				console.log(error);
@@ -68011,7 +67993,6 @@ var Product = function (_Component) {
 	}, {
 		key: 'render',
 		value: function render() {
-
 			return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
 				'div',
 				{ className: 'columns' },

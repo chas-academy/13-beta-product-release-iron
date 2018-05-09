@@ -30,8 +30,6 @@ class Product extends Component {
 	}
 
 	render() {
-
-
 	  return (
 				<div className="columns" id="products">
 					<div className="column is-half">
