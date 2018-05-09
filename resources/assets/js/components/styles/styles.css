@@ -337,7 +337,6 @@ iframe {
 	
 }
 
-<<<<<<< HEAD
 #input-field::placeholder {
 	color: white;
 } 
@@ -389,7 +388,6 @@ iframe {
 		display: none; 
 	}
 }
-=======
 /* Position and sizing of burger button */
 .bm-burger-button {
   position: fixed;
@@ -438,4 +436,3 @@ iframe {
   background: rgba(0, 0, 0, 0.3);
 }	
 
->>>>>>> add hamburger-nav
