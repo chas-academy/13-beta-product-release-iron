@@ -394,11 +394,24 @@ iframe {
 }
 /* Position and sizing of burger button */
 .bm-burger-button {
+	visibility: hidden;
   position: fixed;
   width: 36px;
   height: 30px;
   right: 36px;
   top: 36px;
+}
+
+/*mediaQuery burger-meny */
+@media screen and (max-width: 1024px) {
+.bm-burger-button {
+	visibility: visible; 
+	position: fixed;
+  width: 36px;
+  height: 30px;
+  right: 36px;
+  top: 36px;
+}
 }
 
 /* Color/shape of burger icon bars */

@@ -14,14 +14,15 @@ class Header extends Component {
   render () {
     return (
 			<div>
-        <Menu width={ '20%' } right>
-          <a  className="menu-item" href="#products">Products</a>
-          <a  className="menu-item" href="#events">Events</a>
-          <a  className="menu-item" href="#resellers">Resellers</a>
-          <a  className="menu-item" href="#contact">Contact</a>
-
-				  {/* <a onClick={ this.showSettings } className="menu-item--big" href="">Settings</a> */}
-				</Menu>
+        <div className="navbar-brand is-overlay">
+          <Menu width={ '20%' } right>
+            <a  className="menu-item" href="#products">Products</a>
+            <a  className="menu-item" href="#events">Events</a>
+            <a  className="menu-item" href="#resellers">Resellers</a>
+            <a  className="menu-item" href="#contact">Contact</a>
+				    {/* <a onClick={ this.showSettings } className="menu-item--big" href="">Settings</a> */}
+				  </Menu>
+        </div>
         <div className="navbar-menu is-overlay"> 
  						  <div className="navbar-end">
  								<a href="#products" className="is-tab is-hidden-mobile is-active navbar-customize">Products</a>
