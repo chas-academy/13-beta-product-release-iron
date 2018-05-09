@@ -405,7 +405,7 @@ iframe {
 /*mediaQuery burger-meny */
 @media screen and (max-width: 1024px) {
 .bm-burger-button {
-	visibility: visible; 
+	visibility: visible; 	
 	position: fixed;
   width: 36px;
   height: 30px;
