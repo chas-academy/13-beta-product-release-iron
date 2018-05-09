@@ -56243,7 +56243,6 @@ var Header = function (_Component) {
       fetch('/api/header').then(function (response) {
         return response.json();
       }).then(function (data) {
-        console.log(data);
         now.setState({ header: data[0].videoUrl });
       }).catch(function (error) {
         console.log(error);
@@ -67738,10 +67737,6 @@ module.exports = exports['default'];
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react_dom__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__styles_styles_css__ = __webpack_require__(19);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__styles_styles_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__styles_styles_css__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__images_megaMate_gubbe_png__ = __webpack_require__(271);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__images_megaMate_gubbe_png___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__images_megaMate_gubbe_png__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__images_megaMate_flagga_png__ = __webpack_require__(272);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__images_megaMate_flagga_png___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__images_megaMate_flagga_png__);
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -67754,18 +67749,42 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 
 
-
-
 var Vision = function (_Component) {
 	_inherits(Vision, _Component);
 
 	function Vision() {
 		_classCallCheck(this, Vision);
 
-		return _possibleConstructorReturn(this, (Vision.__proto__ || Object.getPrototypeOf(Vision)).apply(this, arguments));
+		var _this = _possibleConstructorReturn(this, (Vision.__proto__ || Object.getPrototypeOf(Vision)).call(this));
+
+		_this.state = {
+			vision: [],
+			banner: ''
+		};
+		return _this;
 	}
 
 	_createClass(Vision, [{
+		key: 'componentDidMount',
+		value: function componentDidMount() {
+			var now = this;
+			fetch('/api/vision').then(function (response) {
+				return response.json();
+			}).then(function (data) {
+				now.setState({ vision: data[0] });
+			}).catch(function (error) {
+				console.log(error);
+			});
+
+			fetch('/api/banner').then(function (response) {
+				return response.json();
+			}).then(function (data) {
+				now.setState({ banner: data[0] });
+			}).catch(function (error) {
+				console.log(error);
+			});
+		}
+	}, {
 		key: 'render',
 		value: function render() {
 			return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
@@ -67780,17 +67799,17 @@ var Vision = function (_Component) {
 						__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
 							'h1',
 							{ className: 'title is-1 vision-title' },
-							'Mega Vision'
+							this.state.vision.title
 						),
 						__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
 							'h2',
 							{ className: 'title is-3 vision-subtitle' },
-							'Mega Mat\xE8 was created from our love of dance, Africa and the club scene.'
+							this.state.vision.subtitle
 						),
 						__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
 							'p',
 							{ className: 'vision-paragraph' },
-							'After over 20 years of working in restaurants and clubs, our frustration, that there was no energy generating, refreshing and tasty alcohol-free beverage specifically made for the dance floor got too much. We knew that the base for our drink would be tea, the spice ginger and the bottle a tribute to Africa where the founder\u2019s wife has her roots. Mega Mate was born and we headed off to the dance floors, festivals and clubs.'
+							this.state.vision.content
 						)
 					),
 					__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
@@ -67799,7 +67818,7 @@ var Vision = function (_Component) {
 						__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
 							'figure',
 							{ className: 'image is-horizontal-center' },
-							__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { id: 'gubbe', src: __WEBPACK_IMPORTED_MODULE_3__images_megaMate_gubbe_png___default.a })
+							__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { id: 'gubbe', src: this.state.vision.imageUrl })
 						)
 					)
 				),
@@ -67809,7 +67828,7 @@ var Vision = function (_Component) {
 					__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
 						'figure',
 						{ className: 'image' },
-						__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { id: 'megaMateFlagga', src: __WEBPACK_IMPORTED_MODULE_4__images_megaMate_flagga_png___default.a })
+						__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { id: 'megaMateFlagga', src: this.state.banner.imageUrl })
 					)
 				)
 			);
@@ -67822,18 +67841,8 @@ var Vision = function (_Component) {
 /* harmony default export */ __webpack_exports__["a"] = (Vision);
 
 /***/ }),
-/* 271 */
-/***/ (function(module, exports) {
-
-module.exports = "/images/megaMate_gubbe.png?e0d4fd26e91f2fa9ba9c653237539407";
-
-/***/ }),
-/* 272 */
-/***/ (function(module, exports) {
-
-module.exports = "/images/megaMate_flagga.png?4fc67d83fc4a112725ff1217a26d9c49";
-
-/***/ }),
+/* 271 */,
+/* 272 */,
 /* 273 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
