@@ -5,6 +5,7 @@ import megamate_gulsvart from '../images/megaMate_loggo.png';
 import ReactPlayer from 'react-player';
 import { slide as Menu } from 'react-burger-menu';
 
+
 class Header extends Component {
   showSettings (event) {
     event.preventDefault();

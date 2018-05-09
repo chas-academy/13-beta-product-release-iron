@@ -6,6 +6,7 @@ import ProductList from './productlist';
 import Events from './Events';
 import Resellers from './Resellers';
 import Footer from './Footer';
+import { BrowserRouter } from 'react-router-dom'; 
 
 export default class Index extends Component {
 	render() {
