@@ -8,5 +8,4 @@ use Illuminate\Database\Eloquent\Model;
 class Reseller extends Model
 {
   protected $table = 'resellers';
-  public $timestamps = false;
 }
