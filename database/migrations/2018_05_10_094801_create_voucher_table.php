@@ -18,6 +18,7 @@ class CreateVoucherTable extends Migration
             $table->string('title');
             $table->string('subtitle');
             $table->longText('content');
+            $table->date('date');
             $table->time('startTime');
             $table->time('endTime');
             $table->timestamps();
