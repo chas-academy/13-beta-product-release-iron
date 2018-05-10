@@ -21,30 +21,14 @@ add('writable_dirs', []);
 set('allow_anonymous_stats', false);
 
 // Hosts
-
 host('teamiron.me')
     ->user('web')
     ->identityFile('~/.ssh/id_rsa')
     ->stage('production')
-    ->set('branch', 'master')
+    ->set('branch', 'feat-deploy')
     ->set('deploy_path', '/var/www/teamiron.me');
     
-host('dev.teamiron.me')
-    ->user('web')
-    ->identityFile('~/.ssh/id_rsa')
-    ->stage('dev')
-    ->set('branch', 'develop')
-    ->set('deploy_path', '/var/www/dev.teamiron.me');    
-
-host('staging.teamiron.me')
-    ->user('web')
-    ->identityFile('~/.ssh/id_rsa')
-    ->stage('staging')
-    ->set('branch', 'master')
-    ->set('deploy_path', '/var/www/staging.teamiron.me');    
-    
 // Tasks
-
 task('build', function () {
     run('cd {{release_path}} && npm install && npm run prod');
 });
