@@ -10,22 +10,30 @@ class Product extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			showIngredientsList: false 
+			showIngredientsList: false,
+			ingredientsArray: []
 		}
 		this.toggleShowIngredientsListClick = this.toggleShowIngredientsListClick.bind(this);
+	}
+	componentDidMount() {
+		this.createIngredientsArray(this.props.productData.ingredients)
 	}
 
  	toggleShowIngredientsListClick() {
 		this.setState({showIngredientsList: !this.state.showIngredientsList});
 	}
+	
+	createIngredientsArray(ingredients) {
+		this.setState({
+			ingredientsArray: ingredients.split(',')
+		});
+	}
 
 	render() {
-
-
 	  return (
 				<div className="columns" id="products">
 					<div className="column is-half">
-						<h2 className={"title is-3 "+this.props.productData.subtitleClass}>{this.props.productData.subtitle}</h2>
+						<h2 className={"title is-3 "}>{this.props.productData.name}</h2>
 						<p className="title is-6">{this.props.productData.description}</p>
 						
 						<button className="toggle-btn"
@@ -36,8 +44,8 @@ class Product extends Component {
 						}</button>
 
 						<div>
-						{this.state.showIngredientsList &&
-							<ul>{this.props.productData.ingredientsList.map((val, i) => 
+						{this.state.showIngredientsList && 
+							<ul>{this.state.ingredientsArray.map((val, i) => 
 								<li key={i}>{val}</li>
 								)}</ul>			
 						}

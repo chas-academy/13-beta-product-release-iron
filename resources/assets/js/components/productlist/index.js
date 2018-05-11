@@ -11,25 +11,21 @@ class ProductList extends Component {
 	constructor() {
 		super();
 		this.state = {
-			productList: [
-				{
-				subtitle: 'Loui Jama',
-				subtitleClass: 'louiJama-subtitle',
-				description: 'Loui Jama is a mega dance party drink',
-				ingredientsList: ["Water", "Applejuice", "Sugar", "Arom", "Syra"],
-				imageUrl: LouiJama
-				},
-				
-				{
-					subtitle: 'Jungle Ginger',
-					subtitleClass: 'jungleGinger-subtitle',
-					description: 'Drink Mix is a mega dance party drink',
-					ingredientsList: ["Water", "Applejuice", "Sugar", "Arom", "Syra"],
-					imageUrl: JungleGinger
-				} 
-
-			]
+			productList: [],
 		}
+	}
+	componentDidMount() {
+		const now = this;
+		fetch('/api/products')
+			.then(function(response) {
+				return response.json();
+			})
+			.then(function(data) {
+				now.setState({ productList: data});
+			})
+			.catch(function(error) {
+				console.log(error);
+			});
 	}
 
 	render() {
@@ -40,9 +36,11 @@ class ProductList extends Component {
 						<h1 className="title is-1">Mega Products</h1>
 					</div>
 				</div>
-					{this.state.productList.map((val, i) => 
-						<Product key={val.subtitle} productData={val} />
-						)}
+					{
+						this.state.productList.map((val, i) => {
+							return <Product key={val.id} productData={val} />
+						})
+					}
 			</div>		 
 	  );
 	}
