@@ -6,7 +6,8 @@ class Resellers extends Component {
   constructor() {
     super();
     this.state = {
-      cities: []
+      cities: [],
+      reseller: []
     };
   }
 
@@ -23,6 +24,18 @@ class Resellers extends Component {
       .catch(function(error) {
         console.log(error);
       });
+
+    fetch("/api/reseller")
+      .then(function(res) {
+        return res.json();
+      })
+      .then(function(data) {
+        console.log(data);
+        now.setState({ reseller: data });
+      })
+      .catch(function(error) {
+        console.log(error);
+      });
   }
 
   render() {
@@ -31,6 +44,11 @@ class Resellers extends Component {
         <div>
           {this.state.cities.map((val, i) => {
             return <div key={i}>{val.cityName}</div>;
+          })}
+        </div>
+        <div>
+          {this.state.reseller.map((value, index) => {
+            return <div key={index}>{value.name}</div>;
           })}
         </div>
         <div className="columns">
