@@ -25,3 +25,8 @@ Route::get('/voucher', function() {
     return view('voucher');
 });
 
+Route::get('/test', function() {
+    $title = setting('site.title');
+    var_dump($title);
+    return  $title;
+});
