@@ -47,11 +47,10 @@ p.title.is-6 {
 
 .title.is-1.events-title {
 	margin-top: 0;
-
-
-
 }
-.title:not(:last-child), .subtitle:not(:last-child) {
+
+.title:not(:last-child), 
+.subtitle:not(:last-child) {
 	margin-top: 2rem;
 	margin-bottom: 0.5rem;
 }
@@ -190,7 +189,13 @@ img#gubbe {
 	width: 50%;
 	padding-top: 3em;
 }
-    
+
+.vision {
+	background-color:	#FFFAF0;
+
+	
+}
+
 /* image section */ 
 img#megaMateFlagga {
 	padding-top: 5em;
