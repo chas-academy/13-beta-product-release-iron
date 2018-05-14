@@ -56365,7 +56365,7 @@ exports = module.exports = __webpack_require__(239)(false);
 
 
 // module
-exports.push([module.i, "body, button, input, select, textarea {\n\tfont-family: 'Oswald', sans-serif; \n}\n\nbody {\n\tpadding: 0px;\n\tmargin: 0px;\n}\n\n/* titles */ \n\n.bm-overlay {\n\tbackground: unset !important;  \n}\n.title.is-1 {\n\tpadding-top: 1em;\n\tfont-size: 2.8em;\n\ttext-transform: uppercase;\n\tfont-weight: 600;\n}\n\n.title.is-3 {\n\tfont-size: 1.8em;\n\ttext-transform: uppercase;\n}\n\np.title.is-6 {\n\tfont-size: 1em;\n\tmargin-top: 1em;\n}\n\n.title.is-3.vision-subtitle {\n\tcolor: #E43E28;\n}\n\n.title.is-3.louiJama-subtitle {\n\tcolor: #FAB418;\n}\n\n.title.is-3.jungleGinger-subtitle {\n\tcolor: #305A80;\n}\n\n.title.is-3.resellers-subtitle {\n\tcolor: #4A754A;\n}\n\n.title.is-1.events-title {\n\tmargin-top: 0;\n}\n\n.title:not(:last-child), \n.subtitle:not(:last-child) {\n\tmargin-top: 2rem;\n\tmargin-bottom: 0.5rem;\n}\n\n/* buttons */ \n#events-button,\n.footer {\n\tbackground-color: #FAB418;\n}\n\n.button {\n\tborder-radius: 0;\n}\n\n.toggle-btn {\n\tborder-style: none;\n\tcolor: black;\n\tfont-size: 3em;\n}\n\n\n/* voucher */ \n.modalButton {\n\tposition: absolute;\n\tbottom: 2%;\n}\n\n/* header */ \nheader {\n\toverflow: hidden;\n\tmax-height: 100%;\n}\n\nVideo {\n\tposition: inherit;\n\tmin-width: 100%;\n\toverflow: hidden;\n\tz-index: -1;\n}\n\n.banner {\n\twidth: 100%; \n}\n\n.megamate-logo {\n\twidth: 10%;\n\tmargin-left: 3%; \n\tmargin-top: 3%; \n}\n\n.navbar-customize {\n\tcolor: white; \n\tmargin: 10%; \n\tfont-weight: bold; \n\tfont-size: 2em;\n\tz-index: 1000;\n\ttext-transform: uppercase;  \n}\n\na:hover {\n\tcolor: #FAB418;  \n}\n\n.burger-customize {\n\tbackground-color: transparent;\n\tmargin-left: 88%; \n}\n\n.homepage-hero-module {\n\tborder-right: none;\n\tborder-left: none;\n\tposition: relative;\n}\n\n.no-video .video-container video,\n.touch .video-container video {\n\tdisplay: none;\n}\n\n.no-video .video-container .poster,\n.touch .video-container .poster {\n\tdisplay: block !important;\n}\n\n.video-container {\n\tposition: relative;\n\tbottom: 0%;\n\tleft: 0%;\n\theight: 100%;\n\twidth: 100%;\n\toverflow: hidden;\n\tbackground: #000;\n}\n\n.video-container .poster img {\n\twidth: 100%;\n\tbottom: 0;\n\tposition: absolute;\n}\n\n.video-container .filter {\n\tz-index: 100;\n\tposition: absolute;\n\tbackground: rgba(0, 0, 0, 0.4);\n\twidth: 100%;\n}\n\n.video-container video {\n\tposition: absolute;\n\tz-index: 0;\n\tbottom: 0;\n}\n\n.video-container video.fillWidth {\n\twidth: 100%;\n}\n\n\n/* Vision \n.vision-paragraph {\n\tfont-size: 1.2em;\n\tline-height: 1.3em;\n\tpadding-top: 5px;\n}\n\n.column {\n\tpadding: 0em 5em 0em 5em;\n}\n\nimg#gubbe, #louiJama, #jungleGinger {\n\tmargin-left: auto;\n\tmargin-right: auto;\n}\n\nimg#gubbe {\n\twidth: 50%;\n\tpadding-top: 3em;\n}\n\n.vision {\n\tbackground-color:\t#FFFAF0;\n}*/ \n\n/* image section  \nimg#megaMateFlagga {\n\tpadding-top: 5em;\n}  */\n\n\n\n/* products \n.background {\n\tbackground-color:#fff;\n}\n\n.productSite {\n\tdisplay:flex;\n\tjustify-content: space-around;\n}\n\n.productInfo {\n\tpadding-top: 17em;\n}\n*/ \n\n/* events css \n.events {\n\tmin-height: 40em;\n\tcolor: #fff;\n\tmax-width: 100%;\n}\n\n.events-title,\n.events-subtitle,\n.events-name,\n.past-events-title,\n.events-p {\n  color: white;\n}\n\n.title.is-4.events-name {\n\tfont-size: 1.8em;\n}\n\n.events .bg-image {\n\tposition: absolute;\n\tbackground: #333 url('../images/megaMate_eventsbg.png');\n\tbackground-position: center;\n\tbackground-repeat: no-repeat;\n\tbackground-size: cover;\n\twidth: 100%;\n\theight: 40em;\n\tz-index: -1;\n}\n\n.megaTitle {\n\tpadding: 5em;\n}\n\n.events-placeholder {\n\t\tpadding: 10px 50px 5px 50px;\n} \n\n#events-button {\n\tcolor: white;\n} */\n\n/*  Resellers \n.map {\n  padding-top: 5em;\n}\n\n.locationName {\n\tpadding-top: 5px;\n\tfont-size: 1.2em;\n}\n\niframe {\n\theight: 400px;\n\twidth: 100%;\n\tpadding: 0;\n}\n\n.buyOnline {\n\tmargin-top: 2em;\n\tbackground-color: #FAB418; \n\tborder-color: transparent;\n\twidth: 200px;\n\tbox-shadow: 0 8px 16px 0 rgba(0,0,0,0.05), 0 6px 20px 0 rgba(0,0,0,0.05);\n}\n\n#buyOnline-btn {\n\tcolor: white;\n}\n*/ \n\n/*\n\n@media screen and (min-width: 768px) {\n\timg#gubbe {\n\t\twidth: 80%;\n\t\tmargin-top: auto;\n\t\tmargin-bottom: auto;\n\t}\n\n\t.title.is-3.title.is-3.resellers-subtitle.uppsala {\n\t\tpadding-top: 6.4em;\n\t}\n} */\n\n/* mediaQuery Mobile \n@media screen and (max-width: 568px) {\n\t#gubbe {\n\t\tdisplay: none; \n\t}\n} */\n\n\n/* Position and sizing of burger button */\n.bm-burger-button {\n  position: fixed;\n  width: 36px;\n  height: 30px;\n  right: 36px;\n  top: 36px;\n}\n\n/* Color/shape of burger icon bars */\n.bm-burger-bars {\n  background: #373a47;\n}\n\n/* Position and sizing of clickable cross button */\n.bm-cross-button {\n  height: 24px;\n  width: 24px;\n}\n\n/* Color/shape of close button cross */\n.bm-cross {\n  background: #bdc3c7;\n}\n\n/* General sidebar styles */\n.bm-menu {\n  background: #373a47;\n  padding: 2.5em 1.5em 0;\n  font-size: 1.15em;\n}\n\n/* Morph shape necessary with bubble or elastic */\n.bm-morph-shape {\n  fill: #373a47;\n}\n\n/* Wrapper for item list */\n.bm-item-list {\n  color: #b8b7ad;\n  padding: 0.8em;\n}\n\n/* Styling of overlay */\n.bm-overlay {\n  background: rgba(0, 0, 0, 0.3);\n}\t\n\n", ""]);
+exports.push([module.i, "body, button, input, select, textarea {\n\tfont-family: 'Oswald', sans-serif; \n}\n\nbody {\n\tpadding: 0px;\n\tmargin: 0px;\n}\n\n/* titles */ \n\n.bm-overlay {\n\tbackground: unset !important;  \n}\n.title.is-1 {\n\tpadding-top: 1em;\n\tfont-size: 2.8em;\n\ttext-transform: uppercase;\n\tfont-weight: 600;\n}\n\n.title.is-3 {\n\tfont-size: 1.8em;\n\ttext-transform: uppercase;\n}\n\np.title.is-6 {\n\tfont-size: 1em;\n\tmargin-top: 1em;\n\tfont-weight: 400;\n}\n\n.title.is-3.vision-subtitle {\n\tcolor: #E43E28;\n}\n\n.title.is-3.louiJama-subtitle {\n\tcolor: #FAB418;\n}\n\n.title.is-3.jungleGinger-subtitle {\n\tcolor: #305A80;\n}\n\n.title.is-3.resellers-subtitle {\n\tcolor: #4A754A;\n}\n\n.title.is-1.events-title {\n\tmargin-top: 0;\n}\n\n.title:not(:last-child), \n.subtitle:not(:last-child) {\n\tmargin-top: 2rem;\n\tmargin-bottom: 0.5rem;\n}\n\n/* buttons */ \n\n.button {\n\tborder-radius: 0;\n}\n\n.column {\n\tpadding: 0em 5em 0em 5em;\n}\n\n\n/* voucher */ \n.modalButton {\n\tposition: absolute;\n\tbottom: 2%;\n}\n\n/* header */ \nheader {\n\toverflow: hidden;\n\tmax-height: 100%;\n}\n\nVideo {\n\tposition: inherit;\n\tmin-width: 100%;\n\toverflow: hidden;\n\tz-index: -1;\n}\n\n.banner {\n\twidth: 100%; \n}\n\n.megamate-logo {\n\twidth: 10%;\n\tmargin-left: 3%; \n\tmargin-top: 3%; \n}\n\n.navbar-customize {\n\tcolor: white; \n\tmargin: 10%; \n\tfont-weight: bold; \n\tfont-size: 2em;\n\tz-index: 1000;\n\ttext-transform: uppercase;  \n}\n\na:hover {\n\tcolor: #FAB418;  \n}\n\n.burger-customize {\n\tbackground-color: transparent;\n\tmargin-left: 88%; \n}\n\n.homepage-hero-module {\n\tborder-right: none;\n\tborder-left: none;\n\tposition: relative;\n}\n\n.no-video .video-container video,\n.touch .video-container video {\n\tdisplay: none;\n}\n\n.no-video .video-container .poster,\n.touch .video-container .poster {\n\tdisplay: block !important;\n}\n\n.video-container {\n\tposition: relative;\n\tbottom: 0%;\n\tleft: 0%;\n\theight: 100%;\n\twidth: 100%;\n\toverflow: hidden;\n\tbackground: #000;\n}\n\n.video-container .poster img {\n\twidth: 100%;\n\tbottom: 0;\n\tposition: absolute;\n}\n\n.video-container .filter {\n\tz-index: 100;\n\tposition: absolute;\n\tbackground: rgba(0, 0, 0, 0.4);\n\twidth: 100%;\n}\n\n.video-container video {\n\tposition: absolute;\n\tz-index: 0;\n\tbottom: 0;\n}\n\n.video-container video.fillWidth {\n\twidth: 100%;\n}\n\n\n/* Vision \n.vision-paragraph {\n\tfont-size: 1.2em;\n\tline-height: 1.3em;\n\tpadding-top: 5px;\n}\n\n.column {\n\tpadding: 0em 5em 0em 5em;\n}\n\nimg#gubbe, #louiJama, #jungleGinger {\n\tmargin-left: auto;\n\tmargin-right: auto;\n}\n\nimg#gubbe {\n\twidth: 50%;\n\tpadding-top: 3em;\n}\n\n.vision {\n\tbackground-color:\t#FFFAF0;\n}*/ \n\n/* image section  \nimg#megaMateFlagga {\n\tpadding-top: 5em;\n}  */\n\n\n\n/* products \n.background {\n\tbackground-color:#fff;\n}\n\n.productSite {\n\tdisplay:flex;\n\tjustify-content: space-around;\n}\n\n.productInfo {\n\tpadding-top: 17em;\n}\n*/ \n\n/* events css \n.events {\n\tmin-height: 40em;\n\tcolor: #fff;\n\tmax-width: 100%;\n}\n\n.events-title,\n.events-subtitle,\n.events-name,\n.past-events-title,\n.events-p {\n  color: white;\n}\n\n.title.is-4.events-name {\n\tfont-size: 1.8em;\n}\n\n.events .bg-image {\n\tposition: absolute;\n\tbackground: #333 url('../images/megaMate_eventsbg.png');\n\tbackground-position: center;\n\tbackground-repeat: no-repeat;\n\tbackground-size: cover;\n\twidth: 100%;\n\theight: 40em;\n\tz-index: -1;\n}\n\n.megaTitle {\n\tpadding: 5em;\n}\n\n.events-placeholder {\n\t\tpadding: 10px 50px 5px 50px;\n} \n\n#events-button {\n\tcolor: white;\n} */\n\n/*  Resellers \n.map {\n  padding-top: 5em;\n}\n\n.locationName {\n\tpadding-top: 5px;\n\tfont-size: 1.2em;\n}\n\niframe {\n\theight: 400px;\n\twidth: 100%;\n\tpadding: 0;\n}\n\n.buyOnline {\n\tmargin-top: 2em;\n\tbackground-color: #FAB418; \n\tborder-color: transparent;\n\twidth: 200px;\n\tbox-shadow: 0 8px 16px 0 rgba(0,0,0,0.05), 0 6px 20px 0 rgba(0,0,0,0.05);\n}\n\n#buyOnline-btn {\n\tcolor: white;\n}\n*/ \n\n/*\n\n@media screen and (min-width: 768px) {\n\timg#gubbe {\n\t\twidth: 80%;\n\t\tmargin-top: auto;\n\t\tmargin-bottom: auto;\n\t}\n\n\t.title.is-3.title.is-3.resellers-subtitle.uppsala {\n\t\tpadding-top: 6.4em;\n\t}\n} */\n\n/* mediaQuery Mobile \n@media screen and (max-width: 568px) {\n\t#gubbe {\n\t\tdisplay: none; \n\t}\n} */\n\n\n/* Position and sizing of burger button */\n.bm-burger-button {\n  position: fixed;\n  width: 36px;\n  height: 30px;\n  right: 36px;\n  top: 36px;\n}\n\n/* Color/shape of burger icon bars */\n.bm-burger-bars {\n  background: #373a47;\n}\n\n/* Position and sizing of clickable cross button */\n.bm-cross-button {\n  height: 24px;\n  width: 24px;\n}\n\n/* Color/shape of close button cross */\n.bm-cross {\n  background: #bdc3c7;\n}\n\n/* General sidebar styles */\n.bm-menu {\n  background: #373a47;\n  padding: 2.5em 1.5em 0;\n  font-size: 1.15em;\n}\n\n/* Morph shape necessary with bubble or elastic */\n.bm-morph-shape {\n  fill: #373a47;\n}\n\n/* Wrapper for item list */\n.bm-item-list {\n  color: #b8b7ad;\n  padding: 0.8em;\n}\n\n/* Styling of overlay */\n.bm-overlay {\n  background: rgba(0, 0, 0, 0.3);\n}\t\n\n", ""]);
 
 // exports
 
@@ -67843,15 +67843,6 @@ var Vision = function (_Component) {
               __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img", { id: "gubbe", src: this.state.vision.imageUrl })
             )
           )
-        ),
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-          "section",
-          { className: "containter" },
-          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            "figure",
-            { className: "image" },
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img", { id: "megaMateFlagga", src: this.state.banner.imageUrl })
-          )
         )
       );
     }
@@ -68026,7 +68017,7 @@ var Product = function (_Component) {
 					{ className: 'column is-half' },
 					__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
 						'h2',
-						{ className: "title is-3 " },
+						{ className: "title is-3" },
 						this.props.productData.name
 					),
 					__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
@@ -68036,10 +68027,10 @@ var Product = function (_Component) {
 					),
 					__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
 						'button',
-						{ className: 'toggle-btn',
+						{ className: 'toggle-products-btn',
 							onClick: this.toggleShowIngredientsListClick
 						},
-						this.state.showIngredientsList && "-" || "+"
+						this.state.showIngredientsList && "x" || "+"
 					),
 					__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
 						'div',
@@ -68084,10 +68075,10 @@ var Product = function (_Component) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom__ = __webpack_require__(12);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react_dom__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__styles_styles_css__ = __webpack_require__(19);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__styles_styles_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__styles_styles_css__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_util__ = __webpack_require__(274);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_util___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_util__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_util__ = __webpack_require__(274);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_util___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_util__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__styles_styles_css__ = __webpack_require__(19);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__styles_styles_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__styles_styles_css__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__styles_css__ = __webpack_require__(302);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__styles_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__styles_css__);
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -68107,14 +68098,16 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 var Events = function (_Component) {
   _inherits(Events, _Component);
 
-  function Events() {
+  function Events(props) {
     _classCallCheck(this, Events);
 
-    var _this = _possibleConstructorReturn(this, (Events.__proto__ || Object.getPrototypeOf(Events)).call(this));
+    var _this = _possibleConstructorReturn(this, (Events.__proto__ || Object.getPrototypeOf(Events)).call(this, props));
 
     _this.state = {
+      showEventsList: false,
       events: []
     };
+    _this.toggleShowEventsListClick = _this.toggleShowEventsListClick.bind(_this);
     return _this;
   }
 
@@ -68131,59 +68124,89 @@ var Events = function (_Component) {
       });
     }
   }, {
+    key: "toggleShowEventsListClick",
+    value: function toggleShowEventsListClick() {
+      this.setState({ showEventsList: !this.state.showEventsList });
+    }
+  }, {
     key: "render",
     value: function render() {
+      var _this2 = this;
+
       return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
         "div",
-        { className: "events", id: "events" },
+        { className: "events" },
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", { className: "bg-image" }),
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", { className: "backgroundOverlay" }),
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
           "div",
-          { className: "megaTitle block" },
+          { className: "columns" },
           __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            "h1",
-            { className: "title is-1 events-title" },
-            "Mega Events"
-          ),
-          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            "h2",
-            { className: "title is-3 events-subtitle" },
-            "Upcoming"
+            "div",
+            { className: "column is-half" },
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+              "h1",
+              { className: "title is-1 events-title" },
+              "Mega Events"
+            ),
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+              "h2",
+              { className: "title is-3 events-subtitle" },
+              "Upcoming"
+            )
           )
         ),
-        this.state.events && this.state.events.length > 0 ? this.state.events.map(function (keyName, keyIndex) {
-          return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            "div",
-            {
-              className: "container Block events-placeholder",
-              key: "" + keyName.id
-            },
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-              "h4",
-              { className: "title is-4 events-name" },
-              keyName.date,
-              " / ",
-              keyName.eventName,
-              " / ",
-              keyName.city
-            ),
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-              "p",
-              { className: "events-p" },
-              keyName.eventInfo
-            ),
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-              "button",
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          "div",
+          { className: "column is-half" },
+          this.state.events && this.state.events.length > 0 ? this.state.events.map(function (keyName, keyIndex) {
+            return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+              "div",
               {
-                className: "button",
-                id: "events-button",
-                href: keyName.facebookUrl
+                className: "container Block events-placeholder",
+                key: "" + keyName.id
               },
-              "Join the party!"
-            )
-          );
-        }) : ""
+              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                "h4",
+                { className: "title is-4 events-name" },
+                keyName.date,
+                " / ",
+                keyName.eventName,
+                " / ",
+                keyName.city
+              ),
+              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                "button",
+                { className: "toggle-events-btn",
+                  onClick: _this2.toggleShowEventsListClick
+                },
+                _this2.state.showEventsList && "x" || "More info"
+              ),
+              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                "div",
+                null,
+                _this2.state.showEventsList && __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                  "ul",
+                  null,
+                  __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                    "li",
+                    { className: "events-p" },
+                    keyName.eventInfo
+                  ),
+                  __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                    "button",
+                    {
+                      className: "button",
+                      id: "events-button",
+                      href: keyName.facebookUrl
+                    },
+                    "Join the party!"
+                  )
+                )
+              )
+            );
+          }) : ""
+        )
       );
     }
   }]);
@@ -70727,7 +70750,7 @@ exports = module.exports = __webpack_require__(239)(false);
 
 
 // module
-exports.push([module.i, "/* css footer */ \n.footer {\n\tbackground-color: #FAB418;\n\tpadding-bottom: 3rem;\n\ttext-align: center;\n}\n\n.footer-title {\n\tfont-size: 2em;\n\tfont-weight: bold;\n\ttext-align: center;\n\ttext-transform: uppercase;\n}\n\n#footer-title {\n\tmargin-bottom: 0.1em; \n}\n\n.footer-container {\n\tmargin-left: 1rem;\n\twidth: 100%; \n}\n\n.footer-p {\n\tfont-size: 1.2em;\n}\n\n.footer-title,\n.footer-p {\n\tcolor: white;\n}\n\n.footer-logo{\n\tcolor: white; \n}\n\n.logo-link {\n\tpadding: 5px;\n}\n\n.footer-news {\n\tcolor: white;\n\tfont-size: 1.5em;\n\tmargin-top: 1em;\n\twidth: 100%; \n}\n\n.newsletter-container {\n\tmargin-top: 1em; \n\twidth: 100%;\n\tmargin-left: 1em; \n}\n\n#control-input {\n\twidth: 80%;\n}\n\n#input-field,\n#news-button {\n\theight: 2em; \n}\n\n#input-field {\n\tbackground-color: #FAB418;\n  border-color: #FAB418;\n  border-bottom: 1px solid white;\n  padding-left: 0em;\n  padding-bottom: 0em;\n\tbox-shadow: unset;\n\t\n}\n\n#input-field::placeholder {\n\tcolor: white;\n} \n\n#news-button {\n\tbackground-color: white; \n\tcolor: #FAB418;\n\tmargin-left: 1em;  \n\tbox-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);\n}\n\n/* mediaQuery Desktop */ \n@media screen and (min-width: 800px) {\n\t.footer {\n\t\tdisplay: flex; \n\t}\n\t.footer-container {\n\t\twidth: 50%; \n\t}\n\n\t.newsletter-container {\n\t\twidth: 50%;\n\t}\n}\n\n@media screen and (min-width: 768px) {\n\t.footer {\n\t\ttext-align: left;\n\t}\n\n\t.footer-title {\n\t\ttext-align: left;\n\t}\n}\n", ""]);
+exports.push([module.i, "/* css footer */ \n\n.footer {\n\tbackground-color: #FAB418;\n\tpadding-bottom: 3rem;\n\ttext-align: center;\n}\n\n.footer-title {\n\tfont-size: 2em;\n\tfont-weight: bold;\n\ttext-align: center;\n\ttext-transform: uppercase;\n}\n\n#footer-title {\n\tmargin-bottom: 0.1em; \n}\n\n.footer-container {\n\tmargin-left: 1rem;\n\twidth: 100%; \n}\n\n.footer-p {\n\tfont-size: 1.2em;\n}\n\n.footer-title,\n.footer-p {\n\tcolor: white;\n}\n\n.footer-logo{\n\tcolor: white; \n}\n\n.logo-link {\n\tpadding: 5px;\n}\n\n.footer-news {\n\tcolor: white;\n\tfont-size: 1.5em;\n\tmargin-top: 1em;\n\twidth: 100%; \n}\n\n.newsletter-container {\n\tmargin-top: 1em; \n\twidth: 100%;\n\tmargin-left: 1em; \n}\n\n#control-input {\n\twidth: 80%;\n}\n\n#input-field,\n#news-button {\n\theight: 2em; \n}\n\n#input-field {\n\tbackground-color: #FAB418;\n  border-color: #FAB418;\n  border-bottom: 1px solid white;\n  padding-left: 0em;\n  padding-bottom: 0em;\n\tbox-shadow: unset;\n\t\n}\n\n#input-field::placeholder {\n\tcolor: white;\n} \n\n#news-button {\n\tbackground-color: white; \n\tcolor: #FAB418;\n\tmargin-left: 1em;  \n\tbox-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);\n}\n\n/* mediaQuery Desktop */ \n@media screen and (min-width: 800px) {\n\t.footer {\n\t\tdisplay: flex; \n\t}\n\t.footer-container {\n\t\twidth: 50%; \n\t}\n\n\t.newsletter-container {\n\t\twidth: 50%;\n\t}\n}\n\n@media screen and (min-width: 768px) {\n\t.footer {\n\t\ttext-align: left;\n\t}\n\n\t.footer-title {\n\t\ttext-align: left;\n\t}\n}\n", ""]);
 
 // exports
 
@@ -70817,7 +70840,7 @@ exports = module.exports = __webpack_require__(239)(false);
 
 
 // module
-exports.push([module.i, "", ""]);
+exports.push([module.i, ".toggle-products-btn {\n\tborder-style: none;\n\tcolor: black;\n\tfont-size: 20px;\n\tbackground-color: transparent;\n}\n", ""]);
 
 // exports
 
@@ -70862,7 +70885,7 @@ exports = module.exports = __webpack_require__(239)(false);
 
 
 // module
-exports.push([module.i, ".vision-paragraph {\n\tfont-size: 1.2em;\n\tline-height: 1.3em;\n\tpadding-top: 5px;\n}\n\n.column {\n\tpadding: 0em 5em 0em 5em;\n}\n\nimg#gubbe, #louiJama, #jungleGinger {\n\tmargin-left: auto;\n\tmargin-right: auto;\n}\n\nimg#gubbe {\n\twidth: 50%;\n\tpadding-top: 3em;\n}\n\n.vision {\n\tbackground-color:\t#FFFAF0;\n}\n\n/* image section */ \nimg#megaMateFlagga {\n\tpadding-top: 5em;\n}  \n\n@media screen and (min-width: 768px) {\n\timg#gubbe {\n\t\twidth: 80%;\n\t\tmargin-top: auto;\n\t\tmargin-bottom: auto;\n\t}\n}\n\n/* mediaQuery Mobile */ \n@media screen and (max-width: 568px) {\n\t#gubbe {\n\t\tdisplay: none; \n\t}\n}", ""]);
+exports.push([module.i, ".vision-paragraph {\n\tfont-size: 1.2em;\n\tline-height: 1.3em;\n\tpadding-top: 5px;\n}\n\nimg#gubbe {\n\tmargin-left: auto;\n\tmargin-right: auto;\n}\nimg#gubbe {\n\twidth: 50%;\n\tpadding: 4em 4em 0em 4em;\n} \n\n.vision {\n\tbackground-color:\t#FFFAF0;\n\tpadding-bottom: 5em;\n}\n\n/*\nimage section \nimg#megaMateFlagga {\n\tpadding-top: 5em;\n}  */\n\n@media screen and (min-width: 768px) {\n\timg#gubbe {\n\t\twidth: 80%;\n\t\tmargin-top: auto;\n\t\tmargin-bottom: auto;\n\t}\n}\n\n/* mediaQuery Mobile */ \n@media screen and (max-width: 568px) {\n\t#gubbe {\n\t\tdisplay: none; \n\t}\n}", ""]);
 
 // exports
 
@@ -70908,7 +70931,7 @@ exports = module.exports = __webpack_require__(239)(false);
 
 
 // module
-exports.push([module.i, "/* events css */\n.events {\n\tmin-height: 40em;\n\tcolor: #fff;\n\tmax-width: 100%;\n}\n\n.events-title,\n.events-subtitle,\n.events-name,\n.past-events-title,\n.events-p {\n  color: white;\n}\n\n.title.is-4.events-name {\n\tfont-size: 1.8em;\n}\n\n.events .bg-image {\n\tposition: absolute;\n\tbackground: #333 url(" + escape(__webpack_require__(240)) + ");\n\tbackground-position: center;\n\tbackground-repeat: no-repeat;\n\tbackground-size: cover;\n\twidth: 100%;\n\theight: 40em;\n\tz-index: -1;\n}\n\n.megaTitle {\n\tpadding: 5em;\n}\n\n.events-placeholder {\n\t\tpadding: 10px 50px 5px 50px;\n} \n\n#events-button {\n\tcolor: white;\n}", ""]);
+exports.push([module.i, "/* events css */\n\n.events,\n.events-title,\n.events-subtitle,\n.events-name,\n.past-events-title,\n.events-p {\n  color: white;\n}\n\n.events {\n\tmin-height: 40em;\n\tmax-width: 100%;\n}\n\n.title.is-4.events-name {\n\tfont-size: 1.8em;\n}\n\n.toggle-events-btn {\n\tborder-style: none;\n\tcolor: white;\n\tfont-size: 20px;      \n\tbackground-color: transparent;\n}\n\n.events-title {\n\tpadding-top: 1em;\n\tfont-size: 2.8em;\n\ttext-transform: uppercase;\n\tfont-weight: 600;\n}\n\n.events .bg-image {\n\tposition: absolute;\n\tbackground: #333 url(" + escape(__webpack_require__(240)) + ");\n\tbackground-position: center;\n\tbackground-repeat: no-repeat;\n\tbackground-size: cover;\n\twidth: 100%;\n\theight: 40em;\n\tz-index: -1;\n}\n\n#events-button {\n\tborder: none;\n\tcolor: white;\n\tbackground-color: #FAB418;\n\n}\n\n", ""]);
 
 // exports
 
@@ -70953,7 +70976,7 @@ exports = module.exports = __webpack_require__(239)(false);
 
 
 // module
-exports.push([module.i, "/*  Resellers */ \n.map {\n  padding-top: 5em;\n}\n\n.locationName {\n\tpadding-top: 5px;\n\tfont-size: 1.2em;\n}\n\niframe {\n\theight: 400px;\n\twidth: 100%;\n\tpadding: 0;\n}\n\n.buyOnline {\n\tmargin-top: 2em;\n\tbackground-color: #FAB418; \n\tborder-color: transparent;\n\twidth: 200px;\n\tbox-shadow: 0 8px 16px 0 rgba(0,0,0,0.05), 0 6px 20px 0 rgba(0,0,0,0.05);\n}\n\n#buyOnline-btn {\n\tcolor: white;\n}\n\n\n@media screen and (min-width: 768px) {\n\t.title.is-3.title.is-3.resellers-subtitle.uppsala {\n\t\tpadding-top: 6.4em;\n\t}\n}", ""]);
+exports.push([module.i, "/*  Resellers */ \n.map {\n  padding-top: 5em;\n}\n\n.locationName {\n\tpadding-top: 5px;\n\tfont-size: 1.2em;\n}\n\niframe {\n\theight: 400px;\n\twidth: 100%;\n\tpadding: 0;\n}\n\n.buyOnline {\n\tmargin-top: 2em;\n\tbackground-color: #FAB418; \n\tborder-color: transparent;\n\twidth: 200px;\n\tbox-shadow: 0 8px 16px 0 rgba(0,0,0,0.05), 0 6px 20px 0 rgba(0,0,0,0.05);\n}\n\n#buyOnline-btn {\n\tcolor: white;\n}\n\n@media screen and (min-width: 768px) {\n\t.title.is-3.title.is-3.resellers-subtitle.uppsala {\n\t\tpadding-top: 6.4em;\n\t}\n}", ""]);
 
 // exports
 

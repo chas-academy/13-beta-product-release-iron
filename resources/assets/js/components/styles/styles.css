@@ -27,6 +27,7 @@ body {
 p.title.is-6 {
 	font-size: 1em;
 	margin-top: 1em;
+	font-weight: 400;
 }
 
 .title.is-3.vision-subtitle {
@@ -56,19 +57,13 @@ p.title.is-6 {
 }
 
 /* buttons */ 
-#events-button,
-.footer {
-	background-color: #FAB418;
-}
 
 .button {
 	border-radius: 0;
 }
 
-.toggle-btn {
-	border-style: none;
-	color: black;
-	font-size: 3em;
+.column {
+	padding: 0em 5em 0em 5em;
 }
 
 

@@ -56,11 +56,13 @@ class Vision extends Component {
           </div>
         </div>
 
+        {/* 
         <section className="containter">
           <figure className="image">
             {<img id="megaMateFlagga" src={this.state.banner.imageUrl} />}
           </figure>
         </section>
+    */}
       </div>
     );
   }
