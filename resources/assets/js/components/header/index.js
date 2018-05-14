@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
-import "../styles/styles.css";
+//import "../styles/styles.css";
+import "./header.css";
 import megamate_gulsvart from "../images/megaMate_loggo.png";
 import ReactPlayer from "react-player";
 import { slide as Menu } from "react-burger-menu";
@@ -31,7 +32,7 @@ class Header extends Component {
   render() {
     return (
       <header>
-        <Menu id="burger-menu" width={"20%"} right>
+        <Menu id="burger-menu" right>
           <a className="menu-item" href="#products">
             Products
           </a>
