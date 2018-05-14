@@ -11,13 +11,13 @@ class Footer extends Component {
 	constructor(props){
 		super(props);
 		this.state = {
-			email = ''
+			email: ''
 		}
 	}
-	handleSendEmail = email => {
+	handleSendEmail (email) {
 		console.log(email)
 	}
-	handleOnChangeEmail = email => {
+	handleOnChangeEmail (email)	{
 		this.setState ({
 			email: email
 		})

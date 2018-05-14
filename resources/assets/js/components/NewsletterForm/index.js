@@ -7,11 +7,11 @@ const NewsletterForm  = ({email, handleOnChangeEmail, handleSendEmail}) => {
     <Form layout='inline' className='newsletter-form' action='javascript:void(0);' method='POST'>
     <Form.Item>
         <Input onChange={({target}) => handleOnChangeEmail(target.value)}
-        prefix={<Icon type='red-envelope'/>} placeholder ='Your email here' value={email} disabled={!validator.isEmail(email)}/>
+        prefix={<Icon type='red-envelope'/>} placeholder ='Your email here' value={email} />
       </Form.Item>
       <Form.Item>
             <Button onClick={() => handleSendEmail(email)} 
-            htmlType='submit' type='primary'>
+            htmlType='submit' type='primary' disabled={!validator.isEmail(email)}>
               Send</Button>
       </Form.Item>
 
