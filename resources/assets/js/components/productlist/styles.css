@@ -1,0 +1,13 @@
+/* products */ 
+.background {
+	background-color:#fff;
+}
+
+.productSite {
+	display:flex;
+	justify-content: space-around;
+}
+
+.productInfo {
+	padding-top: 17em;
+}

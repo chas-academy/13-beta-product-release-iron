@@ -1,0 +1,106 @@
+/* css footer */ 
+.footer {
+	background-color: #FAB418;
+	padding-bottom: 3rem;
+	text-align: center;
+}
+
+.footer-title {
+	font-size: 2em;
+	font-weight: bold;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+#footer-title {
+	margin-bottom: 0.1em; 
+}
+
+.footer-container {
+	margin-left: 1rem;
+	width: 100%; 
+}
+
+.footer-p {
+	font-size: 1.2em;
+}
+
+.footer-title,
+.footer-p {
+	color: white;
+}
+
+.footer-logo{
+	color: white; 
+}
+
+.logo-link {
+	padding: 5px;
+}
+
+.footer-news {
+	color: white;
+	font-size: 1.5em;
+	margin-top: 1em;
+	width: 100%; 
+}
+
+.newsletter-container {
+	margin-top: 1em; 
+	width: 100%;
+	margin-left: 1em; 
+}
+
+#control-input {
+	width: 80%;
+}
+
+#input-field,
+#news-button {
+	height: 2em; 
+}
+
+#input-field {
+	background-color: #FAB418;
+  border-color: #FAB418;
+  border-bottom: 1px solid white;
+  padding-left: 0em;
+  padding-bottom: 0em;
+	box-shadow: unset;
+	
+}
+
+#input-field::placeholder {
+	color: white;
+} 
+
+#news-button {
+	background-color: white; 
+	color: #FAB418;
+	margin-left: 1em;  
+	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+/* mediaQuery Desktop */ 
+@media screen and (min-width: 800px) {
+	.footer {
+		display: flex; 
+	}
+	.footer-container {
+		width: 50%; 
+	}
+
+	.newsletter-container {
+		width: 50%;
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.footer {
+		text-align: left;
+	}
+
+	.footer-title {
+		text-align: left;
+	}
+}

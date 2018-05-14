@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
-
 import "../styles/styles.css";
 import { debug } from "util";
+import "./styles.css";
 
 class Events extends Component {
   constructor() {

@@ -4,6 +4,7 @@ import '../styles/styles.css';
 import SodaLogo from '../images/SodaFactory.png';
 import FbLogo from '../images/fb.svg';
 import InstaLogo from '../images/insta.svg';
+import './styles.css';
 
 class Footer extends Component {
 	render() {
