@@ -10,12 +10,19 @@ class Header extends Component {
   constructor() {
     super();
     this.state = {
-      header: ""
+      header: "",
+      menuOpen: false
     };
   }
+
   showSettings(event) {
     event.preventDefault();
   }
+
+  closeMenu() {
+    this.setState({ menuOpen: false });
+  }
+
   componentDidMount() {
     const now = this;
     fetch("/api/header")
@@ -32,17 +39,33 @@ class Header extends Component {
   render() {
     return (
       <header>
-        <Menu id="burger-menu" right>
-          <a className="menu-item" href="#products">
+        <Menu id="burger-menu" right isOpen={this.state.menuOpen}>
+          <a
+            onClick={() => this.closeMenu()}
+            className="menu-item"
+            href="#products"
+          >
             Products
           </a>
-          <a className="menu-item" href="#events">
+          <a
+            onClick={() => this.closeMenu()}
+            className="menu-item"
+            href="#events"
+          >
             Events
           </a>
-          <a className="menu-item" href="#resellers">
+          <a
+            onClick={() => this.closeMenu()}
+            className="menu-item"
+            href="#resellers"
+          >
             Resellers
           </a>
-          <a className="menu-item" href="#contact">
+          <a
+            onClick={() => this.closeMenu()}
+            className="menu-item"
+            href="#contact"
+          >
             Contact
           </a>
           {/* <a onClick={ this.showSettings } className="menu-item--big" href="">Settings</a> */}
