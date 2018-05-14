@@ -5,8 +5,24 @@ import SodaLogo from '../images/SodaFactory.png';
 import FbLogo from '../images/fb.svg';
 import InstaLogo from '../images/insta.svg';
 import './styles.css';
+import NewsletterForm from './NewsletterForm';
 
 class Footer extends Component {
+	constructor(props){
+		super(props);
+		this.state = {
+			email = ''
+		}
+	}
+	handleSendEmail = email => {
+		console.log(email)
+	}
+	handleOnChangeEmail = email => {
+		this.setState ({
+			email: email
+		})
+
+	}
 	render() {
 		return (
 			<div>
@@ -29,7 +45,6 @@ class Footer extends Component {
 							</a>
 						</div>
 					</div>
-
 					<div className="container newsletter-container">
 						<div className="content">
 							<p className="footer-news">Sign up for our newsletter</p>               
@@ -47,9 +62,10 @@ class Footer extends Component {
 								</div>
 							</div>
 						</div> 
-						
+						<NewsletterForm email={this.state.email} handleOnChangeEmail={this.handleOnChangeEmail} handleSendEmail={this.handleSendEmail}/>
 				</footer>
 			</div>
+			
 		);
 	}
 }

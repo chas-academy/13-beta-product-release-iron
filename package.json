@@ -26,6 +26,7 @@
     "dependencies": {
         "react-burger-menu": "^2.4.4",
         "react-fontawesome": "^1.6.1",
+        "react-mailchimp-subscribe": "^2.0.2",
         "react-modal": "^3.4.2",
         "react-player": "^1.4.0",
         "react-video-cover": "^1.2.0"
