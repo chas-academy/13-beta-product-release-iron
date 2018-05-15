@@ -46,23 +46,19 @@ class Footer extends Component {
 						</div>
 					</div>
 					<div className="container newsletter-container">
-						<div className="content">
+					<NewsletterForm email={this.state.email} handleOnChangeEmail={this.handleOnChangeEmail} handleSendEmail={this.handleSendEmail}/>
+
+						{/* <div className="content">
 							<p className="footer-news">Sign up for our newsletter</p>               
 								<div className="field has-addons">
 									<div className="control" id="control-input">
-										<input
-											id="input-field"
-											className="input"
-											type="text"
-											placeholder="Enter your email"/>
 									</div>
 									<div className="control">
 										<a id="news-button" className="button is-info">Submit</a>
 									</div> 
 								</div>
-							</div>
+							</div> */}
 						</div> 
-						<NewsletterForm email={this.state.email} handleOnChangeEmail={this.handleOnChangeEmail} handleSendEmail={this.handleSendEmail}/>
 				</footer>
 			</div>
 			

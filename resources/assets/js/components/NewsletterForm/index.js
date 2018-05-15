@@ -1,21 +1,35 @@
 import React from 'react';
-import  { Form, Input, Icon, Button } from 'antd'; 
+import '../styles/styles.css';
 import validator from 'validator'; 
+import  { Form, Input, Icon, Button } from 'antd'; 
 
 const NewsletterForm  = ({email, handleOnChangeEmail, handleSendEmail}) => {
   return  (
-    <Form layout='inline' className='newsletter-form' action='javascript:void(0);' method='POST'>
-    <Form.Item>
-        <Input onChange={({target}) => handleOnChangeEmail(target.value)}
-        prefix={<Icon type='red-envelope'/>} placeholder ='Your email here' value={email} />
-      </Form.Item>
-      <Form.Item>
-            <Button onClick={() => handleSendEmail(email)} 
+    <div className="container newsletter-container">
+    <div className="content">
+      <p className="footer-news">Sign up for our newsletter</p> 
+      <Form layout='inline' className='newsletter-form' action='javascript:void(0);' method='POST'>
+        <div className="field has-addons">
+
+				  <div id="control-input" className="control">
+              <Form.Item id="control-input" className="control">
+                <Input id="input-field" className="input" onChange={({target}) => handleOnChangeEmail(target.value)}
+                  prefix={<Icon type='red-envelope'/>} placeholder ='Enter your email' value={email} />
+              </Form.Item>
+            </div>
+
+            <div className="control">
+            <Form.Item>
+            <Button id="news-button" onClick={() => handleSendEmail(email)} 
             htmlType='submit' type='primary' disabled={!validator.isEmail(email)}>
               Send</Button>
-      </Form.Item>
+            </Form.Item>
+            </div>
 
-    </Form>
+        </div>
+      </Form>
+    </div>
+    </div>
   );
 }
 
