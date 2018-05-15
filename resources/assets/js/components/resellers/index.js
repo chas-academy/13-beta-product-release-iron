@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
 import "../styles/styles.css";
+import "./styles.css";
 
 class Resellers extends Component {
   constructor() {

@@ -1,0 +1,38 @@
+.vision-paragraph {
+	font-size: 1.2em;
+	line-height: 1.3em;
+	padding-top: 5px;
+}
+
+img#gubbe {
+	margin-left: auto;
+	margin-right: auto;
+}
+img#gubbe {
+	width: 50%;
+	padding: 4em 4em 0em 4em;
+} 
+
+.vision {
+	/* background-color:	#FFFAF0; */
+	padding-bottom: 5em;
+}
+
+#imgBanner {
+	padding-top: 5em;
+} 
+
+@media screen and (min-width: 768px) {
+	img#gubbe {
+		width: 80%;
+		margin-top: auto;
+		margin-bottom: auto;
+	}
+}
+
+/* mediaQuery Mobile */ 
+@media screen and (max-width: 568px) {
+	#gubbe {
+		display: none; 
+	}
+}

@@ -7,7 +7,8 @@
 }
 
 .bm-menu {
-  background: #fab418;
+  background: #fab418; 
+  padding: 2.5em 1.5em 0;
 }
 
 .bm-item-list {
@@ -21,8 +22,6 @@
 }
 
 .bm-cross-button span {
-  /*top: 30px;
-  right: 30px;*/
   background: black;
 }
 
@@ -52,3 +51,11 @@
   background: #fab418;
   height: 15%;
 }
+
+.bm-burger-button {
+  position: fixed;
+  width: 36px;
+  height: 30px;
+  right: 36px;
+  top: 36px;
+} 

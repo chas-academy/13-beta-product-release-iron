@@ -1,0 +1,18 @@
+/* products */ 
+.background {
+	background-color:#fff;
+}
+
+#louiJama, #jungleGinger {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.productSite {
+	display:flex;
+	justify-content: space-around;
+}
+
+.productInfo {
+	padding-top: 17em;
+}

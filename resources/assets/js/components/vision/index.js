@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
 import "../styles/styles.css";
+import "./styles.css";
 
 class Vision extends Component {
   constructor() {
@@ -55,11 +56,13 @@ class Vision extends Component {
           </div>
         </div>
 
+        {
         <section className="containter">
           <figure className="image">
-            {<img id="megaMateFlagga" src={this.state.banner.imageUrl} />}
+            {<img id="imgBanner" src={this.state.banner.imageUrl} />}
           </figure>
         </section>
+        }
       </div>
     );
   }
