@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import ReactModal from 'react-modal';
 import '../styles/styles.css';
-import './styles.css';
 
 
 class Voucher extends Component {

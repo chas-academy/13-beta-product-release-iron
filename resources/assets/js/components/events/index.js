@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
 import { debug } from "util";
-import "../styles/styles.css";
+//import "../styles/styles.css";
 import "./styles.css";
 
 class Events extends Component {
@@ -38,7 +38,7 @@ class Events extends Component {
           <div className="backgroundOverlay" />
                     
             <div className="columns">
-              <div className="column is-half">
+              <div className="column is-half" id="eventsHeading">
                 <h1 className="title is-1 events-title">Mega Events</h1>
                 <h2 className="title is-3 events-subtitle">Upcoming</h2>
               </div>
@@ -68,13 +68,13 @@ class Events extends Component {
                   {this.state.showEventsList &&
                       <ul> 
                       <li className="events-p">{keyName.eventInfo}</li>
-                      <button
+                      <a
                         className="button"
                         id="events-button"
                         href={keyName.facebookUrl}
                       >
                         Join the party!
-                      </button>
+                      </a>
                       </ul>
                     }
                     </div>
