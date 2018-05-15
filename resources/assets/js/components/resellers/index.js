@@ -51,12 +51,12 @@ class Resellers extends Component {
     return (
       <div className="resellers" id="resellers">
         <div className="columns">
-          <div className="column is-half is-desktop">
-            <h1 className="title is-1 resellers-title">Resellers</h1>
-            <div>
+          <div className="column">
+            <h1 className="title is-1 resellers-title">Drink Us!</h1>
+            <div className="city-div">
               {this.state.cities.map((val, i) => {
                 return (
-                  <div>
+                  <div className="city-name">
                     <h2 className="title is-3 resellers-subtitle" key={i}>
                       {val.cityName}
                     </h2>

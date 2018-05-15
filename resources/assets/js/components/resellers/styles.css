@@ -1,37 +1,53 @@
-/*  Resellers */ 
+/*  Resellers */
 .map {
   padding-top: 5em;
 }
 
 .locationName {
-	padding-top: 5px;
-	font-size: 1.2em;
+  padding-top: 5px;
+  font-size: 1.2em;
 }
 
 iframe {
-	height: 400px;
-	width: 100%;
-	padding: 0;
+  height: 400px;
+  width: 100%;
+  padding: 0;
 }
 
 .buyOnline {
-	margin-top: 2em;
-	background-color: #FAB418; 
-	border-color: transparent;
-	width: 200px;
-	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.05), 0 6px 20px 0 rgba(0,0,0,0.05);
+  margin-top: 2em;
+  background-color: #fab418;
+  border-color: transparent;
+  width: 200px;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.05), 0 6px 20px 0 rgba(0, 0, 0, 0.05);
 }
 
 #buyOnline-btn {
-	color: white;
+  color: white;
+}
+
+.city-div {
+  flex-wrap: wrap;
+  display: flex;
+  padding-left: 0;
+}
+
+.city-name {
+  flex: 0 0 50%;
 }
 
 .i4ewOd-pzNkMb-haAclf QUIbkc {
-	background-color: transparent;
+  background-color: transparent;
 }
 
 @media screen and (min-width: 768px) {
-	.title.is-3.title.is-3.resellers-subtitle.uppsala {
-		padding-top: 6.4em;
-	}
+  .title.is-3.title.is-3.resellers-subtitle.uppsala {
+    padding-top: 6.4em;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .city-name {
+    flex: 0 0 100%;
+  }
 }
