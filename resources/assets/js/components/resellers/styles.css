@@ -36,16 +36,6 @@ iframe {
   flex: 0 0 50%;
 }
 
-.i4ewOd-pzNkMb-haAclf QUIbkc {
-  background-color: transparent;
-}
-
-@media screen and (min-width: 768px) {
-  .title.is-3.title.is-3.resellers-subtitle.uppsala {
-    padding-top: 6.4em;
-  }
-}
-
 @media screen and (max-width: 600px) {
   .city-name {
     flex: 0 0 100%;
