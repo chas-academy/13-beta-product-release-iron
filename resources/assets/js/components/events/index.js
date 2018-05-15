@@ -5,6 +5,7 @@ import { debug } from "util";
 import "./styles.css";
 
 class Events extends Component {
+
   constructor(props) {
     super(props);
     this.state = {
@@ -30,13 +31,13 @@ class Events extends Component {
   toggleShowEventsListClick() {
 		this.setState({showEventsList: !this.state.showEventsList});
 	}
+	
+
 
   render() {
     return (
       <div className="events">
-        <div className="bg-image" />
-          <div className="backgroundOverlay" />
-                    
+        <div className="bg-image" />                    
             <div className="columns">
               <div className="column is-half" id="eventsHeading">
                 <h1 className="title is-1 events-title">Mega Events</h1>
@@ -44,40 +45,43 @@ class Events extends Component {
               </div>
             </div>
        
-        <div className="column is-half">
+        <div className="column">
         {this.state.events && this.state.events.length > 0
           ? this.state.events.map((keyName, keyIndex) => {
               return (
                 <div
-                  className="container Block events-placeholder"
+                  className="container block events-placeholder"
                   key={`${keyName.id}`}
                 >
                   <h4 className="title is-4 events-name">
                     {keyName.date} / {keyName.eventName} / {keyName.city}
+  
                   </h4>
 
                   <button className="toggle-events-btn"
                   onClick={this.toggleShowEventsListClick}
-                  > 
+                  >
                   {(this.state.showEventsList &&
-                    "x"	) || "More info"	
-                  } 
-                  </button>
-
+                    "x"	) || "Read More"	
+                  }</button>
                   <div>
+                  
+
                   {this.state.showEventsList &&
                       <ul> 
                       <li className="events-p">{keyName.eventInfo}</li>
                       <a
-                        className="button"
-                        id="events-button"
-                        href={keyName.facebookUrl}
-                      >
-                        Join the party!
-                      </a>
+                      className="button"
+                      id="events-button"
+                      href={keyName.facebookUrl}
+                    >
+                      Join the party!
+                    </a>
                       </ul>
                     }
+
                     </div>
+
                 </div>
               );
             })

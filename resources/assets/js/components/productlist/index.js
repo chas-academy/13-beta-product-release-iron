@@ -1,8 +1,6 @@
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
 import Product from "../product/";
-import LouiJama from "../images/megaMate_louiJama.png";
-import JungleGinger from "../images/megaMate_jungleGinger.png";
 import "../styles/styles.css";
 
 class ProductList extends Component {
