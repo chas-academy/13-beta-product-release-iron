@@ -68,20 +68,12 @@ class Header extends Component {
           >
             Contact
           </a>
-
-          </Menu>
-        <div className="Video">
+        </Menu>
+        <div className="video">
           <ReactPlayer
             playing
-            loop="true"
-            width="100%"
-            height="100%"
-            style={{
-              position: "inherit",
-              minWidth: "100%",
-              overflow: "hidden",
-              zIndex: -1
-            }}
+            loop="false"
+            className="react-video"
             url={[
               { src: "/images/header-video.mp4", type: "video/mp4" },
               { src: "/images/header-video.ogg", type: "video/ogg" },

@@ -7,7 +7,7 @@
 }
 
 .bm-menu {
-  background: #fab418; 
+  background: #fab418;
   padding: 2.5em 1.5em 0;
 }
 
@@ -58,4 +58,18 @@
   height: 30px;
   right: 36px;
   top: 36px;
-} 
+}
+
+.video {
+  position: inherit;
+  min-width: 100%;
+  overflow: hidden;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+}
+
+.react-video {
+  width: 100% !important;
+  height: 100% !important;
+}
