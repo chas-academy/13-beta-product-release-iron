@@ -107,16 +107,16 @@ height: 3em;
 }
 
 /* background on first page */ 
-#voucher {
+.voucher {
   margin: 0;
   padding: 0;
 	background-color: #FAB418;
 } 
 
 .center {
-  /* position: absolute; */
-  /* top: 50%;
-  left: 50%; */
+  position: absolute;
+   top: 50%;
+  left: 50%; 
   transform: translate(-50%, -50%);
 }
 

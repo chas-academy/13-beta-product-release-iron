@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import ReactModal from 'react-modal';
-import '../styles/styles.css';
+import './styles.css';
 
 class Voucher extends Component {
 	constructor () {
@@ -55,10 +55,10 @@ class Voucher extends Component {
 	render() {
 			return (
 				<section className="hero is-fullheight is-primary is-bold">
-					<div className="hero-body">
+					<div className="hero-body voucher">
 					{this.state.showVoucher === true ?
 						<div className="container has-text-centered">
-							<a onClick={this.handleOpenModal} className="button is-large is-link is-rounded">Get mega voucher</a>
+							<a onClick={this.handleOpenModal} className="button is-large is-link is-rounded pulse center">Get mega voucher</a>
 							<div id="offerVoucher"></div>
 						</div>
 						: ""
@@ -84,7 +84,7 @@ class Voucher extends Component {
 						</div>
 					</ReactModal>
 
-					<div className="level-right">
+					<div className="level-right voucher">
 						<a className="button is-info is-outlined" href="http://localhost:8000">Go to homepage</a>
 					</div>
 				</section>
