@@ -38,7 +38,7 @@ class Vision extends Component {
 
   render() {
     return (
-      <div className="vision">
+      <div id="vision" className="vision">
         <div className="columns">
           <div className="column is-half">
             <h1 className="title is-1 vision-title">
@@ -57,11 +57,11 @@ class Vision extends Component {
         </div>
 
         {
-        <section className="containter">
-          <figure className="image">
-            {<img id="imgBanner" src={this.state.banner.imageUrl} />}
-          </figure>
-        </section>
+          <section className="containter">
+            <figure className="image">
+              {<img id="imgBanner" src={this.state.banner.imageUrl} />}
+            </figure>
+          </section>
         }
       </div>
     );

@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import ReactDOM from "react-dom";
 //import "../styles/styles.css";
 import "./header.css";
-import megamate_gulsvart from "../images/megaMate_loggo.png";
+import megamate_gulsvart from "../images/MegaMate_loggo_color-01.png";
 import ReactPlayer from "react-player";
 import { slide as Menu } from "react-burger-menu";
 
@@ -59,7 +59,7 @@ class Header extends Component {
             className="menu-item"
             href="#resellers"
           >
-            Resellers
+            Drink Us!
           </a>
           <a
             onClick={() => this.closeMenu()}
@@ -72,7 +72,6 @@ class Header extends Component {
         <div className="video">
           <ReactPlayer
             playing
-            loop="false"
             className="react-video"
             url={[
               { src: "/images/header-video.mp4", type: "video/mp4" },
@@ -80,6 +79,14 @@ class Header extends Component {
               { src: "/images/header-video.webm", type: "video/webm" }
             ]}
           />
+          <a href="#vision">
+            <div className="arrow-container animated fadeInDown">
+              <div className="arrow-2">
+                <i className="fa fa-angle-down" />
+              </div>
+              <div className="arrow-1 animated hinge infinite zoomIn" />
+            </div>
+          </a>
         </div>
         <img
           src={megamate_gulsvart}
