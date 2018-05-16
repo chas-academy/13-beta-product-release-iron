@@ -4,7 +4,7 @@ import "../styles/styles.css";
 import "./styles.css";
 
 class Resellers extends Component {
-  constructor(p) {
+  constructor() {
     super();
     this.state = {
       cities: [],

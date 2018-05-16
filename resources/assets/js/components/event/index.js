@@ -25,25 +25,23 @@ class Event extends Component {
     return (
               <div
                 className="container block events-placeholder"
-                /*key={`${props.eventData.id}`} */
               >
                 <h4 className="title is-4 events-name">
                   {this.props.eventData.date} / {this.props.eventData.eventName} / {this.props.eventData.city}
 
                 </h4>
 
-
+                  <div id="btn">
                 { !this.state.showEventDetail &&
-                <button className="toggle-events-btn" id="btn"
+                <button className="toggle-events-btn" 
                 onClick={this.toggleshowEventDetailClick}
                 >
                   Read More	
                 </button>}
             
-
                 {this.state.showEventDetail &&
-                    <ul> 
-                    <li className="events-p">{this.props.eventData.eventInfo}</li>
+                    
+                    <p className="events-p">{this.props.eventData.eventInfo}</p>
                     {this.props.eventData.facebookUrl != null ?
                       (<a
                       className="button"
@@ -53,13 +51,14 @@ class Event extends Component {
                       Join the party!
                     </a>)
                       : ""}
-                    <button className="toggle-events-btn" id="btn"
+                    <button className="toggle-events-btn"
                     onClick={this.toggleshowEventDetailClick}
                     >
-                      -	
+                      x
                     </button>
-                    </ul>
                   }
+                  
+                </div>
                 </div>
     );
   }

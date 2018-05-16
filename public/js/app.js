@@ -13689,7 +13689,7 @@ exports.show = show;
 exports.documentNotReadyOrSSRTesting = documentNotReadyOrSSRTesting;
 exports.resetForTesting = resetForTesting;
 
-var _warning = __webpack_require__(298);
+var _warning = __webpack_require__(299);
 
 var _warning2 = _interopRequireDefault(_warning);
 
@@ -13756,7 +13756,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.canUseDOM = undefined;
 
-var _exenv = __webpack_require__(300);
+var _exenv = __webpack_require__(301);
 
 var _exenv2 = _interopRequireDefault(_exenv);
 
@@ -13775,7 +13775,7 @@ exports.default = SafeHTMLElement;
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(111);
-module.exports = __webpack_require__(302);
+module.exports = __webpack_require__(303);
 
 
 /***/ }),
@@ -13784,7 +13784,7 @@ module.exports = __webpack_require__(302);
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_voucher_Index_js__ = __webpack_require__(292);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_voucher_Index_js__ = __webpack_require__(293);
 /**
  * First we will load all of this project's JavaScript dependencies which
  * includes React and other helpers. It's a great starting point while
@@ -44634,10 +44634,10 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react_dom__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Header__ = __webpack_require__(236);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Vision__ = __webpack_require__(267);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__Productlist__ = __webpack_require__(304);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__Eventslist__ = __webpack_require__(308);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__Resellers__ = __webpack_require__(283);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__Footer__ = __webpack_require__(286);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__Productlist__ = __webpack_require__(271);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__Eventslist__ = __webpack_require__(275);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__Resellers__ = __webpack_require__(284);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__Footer__ = __webpack_require__(287);
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -67892,7 +67892,88 @@ exports.push([module.i, ".vision-paragraph {\n\tfont-size: 1.2em;\n\tline-height
 
 
 /***/ }),
-/* 271 */,
+/* 271 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react_dom__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__product___ = __webpack_require__(272);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__styles_styles_css__ = __webpack_require__(29);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__styles_styles_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__styles_styles_css__);
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+
+
+
+
+
+var ProductList = function (_Component) {
+  _inherits(ProductList, _Component);
+
+  function ProductList() {
+    _classCallCheck(this, ProductList);
+
+    var _this = _possibleConstructorReturn(this, (ProductList.__proto__ || Object.getPrototypeOf(ProductList)).call(this));
+
+    _this.state = {
+      productList: []
+    };
+    return _this;
+  }
+
+  _createClass(ProductList, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      var now = this;
+      fetch("/api/products").then(function (response) {
+        return response.json();
+      }).then(function (data) {
+        now.setState({ productList: data });
+      }).catch(function (error) {
+        console.log(error);
+      });
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        "div",
+        { className: "products", id: "products" },
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          "div",
+          { className: "columns" },
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            "div",
+            { className: "column is-half" },
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+              "h1",
+              { className: "title is-1" },
+              "Mega Products"
+            )
+          )
+        ),
+        this.state.productList.map(function (val, i) {
+          return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__product___["a" /* default */], { key: val.id, productData: val });
+        })
+      );
+    }
+  }]);
+
+  return ProductList;
+}(__WEBPACK_IMPORTED_MODULE_0_react__["Component"]);
+
+/* harmony default export */ __webpack_exports__["a"] = (ProductList);
+
+/***/ }),
 /* 272 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -68057,7 +68138,102 @@ exports.push([module.i, ".toggle-products-btn {\n\tborder-style: none;\n\tcolor:
 
 
 /***/ }),
-/* 275 */,
+/* 275 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react_dom__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_util__ = __webpack_require__(276);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_util___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_util__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__event__ = __webpack_require__(279);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__styles_css__ = __webpack_require__(280);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__styles_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__styles_css__);
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+
+
+
+
+//import "../styles/styles.css";
+
+
+var EventsList = function (_Component) {
+  _inherits(EventsList, _Component);
+
+  function EventsList() {
+    _classCallCheck(this, EventsList);
+
+    var _this = _possibleConstructorReturn(this, (EventsList.__proto__ || Object.getPrototypeOf(EventsList)).call(this));
+
+    _this.state = {
+      events: []
+    };
+    return _this;
+  }
+
+  _createClass(EventsList, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      var now = this;
+      fetch("/api/event").then(function (response) {
+        return response.json();
+      }).then(function (data) {
+        now.setState({ events: data });
+      }).catch(function (error) {
+        console.log(error);
+      });
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        "div",
+        { className: "events" },
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", { className: "bg-image" }),
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          "div",
+          { className: "columns" },
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            "div",
+            { className: "column is-half", id: "eventsHeading" },
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+              "h1",
+              { className: "title is-1 events-title" },
+              "Mega Events"
+            ),
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+              "h2",
+              { className: "title is-3 events-subtitle" },
+              "Upcoming"
+            )
+          )
+        ),
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          "div",
+          { className: "column" },
+          this.state.events && this.state.events.length > 0 ? this.state.events.map(function (keyName, keyIndex) {
+            return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__event__["a" /* default */], { key: keyName.id, eventData: keyName });
+          }) : ""
+        )
+      );
+    }
+  }]);
+
+  return EventsList;
+}(__WEBPACK_IMPORTED_MODULE_0_react__["Component"]);
+
+/* harmony default export */ __webpack_exports__["a"] = (EventsList);
+
+/***/ }),
 /* 276 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -68691,9 +68867,163 @@ if (typeof Object.create === 'function') {
 
 
 /***/ }),
-/* 279 */,
-/* 280 */,
+/* 279 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react_dom__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_util__ = __webpack_require__(276);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_util___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_util__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__styles_css__ = __webpack_require__(305);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__styles_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__styles_css__);
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+
+
+
+//import "../styles/styles.css";
+
+
+var Event = function (_Component) {
+  _inherits(Event, _Component);
+
+  function Event(props) {
+    _classCallCheck(this, Event);
+
+    var _this = _possibleConstructorReturn(this, (Event.__proto__ || Object.getPrototypeOf(Event)).call(this, props));
+
+    _this.state = {
+      showEventDetail: false
+
+    };
+    _this.toggleshowEventDetailClick = _this.toggleshowEventDetailClick.bind(_this);
+    return _this;
+  }
+
+  _createClass(Event, [{
+    key: "toggleshowEventDetailClick",
+    value: function toggleshowEventDetailClick() {
+      this.setState({ showEventDetail: !this.state.showEventDetail });
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        "div",
+        {
+          className: "container block events-placeholder"
+        },
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          "h4",
+          { className: "title is-4 events-name" },
+          this.props.eventData.date,
+          " / ",
+          this.props.eventData.eventName,
+          " / ",
+          this.props.eventData.city
+        ),
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          "div",
+          { id: "btn" },
+          !this.state.showEventDetail && __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            "button",
+            { className: "toggle-events-btn",
+              onClick: this.toggleshowEventDetailClick
+            },
+            "Read More"
+          ),
+          this.state.showEventDetail && __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            "div",
+            null,
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+              "p",
+              { className: "events-p" },
+              this.props.eventData.eventInfo
+            ),
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+              "a",
+              {
+                className: "button",
+                id: "events-button",
+                href: this.props.eventData.facebookUrl
+              },
+              "Join the party!"
+            ),
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+              "button",
+              { className: "toggle-events-btn",
+                onClick: this.toggleshowEventDetailClick
+              },
+              "x"
+            )
+          )
+        )
+      );
+    }
+  }]);
+
+  return Event;
+}(__WEBPACK_IMPORTED_MODULE_0_react__["Component"]);
+
+/* harmony default export */ __webpack_exports__["a"] = (Event);
+
+/***/ }),
+/* 280 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(281);
+if(typeof content === 'string') content = [[module.i, content, '']];
+// Prepare cssTransformation
+var transform;
+
+var options = {}
+options.transform = transform
+// add the styles to the DOM
+var update = __webpack_require__(22)(content, options);
+if(content.locals) module.exports = content.locals;
+// Hot Module Replacement
+if(false) {
+	// When the styles change, update the <style> tags
+	if(!content.locals) {
+		module.hot.accept("!!../../../../../node_modules/css-loader/index.js!./styles.css", function() {
+			var newContent = require("!!../../../../../node_modules/css-loader/index.js!./styles.css");
+			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+			update(newContent);
+		});
+	}
+	// When the module is disposed, remove the <style> tags
+	module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
 /* 281 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var escape = __webpack_require__(282);
+exports = module.exports = __webpack_require__(21)(false);
+// imports
+
+
+// module
+exports.push([module.i, "/* events css */\n.events,\n.events-title,\n.events-subtitle {\n  color: white;\n}\n\n.events {\n\tmin-height: auto;\n\tmax-width: 100%;\n\tmargin-top: 2em;\n\tbackground: #333 url(" + escape(__webpack_require__(283)) + ");\n\tbackground-position: center;\n\tbackground-repeat: no-repeat;\n\tbackground-size: cover;\n\tz-index: -1;\n\tpadding: 5em 0 5em 0;\n}\n\n.events-title {\n\tpadding-top: 1em;\n\tfont-size: 2.8em;\n\ttext-transform: uppercase;\n\tfont-weight: 600;\n}", ""]);
+
+// exports
+
+
+/***/ }),
+/* 282 */
 /***/ (function(module, exports) {
 
 module.exports = function escape(url) {
@@ -68715,13 +69045,13 @@ module.exports = function escape(url) {
 
 
 /***/ }),
-/* 282 */
+/* 283 */
 /***/ (function(module, exports) {
 
 module.exports = "/images/megaMate_eventsbg.png?7330b8c5eb1feaefa848c047066a5216";
 
 /***/ }),
-/* 283 */
+/* 284 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -68731,7 +69061,7 @@ module.exports = "/images/megaMate_eventsbg.png?7330b8c5eb1feaefa848c047066a5216
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react_dom__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__styles_styles_css__ = __webpack_require__(29);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__styles_styles_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__styles_styles_css__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__styles_css__ = __webpack_require__(284);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__styles_css__ = __webpack_require__(285);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__styles_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__styles_css__);
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
@@ -68749,7 +69079,7 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 var Resellers = function (_Component) {
   _inherits(Resellers, _Component);
 
-  function Resellers(p) {
+  function Resellers() {
     _classCallCheck(this, Resellers);
 
     var _this = _possibleConstructorReturn(this, (Resellers.__proto__ || Object.getPrototypeOf(Resellers)).call(this));
@@ -68871,13 +69201,13 @@ var Resellers = function (_Component) {
 /* harmony default export */ __webpack_exports__["a"] = (Resellers);
 
 /***/ }),
-/* 284 */
+/* 285 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(285);
+var content = __webpack_require__(286);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // Prepare cssTransformation
 var transform;
@@ -68902,7 +69232,7 @@ if(false) {
 }
 
 /***/ }),
-/* 285 */
+/* 286 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(21)(false);
@@ -68916,7 +69246,7 @@ exports.push([module.i, "/*  Resellers */\n.map {\n  padding-top: 5em;\n}\n\n.lo
 
 
 /***/ }),
-/* 286 */
+/* 287 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -68926,13 +69256,13 @@ exports.push([module.i, "/*  Resellers */\n.map {\n  padding-top: 5em;\n}\n\n.lo
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react_dom__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__styles_styles_css__ = __webpack_require__(29);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__styles_styles_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__styles_styles_css__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__images_SodaFactory_png__ = __webpack_require__(287);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__images_SodaFactory_png__ = __webpack_require__(288);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__images_SodaFactory_png___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__images_SodaFactory_png__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__images_fb_svg__ = __webpack_require__(288);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__images_fb_svg__ = __webpack_require__(289);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__images_fb_svg___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__images_fb_svg__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__images_insta_svg__ = __webpack_require__(289);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__images_insta_svg__ = __webpack_require__(290);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__images_insta_svg___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5__images_insta_svg__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__styles_css__ = __webpack_require__(290);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__styles_css__ = __webpack_require__(291);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__styles_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6__styles_css__);
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
@@ -69063,31 +69393,31 @@ var Footer = function (_Component) {
 /* harmony default export */ __webpack_exports__["a"] = (Footer);
 
 /***/ }),
-/* 287 */
+/* 288 */
 /***/ (function(module, exports) {
 
 module.exports = "/images/SodaFactory.png?5f7251c9eb96e2c33011d3b38af5855e";
 
 /***/ }),
-/* 288 */
+/* 289 */
 /***/ (function(module, exports) {
 
 module.exports = "/fonts/fb.svg?2362db2ef99c063558ffe8d9121643d4";
 
 /***/ }),
-/* 289 */
+/* 290 */
 /***/ (function(module, exports) {
 
 module.exports = "/fonts/insta.svg?6f7f616f44e4c4244580338661f876d9";
 
 /***/ }),
-/* 290 */
+/* 291 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(291);
+var content = __webpack_require__(292);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // Prepare cssTransformation
 var transform;
@@ -69112,7 +69442,7 @@ if(false) {
 }
 
 /***/ }),
-/* 291 */
+/* 292 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(21)(false);
@@ -69126,7 +69456,7 @@ exports.push([module.i, "/* css footer */ \n\n.footer {\n\tbackground-color: #FA
 
 
 /***/ }),
-/* 292 */
+/* 293 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -69134,7 +69464,7 @@ exports.push([module.i, "/* css footer */ \n\n.footer {\n\tbackground-color: #FA
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom__ = __webpack_require__(12);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react_dom__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react_modal__ = __webpack_require__(293);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react_modal__ = __webpack_require__(294);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react_modal___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_react_modal__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__styles_styles_css__ = __webpack_require__(29);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__styles_styles_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__styles_styles_css__);
@@ -69258,7 +69588,7 @@ if (document.getElementById('voucher')) {
 }
 
 /***/ }),
-/* 293 */
+/* 294 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -69268,7 +69598,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _Modal = __webpack_require__(294);
+var _Modal = __webpack_require__(295);
 
 var _Modal2 = _interopRequireDefault(_Modal);
 
@@ -69278,7 +69608,7 @@ exports.default = _Modal2.default;
 module.exports = exports["default"];
 
 /***/ }),
-/* 294 */
+/* 295 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -69305,7 +69635,7 @@ var _propTypes = __webpack_require__(28);
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
-var _ModalPortal = __webpack_require__(295);
+var _ModalPortal = __webpack_require__(296);
 
 var _ModalPortal2 = _interopRequireDefault(_ModalPortal);
 
@@ -69317,7 +69647,7 @@ var _safeHTMLElement = __webpack_require__(109);
 
 var _safeHTMLElement2 = _interopRequireDefault(_safeHTMLElement);
 
-var _reactLifecyclesCompat = __webpack_require__(301);
+var _reactLifecyclesCompat = __webpack_require__(302);
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
 
@@ -69543,7 +69873,7 @@ Modal.defaultStyles = {
 exports.default = Modal;
 
 /***/ }),
-/* 295 */
+/* 296 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -69567,11 +69897,11 @@ var _propTypes = __webpack_require__(28);
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
-var _focusManager = __webpack_require__(296);
+var _focusManager = __webpack_require__(297);
 
 var focusManager = _interopRequireWildcard(_focusManager);
 
-var _scopeTab = __webpack_require__(297);
+var _scopeTab = __webpack_require__(298);
 
 var _scopeTab2 = _interopRequireDefault(_scopeTab);
 
@@ -69579,7 +69909,7 @@ var _ariaAppHider = __webpack_require__(108);
 
 var ariaAppHider = _interopRequireWildcard(_ariaAppHider);
 
-var _classList = __webpack_require__(299);
+var _classList = __webpack_require__(300);
 
 var classList = _interopRequireWildcard(_classList);
 
@@ -69949,7 +70279,7 @@ exports.default = ModalPortal;
 module.exports = exports["default"];
 
 /***/ }),
-/* 296 */
+/* 297 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -70049,7 +70379,7 @@ function teardownScopedFocus() {
 }
 
 /***/ }),
-/* 297 */
+/* 298 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -70132,7 +70462,7 @@ function scopeTab(node, event) {
 module.exports = exports["default"];
 
 /***/ }),
-/* 298 */
+/* 299 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -70199,7 +70529,7 @@ module.exports = warning;
 
 
 /***/ }),
-/* 299 */
+/* 300 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -70312,7 +70642,7 @@ var remove = exports.remove = function remove(element, classString) {
 };
 
 /***/ }),
-/* 300 */
+/* 301 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -70359,7 +70689,7 @@ var __WEBPACK_AMD_DEFINE_RESULT__;/*!
 
 
 /***/ }),
-/* 301 */
+/* 302 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -70523,385 +70853,54 @@ function polyfill(Component) {
 
 
 /***/ }),
-/* 302 */
+/* 303 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 303 */,
-/* 304 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom__ = __webpack_require__(12);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react_dom__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__product___ = __webpack_require__(272);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__styles_styles_css__ = __webpack_require__(29);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__styles_styles_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__styles_styles_css__);
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-
-
-
-
-
-var ProductList = function (_Component) {
-  _inherits(ProductList, _Component);
-
-  function ProductList() {
-    _classCallCheck(this, ProductList);
-
-    var _this = _possibleConstructorReturn(this, (ProductList.__proto__ || Object.getPrototypeOf(ProductList)).call(this));
-
-    _this.state = {
-      productList: []
-    };
-    return _this;
-  }
-
-  _createClass(ProductList, [{
-    key: "componentDidMount",
-    value: function componentDidMount() {
-      var now = this;
-      fetch("/api/products").then(function (response) {
-        return response.json();
-      }).then(function (data) {
-        now.setState({ productList: data });
-      }).catch(function (error) {
-        console.log(error);
-      });
-    }
-  }, {
-    key: "render",
-    value: function render() {
-      return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-        "div",
-        { className: "products", id: "products" },
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-          "div",
-          { className: "columns" },
-          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            "div",
-            { className: "column is-half" },
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-              "h1",
-              { className: "title is-1" },
-              "Mega Products"
-            )
-          )
-        ),
-        this.state.productList.map(function (val, i) {
-          return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__product___["a" /* default */], { key: val.id, productData: val });
-        })
-      );
-    }
-  }]);
-
-  return ProductList;
-}(__WEBPACK_IMPORTED_MODULE_0_react__["Component"]);
-
-/* harmony default export */ __webpack_exports__["a"] = (ProductList);
-
-/***/ }),
+/* 304 */,
 /* 305 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom__ = __webpack_require__(12);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react_dom__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_util__ = __webpack_require__(276);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_util___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_util__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__styles_css__ = __webpack_require__(306);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__styles_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__styles_css__);
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+// style-loader: Adds some css to the DOM by adding a <style> tag
 
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+// load the styles
+var content = __webpack_require__(306);
+if(typeof content === 'string') content = [[module.i, content, '']];
+// Prepare cssTransformation
+var transform;
 
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-
-
-
-//import "../styles/styles.css";
-
-
-var Event = function (_Component) {
-  _inherits(Event, _Component);
-
-  function Event(props) {
-    _classCallCheck(this, Event);
-
-    var _this = _possibleConstructorReturn(this, (Event.__proto__ || Object.getPrototypeOf(Event)).call(this, props));
-
-    _this.state = {
-      showEventDetail: false
-
-    };
-    _this.toggleshowEventDetailClick = _this.toggleshowEventDetailClick.bind(_this);
-    return _this;
-  }
-
-  _createClass(Event, [{
-    key: "toggleshowEventDetailClick",
-    value: function toggleshowEventDetailClick() {
-      this.setState({ showEventDetail: !this.state.showEventDetail });
-    }
-  }, {
-    key: "render",
-    value: function render() {
-      return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-        "div",
-        {
-          className: "container block events-placeholder"
-          /*key={`${props.eventData.id}`} */
-        },
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-          "h4",
-          { className: "title is-4 events-name" },
-          this.props.eventData.date,
-          " / ",
-          this.props.eventData.eventName,
-          " / ",
-          this.props.eventData.city
-        ),
-        !this.state.showEventDetail && __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-          "button",
-          { className: "toggle-events-btn", id: "btn",
-            onClick: this.toggleshowEventDetailClick
-          },
-          "Read More"
-        ),
-        this.state.showEventDetail && __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-          "ul",
-          null,
-          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            "li",
-            { className: "events-p" },
-            this.props.eventData.eventInfo
-          ),
-          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            "a",
-            {
-              className: "button",
-              id: "events-button",
-              href: this.props.eventData.facebookUrl
-            },
-            "Join the party!"
-          ),
-          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            "button",
-            { className: "toggle-events-btn", id: "btn",
-              onClick: this.toggleshowEventDetailClick
-            },
-            "-"
-          )
-        )
-      );
-    }
-  }]);
-
-  return Event;
-}(__WEBPACK_IMPORTED_MODULE_0_react__["Component"]);
-
-/* harmony default export */ __webpack_exports__["a"] = (Event);
+var options = {}
+options.transform = transform
+// add the styles to the DOM
+var update = __webpack_require__(22)(content, options);
+if(content.locals) module.exports = content.locals;
+// Hot Module Replacement
+if(false) {
+	// When the styles change, update the <style> tags
+	if(!content.locals) {
+		module.hot.accept("!!../../../../../node_modules/css-loader/index.js!./styles.css", function() {
+			var newContent = require("!!../../../../../node_modules/css-loader/index.js!./styles.css");
+			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+			update(newContent);
+		});
+	}
+	// When the module is disposed, remove the <style> tags
+	module.hot.dispose(function() { update(); });
+}
 
 /***/ }),
 /* 306 */
 /***/ (function(module, exports, __webpack_require__) {
 
-// style-loader: Adds some css to the DOM by adding a <style> tag
-
-// load the styles
-var content = __webpack_require__(307);
-if(typeof content === 'string') content = [[module.i, content, '']];
-// Prepare cssTransformation
-var transform;
-
-var options = {}
-options.transform = transform
-// add the styles to the DOM
-var update = __webpack_require__(22)(content, options);
-if(content.locals) module.exports = content.locals;
-// Hot Module Replacement
-if(false) {
-	// When the styles change, update the <style> tags
-	if(!content.locals) {
-		module.hot.accept("!!../../../../../node_modules/css-loader/index.js!./styles.css", function() {
-			var newContent = require("!!../../../../../node_modules/css-loader/index.js!./styles.css");
-			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-			update(newContent);
-		});
-	}
-	// When the module is disposed, remove the <style> tags
-	module.hot.dispose(function() { update(); });
-}
-
-/***/ }),
-/* 307 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var escape = __webpack_require__(281);
+var escape = __webpack_require__(282);
 exports = module.exports = __webpack_require__(21)(false);
 // imports
 
 
 // module
-exports.push([module.i, "/* events css */\n.events,\n.events-title,\n.events-subtitle,\n.events-name,\n.past-events-title,\n#events-button,\n.events-p {\n  color: white;\n}\n\n.events {\n\tmin-height: auto;\n\tmax-width: 100%;\n\tmargin-top: 2em;\n\tbackground: #333 url(" + escape(__webpack_require__(282)) + ");\n\tbackground-position: center;\n\tbackground-repeat: no-repeat;\n\tbackground-size: cover;\n\tz-index: -1;\n\tpadding: 5em 0 5em 0;\n}\n\n.title.is-4.events-name {\n\tfont-size: 1.8em;\n}\n\n.toggle-events-btn {\n\tborder-style: none;\n\tcolor: white;\n\tfont-size: 20px;      \n\tbackground-color: transparent;\n}\n\n.events-title {\n\tpadding-top: 1em;\n\tfont-size: 2.8em;\n\ttext-transform: uppercase;\n\tfont-weight: 600;\n}\n\n#events-button {\n\tmargin-top: 0.5em;\n\tbackground-color: #FAB418; \n\tborder-color: transparent;\n\twidth: 100px;\n\tbox-shadow: 0 8px 16px 0 rgba(0,0,0,0.05), 0 6px 20px 0 rgba(0,0,0,0.05);\n}\n\nli.events-p {\n\tfont-size: 1.5em;\n}\n\nbutton.toggle-events-btn {\n\ttransition: 200s ease-in;\n\tcolor: green;\n}\n", ""]);
-
-// exports
-
-
-/***/ }),
-/* 308 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom__ = __webpack_require__(12);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react_dom__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_util__ = __webpack_require__(276);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_util___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_util__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__event__ = __webpack_require__(305);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__styles_css__ = __webpack_require__(309);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__styles_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__styles_css__);
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-
-
-
-
-//import "../styles/styles.css";
-
-
-var EventsList = function (_Component) {
-  _inherits(EventsList, _Component);
-
-  function EventsList() {
-    _classCallCheck(this, EventsList);
-
-    var _this = _possibleConstructorReturn(this, (EventsList.__proto__ || Object.getPrototypeOf(EventsList)).call(this));
-
-    _this.state = {
-      events: []
-    };
-    return _this;
-  }
-
-  _createClass(EventsList, [{
-    key: "componentDidMount",
-    value: function componentDidMount() {
-      var now = this;
-      fetch("/api/event").then(function (response) {
-        return response.json();
-      }).then(function (data) {
-        now.setState({ events: data });
-      }).catch(function (error) {
-        console.log(error);
-      });
-    }
-  }, {
-    key: "render",
-    value: function render() {
-      return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-        "div",
-        { className: "events" },
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", { className: "bg-image" }),
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-          "div",
-          { className: "columns" },
-          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            "div",
-            { className: "column is-half", id: "eventsHeading" },
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-              "h1",
-              { className: "title is-1 events-title" },
-              "Mega Events"
-            ),
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-              "h2",
-              { className: "title is-3 events-subtitle" },
-              "Upcoming"
-            )
-          )
-        ),
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-          "div",
-          { className: "column" },
-          this.state.events && this.state.events.length > 0 ? this.state.events.map(function (keyName, keyIndex) {
-            return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__event__["a" /* default */], { key: keyName.id, eventData: keyName });
-          }) : ""
-        )
-      );
-    }
-  }]);
-
-  return EventsList;
-}(__WEBPACK_IMPORTED_MODULE_0_react__["Component"]);
-
-/* harmony default export */ __webpack_exports__["a"] = (EventsList);
-
-/***/ }),
-/* 309 */
-/***/ (function(module, exports, __webpack_require__) {
-
-// style-loader: Adds some css to the DOM by adding a <style> tag
-
-// load the styles
-var content = __webpack_require__(310);
-if(typeof content === 'string') content = [[module.i, content, '']];
-// Prepare cssTransformation
-var transform;
-
-var options = {}
-options.transform = transform
-// add the styles to the DOM
-var update = __webpack_require__(22)(content, options);
-if(content.locals) module.exports = content.locals;
-// Hot Module Replacement
-if(false) {
-	// When the styles change, update the <style> tags
-	if(!content.locals) {
-		module.hot.accept("!!../../../../../node_modules/css-loader/index.js!./styles.css", function() {
-			var newContent = require("!!../../../../../node_modules/css-loader/index.js!./styles.css");
-			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-			update(newContent);
-		});
-	}
-	// When the module is disposed, remove the <style> tags
-	module.hot.dispose(function() { update(); });
-}
-
-/***/ }),
-/* 310 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var escape = __webpack_require__(281);
-exports = module.exports = __webpack_require__(21)(false);
-// imports
-
-
-// module
-exports.push([module.i, "/* events css */\n.events,\n.events-title,\n.events-subtitle,\n.events-name,\n.past-events-title,\n#events-button,\n.events-p {\n  color: white;\n}\n\n.events {\n\tmin-height: auto;\n\tmax-width: 100%;\n\tmargin-top: 2em;\n\tbackground: #333 url(" + escape(__webpack_require__(282)) + ");\n\tbackground-position: center;\n\tbackground-repeat: no-repeat;\n\tbackground-size: cover;\n\tz-index: -1;\n\tpadding: 5em 0 5em 0;\n}\n\n.title.is-4.events-name {\n\tfont-size: 1.8em;\n}\n\n.toggle-events-btn {\n\tborder-style: none;\n\tcolor: white;\n\tfont-size: 20px;      \n\tbackground-color: transparent;\n}\n\n.events-title {\n\tpadding-top: 1em;\n\tfont-size: 2.8em;\n\ttext-transform: uppercase;\n\tfont-weight: 600;\n}\n\n#events-button {\n\tmargin-top: 0.5em;\n\tbackground-color: #FAB418; \n\tborder-color: transparent;\n\twidth: 100px;\n\tbox-shadow: 0 8px 16px 0 rgba(0,0,0,0.05), 0 6px 20px 0 rgba(0,0,0,0.05);\n}\n\nli.events-p {\n\tfont-size: 1.5em;\n}\n\nbutton.toggle-events-btn {\n\ttransition: 200s ease-in;\n\tcolor: green;\n}\n", ""]);
+exports.push([module.i, "/* events css */\n.events-name,\n#events-button,\n.events-p {\n  color: white;\n}\n\n.events {\n\tmin-height: auto;\n\tmax-width: 100%;\n\tmargin-top: 2em;\n\tbackground: #333 url(" + escape(__webpack_require__(283)) + ");\n\tbackground-position: center;\n\tbackground-repeat: no-repeat;\n\tbackground-size: cover;\n\tz-index: -1;\n\tpadding: 5em 0 5em 0;\n}\n\n.title.is-4.events-name {\n\tfont-size: 1.8em;\n}\n\n.toggle-events-btn {\n\tborder-style: none;\n\tcolor: white;\n\tfont-size: 20px;      \n\tbackground-color: transparent;\n}\n\n.events-title {\n\tpadding-top: 1em;\n\tfont-size: 2.8em;\n\ttext-transform: uppercase;\n\tfont-weight: 600;\n}\n\n#events-button {\n\tmargin-top: 0.5em;\n\tbackground-color: #FAB418; \n\tborder-color: transparent;\n\twidth: 100px;\n\tbox-shadow: 0 8px 16px 0 rgba(0,0,0,0.05), 0 6px 20px 0 rgba(0,0,0,0.05);\n}\n\nli.events-p {\n\tfont-size: 1.5em;\n}\n\nbutton.toggle-events-btn {\n\ttransition: 200s ease-in;\n\tcolor: green;\n}\n\n#btn {\n\t\n}\n", ""]);
 
 // exports
 

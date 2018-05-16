@@ -1,9 +1,5 @@
 /* events css */
-.events,
-.events-title,
-.events-subtitle,
 .events-name,
-.past-events-title,
 #events-button,
 .events-p {
   color: white;
@@ -54,4 +50,8 @@ li.events-p {
 button.toggle-events-btn {
 	transition: 200s ease-in;
 	color: green;
+}
+
+#btn {
+	
 }
