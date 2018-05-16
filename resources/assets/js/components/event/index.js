@@ -10,8 +10,8 @@ class Event extends Component {
     super(props);
     this.state = {
       showEventDetail: false
+    } 
 
-    }
     this.toggleshowEventDetailClick = this.toggleshowEventDetailClick.bind(this);
   }
 
@@ -24,11 +24,10 @@ class Event extends Component {
   render() {
     return (
               <div
-                className="container block events-placeholder"
+                className="block events-placeholder"
               >
                 <h4 className="title is-4 events-name">
                   {this.props.eventData.date} / {this.props.eventData.eventName} / {this.props.eventData.city}
-
                 </h4>
 
                   <div id="btn">

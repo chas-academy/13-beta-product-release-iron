@@ -68201,28 +68201,32 @@ var EventsList = function (_Component) {
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", { className: "bg-image" }),
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
           "div",
-          { className: "columns" },
+          { id: "hejpadig", className: "" },
           __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
             "div",
-            { className: "column is-half", id: "eventsHeading" },
+            { className: "" },
             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-              "h1",
-              { className: "title is-1 events-title" },
-              "Mega Events"
-            ),
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-              "h2",
-              { className: "title is-3 events-subtitle" },
-              "Upcoming"
+              "div",
+              { className: "", id: "eventsHeading" },
+              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                "h1",
+                { className: "title is-1 events-title" },
+                "Mega Events"
+              ),
+              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                "h2",
+                { className: "title is-3 events-subtitle" },
+                "Upcoming"
+              )
             )
+          ),
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            "div",
+            { className: "" },
+            this.state.events && this.state.events.length > 0 ? this.state.events.map(function (keyName, keyIndex) {
+              return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__event__["a" /* default */], { key: keyName.id, eventData: keyName });
+            }) : ""
           )
-        ),
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-          "div",
-          { className: "column" },
-          this.state.events && this.state.events.length > 0 ? this.state.events.map(function (keyName, keyIndex) {
-            return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__event__["a" /* default */], { key: keyName.id, eventData: keyName });
-          }) : ""
         )
       );
     }
@@ -68903,8 +68907,8 @@ var Event = function (_Component) {
 
     _this.state = {
       showEventDetail: false
-
     };
+
     _this.toggleshowEventDetailClick = _this.toggleshowEventDetailClick.bind(_this);
     return _this;
   }
@@ -68920,7 +68924,7 @@ var Event = function (_Component) {
       return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
         "div",
         {
-          className: "container block events-placeholder"
+          className: "block events-placeholder"
         },
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
           "h4",
@@ -69017,7 +69021,7 @@ exports = module.exports = __webpack_require__(21)(false);
 
 
 // module
-exports.push([module.i, "/* events css */\n.events,\n.events-title,\n.events-subtitle {\n  color: white;\n}\n\n.events {\n\tmin-height: auto;\n\tmax-width: 100%;\n\tmargin-top: 2em;\n\tbackground: #333 url(" + escape(__webpack_require__(283)) + ");\n\tbackground-position: center;\n\tbackground-repeat: no-repeat;\n\tbackground-size: cover;\n\tz-index: -1;\n\tpadding: 5em 0 5em 0;\n}\n\n.events-title {\n\tpadding-top: 1em;\n\tfont-size: 2.8em;\n\ttext-transform: uppercase;\n\tfont-weight: 600;\n}", ""]);
+exports.push([module.i, "/* events css */\n.events,\n.events-title,\n.events-subtitle {\n  color: white;\n}\n\n.events {\n\tmin-height: auto;\n\tmax-width: 100%;\n\tmargin-top: 2em;\n\tbackground: #333 url(" + escape(__webpack_require__(283)) + ");\n\tbackground-position: center;\n\tbackground-repeat: no-repeat;\n\tbackground-size: cover;\n\tz-index: -1;\n\tpadding-left:5em;\n}\n\n.events-title {\n\tpadding-top: 1em;\n\tfont-size: 2.8em;\n\ttext-transform: uppercase;\n\tfont-weight: 600;\n}\n\n", ""]);
 
 // exports
 
@@ -70894,13 +70898,12 @@ if(false) {
 /* 306 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var escape = __webpack_require__(282);
 exports = module.exports = __webpack_require__(21)(false);
 // imports
 
 
 // module
-exports.push([module.i, "/* events css */\n.events-name,\n#events-button,\n.events-p {\n  color: white;\n}\n\n.events {\n\tmin-height: auto;\n\tmax-width: 100%;\n\tmargin-top: 2em;\n\tbackground: #333 url(" + escape(__webpack_require__(283)) + ");\n\tbackground-position: center;\n\tbackground-repeat: no-repeat;\n\tbackground-size: cover;\n\tz-index: -1;\n\tpadding: 5em 0 5em 0;\n}\n\n.title.is-4.events-name {\n\tfont-size: 1.8em;\n}\n\n.toggle-events-btn {\n\tborder-style: none;\n\tcolor: white;\n\tfont-size: 20px;      \n\tbackground-color: transparent;\n}\n\n.events-title {\n\tpadding-top: 1em;\n\tfont-size: 2.8em;\n\ttext-transform: uppercase;\n\tfont-weight: 600;\n}\n\n#events-button {\n\tmargin-top: 0.5em;\n\tbackground-color: #FAB418; \n\tborder-color: transparent;\n\twidth: 100px;\n\tbox-shadow: 0 8px 16px 0 rgba(0,0,0,0.05), 0 6px 20px 0 rgba(0,0,0,0.05);\n}\n\nli.events-p {\n\tfont-size: 1.5em;\n}\n\nbutton.toggle-events-btn {\n\ttransition: 200s ease-in;\n\tcolor: green;\n}\n\n#btn {\n\t\n}\n", ""]);
+exports.push([module.i, "/* events css */\n.events-name,\n#events-button,\n.events-p {\n  color: white;\n}\n\n\n.title.is-4.events-name {\n\tfont-size: 1.8em;\n}\n\n\n#btn {\n\t\n}\n\n.toggle-events-btn {\n\tborder-style: none;\n\tcolor: white;\n\tfont-size: 20px;      \n\tbackground-color: transparent;\n}\n\n.events-title {\n\tpadding-top: 1em;\n\tfont-size: 2.8em;\n\ttext-transform: uppercase;\n\tfont-weight: 600;\n}\n\n#events-button {\n\tmargin-top: 0.5em;\n\tbackground-color: #FAB418; \n\tborder-color: transparent;\n\twidth: 100px;\n\tbox-shadow: 0 8px 16px 0 rgba(0,0,0,0.05), 0 6px 20px 0 rgba(0,0,0,0.05);\n}\n\np.events-p {\n\tfont-size: 1em;\n}\n\nbutton.toggle-events-btn {\n\ttransition: 200s ease-in;\n\tcolor: green;\n}\n", ""]);
 
 // exports
 

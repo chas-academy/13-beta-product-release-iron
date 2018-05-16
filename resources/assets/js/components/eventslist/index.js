@@ -29,31 +29,24 @@ class EventsList extends Component {
 
   render() {
     return (
-        <div className="events">
-          <div className="bg-image" />                    
-              <div className="columns">
-                <div className="column is-half" id="eventsHeading">
-                  <h1 className="title is-1 events-title">Mega Events</h1>
-                  <h2 className="title is-3 events-subtitle">Upcoming</h2>
-                </div>
+      <div className="events">
+        <div className="bg-image" />   
+            <div id="hejpadig" className="">                 
+            <div className="">
+              <div className="" id="eventsHeading">
+                <h1 className="title is-1 events-title">Mega Events</h1>
+                <h2 className="title is-3 events-subtitle">Upcoming</h2>
               </div>
-        
-          <div className="column">
-          {this.state.events && this.state.events.length > 0
-            ? this.state.events.map((keyName, keyIndex) => {
-                return <Event key={keyName.id} eventData={keyName}/>;
-              
-              })
-            : ""}
             </div>
        
-        <div className="column">
+        <div className="">
         {this.state.events && this.state.events.length > 0
           ? this.state.events.map((keyName, keyIndex) => {
               if(this.checkIfEventDatePassed(keyName))
                 return <Event key={keyName.id} eventData={keyName}/>;
             })
           : ""}
+          </div>
           </div>
       </div>
 
