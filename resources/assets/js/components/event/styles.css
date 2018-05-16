@@ -4,6 +4,7 @@
 .events-subtitle,
 .events-name,
 .past-events-title,
+#events-button,
 .events-p {
   color: white;
 }
@@ -42,18 +43,15 @@
 	margin-top: 0.5em;
 	background-color: #FAB418; 
 	border-color: transparent;
-	color: white;
 	width: 100px;
 	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.05), 0 6px 20px 0 rgba(0,0,0,0.05);
-}
-
-#toggle-products-btn {
-	font-size: 0.4em;
-	padding-left: 2em;
 }
 
 li.events-p {
 	font-size: 1.5em;
 }
 
-
+button.toggle-events-btn {
+	transition: 200s ease-in;
+	color: green;
+}
