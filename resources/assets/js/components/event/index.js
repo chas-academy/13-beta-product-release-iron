@@ -39,7 +39,7 @@ class Event extends Component {
                 </button>}
             
                 {this.state.showEventDetail &&
-                    
+                    <div>
                     <p className="events-p">{this.props.eventData.eventInfo}</p>
                     {this.props.eventData.facebookUrl != null ?
                       (<a
@@ -55,6 +55,7 @@ class Event extends Component {
                     >
                       x
                     </button>
+                        </div>
                   }
                   
                 </div>

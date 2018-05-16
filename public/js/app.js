@@ -68195,6 +68195,8 @@ var EventsList = function (_Component) {
   }, {
     key: "render",
     value: function render() {
+      var _this2 = this;
+
       return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
         "div",
         { className: "events" },
@@ -68224,11 +68226,22 @@ var EventsList = function (_Component) {
             "div",
             { className: "" },
             this.state.events && this.state.events.length > 0 ? this.state.events.map(function (keyName, keyIndex) {
-              return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__event__["a" /* default */], { key: keyName.id, eventData: keyName });
+              if (_this2.checkIfEventDatePassed(keyName)) return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__event__["a" /* default */], { key: keyName.id, eventData: keyName });
             }) : ""
           )
         )
       );
+    }
+  }, {
+    key: "checkIfEventDatePassed",
+    value: function checkIfEventDatePassed(event) {
+      var eventDate = new Date(event.date);
+      var todaysDate = new Date();
+      if (eventDate.setHours(0, 0, 0, 0) >= todaysDate.setHours(0, 0, 0, 0)) {
+        return true;
+      } else {
+        return false;
+      }
     }
   }]);
 
@@ -68953,7 +68966,7 @@ var Event = function (_Component) {
               { className: "events-p" },
               this.props.eventData.eventInfo
             ),
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            this.props.eventData.facebookUrl != null ? __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
               "a",
               {
                 className: "button",
@@ -68961,7 +68974,7 @@ var Event = function (_Component) {
                 href: this.props.eventData.facebookUrl
               },
               "Join the party!"
-            ),
+            ) : "",
             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
               "button",
               { className: "toggle-events-btn",
