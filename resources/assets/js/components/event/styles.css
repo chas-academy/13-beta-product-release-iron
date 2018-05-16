@@ -1,0 +1,47 @@
+/* events css */
+.events-name,
+#events-button,
+.events-p {
+  color: white;
+}
+
+
+.title.is-4.events-name {
+	font-size: 1.8em;
+}
+
+
+#btn {
+	
+}
+
+.toggle-events-btn {
+	border-style: none;
+	color: white;
+	font-size: 20px;      
+	background-color: transparent;
+}
+
+.events-title {
+	padding-top: 1em;
+	font-size: 2.8em;
+	text-transform: uppercase;
+	font-weight: 600;
+}
+
+#events-button {
+	margin-top: 0.5em;
+	background-color: #FAB418; 
+	border-color: transparent;
+	width: 100px;
+	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.05), 0 6px 20px 0 rgba(0,0,0,0.05);
+}
+
+p.events-p {
+	font-size: 1em;
+}
+
+button.toggle-events-btn {
+	transition: 200s ease-in;
+	color: green;
+}

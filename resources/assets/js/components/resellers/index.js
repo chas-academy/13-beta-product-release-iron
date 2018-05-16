@@ -52,7 +52,7 @@ class Resellers extends Component {
       <div className="resellers" id="resellers">
         <div className="columns">
           <div className="column">
-            <h1 className="title is-1 resellers-title">Drink Us!</h1>
+            <h1 className="title is-1 resellers-title">Drink Us</h1>
             <div className="city-div">
               {this.state.cities.map((val, i) => {
                 return (

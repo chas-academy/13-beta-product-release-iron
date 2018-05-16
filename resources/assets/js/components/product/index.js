@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import LouiJama from '../images/megaMate_louiJama.png';
-import JungleGinger from '../images/megaMate_jungleGinger.png';
 import '../styles/styles.css';
 import './styles.css';
 
@@ -41,7 +39,7 @@ class Product extends Component {
 							onClick={this.toggleShowIngredientsListClick}
 							>
 							{(this.state.showIngredientsList &&
-								"x"	) || "+"	
+								"x"	) || "+ Ingredients"	
 							}</button>
 
 						<div>

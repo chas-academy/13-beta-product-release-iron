@@ -1,0 +1,26 @@
+/* events css */
+.events,
+.events-title,
+.events-subtitle {
+  color: white;
+}
+
+.events {
+	min-height: auto;
+	max-width: 100%;
+	margin-top: 2em;
+	background: #333 url('../images/megaMate_eventsbg.png');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	z-index: -1;
+	padding-left:5em;
+}
+
+.events-title {
+	padding-top: 1em;
+	font-size: 2.8em;
+	text-transform: uppercase;
+	font-weight: 600;
+}
+
