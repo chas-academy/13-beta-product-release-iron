@@ -41,14 +41,24 @@ class EventsList extends Component {
         <div className="column">
         {this.state.events && this.state.events.length > 0
           ? this.state.events.map((keyName, keyIndex) => {
-              return <Event key={keyName.id} eventData={keyName}/>;
-            
+              if(this.checkIfEventDatePassed(keyName))
+                return <Event key={keyName.id} eventData={keyName}/>;
             })
           : ""}
           </div>
       </div>
 
     );
+  }
+  checkIfEventDatePassed(event) {
+    console.log(event.date);
+    var eventDate = new Date(event.date);
+    var todaysDate = new Date();
+    if(eventDate.setHours(0,0,0,0) >= todaysDate.setHours(0,0,0,0)){
+      return true;
+    } else {
+      return false;
+    }
   }
 }
 
