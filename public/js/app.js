@@ -1671,7 +1671,7 @@ var _prodInvariant = __webpack_require__(2),
     _assign = __webpack_require__(4);
 
 var CallbackQueue = __webpack_require__(80);
-var PooledClass = __webpack_require__(20);
+var PooledClass = __webpack_require__(22);
 var ReactFeatureFlags = __webpack_require__(81);
 var ReactReconciler = __webpack_require__(26);
 var Transaction = __webpack_require__(37);
@@ -2434,7 +2434,7 @@ module.exports = exports['default'];
 
 var _assign = __webpack_require__(4);
 
-var PooledClass = __webpack_require__(20);
+var PooledClass = __webpack_require__(22);
 
 var emptyFunction = __webpack_require__(11);
 var warning = __webpack_require__(1);
@@ -2905,6 +2905,447 @@ module.exports = DOMProperty;
 
 /***/ }),
 /* 19 */
+/***/ (function(module, exports) {
+
+/*
+	MIT License http://www.opensource.org/licenses/mit-license.php
+	Author Tobias Koppers @sokra
+*/
+// css base code, injected by the css-loader
+module.exports = function(useSourceMap) {
+	var list = [];
+
+	// return the list of modules as css string
+	list.toString = function toString() {
+		return this.map(function (item) {
+			var content = cssWithMappingToString(item, useSourceMap);
+			if(item[2]) {
+				return "@media " + item[2] + "{" + content + "}";
+			} else {
+				return content;
+			}
+		}).join("");
+	};
+
+	// import a list of modules into the list
+	list.i = function(modules, mediaQuery) {
+		if(typeof modules === "string")
+			modules = [[null, modules, ""]];
+		var alreadyImportedModules = {};
+		for(var i = 0; i < this.length; i++) {
+			var id = this[i][0];
+			if(typeof id === "number")
+				alreadyImportedModules[id] = true;
+		}
+		for(i = 0; i < modules.length; i++) {
+			var item = modules[i];
+			// skip already imported module
+			// this implementation is not 100% perfect for weird media query combinations
+			//  when a module is imported multiple times with different media queries.
+			//  I hope this will never occur (Hey this way we have smaller bundles)
+			if(typeof item[0] !== "number" || !alreadyImportedModules[item[0]]) {
+				if(mediaQuery && !item[2]) {
+					item[2] = mediaQuery;
+				} else if(mediaQuery) {
+					item[2] = "(" + item[2] + ") and (" + mediaQuery + ")";
+				}
+				list.push(item);
+			}
+		}
+	};
+	return list;
+};
+
+function cssWithMappingToString(item, useSourceMap) {
+	var content = item[1] || '';
+	var cssMapping = item[3];
+	if (!cssMapping) {
+		return content;
+	}
+
+	if (useSourceMap && typeof btoa === 'function') {
+		var sourceMapping = toComment(cssMapping);
+		var sourceURLs = cssMapping.sources.map(function (source) {
+			return '/*# sourceURL=' + cssMapping.sourceRoot + source + ' */'
+		});
+
+		return [content].concat(sourceURLs).concat([sourceMapping]).join('\n');
+	}
+
+	return [content].join('\n');
+}
+
+// Adapted from convert-source-map (MIT)
+function toComment(sourceMap) {
+	// eslint-disable-next-line no-undef
+	var base64 = btoa(unescape(encodeURIComponent(JSON.stringify(sourceMap))));
+	var data = 'sourceMappingURL=data:application/json;charset=utf-8;base64,' + base64;
+
+	return '/*# ' + data + ' */';
+}
+
+
+/***/ }),
+/* 20 */
+/***/ (function(module, exports, __webpack_require__) {
+
+/*
+	MIT License http://www.opensource.org/licenses/mit-license.php
+	Author Tobias Koppers @sokra
+*/
+
+var stylesInDom = {};
+
+var	memoize = function (fn) {
+	var memo;
+
+	return function () {
+		if (typeof memo === "undefined") memo = fn.apply(this, arguments);
+		return memo;
+	};
+};
+
+var isOldIE = memoize(function () {
+	// Test for IE <= 9 as proposed by Browserhacks
+	// @see http://browserhacks.com/#hack-e71d8692f65334173fee715c222cb805
+	// Tests for existence of standard globals is to allow style-loader
+	// to operate correctly into non-standard environments
+	// @see https://github.com/webpack-contrib/style-loader/issues/177
+	return window && document && document.all && !window.atob;
+});
+
+var getElement = (function (fn) {
+	var memo = {};
+
+	return function(selector) {
+		if (typeof memo[selector] === "undefined") {
+			memo[selector] = fn.call(this, selector);
+		}
+
+		return memo[selector]
+	};
+})(function (target) {
+	return document.querySelector(target)
+});
+
+var singleton = null;
+var	singletonCounter = 0;
+var	stylesInsertedAtTop = [];
+
+var	fixUrls = __webpack_require__(241);
+
+module.exports = function(list, options) {
+	if (typeof DEBUG !== "undefined" && DEBUG) {
+		if (typeof document !== "object") throw new Error("The style-loader cannot be used in a non-browser environment");
+	}
+
+	options = options || {};
+
+	options.attrs = typeof options.attrs === "object" ? options.attrs : {};
+
+	// Force single-tag solution on IE6-9, which has a hard limit on the # of <style>
+	// tags it will allow on a page
+	if (!options.singleton) options.singleton = isOldIE();
+
+	// By default, add <style> tags to the <head> element
+	if (!options.insertInto) options.insertInto = "head";
+
+	// By default, add <style> tags to the bottom of the target
+	if (!options.insertAt) options.insertAt = "bottom";
+
+	var styles = listToStyles(list, options);
+
+	addStylesToDom(styles, options);
+
+	return function update (newList) {
+		var mayRemove = [];
+
+		for (var i = 0; i < styles.length; i++) {
+			var item = styles[i];
+			var domStyle = stylesInDom[item.id];
+
+			domStyle.refs--;
+			mayRemove.push(domStyle);
+		}
+
+		if(newList) {
+			var newStyles = listToStyles(newList, options);
+			addStylesToDom(newStyles, options);
+		}
+
+		for (var i = 0; i < mayRemove.length; i++) {
+			var domStyle = mayRemove[i];
+
+			if(domStyle.refs === 0) {
+				for (var j = 0; j < domStyle.parts.length; j++) domStyle.parts[j]();
+
+				delete stylesInDom[domStyle.id];
+			}
+		}
+	};
+};
+
+function addStylesToDom (styles, options) {
+	for (var i = 0; i < styles.length; i++) {
+		var item = styles[i];
+		var domStyle = stylesInDom[item.id];
+
+		if(domStyle) {
+			domStyle.refs++;
+
+			for(var j = 0; j < domStyle.parts.length; j++) {
+				domStyle.parts[j](item.parts[j]);
+			}
+
+			for(; j < item.parts.length; j++) {
+				domStyle.parts.push(addStyle(item.parts[j], options));
+			}
+		} else {
+			var parts = [];
+
+			for(var j = 0; j < item.parts.length; j++) {
+				parts.push(addStyle(item.parts[j], options));
+			}
+
+			stylesInDom[item.id] = {id: item.id, refs: 1, parts: parts};
+		}
+	}
+}
+
+function listToStyles (list, options) {
+	var styles = [];
+	var newStyles = {};
+
+	for (var i = 0; i < list.length; i++) {
+		var item = list[i];
+		var id = options.base ? item[0] + options.base : item[0];
+		var css = item[1];
+		var media = item[2];
+		var sourceMap = item[3];
+		var part = {css: css, media: media, sourceMap: sourceMap};
+
+		if(!newStyles[id]) styles.push(newStyles[id] = {id: id, parts: [part]});
+		else newStyles[id].parts.push(part);
+	}
+
+	return styles;
+}
+
+function insertStyleElement (options, style) {
+	var target = getElement(options.insertInto)
+
+	if (!target) {
+		throw new Error("Couldn't find a style target. This probably means that the value for the 'insertInto' parameter is invalid.");
+	}
+
+	var lastStyleElementInsertedAtTop = stylesInsertedAtTop[stylesInsertedAtTop.length - 1];
+
+	if (options.insertAt === "top") {
+		if (!lastStyleElementInsertedAtTop) {
+			target.insertBefore(style, target.firstChild);
+		} else if (lastStyleElementInsertedAtTop.nextSibling) {
+			target.insertBefore(style, lastStyleElementInsertedAtTop.nextSibling);
+		} else {
+			target.appendChild(style);
+		}
+		stylesInsertedAtTop.push(style);
+	} else if (options.insertAt === "bottom") {
+		target.appendChild(style);
+	} else {
+		throw new Error("Invalid value for parameter 'insertAt'. Must be 'top' or 'bottom'.");
+	}
+}
+
+function removeStyleElement (style) {
+	if (style.parentNode === null) return false;
+	style.parentNode.removeChild(style);
+
+	var idx = stylesInsertedAtTop.indexOf(style);
+	if(idx >= 0) {
+		stylesInsertedAtTop.splice(idx, 1);
+	}
+}
+
+function createStyleElement (options) {
+	var style = document.createElement("style");
+
+	options.attrs.type = "text/css";
+
+	addAttrs(style, options.attrs);
+	insertStyleElement(options, style);
+
+	return style;
+}
+
+function createLinkElement (options) {
+	var link = document.createElement("link");
+
+	options.attrs.type = "text/css";
+	options.attrs.rel = "stylesheet";
+
+	addAttrs(link, options.attrs);
+	insertStyleElement(options, link);
+
+	return link;
+}
+
+function addAttrs (el, attrs) {
+	Object.keys(attrs).forEach(function (key) {
+		el.setAttribute(key, attrs[key]);
+	});
+}
+
+function addStyle (obj, options) {
+	var style, update, remove, result;
+
+	// If a transform function was defined, run it on the css
+	if (options.transform && obj.css) {
+	    result = options.transform(obj.css);
+
+	    if (result) {
+	    	// If transform returns a value, use that instead of the original css.
+	    	// This allows running runtime transformations on the css.
+	    	obj.css = result;
+	    } else {
+	    	// If the transform function returns a falsy value, don't add this css.
+	    	// This allows conditional loading of css
+	    	return function() {
+	    		// noop
+	    	};
+	    }
+	}
+
+	if (options.singleton) {
+		var styleIndex = singletonCounter++;
+
+		style = singleton || (singleton = createStyleElement(options));
+
+		update = applyToSingletonTag.bind(null, style, styleIndex, false);
+		remove = applyToSingletonTag.bind(null, style, styleIndex, true);
+
+	} else if (
+		obj.sourceMap &&
+		typeof URL === "function" &&
+		typeof URL.createObjectURL === "function" &&
+		typeof URL.revokeObjectURL === "function" &&
+		typeof Blob === "function" &&
+		typeof btoa === "function"
+	) {
+		style = createLinkElement(options);
+		update = updateLink.bind(null, style, options);
+		remove = function () {
+			removeStyleElement(style);
+
+			if(style.href) URL.revokeObjectURL(style.href);
+		};
+	} else {
+		style = createStyleElement(options);
+		update = applyToTag.bind(null, style);
+		remove = function () {
+			removeStyleElement(style);
+		};
+	}
+
+	update(obj);
+
+	return function updateStyle (newObj) {
+		if (newObj) {
+			if (
+				newObj.css === obj.css &&
+				newObj.media === obj.media &&
+				newObj.sourceMap === obj.sourceMap
+			) {
+				return;
+			}
+
+			update(obj = newObj);
+		} else {
+			remove();
+		}
+	};
+}
+
+var replaceText = (function () {
+	var textStore = [];
+
+	return function (index, replacement) {
+		textStore[index] = replacement;
+
+		return textStore.filter(Boolean).join('\n');
+	};
+})();
+
+function applyToSingletonTag (style, index, remove, obj) {
+	var css = remove ? "" : obj.css;
+
+	if (style.styleSheet) {
+		style.styleSheet.cssText = replaceText(index, css);
+	} else {
+		var cssNode = document.createTextNode(css);
+		var childNodes = style.childNodes;
+
+		if (childNodes[index]) style.removeChild(childNodes[index]);
+
+		if (childNodes.length) {
+			style.insertBefore(cssNode, childNodes[index]);
+		} else {
+			style.appendChild(cssNode);
+		}
+	}
+}
+
+function applyToTag (style, obj) {
+	var css = obj.css;
+	var media = obj.media;
+
+	if(media) {
+		style.setAttribute("media", media)
+	}
+
+	if(style.styleSheet) {
+		style.styleSheet.cssText = css;
+	} else {
+		while(style.firstChild) {
+			style.removeChild(style.firstChild);
+		}
+
+		style.appendChild(document.createTextNode(css));
+	}
+}
+
+function updateLink (link, options, obj) {
+	var css = obj.css;
+	var sourceMap = obj.sourceMap;
+
+	/*
+		If convertToAbsoluteUrls isn't defined, but sourcemaps are enabled
+		and there is no publicPath defined then lets turn convertToAbsoluteUrls
+		on by default.  Otherwise default to the convertToAbsoluteUrls option
+		directly
+	*/
+	var autoFixUrls = options.convertToAbsoluteUrls === undefined && sourceMap;
+
+	if (options.convertToAbsoluteUrls || autoFixUrls) {
+		css = fixUrls(css);
+	}
+
+	if (sourceMap) {
+		// http://stackoverflow.com/a/26603875
+		css += "\n/*# sourceMappingURL=data:application/json;base64," + btoa(unescape(encodeURIComponent(JSON.stringify(sourceMap)))) + " */";
+	}
+
+	var blob = new Blob([css], { type: "text/css" });
+
+	var oldSrc = link.href;
+
+	link.href = URL.createObjectURL(blob);
+
+	if(oldSrc) URL.revokeObjectURL(oldSrc);
+}
+
+
+/***/ }),
+/* 21 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3248,7 +3689,7 @@ ReactElement.isValidElement = function (object) {
 module.exports = ReactElement;
 
 /***/ }),
-/* 20 */
+/* 22 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3363,6 +3804,7 @@ var PooledClass = {
 module.exports = PooledClass;
 
 /***/ }),
+<<<<<<< HEAD
 /* 21 */
 /***/ (function(module, exports) {
 
@@ -3804,6 +4246,8 @@ function updateLink (link, options, obj) {
 
 
 /***/ }),
+=======
+>>>>>>> add modal responsiv and style
 /* 23 */
 /***/ (function(module, exports) {
 
@@ -4011,11 +4455,19 @@ process.umask = function() { return 0; };
 var _assign = __webpack_require__(4);
 
 var ReactBaseClasses = __webpack_require__(68);
+<<<<<<< HEAD
 var ReactChildren = __webpack_require__(137);
 var ReactDOMFactories = __webpack_require__(141);
 var ReactElement = __webpack_require__(19);
 var ReactPropTypes = __webpack_require__(145);
 var ReactVersion = __webpack_require__(147);
+=======
+var ReactChildren = __webpack_require__(139);
+var ReactDOMFactories = __webpack_require__(143);
+var ReactElement = __webpack_require__(21);
+var ReactPropTypes = __webpack_require__(147);
+var ReactVersion = __webpack_require__(149);
+>>>>>>> add modal responsiv and style
 
 var createReactClass = __webpack_require__(148);
 var onlyChild = __webpack_require__(150);
@@ -4509,7 +4961,7 @@ var transform;
 var options = {}
 options.transform = transform
 // add the styles to the DOM
-var update = __webpack_require__(22)(content, options);
+var update = __webpack_require__(20)(content, options);
 if(content.locals) module.exports = content.locals;
 // Hot Module Replacement
 if(false) {
@@ -9234,7 +9686,7 @@ module.exports = getIteratorFn;
 
 var ReactCurrentOwner = __webpack_require__(13);
 var ReactComponentTreeHook = __webpack_require__(7);
-var ReactElement = __webpack_require__(19);
+var ReactElement = __webpack_require__(21);
 
 var checkReactTypeSpec = __webpack_require__(142);
 
@@ -10234,7 +10686,7 @@ var _prodInvariant = __webpack_require__(2);
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-var PooledClass = __webpack_require__(20);
+var PooledClass = __webpack_require__(22);
 
 var invariant = __webpack_require__(0);
 
@@ -13774,8 +14226,13 @@ exports.default = SafeHTMLElement;
 /* 110 */
 /***/ (function(module, exports, __webpack_require__) {
 
+<<<<<<< HEAD
 __webpack_require__(111);
 module.exports = __webpack_require__(303);
+=======
+__webpack_require__(113);
+module.exports = __webpack_require__(306);
+>>>>>>> add modal responsiv and style
 
 
 /***/ }),
@@ -44705,8 +45162,13 @@ if (document.getElementById("app")) {
 
 
 
+<<<<<<< HEAD
 var PooledClass = __webpack_require__(138);
 var ReactElement = __webpack_require__(19);
+=======
+var PooledClass = __webpack_require__(140);
+var ReactElement = __webpack_require__(21);
+>>>>>>> add modal responsiv and style
 
 var emptyFunction = __webpack_require__(11);
 var traverseAllChildren = __webpack_require__(139);
@@ -45255,7 +45717,7 @@ module.exports = KeyEscapeUtils;
 
 
 
-var ReactElement = __webpack_require__(19);
+var ReactElement = __webpack_require__(21);
 
 /**
  * Create a factory that creates HTML tag elements.
@@ -45566,7 +46028,7 @@ module.exports = ReactPropTypesSecret;
 
 
 
-var _require = __webpack_require__(19),
+var _require = __webpack_require__(21),
     isValidElement = _require.isValidElement;
 
 var factory = __webpack_require__(73);
@@ -45674,7 +46136,7 @@ module.exports = '15.6.2';
 var _require = __webpack_require__(68),
     Component = _require.Component;
 
-var _require2 = __webpack_require__(19),
+var _require2 = __webpack_require__(21),
     isValidElement = _require2.isValidElement;
 
 var ReactNoopUpdateQueue = __webpack_require__(69);
@@ -46631,7 +47093,7 @@ module.exports = factory;
 
 var _prodInvariant = __webpack_require__(25);
 
-var ReactElement = __webpack_require__(19);
+var ReactElement = __webpack_require__(21);
 
 var invariant = __webpack_require__(0);
 
@@ -47340,7 +47802,7 @@ module.exports = BeforeInputEventPlugin;
 
 var _assign = __webpack_require__(4);
 
-var PooledClass = __webpack_require__(20);
+var PooledClass = __webpack_require__(22);
 
 var getTextContentAccessor = __webpack_require__(79);
 
@@ -53403,7 +53865,7 @@ module.exports = flattenChildren;
 
 var _assign = __webpack_require__(4);
 
-var PooledClass = __webpack_require__(20);
+var PooledClass = __webpack_require__(22);
 var Transaction = __webpack_require__(37);
 var ReactInstrumentation = __webpack_require__(9);
 var ReactServerUpdateQueue = __webpack_require__(200);
@@ -54078,7 +54540,7 @@ var _assign = __webpack_require__(4);
 
 var EventListener = __webpack_require__(96);
 var ExecutionEnvironment = __webpack_require__(6);
-var PooledClass = __webpack_require__(20);
+var PooledClass = __webpack_require__(22);
 var ReactDOMComponentTree = __webpack_require__(5);
 var ReactUpdates = __webpack_require__(14);
 
@@ -54314,7 +54776,7 @@ module.exports = ReactInjection;
 var _assign = __webpack_require__(4);
 
 var CallbackQueue = __webpack_require__(80);
-var PooledClass = __webpack_require__(20);
+var PooledClass = __webpack_require__(22);
 var ReactBrowserEventEmitter = __webpack_require__(41);
 var ReactInputSelection = __webpack_require__(97);
 var ReactInstrumentation = __webpack_require__(9);
@@ -56779,7 +57241,7 @@ var transform;
 var options = {}
 options.transform = transform
 // add the styles to the DOM
-var update = __webpack_require__(22)(content, options);
+var update = __webpack_require__(20)(content, options);
 if(content.locals) module.exports = content.locals;
 // Hot Module Replacement
 if(false) {
@@ -56799,7 +57261,7 @@ if(false) {
 /* 238 */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(21)(false);
+exports = module.exports = __webpack_require__(19)(false);
 // imports
 
 
@@ -67836,7 +68298,7 @@ var Vision = function (_Component) {
 /* 268 */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(21)(false);
+exports = module.exports = __webpack_require__(19)(false);
 // imports
 
 
@@ -67861,7 +68323,7 @@ var transform;
 var options = {}
 options.transform = transform
 // add the styles to the DOM
-var update = __webpack_require__(22)(content, options);
+var update = __webpack_require__(20)(content, options);
 if(content.locals) module.exports = content.locals;
 // Hot Module Replacement
 if(false) {
@@ -67881,7 +68343,7 @@ if(false) {
 /* 270 */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(21)(false);
+exports = module.exports = __webpack_require__(19)(false);
 // imports
 
 
@@ -68107,7 +68569,7 @@ var transform;
 var options = {}
 options.transform = transform
 // add the styles to the DOM
-var update = __webpack_require__(22)(content, options);
+var update = __webpack_require__(20)(content, options);
 if(content.locals) module.exports = content.locals;
 // Hot Module Replacement
 if(false) {
@@ -68127,7 +68589,7 @@ if(false) {
 /* 274 */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(21)(false);
+exports = module.exports = __webpack_require__(19)(false);
 // imports
 
 
@@ -69008,7 +69470,7 @@ var transform;
 var options = {}
 options.transform = transform
 // add the styles to the DOM
-var update = __webpack_require__(22)(content, options);
+var update = __webpack_require__(20)(content, options);
 if(content.locals) module.exports = content.locals;
 // Hot Module Replacement
 if(false) {
@@ -69028,8 +69490,13 @@ if(false) {
 /* 281 */
 /***/ (function(module, exports, __webpack_require__) {
 
+<<<<<<< HEAD
 var escape = __webpack_require__(282);
 exports = module.exports = __webpack_require__(21)(false);
+=======
+var escape = __webpack_require__(283);
+exports = module.exports = __webpack_require__(19)(false);
+>>>>>>> add modal responsiv and style
 // imports
 
 
@@ -69232,7 +69699,7 @@ var transform;
 var options = {}
 options.transform = transform
 // add the styles to the DOM
-var update = __webpack_require__(22)(content, options);
+var update = __webpack_require__(20)(content, options);
 if(content.locals) module.exports = content.locals;
 // Hot Module Replacement
 if(false) {
@@ -69252,7 +69719,7 @@ if(false) {
 /* 286 */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(21)(false);
+exports = module.exports = __webpack_require__(19)(false);
 // imports
 
 
@@ -69442,7 +69909,7 @@ var transform;
 var options = {}
 options.transform = transform
 // add the styles to the DOM
-var update = __webpack_require__(22)(content, options);
+var update = __webpack_require__(20)(content, options);
 if(content.locals) module.exports = content.locals;
 // Hot Module Replacement
 if(false) {
@@ -69462,7 +69929,7 @@ if(false) {
 /* 292 */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(21)(false);
+exports = module.exports = __webpack_require__(19)(false);
 // imports
 
 
@@ -69485,6 +69952,11 @@ exports.push([module.i, "/* css footer */ \n\n.footer {\n\tbackground-color: #FA
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react_modal___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_react_modal__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__styles_styles_css__ = __webpack_require__(29);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__styles_styles_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__styles_styles_css__);
+<<<<<<< HEAD
+=======
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__styles_css__ = __webpack_require__(304);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__styles_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__styles_css__);
+>>>>>>> add modal responsiv and style
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -69507,7 +69979,10 @@ var Voucher = function (_Component) {
 		var _this = _possibleConstructorReturn(this, (Voucher.__proto__ || Object.getPrototypeOf(Voucher)).call(this));
 
 		_this.state = {
-			showModal: false
+			showModal: false,
+			showVoucher: false,
+			vouchers: [],
+			voucher: []
 		};
 
 		_this.handleOpenModal = _this.handleOpenModal.bind(_this);
@@ -69516,6 +69991,19 @@ var Voucher = function (_Component) {
 	}
 
 	_createClass(Voucher, [{
+		key: 'componentDidMount',
+		value: function componentDidMount() {
+			var now = this;
+			fetch("api/voucher").then(function (response) {
+				return response.json();
+			}).then(function (data) {
+				now.setState({ vouchers: data });
+				now.checkAllVouchers();
+			}).catch(function (error) {
+				console.log(error);
+			});
+		}
+	}, {
 		key: 'handleOpenModal',
 		value: function handleOpenModal() {
 			this.setState({ showModal: true });
@@ -69531,6 +70019,17 @@ var Voucher = function (_Component) {
 			__WEBPACK_IMPORTED_MODULE_2_react_modal___default.a.setAppElement('body');
 		}
 	}, {
+		key: 'handleShowVoucher',
+		value: function handleShowVoucher(voucherNumber) {
+			this.setState({
+				showVoucher: true,
+				voucher: this.state.vouchers[voucherNumber]
+			});
+		}
+	}, {
+		key: 'componentDidUpdate',
+		value: function componentDidUpdate() {}
+	}, {
 		key: 'render',
 		value: function render() {
 			return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
@@ -69538,8 +70037,13 @@ var Voucher = function (_Component) {
 				{ className: 'hero is-fullheight is-primary is-bold' },
 				__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
 					'div',
+<<<<<<< HEAD
 					{ className: 'hero-body' },
 					__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+=======
+					{ className: 'hero-body', id: 'voucher' },
+					this.state.showVoucher === true ? __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+>>>>>>> add modal responsiv and style
 						'div',
 						{ className: 'container has-text-centered' },
 						__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
@@ -69548,13 +70052,14 @@ var Voucher = function (_Component) {
 							'Get mega voucher'
 						),
 						__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div', { id: 'offerVoucher' })
-					)
+					) : ""
 				),
 				__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
 					__WEBPACK_IMPORTED_MODULE_2_react_modal___default.a,
 					{
 						isOpen: this.state.showModal,
 						contentLabel: 'Voucher for mega mat\xE9',
+<<<<<<< HEAD
 						onRequestClose: this.handleCloseModal
 					},
 					__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
@@ -69571,6 +70076,40 @@ var Voucher = function (_Component) {
 						'p',
 						{ className: 'has-text-centered' },
 						'G\xE4ller vid lilla baren mellan 21:00-23:30'
+=======
+						onRequestClose: this.handleCloseModal,
+						className: 'Modal'
+
+					},
+					__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+						'div',
+						{ className: 'modal-content' },
+						__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+							'h1',
+							{ className: 'title has-text-centered animate-fallIn', id: 'voucherTitle' },
+							this.state.voucher.title
+						),
+						__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+							'h2',
+							{ className: 'subtitle has-text-centered animate-fallIn', id: 'voucherSubtitle' },
+							this.state.voucher.subtitle
+						),
+						__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+							'p',
+							{ className: 'has-text-centered animate-fallIn', id: 'voucherText' },
+							this.state.voucher.content
+						),
+						__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+							'p',
+							{ className: 'has-text-centered animate-fallIn' },
+							this.state.voucher.startTime
+						),
+						__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+							'p',
+							{ className: 'has-text-centered animate-fallIn' },
+							this.state.voucher.endTime
+						)
+>>>>>>> add modal responsiv and style
 					),
 					__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
 						'div',
@@ -69592,6 +70131,31 @@ var Voucher = function (_Component) {
 					)
 				)
 			);
+		}
+	}, {
+		key: 'checkAllVouchers',
+		value: function checkAllVouchers() {
+			for (var i = 0; i < this.state.vouchers.length; i++) {
+				console.log(this.state.vouchers[i]);
+				this.checkIfVoucherIsValid(this.state.vouchers[i].date, this.state.vouchers[i].startTime, this.state.vouchers[i].endTime, i);
+				if (this.state.showVoucher == true) {
+					break;
+				}
+			}
+		}
+	}, {
+		key: 'checkIfVoucherIsValid',
+		value: function checkIfVoucherIsValid(voucherDate, startTime, endTime, voucherNumber) {
+			var inputDate = new Date(voucherDate);
+			var todaysDate = new Date();
+			var todaysTime = new Date().toLocaleTimeString();
+			if (inputDate.setHours(0, 0, 0, 0) == todaysDate.setHours(0, 0, 0, 0)) {
+				if (startTime < todaysTime) {
+					if (endTime > todaysTime) {
+						this.handleShowVoucher(voucherNumber);
+					}
+				}
+			}
 		}
 	}]);
 
@@ -70870,6 +71434,7 @@ function polyfill(Component) {
 
 
 /***/ }),
+<<<<<<< HEAD
 /* 303 */
 /***/ (function(module, exports) {
 
@@ -70878,12 +71443,19 @@ function polyfill(Component) {
 /***/ }),
 /* 304 */,
 /* 305 */
+=======
+/* 304 */
+>>>>>>> add modal responsiv and style
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
+<<<<<<< HEAD
 var content = __webpack_require__(306);
+=======
+var content = __webpack_require__(305);
+>>>>>>> add modal responsiv and style
 if(typeof content === 'string') content = [[module.i, content, '']];
 // Prepare cssTransformation
 var transform;
@@ -70891,7 +71463,7 @@ var transform;
 var options = {}
 options.transform = transform
 // add the styles to the DOM
-var update = __webpack_require__(22)(content, options);
+var update = __webpack_require__(20)(content, options);
 if(content.locals) module.exports = content.locals;
 // Hot Module Replacement
 if(false) {
@@ -70908,18 +71480,32 @@ if(false) {
 }
 
 /***/ }),
+<<<<<<< HEAD
 /* 306 */
+=======
+/* 305 */
+>>>>>>> add modal responsiv and style
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(21)(false);
+exports = module.exports = __webpack_require__(19)(false);
 // imports
 
 
 // module
+<<<<<<< HEAD
 exports.push([module.i, "/* events css */\n.events-name,\n#events-button,\n.events-p {\n  color: white;\n}\n\n\n.title.is-4.events-name {\n\tfont-size: 1.8em;\n}\n\n\n#btn {\n\t\n}\n\n.toggle-events-btn {\n\tborder-style: none;\n\tcolor: white;\n\tfont-size: 20px;      \n\tbackground-color: transparent;\n}\n\n.events-title {\n\tpadding-top: 1em;\n\tfont-size: 2.8em;\n\ttext-transform: uppercase;\n\tfont-weight: 600;\n}\n\n#events-button {\n\tmargin-top: 0.5em;\n\tbackground-color: #FAB418; \n\tborder-color: transparent;\n\twidth: 100px;\n\tbox-shadow: 0 8px 16px 0 rgba(0,0,0,0.05), 0 6px 20px 0 rgba(0,0,0,0.05);\n}\n\np.events-p {\n\tfont-size: 1em;\n}\n\nbutton.toggle-events-btn {\n\ttransition: 200s ease-in;\n\tcolor: green;\n}\n", ""]);
+=======
+exports.push([module.i, "#voucherTitle,\n#voucherSubtitle,\n#voucherText {\npadding-top: 30px;\ncolor: white;\n}\n\n#voucherSubtitle {\npadding-top: 30px;\n}\n\n#voucherPopBtn {\nbackground-color: black;\n}\n\n/*\nul.bubbles {\nposition: absolute;\ntop: 50%;\nleft: 50%; \ntransform: translate(-50%, -50%);\nmargin: 0;\npadding: 0; \ndisplay: flex;\n}\n\nul.bubbles \nli.bubble {\n\tlist-style: none;\n\twidth: 30px;\n\theight: 30px;\n\tbackground-color: #FAB418;\n\tborder-radius: 50%; \n\tanimation: circlebubbles 1.4s ease-in-out infinite;\n}\n\n@keyframes circlebubbles {\n0%, 60%, 100%\n  {\n  transform: scale(0.2);\n  } \n  15%\n  {\n  transform: scale(0.5);\n  }\n}\n\n\nul.bubbles li.bubble\n{\nanimation-delay: -1.4s;\nbackground:  #FAB418;\nbox-shadow: 0 0 50px #FAB418;\n}\n*/\n\n.button.is-info.is-outlined {\nborder-color: #FAB418;\ncolor: #FAB418;\n}\n\n#voucher-close-btn {\nposition: absolute;\nbottom: 2%;\ncolor: white;\nwidth: 100px;\nheight: 3em;\n}\n\n.Modal {\n  position: absolute;\n  top:0;\n  left:0;\n  right:0;\n  bottom:0;\n  background-size: cover;\n  background: url('https://images.unsplash.com/photo-1520935443738-cdd39913a9e4?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=faaf839ae377736e02dffa9267f63104&auto=format&fit=crop&w=1922&q=80')\n}\n\n.Modal::after {\n  content: \"\";\n  position: absolute;\n  top:0;\n  left:0;\n  width:100%;\n  height:100%;\n  background: rgba(0,0,0,0.6)\n}\n.Overlay {\n\tposition: fixed;\n\ttop: 0;\n\tleft: 0; \n\tright: 0;\n\tbottom: 0;\n\tbackground-color:white;\n}\n\n.modal-content {\n  z-index: 2;\n  top:50%;\n  transform: translateY(-50%);\n}\n\n.modal-content > .title {\n  font-size: 72px;\n  text-transform: uppercase;\n}\n\n/* background on first page */ \n#voucher {\n  margin: 0;\n  padding: 0;\n\tbackground-color: #FAB418;\n} \n\n.center {\n  /* position: absolute; */\n  /* top: 50%;\n  left: 50%; */\n  transform: translate(-50%, -50%);\n}\n\n.pulse {\n  width: 290px;\n  height: 75px;\n  background: #ff6d4a;\n  border-radius: 50%;\n  color: #fff;\n  font-size: 20px;\n  text-align: center;\n  line-height: 100px;\n  font-family: verdana;\n  text-transform: uppercase;\n  animation: animate 3s linear infinite;\n}\n\n@keyframes animate\n{\n  0%\n  {\n    box-shadow: 0 0 0 0 rgba(255,109,74,.7), 0 0 0 0 rgba(255,109,74,.7);\n  }\n  40%\n  {\n    box-shadow: 0 0 0 50px rgba(255,109,74,0), 0 0 0 0 rgba(255,109,74,.7);\n  }\n  80%\n  {\n    box-shadow: 0 0 0 50px rgba(255,109,74,0), 0 0 0 30px rgba(255,109,74,0);\n  }\n  100%\n  {\n    box-shadow: 0 0 0 0 rgba(255,109,74,0), 0 0 0 30px rgba(255,109,74,0);\n  }\n}", ""]);
+>>>>>>> add modal responsiv and style
 
 // exports
 
+
+/***/ }),
+/* 306 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
 
 /***/ })
 /******/ ]);

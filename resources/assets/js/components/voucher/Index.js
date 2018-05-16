@@ -69,10 +69,16 @@ class Voucher extends Component {
 						isOpen={this.state.showModal}
 						contentLabel="Voucher for mega maté"
 						onRequestClose={this.handleCloseModal}
+						className="Modal"
+						
 						>
-						<h1 className="title has-text-centered">{this.state.voucher.title}</h1>
-						<h2 className="subtitle has-text-centered">{this.state.voucher.subtitle}</h2>
-						<p className="has-text-centered">{this.state.voucher.content}</p>
+						<div className="modal-content" >
+						<h1 className="title has-text-centered animate-fallIn" id="voucherTitle" >{this.state.voucher.title}</h1>
+						<h2 className="subtitle has-text-centered animate-fallIn" id="voucherSubtitle" >{this.state.voucher.subtitle}</h2>
+						<p className="has-text-centered animate-fallIn" id="voucherText">{this.state.voucher.content}</p>
+						<p className="has-text-centered animate-fallIn">{this.state.voucher.startTime}</p>
+						<p className="has-text-centered animate-fallIn">{this.state.voucher.endTime}</p>
+						</div>
 						<div className="buttons has-addons is-right">
 							<button onClick={this.handleCloseModal} className="modalButton">Close</button>
 						</div>
