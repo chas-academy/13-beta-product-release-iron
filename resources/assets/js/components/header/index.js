@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import ReactDOM from "react-dom";
 //import "../styles/styles.css";
 import "./header.css";
-import megamate_gulsvart from "../images/megaMate_loggo.png";
+import megamate_gulsvart from "../images/MegaMate_loggo_color-01.png";
 import ReactPlayer from "react-player";
 import { slide as Menu } from "react-burger-menu";
 
@@ -72,7 +72,6 @@ class Header extends Component {
         <div className="video">
           <ReactPlayer
             playing
-            loop="false"
             className="react-video"
             url={[
               { src: "/images/header-video.mp4", type: "video/mp4" },
