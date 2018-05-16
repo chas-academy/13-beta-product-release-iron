@@ -44,13 +44,15 @@ class Event extends Component {
                 {this.state.showEventDetail &&
                     <ul> 
                     <li className="events-p">{this.props.eventData.eventInfo}</li>
-                    <a
-                    className="button"
-                    id="events-button"
-                    href={this.props.eventData.facebookUrl}
-                  >
-                    Join the party!
-                  </a>
+                    {this.props.eventData.facebookUrl != null ?
+                      (<a
+                      className="button"
+                      id="events-button"
+                      href={this.props.eventData.facebookUrl}
+                    >
+                      Join the party!
+                    </a>)
+                      : ""}
                     <button className="toggle-events-btn" id="btn"
                     onClick={this.toggleshowEventDetailClick}
                     >

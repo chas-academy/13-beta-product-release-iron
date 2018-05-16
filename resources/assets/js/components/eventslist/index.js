@@ -51,7 +51,6 @@ class EventsList extends Component {
     );
   }
   checkIfEventDatePassed(event) {
-    console.log(event.date);
     var eventDate = new Date(event.date);
     var todaysDate = new Date();
     if(eventDate.setHours(0,0,0,0) >= todaysDate.setHours(0,0,0,0)){
