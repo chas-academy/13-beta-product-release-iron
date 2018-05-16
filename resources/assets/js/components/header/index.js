@@ -59,7 +59,7 @@ class Header extends Component {
             className="menu-item"
             href="#resellers"
           >
-            Resellers
+            Drink Us!
           </a>
           <a
             onClick={() => this.closeMenu()}
@@ -75,11 +75,19 @@ class Header extends Component {
             loop="false"
             className="react-video"
             url={[
-              { src: "/images/header-video.mp4", type: "video/mp4" },
-              { src: "/images/header-video.ogg", type: "video/ogg" },
-              { src: "/images/header-video.webm", type: "video/webm" }
+              { src: "/images/header-new-video.mp4", type: "video/mp4" },
+              { src: "/images/header-new-video.ogg", type: "video/ogg" },
+              { src: "/images/header-new-video.webm", type: "video/webm" }
             ]}
           />
+          <a href="#vision">
+            <div className="arrow-container animated fadeInDown">
+              <div className="arrow-2">
+                <i className="fa fa-angle-down" />
+              </div>
+              <div className="arrow-1 animated hinge infinite zoomIn" />
+            </div>
+          </a>
         </div>
         <img
           src={megamate_gulsvart}
