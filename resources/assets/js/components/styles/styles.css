@@ -29,15 +29,9 @@ body {
 }
 
 p.title.is-6 {
-<<<<<<< HEAD
-	font-size: 1.5em;
-	margin-top: 1em;
-	font-weight: 400;
-=======
-  font-size: 1em;
+  font-size: 1.5em;
   margin-top: 1em;
   font-weight: 400;
->>>>>>> add and change loggo, add new color
 }
 
 .title.is-3.vision-subtitle {
