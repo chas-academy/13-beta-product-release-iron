@@ -136,7 +136,6 @@ class Voucher extends Component {
     var inputDate = new Date(voucherDate);
     var todaysDate = new Date();
     var todaysTime = new Date().toLocaleTimeString();
-    console.log(inputDate + " " + startTime + " " + endTime);
     if (inputDate.setHours(0, 0, 0, 0) == todaysDate.setHours(0, 0, 0, 0)) {
       if (startTime < todaysTime) {
         if (endTime > todaysTime) {
