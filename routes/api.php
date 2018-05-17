@@ -17,12 +17,6 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-// Route::get('/test', function() {
-//     return setting('site.title');
-// });
-// Route::middleware('auth:api')->get('/test2', function (Request $request) {
-//     return setting('site.title');
-// });
 Route::get('/products/{id}', 'ProductController@show');
 Route::get('/products', 'ProductController@getAll');
 Route::get('/reseller', 'ResellerController@getAll');
@@ -31,3 +25,4 @@ Route::get('/event', 'EventController@getAll');
 Route::get('/header', 'HeaderController@getAll');
 Route::get('/vision', 'VisionController@getAll');
 Route::get('/banner', 'VisionController@getBanner');
+Route::get('/voucher', 'VoucherController@getAll');
