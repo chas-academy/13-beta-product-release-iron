@@ -1,16 +1,16 @@
 #voucherTitle,
 #voucherSubtitle,
 #voucherText {
-padding-top: 30px;
-color: white;
+  padding-top: 30px;
+  color: white;
 }
 
 #voucherSubtitle {
-padding-top: 30px;
+  padding-top: 30px;
 }
 
 #voucherPopBtn {
-background-color: black;
+  background-color: black;
 }
 
 /*
@@ -29,7 +29,7 @@ li.bubble {
 	list-style: none;
 	width: 30px;
 	height: 30px;
-	background-color: #FAB418;
+	background-color: #fab317;
 	border-radius: 50%; 
 	animation: circlebubbles 1.4s ease-in-out infinite;
 }
@@ -49,56 +49,59 @@ li.bubble {
 ul.bubbles li.bubble
 {
 animation-delay: -1.4s;
-background:  #FAB418;
-box-shadow: 0 0 50px #FAB418;
+background:  #fab317;
+box-shadow: 0 0 50px #fab317;
 }
 */
 
 .button.is-info.is-outlined {
-border-color: #FAB418;
-color: #FAB418;
+  border-color: #fab317;
+  color: #fab317;
 }
 
 #voucher-close-btn {
-position: absolute;
-bottom: 2%;
-color: white;
-width: 100px;
-height: 3em;
+  position: absolute;
+  bottom: 2%;
+  color: white;
+  width: 100px;
+  height: 3em;
 }
 
 .Modal {
   position: absolute;
-  top:0;
-  left:0;
-  right:0;
-  bottom:0;
+  background: url("../images/mega.gif");
   background-size: cover;
-  background: url('https://images.unsplash.com/photo-1520935443738-cdd39913a9e4?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=faaf839ae377736e02dffa9267f63104&auto=format&fit=crop&w=1922&q=80')
+  background-repeat: repeat-y;
+  background-attachment: fixed;
+  height: 100%;
+  width: 100%;
 }
 
 .Modal::after {
   content: "";
   position: absolute;
-  top:0;
-  left:0;
-  width:100%;
-  height:100%;
-  background: rgba(0,0,0,0.6)
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
 }
 .Overlay {
-	position: fixed;
-	top: 0;
-	left: 0; 
-	right: 0;
-	bottom: 0;
-	background-color:white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: white;
 }
 
 .modal-content {
   z-index: 2;
-  top:50%;
+  height: 50%;
+  width: 30%;
+  top: 50%;
   transform: translateY(-50%);
+  background-color: #fab317;
 }
 
 .modal-content > .title {
@@ -106,17 +109,17 @@ height: 3em;
   text-transform: uppercase;
 }
 
-/* background on first page */ 
+/* background on first page */
 .voucher {
   margin: 0;
   padding: 0;
-	background-color: #FAB418;
-} 
+  background-color: #fab317;
+}
 
 .center {
   position: absolute;
-   top: 50%;
-  left: 50%; 
+  top: 50%;
+  left: 50%;
   transform: translate(-50%, -50%);
 }
 
@@ -134,22 +137,19 @@ height: 3em;
   animation: animate 3s linear infinite;
 }
 
-@keyframes animate
-{
-  0%
-  {
-    box-shadow: 0 0 0 0 rgba(255,109,74,.7), 0 0 0 0 rgba(255,109,74,.7);
+@keyframes animate {
+  0% {
+    box-shadow: 0 0 0 0 rgba(255, 109, 74, 0.7), 0 0 0 0 rgba(255, 109, 74, 0.7);
   }
-  40%
-  {
-    box-shadow: 0 0 0 50px rgba(255,109,74,0), 0 0 0 0 rgba(255,109,74,.7);
+  40% {
+    box-shadow: 0 0 0 50px rgba(255, 109, 74, 0),
+      0 0 0 0 rgba(255, 109, 74, 0.7);
   }
-  80%
-  {
-    box-shadow: 0 0 0 50px rgba(255,109,74,0), 0 0 0 30px rgba(255,109,74,0);
+  80% {
+    box-shadow: 0 0 0 50px rgba(255, 109, 74, 0),
+      0 0 0 30px rgba(255, 109, 74, 0);
   }
-  100%
-  {
-    box-shadow: 0 0 0 0 rgba(255,109,74,0), 0 0 0 30px rgba(255,109,74,0);
+  100% {
+    box-shadow: 0 0 0 0 rgba(255, 109, 74, 0), 0 0 0 30px rgba(255, 109, 74, 0);
   }
 }
