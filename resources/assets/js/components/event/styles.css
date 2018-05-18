@@ -5,43 +5,43 @@
   color: white;
 }
 
-
 .title.is-4.events-name {
-	font-size: 1.8em;
-}
-
-
-#btn {
-	
+  font-size: 1.8em;
 }
 
 .toggle-events-btn {
-	border-style: none;
-	color: white;
-	font-size: 20px;      
-	background-color: transparent;
+  border-style: none;
+  color: white;
+  font-size: 20px;
+  background-color: transparent;
 }
 
 .events-title {
-	padding-top: 1em;
-	font-size: 2.8em;
-	text-transform: uppercase;
-	font-weight: 600;
+  padding-top: 1em;
+  font-size: 2.8em;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.events-placeholder {
+  padding-bottom: 3em;
 }
 
 #events-button {
-	margin-top: 0.5em;
-	background-color: #FAB418; 
-	border-color: transparent;
-	width: 100px;
-	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.05), 0 6px 20px 0 rgba(0,0,0,0.05);
+  margin-top: 0.5em;
+  background-color: #fab317;
+  border-color: transparent;
+  width: 100px;
+  margin-right: 1em;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.05), 0 6px 20px 0 rgba(0, 0, 0, 0.05);
 }
 
 p.events-p {
-	font-size: 1em;
+  font-size: 1em;
 }
 
 button.toggle-events-btn {
-	transition: 200s ease-in;
-	color: green;
+  transition: 200s ease-in;
+  color: #fba317;
+  float: left;
 }

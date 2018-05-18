@@ -65,12 +65,6 @@ p.title.is-6 {
   border-radius: 0;
 }
 
-/* voucher */
-.modalButton {
-  position: absolute;
-  bottom: 2%;
-}
-
 /* Video*/
 header {
   overflow: hidden;
