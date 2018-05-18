@@ -3,6 +3,7 @@
 #voucherText {
   padding-top: 30px;
   color: white;
+  font-size: 20px;
 }
 
 #voucherSubtitle {
@@ -73,6 +74,7 @@ box-shadow: 0 0 50px #fab317;
   background-size: cover;
   background-repeat: repeat-y;
   background-attachment: fixed;
+  background-position: center;
   height: 100%;
   width: 100%;
 }
@@ -100,13 +102,21 @@ box-shadow: 0 0 50px #fab317;
   height: 50%;
   width: 30%;
   top: 50%;
+  margin: 0 auto;
   transform: translateY(-50%);
   background-color: #fab317;
 }
 
 .modal-content > .title {
-  font-size: 72px;
+  font-size: 2em;
   text-transform: uppercase;
+}
+
+.modalButton {
+  bottom: 0;
+  margin: 0 auto;
+  margin-top: 2em;
+  color: #fab317;
 }
 
 /* background on first page */
@@ -151,5 +161,11 @@ box-shadow: 0 0 50px #fab317;
   }
   100% {
     box-shadow: 0 0 0 0 rgba(255, 109, 74, 0), 0 0 0 30px rgba(255, 109, 74, 0);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .modal-content {
+    width: 60%;
   }
 }

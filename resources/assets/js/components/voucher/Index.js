@@ -97,11 +97,11 @@ class Voucher extends Component {
             <p className="has-text-centered animate-fallIn">
               {this.state.voucher.endTime}
             </p>
-          </div>
-          <div className="buttons has-addons is-right">
-            <button onClick={this.handleCloseModal} className="modalButton">
-              Close
-            </button>
+            <div className="buttons has-addons is-right">
+              <button onClick={this.handleCloseModal} className="modalButton">
+                Close
+              </button>
+            </div>
           </div>
         </ReactModal>
 
