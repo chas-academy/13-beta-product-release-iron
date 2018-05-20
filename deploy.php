@@ -10,13 +10,13 @@ set('application', 'mega-mate');
 set('repository', 'git@github.com:chas-academy/13-beta-product-release--Iron.git');
 
 // [Optional] Allocate tty for git clone. Default value is false.
-set('git_tty', true); 
+set('git_tty', true);
 
-// Shared files/dirs between deploys 
+// Shared files/dirs between deploys
 add('shared_files', []);
 add('shared_dirs', []);
 
-// Writable dirs by web server 
+// Writable dirs by web server
 add('writable_dirs', []);
 set('allow_anonymous_stats', false);
 
@@ -26,7 +26,7 @@ host('teamiron.me')
     ->user('web')
     ->identityFile('~/.ssh/id_rsa')
     ->stage('production')
-    ->set('branch', 'master')
+    ->set('branch', 'develop')
     ->set('deploy_path', '/var/www/teamiron.me');
     
 host('dev.teamiron.me')
@@ -34,14 +34,14 @@ host('dev.teamiron.me')
     ->identityFile('~/.ssh/id_rsa')
     ->stage('dev')
     ->set('branch', 'develop')
-    ->set('deploy_path', '/var/www/dev.teamiron.me');    
+    ->set('deploy_path', '/var/www/dev.teamiron.me');
 
 host('staging.teamiron.me')
     ->user('web')
     ->identityFile('~/.ssh/id_rsa')
     ->stage('staging')
     ->set('branch', 'master')
-    ->set('deploy_path', '/var/www/staging.teamiron.me');    
+    ->set('deploy_path', '/var/www/staging.teamiron.me');
     
 // Tasks
 
@@ -51,7 +51,7 @@ task('build', function () {
 
 task('artisan:migrate:fresh', function () {
     run('{{bin/php}} {{release_path}}/artisan migrate:fresh --seed');
-  });
+});
 
 desc('Dump autoload before seed');
 task('dump-autoload', function () {
@@ -66,8 +66,8 @@ before('deploy:symlink', 'artisan:migrate:fresh');
 after('artisan:migrate:fresh', 'dump-autoload');
 
 desc('Clear config cache');
-task('artisan:config:clear', function() {
-  run('{{bin/php}} {{release_path}}/artisan config:clear');
+task('artisan:config:clear', function () {
+    run('{{bin/php}} {{release_path}}/artisan config:clear');
 });
 after('deploy:symlink', 'artisan:config:clear');
 desc('Restart PHP-FPM service');
@@ -75,4 +75,3 @@ task('php-fpm:restart', function () {
     run('sudo service php7.2-fpm reload');
 });
 after('deploy:symlink', 'php-fpm:restart');
-

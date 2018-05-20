@@ -9,7 +9,7 @@
 /.vagrant
 npm-debug.log
 yarn-error.log
-/DS_Store
+.DS_Store
 /public/js/app.js
 /public/css/app.css
 .env
