@@ -144,11 +144,9 @@ html {
     -webkit-transform: scale3d(0.4, 0.4, 0.4);
     transform: scale3d(0.4, 0.4, 0.4);
   }
-
   50% {
     opacity: 0.5;
   }
-
   100% {
     opacity: 0;
   }
@@ -160,11 +158,9 @@ html {
     -webkit-transform: scale3d(0.4, 0.4, 0.4);
     transform: scale3d(0.4, 0.4, 0.4);
   }
-
   50% {
     opacity: 0.5;
   }
-
   100% {
     opacity: 0;
   }
