@@ -26,7 +26,7 @@ host('teamiron.me')
     ->user('web')
     ->identityFile('~/.ssh/id_rsa')
     ->stage('production')
-    ->set('branch', 'fix-all-the-things')
+    ->set('branch', 'develop')
     ->set('deploy_path', '/var/www/teamiron.me');
     
 host('dev.teamiron.me')
