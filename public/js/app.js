@@ -57259,7 +57259,6 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 
 
-//import "../styles/styles.css";
 
 
 
@@ -57344,7 +57343,7 @@ var Header = function (_Component) {
               className: "menu-item",
               href: "#resellers"
             },
-            "Drink Us!"
+            "Drink Us"
           ),
           __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
             "a",
@@ -57368,7 +57367,7 @@ var Header = function (_Component) {
           }),
           __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
             "a",
-            { href: "#vision" },
+            { id: "animated-arrow", href: "#vision" },
             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
               "div",
               { className: "arrow-container animated fadeInDown" },
@@ -57435,7 +57434,7 @@ exports = module.exports = __webpack_require__(15)(false);
 
 
 // module
-exports.push([module.i, "html {\n  scroll-behavior: smooth;\n}\n\n#burger-menu {\n  width: 20%;\n}\n\n.bm-overlay {\n  color: white;\n}\n\n.bm-menu {\n  background: #fab317;\n  padding: 2.5em 1.5em 0;\n}\n\n.bm-item-list {\n  height: 80% !important;\n  margin-top: 20px;\n}\n\n.bm-cross-button {\n  right: 30px !important;\n  top: 30px !important;\n}\n\n.bm-cross-button span {\n  background: black;\n}\n\n.bm-cross-button button {\n  left: unset;\n  top: 25px;\n  right: 20px;\n}\n\n.menu-item {\n  color: black;\n  text-align: left;\n  font-size: 30px;\n  padding-bottom: 7px;\n  padding-left: 35px;\n}\n\n.menu-item:hover {\n  color: white;\n}\n\n.bm-burger-button {\n  color: white;\n}\n\n.bm-burger-bars {\n  background: #fab317;\n  height: 15%;\n}\n\n.bm-burger-button {\n  position: fixed;\n  width: 36px;\n  height: 30px;\n  right: 36px;\n  top: 36px;\n}\n\n.video {\n  position: inherit;\n  min-width: 100%;\n  overflow: hidden;\n  z-index: -1;\n  width: 100%;\n  height: 100%;\n}\n\n.react-video {\n  width: 100% !important;\n  height: 100% !important;\n}\n\n.arrow-container {\n  width: 100px;\n  height: 100px;\n  margin: 0 auto;\n  position: absolute;\n  bottom: 25px;\n  left: 0;\n  right: 0;\n}\n\n.arrow-1 {\n  width: 100px;\n  height: 100px;\n  background: #fab317;\n  opacity: 0.5;\n  border-radius: 50%;\n  position: absolute;\n}\n\n.arrow-2 {\n  width: 60px;\n  height: 60px;\n  background: #fab317;\n  border-radius: 50%;\n  opacity: 0.5;\n  position: absolute;\n  top: 20px;\n  left: 20px;\n  z-index: 1;\n  display: table;\n}\n\n.arrow-2:before {\n  width: 52px;\n  height: 52px;\n  content: \"\";\n  border-radius: 50%;\n  position: absolute;\n  top: 4px;\n  left: 4px;\n}\n\n.arrow-2 i.fa {\n  font-size: 30px;\n  display: table-cell;\n  vertical-align: middle;\n  text-align: center;\n  color: black;\n  padding-top: 3px;\n}\n\n/* Custom Animate.css */\n\n.animated.hinge {\n  -webkit-animation-duration: 2s;\n  animation-duration: 2s;\n  -webkit-animation-iteration-count: infinite;\n  animation-iteration-count: infinite;\n}\n\n@-webkit-keyframes zoomIn {\n  0% {\n    opacity: 0;\n    -webkit-transform: scale3d(0.4, 0.4, 0.4);\n    transform: scale3d(0.4, 0.4, 0.4);\n  }\n  50% {\n    opacity: 0.5;\n  }\n  100% {\n    opacity: 0;\n  }\n}\n\n@keyframes zoomIn {\n  0% {\n    opacity: 0;\n    -webkit-transform: scale3d(0.4, 0.4, 0.4);\n    transform: scale3d(0.4, 0.4, 0.4);\n  }\n  50% {\n    opacity: 0.5;\n  }\n  100% {\n    opacity: 0;\n  }\n}\n\n.zoomIn {\n  -webkit-animation-name: zoomIn;\n  animation-name: zoomIn;\n}", ""]);
+exports.push([module.i, "html {\n  scroll-behavior: smooth;\n}\n\n#burger-menu {\n  width: 20%;\n}\n\n.bm-overlay {\n  color: white;\n}\n\n.bm-menu {\n  background: #fab317;\n  padding: 2.5em 1.5em 0;\n}\n\n.bm-item-list {\n  height: 80% !important;\n  margin-top: 20px;\n}\n\n.bm-cross-button {\n  right: 30px !important;\n  top: 30px !important;\n}\n\n.bm-cross-button span {\n  background: black;\n}\n\n.bm-cross-button button {\n  left: unset;\n  top: 25px;\n  right: 20px;\n}\n\n.menu-item {\n  color: black;\n  text-align: left;\n  font-size: 30px;\n  padding-bottom: 7px;\n  padding-left: 35px;\n}\n\n.menu-item:hover {\n  color: white;\n}\n\n.bm-burger-button {\n  color: white;\n}\n\n.bm-burger-bars {\n  background: #fab317;\n  height: 15%;\n}\n\n.bm-burger-button {\n  position: fixed;\n  width: 36px;\n  height: 30px;\n  right: 36px;\n  top: 36px;\n}\n\n.video {\n  position: inherit;\n  min-width: 100%;\n  overflow: hidden;\n  z-index: -1;\n  width: 100%;\n  height: 100%;\n}\n\n.react-video {\n  width: 100% !important;\n  height: 100% !important;\n}\n\n.arrow-container {\n  width: 100px;\n  height: 100px;\n  margin: 0 auto;\n  position: absolute;\n  bottom: 25px;\n  left: 0;\n  right: 0;\n}\n\n.arrow-1 {\n  width: 100px;\n  height: 100px;\n  background: #fab317;\n  opacity: 0.5;\n  border-radius: 50%;\n  position: absolute;\n}\n\n.arrow-2 {\n  width: 60px;\n  height: 60px;\n  background: #fab317;\n  border-radius: 50%;\n  opacity: 0.5;\n  position: absolute;\n  top: 20px;\n  left: 20px;\n  z-index: 1;\n  display: table;\n}\n\n.arrow-2:before {\n  width: 52px;\n  height: 52px;\n  content: \"\";\n  border-radius: 50%;\n  position: absolute;\n  top: 4px;\n  left: 4px;\n}\n\n.arrow-2 i.fa {\n  font-size: 30px;\n  display: table-cell;\n  vertical-align: middle;\n  text-align: center;\n  color: black;\n  padding-top: 3px;\n}\n\n/* Custom Animate.css */\n\n.animated.hinge {\n  -webkit-animation-duration: 2s;\n  animation-duration: 2s;\n  -webkit-animation-iteration-count: infinite;\n  animation-iteration-count: infinite;\n}\n\n@-webkit-keyframes zoomIn {\n  0% {\n    opacity: 0;\n    -webkit-transform: scale3d(0.4, 0.4, 0.4);\n    transform: scale3d(0.4, 0.4, 0.4);\n  }\n  50% {\n    opacity: 0.5;\n  }\n  100% {\n    opacity: 0;\n  }\n}\n\n@keyframes zoomIn {\n  0% {\n    opacity: 0;\n    -webkit-transform: scale3d(0.4, 0.4, 0.4);\n    transform: scale3d(0.4, 0.4, 0.4);\n  }\n  50% {\n    opacity: 0.5;\n  }\n  100% {\n    opacity: 0;\n  }\n}\n\n.zoomIn {\n  -webkit-animation-name: zoomIn;\n  animation-name: zoomIn;\n}\n\n@media screen and (max-width: 1349px) {\n  #animated-arrow {\n    display: none;\n  }\n}\n", ""]);
 
 // exports
 
@@ -68772,14 +68771,14 @@ var Product = function (_Component) {
           ),
           __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
             "div",
-            null,
+            { className: "ingredient-container" },
             this.state.showIngredientsList && __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
               "ul",
-              null,
+              { className: "ingredient-dropdown" },
               this.state.ingredientsArray.map(function (val, i) {
                 return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                   "li",
-                  { key: i },
+                  { className: "ingredient-li", key: i },
                   val
                 );
               })
@@ -68794,6 +68793,7 @@ var Product = function (_Component) {
             { className: "image is-horizontal-center" },
             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img", {
               className: "product-img",
+              id: "product-image",
               src: this.props.productData.imageUrl
             })
           )
@@ -68847,7 +68847,7 @@ exports = module.exports = __webpack_require__(15)(false);
 
 
 // module
-exports.push([module.i, ".toggle-products-btn {\n  border: none;\n  color: #fba317;\n  font-size: 20px;\n  padding: 6px 10px 5px 0px;\n  text-transform: uppercase;\n  font-size: 1em;\n  \n}\n\n.product-img {\n  width: 80%;\n}\n\n#louiJama-subtitle {\n  color: #305a80;\n  margin-top: 1em;\n}", ""]);
+exports.push([module.i, ".toggle-products-btn {\n  border: none;\n  color: #fba317;\n  font-size: 20px;\n  padding: 6px 10px 5px 0px;\n  text-transform: uppercase;\n  font-size: 1em;\n  background-color: white;\n}\n\n#product-image {\n  display: block;\n  margin-left: auto;\n  margin-right: auto;\n  margin-top: 1em;\n  max-width: 90%;\n}\n\n#louiJama-subtitle {\n  color: #305a80;\n  margin-top: 1em;\n}\n\n\n", ""]);
 
 // exports
 
@@ -68861,7 +68861,7 @@ exports = module.exports = __webpack_require__(15)(false);
 
 
 // module
-exports.push([module.i, "body,\nbutton,\ninput,\nselect,\ntextarea {\n  font-family: \"Oswald\", sans-serif;\n}\n\nbody {\n  padding: 0px;\n  margin: 0px;\n}\n\n.column {\n  padding: 0em 5em 0em 5em;\n}\n\n/* Font styling */\n.title.is-1 {\n  margin-top: 2rem;\n  padding-top: 1em;\n  font-size: 2.8em;\n  text-transform: uppercase;\n  font-weight: 600;\n  margin-bottom: 0.5rem;\n}\n\n.title.is-3 {\n  text-transform: uppercase;\n}\n\np.title.is-6 {\n  font-size: 1.5em;\n  margin-top: 1em;\n  font-weight: 400;\n}\n\n\n.title:not(:last-child),\n.subtitle:not(:last-child) {\n  margin-top: 2rem;\n  margin-bottom: 0.5rem;\n}\n\n\n/* buttons */\n.button {\n  border-radius: 0;\n}\n\n/* Video*/\nheader {\n  overflow: hidden;\n  max-height: 100%;\n}\n\nvideo {\n  position: inherit;\n  min-width: 100%;\n  overflow: hidden;\n  z-index: -1;\n}\n\n.megamate-logo {\n  width: 10%;\n  margin-left: 3%;\n  margin-top: 3%;\n}\n\n.homepage-hero-module {\n  border-right: none;\n  border-left: none;\n  position: relative;\n}\n\n.no-video .video-container video,\n.touch .video-container video {\n  display: none;\n}\n\n.no-video .video-container .poster,\n.touch .video-container .poster {\n  display: block !important;\n}\n\n.video-container {\n  position: relative;\n  bottom: 0%;\n  left: 0%;\n  height: 100%;\n  width: 100%;\n  overflow: hidden;\n  background: #000;\n}\n\n.video-container .poster img {\n  width: 100%;\n  bottom: 0;\n  position: absolute;\n}\n\n.video-container .filter {\n  z-index: 100;\n  position: absolute;\n  background: rgba(0, 0, 0, 0.4);\n  width: 100%;\n}\n\n.video-container video {\n  position: absolute;\n  z-index: 0;\n  bottom: 0;\n}\n\n.video-container video.fillWidth {\n  width: 100%;\n}\n", ""]);
+exports.push([module.i, "body,\nbutton,\ninput,\nselect,\ntextarea {\n  font-family: \"Oswald\", sans-serif;\n}\n\nbody {\n  padding: 0px;\n  margin: 0px;\n  overflow-x: hidden;\n}\n\n.column {\n  padding: 0em 5em 0em 5em;\n}\n\n/* Font styling */\n.title.is-1 {\n  margin-top: 2rem;\n  padding-top: 1em;\n  font-size: 2.8em;\n  text-transform: uppercase;\n  font-weight: 600;\n  margin-bottom: 0.5rem;\n}\n\n.title.is-3 {\n  text-transform: uppercase;\n}\n\np.title.is-6 {\n  font-size: 1.5em;\n  margin-top: 1em;\n  font-weight: 400;\n}\n\n\n.title:not(:last-child),\n.subtitle:not(:last-child) {\n  margin-top: 2rem;\n  margin-bottom: 0.5rem;\n}\n\n\n/* buttons */\n.button {\n  border-radius: 0;\n}\n\n/* Video*/\nheader {\n  overflow: hidden;\n  max-height: 100%;\n}\n\nvideo {\n  position: inherit;\n  min-width: 100%;\n  overflow: hidden;\n  z-index: -1;\n}\n\n.megamate-logo {\n  width: 10%;\n  margin-left: 3%;\n  margin-top: 3%;\n}\n\n.homepage-hero-module {\n  border-right: none;\n  border-left: none;\n  position: relative;\n}\n\n.no-video .video-container video,\n.touch .video-container video {\n  display: none;\n}\n\n.no-video .video-container .poster,\n.touch .video-container .poster {\n  display: block !important;\n}\n\n.video-container {\n  position: relative;\n  bottom: 0%;\n  left: 0%;\n  height: 100%;\n  width: 100%;\n  overflow: hidden;\n  background: #000;\n}\n\n.video-container .poster img {\n  width: 100%;\n  bottom: 0;\n  position: absolute;\n}\n\n.video-container .filter {\n  z-index: 100;\n  position: absolute;\n  background: rgba(0, 0, 0, 0.4);\n  width: 100%;\n}\n\n.video-container video {\n  position: absolute;\n  z-index: 0;\n  bottom: 0;\n}\n\n.video-container video.fillWidth {\n  width: 100%;\n}\n", ""]);
 
 // exports
 
@@ -68927,7 +68927,7 @@ var EventsList = function (_Component) {
 
       return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
         "div",
-        { className: "events" },
+        { className: "events", id: "events" },
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", { className: "bg-image" }),
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
           "div",
@@ -69625,7 +69625,7 @@ exports = module.exports = __webpack_require__(15)(false);
 
 
 // module
-exports.push([module.i, "/* css footer */\n\n.footer {\n  background-color: #fab317;\n  padding-bottom: 3rem;\n  text-align: center;\n}\n\n.footer-title {\n  font-size: 2em;\n  font-weight: bold;\n  text-align: center;\n  text-transform: uppercase;\n}\n\n#footer-title {\n  margin-bottom: 0.1em;\n}\n\n.footer-container {\n  margin-left: 1rem;\n  width: 100%;\n}\n\n.footer-p {\n  font-size: 1.2em;\n}\n\n.footer-title,\n.footer-p {\n  color: white;\n}\n\n.footer-logo {\n  color: white;\n}\n\n.logo-link {\n  padding: 5px;\n}\n\n.footer-news {\n  color: white;\n  font-size: 1.5em;\n  margin-top: 1em;\n  width: 100%;\n}\n\n.newsletter-container {\n  margin-top: 1em;\n  width: 100%;\n  margin-left: 1em;\n}\n\n#control-input {\n  width: 80%;\n}\n\n#input-field,\n#news-button {\n  height: 2em;\n}\n\n#input-field {\n  background-color: #fab317;\n  border-color: #fab317;\n  border-bottom: 1px solid white;\n  padding-left: 0em;\n  padding-bottom: 0em;\n  box-shadow: unset;\n}\n\n#input-field::placeholder {\n  color: white;\n}\n\n#news-button {\n  background-color: white;\n  color: #fab317;\n  margin-left: 1em;\n  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);\n}\n\n/* mediaQuery Desktop */\n@media screen and (min-width: 800px) {\n  .footer {\n    display: flex;\n  }\n  .footer-container {\n    width: 50%;\n  }\n\n  .newsletter-container {\n    width: 50%;\n  }\n}\n\n@media screen and (min-width: 768px) {\n  .footer {\n    text-align: left;\n  }\n\n  .footer-title {\n    text-align: left;\n  }\n}\n", ""]);
+exports.push([module.i, "/* css footer */\n\n.footer {\n  background-color: #fab317;\n  padding-bottom: 3rem;\n  text-align: center;\n}\n\n.footer-title {\n  font-size: 2em;\n  font-weight: bold;\n  text-align: center;\n  text-transform: uppercase;\n}\n\n#footer-title {\n  margin-bottom: 0.1em;\n}\n\n.footer-container {\n  margin-left: 1rem;\n  width: 100%;\n}\n\n.footer-p {\n  font-size: 1.2em;\n}\n\n.footer-title,\n.footer-p {\n  color: white;\n}\n\n.footer-logo {\n  color: white;\n}\n\n.logo-link {\n  padding: 5px;\n}\n\n.footer-news {\n  color: white;\n  font-size: 1.5em;\n  margin-top: 1em;\n  width: 100%;\n}\n\n.newsletter-container {\n  margin-top: 1em;\n  width: 100%;\n  margin-left: 1em;\n}\n\n#control-input {\n  width: 80%;\n}\n\n#input-field,\n#news-button {\n  height: 2em;\n}\n\n#input-field {\n  background-color: #fab317;\n  border-color: #fab317;\n  border-bottom: 1px solid white;\n  padding-left: 0em;\n  padding-bottom: 0em;\n  box-shadow: unset;\n}\n\n#input-field::placeholder {\n  color: white;\n}\n\n#news-button {\n  background-color: white;\n  color: #fab317;\n  margin-left: 1em;\n  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);\n}\n\n/* mediaQuery Desktop */\n@media screen and (min-width: 800px) {\n  .footer {\n    display: flex;\n  }\n  .footer-container {\n    width: 50%;\n  }\n\n  .newsletter-container {\n    width: 50%;\n  }\n}\n\n@media screen and (min-width: 768px) {\n  .footer {\n    text-align: left;\n  }\n\n  .footer-title {\n    text-align: left;\n  }\n}\n\n@media screen and (max-width: 767px) {\n  .footer-container,\n  .newsletter-container {\n    margin: 0 auto;\n  }\n}\n", ""]);
 
 // exports
 
@@ -69731,7 +69731,7 @@ var Voucher = function (_Component) {
               "a",
               {
                 onClick: this.handleOpenModal,
-                className: "button is-large is-rounded pulse center"
+                className: "button is-large is-rounded pulse center voucher-btn"
               },
               "Get mega voucher"
             ),
@@ -69767,17 +69767,17 @@ var Voucher = function (_Component) {
             ),
             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
               "p",
-              { className: "has-text-centered animate-fallIn", id: "voucherText" },
+              { className: "has-text-centered animate-fallIn voucherText" },
               this.state.voucher.content
             ),
             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
               "p",
-              { className: "has-text-centered animate-fallIn" },
+              { className: "has-text-centered animate-fallIn voucherStartTime" },
               this.state.voucher.startTime
             ),
             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
               "p",
-              { className: "has-text-centered animate-fallIn" },
+              { className: "has-text-centered animate-fallIn voucherEndTime" },
               this.state.voucher.endTime
             ),
             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
@@ -69797,7 +69797,7 @@ var Voucher = function (_Component) {
           __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
             "a",
             {
-              className: "button is-info is-outlined",
+              className: "button homepage-btn",
               href: "http://localhost:8000"
             },
             "Go to homepage"
@@ -71147,7 +71147,7 @@ exports = module.exports = __webpack_require__(15)(false);
 
 
 // module
-exports.push([module.i, "#voucherTitle,\n#voucherSubtitle,\n#voucherText {\n  padding-top: 30px;\n  color: white;\n  font-size: 20px;\n}\n\n#voucherSubtitle {\n  padding-top: 30px;\n}\n\n.button.is-info.is-outlined {\n  border-color: #fab317;\n  color: #fab317;\n}\n\n#voucher-close-btn {\n  position: absolute;\n  bottom: 2%;\n  color: white;\n  width: 100px;\n  height: 3em;\n}\n\n.Modal {\n  position: absolute;\n  background: url(" + escape(__webpack_require__(310)) + ");\n  background-size: cover;\n  background-repeat: repeat-y;\n  background-attachment: fixed;\n  background-position: center;\n  height: 100%;\n  width: 100%;\n}\n\n.Modal::after {\n  content: \"\";\n  position: absolute;\n  top: 0;\n  left: 0;\n  width: 100%;\n  height: 100%;\n  background: rgba(0, 0, 0, 0.6);\n}\n.Overlay {\n  position: fixed;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  background-color: white;\n}\n\n.modal-content {\n  z-index: 2;\n  height: 50%;\n  width: 30%;\n  top: 50%;\n  margin: 0 auto;\n  transform: translateY(-50%);\n  background-color: #fab317;\n}\n\n.modal-content > .title {\n  font-size: 2em;\n  text-transform: uppercase;\n}\n\n.modalButton {\n  bottom: 0;\n  margin: 0 auto;\n  margin-top: 2em;\n  color: #fab317;\n}\n\n/* background on first page */\n.voucher {\n  margin: 0;\n  padding: 0;\n  background-color: #fab317;\n}\n\n.center {\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  transform: translate(-50%, -50%);\n}\n\n.pulse {\n  width: 290px;\n  height: 75px;\n  background: #ff6d4a;\n  border-radius: 50%;\n  color: #fff;\n  font-size: 20px;\n  text-align: center;\n  line-height: 100px;\n  text-transform: uppercase;\n  animation: animate 3s linear infinite;\n}\n\n@keyframes animate {\n  0% {\n    box-shadow: 0 0 0 0 rgba(255, 109, 74, 0.7), 0 0 0 0 rgba(255, 109, 74, 0.7);\n  }\n  40% {\n    box-shadow: 0 0 0 50px rgba(255, 109, 74, 0),\n      0 0 0 0 rgba(255, 109, 74, 0.7);\n  }\n  80% {\n    box-shadow: 0 0 0 50px rgba(255, 109, 74, 0),\n      0 0 0 30px rgba(255, 109, 74, 0);\n  }\n  100% {\n    box-shadow: 0 0 0 0 rgba(255, 109, 74, 0), 0 0 0 30px rgba(255, 109, 74, 0);\n  }\n}\n\n@media screen and (max-width: 768px) {\n  .modal-content {\n    width: 60%;\n  }\n}\n", ""]);
+exports.push([module.i, "#voucherTitle,\n#voucherSubtitle,\n.voucherText,\n.voucherStartTime,\n.voucherEndTime,\n.voucher-btn {\n  color: white;\n}\n\n#voucherTitle {\n  margin-top: 1.5em;\n  font-size: 2.2em;\n  text-transform: uppercase;\n}\n\n#voucherSubtitle {\n  font-size: 1.8em;\n  margin-top: 0.5em;\n}\n\n.voucherText {\n  margin-top: 0.6em;\n  font-size: 1.5em;\n}\n\n.voucherStartTime {\n  font-size: 1.2em;\n  margin-top: 1em;\n}\n\n.voucherEndTime {\n  font-size: 1.2em;\n  margin-top: 0.2em;\n}\n\na.homepage-btn {\n  border: none;\n}\n\n.voucher-btn {\n  border: none;\n  letter-spacing: 3px;\n}\n\na.voucher-btn:hover {\n  color: #fab317;\n}\n\n.homepage-btn:hover {\n  background-color: darkslateblue;\n  color: white;\n}\n\n#voucher-close-btn {\n  position: absolute;\n  bottom: 2%;\n  color: white;\n  width: 100px;\n  height: 3em;\n}\n\n/* background on first page */\n.voucher {\n  margin: 0;\n  padding: 0;\n  background-color: #fab317;\n\n}\n\n/* first voucher button */ \n.pulse {\n  width: 290px;\n  height: 80px;\n  background: #e43e28;;\n  border-radius: 50%;\n  color: #fff;\n  font-size: 35px;\n  font-weight: bold;\n  text-align: center;\n  line-height: 100px;\n  text-transform: uppercase;\n  animation: animate 3s linear infinite;\n}\n\n@keyframes animate {\n  0% {\n    box-shadow: 0 0 0 0 rgba(255, 109, 74, 0.7), 0 0 0 0 rgba(255, 109, 74, 0.7);\n  }\n  40% {\n    box-shadow: 0 0 0 50px rgba(255, 109, 74, 0),\n      0 0 0 0 rgba(255, 109, 74, 0.7);\n  }\n  80% {\n    box-shadow: 0 0 0 50px rgba(255, 109, 74, 0),\n      0 0 0 30px rgba(255, 109, 74, 0);\n  }\n  100% {\n    box-shadow: 0 0 0 0 rgba(255, 109, 74, 0), 0 0 0 30px rgba(255, 109, 74, 0);\n  }\n}\n\n@media screen and (max-width: 768px) {\n  .modal-content {\n    width: 60%;\n  }\n}\n\n@media screen and (max-height: 540px) {\n  .modal-content {\n    max-height: calc(100vh - 125px);\n    height: 70%;\n  }\n}\n\n/*when voucher clicked background */ \n.Modal {\n  position: absolute;\n  background: url(" + escape(__webpack_require__(310)) + ");\n  background-size: cover;\n  background-repeat: repeat-y;\n  background-attachment: fixed;\n  background-position: center;\n  height: 100%;\n  width: 100%;\n}\n\n.Modal::after {\n  content: \"\";\n  position: absolute;\n  top: 0;\n  left: 0;\n  width: 100%;\n  height: 100%;\n  background: rgba(0, 0, 0, 0.6);\n}\n\n.modal-content {\n  z-index: 2;\n  height: 50%;\n  width: 30%;\n  top: 50%;\n  margin: 0 auto;\n  transform: translateY(-50%);\n  background-color: #fab317;\n}\n\n/* close button */ \n.modalButton {\n  bottom: 0;\n  margin: 0 auto;\n  margin-top: 2em;\n  color: #fab317;\n} ", ""]);
 
 // exports
 

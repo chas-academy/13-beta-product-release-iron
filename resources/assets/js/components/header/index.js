@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
-//import "../styles/styles.css";
 import "./header.css";
 import megamate_gulsvart from "../images/MegaMate_loggo_color-01.png";
 import ReactPlayer from "react-player";
@@ -59,7 +58,7 @@ class Header extends Component {
             className="menu-item"
             href="#resellers"
           >
-            Drink Us!
+            Drink Us
           </a>
           <a
             onClick={() => this.closeMenu()}

@@ -29,7 +29,7 @@ class EventsList extends Component {
 
   render() {
     return (
-      <div className="events">
+      <div className="events" id="events">
         <div className="bg-image" />   
             <div className="">                 
             <div className="">
