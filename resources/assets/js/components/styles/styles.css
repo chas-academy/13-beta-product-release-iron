@@ -17,14 +17,15 @@ body {
 
 /* Font styling */
 .title.is-1 {
+  margin-top: 2rem;
   padding-top: 1em;
   font-size: 2.8em;
   text-transform: uppercase;
   font-weight: 600;
+  margin-bottom: 0.5rem;
 }
 
 .title.is-3 {
-  font-size: 1.8em;
   text-transform: uppercase;
 }
 
@@ -34,21 +35,6 @@ p.title.is-6 {
   font-weight: 400;
 }
 
-.title.is-3.louiJama-subtitle {
-  color: #fab317;
-}
-
-.title.is-3.jungleGinger-subtitle {
-  color: #305a80;
-}
-
-.title.is-3.resellers-subtitle {
-  color: #4a754a;
-}
-
-.title.is-1.events-title {
-  margin-top: 0;
-}
 
 .title:not(:last-child),
 .subtitle:not(:last-child) {

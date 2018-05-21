@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import ReactDOM from "react-dom";
 import { debug } from "util";
 import Event from "../event";
-//import "../styles/styles.css";
 import "./styles.css";
 
 class EventsList extends Component {
@@ -31,7 +30,7 @@ class EventsList extends Component {
     return (
       <div className="events">
         <div className="bg-image" />   
-            <div id="hejpadig" className="">                 
+            <div className="">                 
             <div className="">
               <div className="" id="eventsHeading">
                 <h1 className="title is-1 events-title">Mega Events</h1>
