@@ -26,6 +26,10 @@ iframe {
   color: white;
 }
 
+.title.is-3.resellers-subtitle {
+  color: #4a754a;
+}
+
 .city-div {
   flex-wrap: wrap;
   display: flex;

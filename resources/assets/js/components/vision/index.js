@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
-import "../styles/styles.css";
 import "./styles.css";
 
 class Vision extends Component {
@@ -8,7 +7,6 @@ class Vision extends Component {
     super();
     this.state = {
       vision: [],
-      banner: ""
     };
   }
   componentDidMount() {
@@ -23,24 +21,13 @@ class Vision extends Component {
       .catch(function(error) {
         console.log(error);
       });
-
-    fetch("/api/banner")
-      .then(function(response) {
-        return response.json();
-      })
-      .then(function(data) {
-        now.setState({ banner: data[0] });
-      })
-      .catch(function(error) {
-        console.log(error);
-      });
   }
 
   render() {
     return (
       <div id="vision" className="vision">
         <div className="columns">
-          <div className="column is-half">
+          <div className="column is-half is-desktop">
             <h1 className="title is-1 vision-title">
               {this.state.vision.title}
             </h1>
@@ -50,19 +37,11 @@ class Vision extends Component {
             <p className="vision-paragraph">{this.state.vision.content}</p>
           </div>
           <div className="coloumn is-half">
-            <figure className="image is-horizontal-center">
+            <figure className="image is-horizontal-center is-half">
               <img id="gubbe" src={this.state.vision.imageUrl} />
             </figure>
           </div>
         </div>
-
-        {
-          <section className="containter">
-            <figure className="image">
-              {<img id="imgBanner" src={this.state.banner.imageUrl} />}
-            </figure>
-          </section>
-        }
       </div>
     );
   }

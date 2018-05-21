@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
-import "../styles/styles.css";
 import "./styles.css";
 
 class Product extends Component {
@@ -32,14 +31,14 @@ class Product extends Component {
     return (
       <div className="columns" id="products">
         <div className="column is-half">
-          <h2 className={"title is-3"}>{this.props.productData.name}</h2>
+          <h2 className={"title is-3"} id="louiJama-subtitle">{this.props.productData.name}</h2>
           <p className="title is-6">{this.props.productData.description}</p>
 
           <button
             className="toggle-products-btn"
             onClick={this.toggleShowIngredientsListClick}
           >
-            {(this.state.showIngredientsList && "- Close") || "+ Ingredients"}
+            {(this.state.showIngredientsList && "x Close") || "+ Ingredients"}
           </button>
 
           <div>

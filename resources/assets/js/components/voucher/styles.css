@@ -10,51 +10,6 @@
   padding-top: 30px;
 }
 
-#voucherPopBtn {
-  background-color: black;
-}
-
-/*
-ul.bubbles {
-position: absolute;
-top: 50%;
-left: 50%; 
-transform: translate(-50%, -50%);
-margin: 0;
-padding: 0; 
-display: flex;
-}
-
-ul.bubbles 
-li.bubble {
-	list-style: none;
-	width: 30px;
-	height: 30px;
-	background-color: #fab317;
-	border-radius: 50%; 
-	animation: circlebubbles 1.4s ease-in-out infinite;
-}
-
-@keyframes circlebubbles {
-0%, 60%, 100%
-  {
-  transform: scale(0.2);
-  } 
-  15%
-  {
-  transform: scale(0.5);
-  }
-}
-
-
-ul.bubbles li.bubble
-{
-animation-delay: -1.4s;
-background:  #fab317;
-box-shadow: 0 0 50px #fab317;
-}
-*/
-
 .button.is-info.is-outlined {
   border-color: #fab317;
   color: #fab317;
@@ -142,7 +97,6 @@ box-shadow: 0 0 50px #fab317;
   font-size: 20px;
   text-align: center;
   line-height: 100px;
-  font-family: verdana;
   text-transform: uppercase;
   animation: animate 3s linear infinite;
 }

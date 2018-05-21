@@ -1,11 +1,18 @@
 .toggle-products-btn {
-  border: 1px solid black;
-  color: black;
+  border: none;
+  color: #fba317;
   font-size: 20px;
-  padding: 5px 10px 5px 10px;
-  background-color: #fba317;
+  padding: 6px 10px 5px 0px;
+  text-transform: uppercase;
+  font-size: 1em;
+  
 }
 
 .product-img {
   width: 80%;
+}
+
+#louiJama-subtitle {
+  color: #305a80;
+  margin-top: 1em;
 }

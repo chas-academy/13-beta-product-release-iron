@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
 import { debug } from "util";
-//import "../styles/styles.css";
 import "./styles.css";
 
 class Event extends Component {
