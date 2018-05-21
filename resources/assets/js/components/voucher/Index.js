@@ -52,13 +52,13 @@ class Voucher extends Component {
 
   render() {
     return (
-      <section className="hero is-fullheight is-primary is-bold">
+      <section className="hero is-fullheight is-bold">
         <div className="hero-body voucher">
           {this.state.showVoucher === true ? (
             <div className="container has-text-centered">
               <a
                 onClick={this.handleOpenModal}
-                className="button is-large is-link is-rounded pulse center"
+                className="button is-large is-rounded pulse center"
               >
                 Get mega voucher
               </a>

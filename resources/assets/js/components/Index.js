@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import ReactDOM from "react-dom";
 import Header from "./header";
 import Vision from "./vision";
+import Banner from "./banner";
 import ProductList from "./productlist";
 import EventsList from "./eventslist";
 import Resellers from "./resellers";
@@ -13,6 +14,7 @@ export default class Index extends Component {
       <div>
         <Header />
         <Vision />
+        <Banner />
         <ProductList />
         <EventsList />
         <Resellers />
