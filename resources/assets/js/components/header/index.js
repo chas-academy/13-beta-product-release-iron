@@ -79,7 +79,7 @@ class Header extends Component {
               { src: "/images/header-video.webm", type: "video/webm" }
             ]}
           />
-          <a href="#vision">
+          <a id="animated-arrow" href="#vision">
             <div className="arrow-container animated fadeInDown">
               <div className="arrow-2">
                 <i className="fa fa-angle-down" />

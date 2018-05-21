@@ -104,3 +104,10 @@
     text-align: left;
   }
 }
+
+@media screen and (max-width: 767px) {
+  .footer-container,
+  .newsletter-container {
+    margin: 0 auto;
+  }
+}

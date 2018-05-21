@@ -41,11 +41,13 @@ class Product extends Component {
             {(this.state.showIngredientsList && "x Close") || "+ Ingredients"}
           </button>
 
-          <div>
+          <div className="ingredient-container">
             {this.state.showIngredientsList && (
-              <ul>
+              <ul className="ingredient-dropdown">
                 {this.state.ingredientsArray.map((val, i) => (
-                  <li key={i}>{val}</li>
+                  <li className="ingredient-li" key={i}>
+                    {val}
+                  </li>
                 ))}
               </ul>
             )}
@@ -56,6 +58,7 @@ class Product extends Component {
           <figure className="image is-horizontal-center">
             <img
               className="product-img"
+              id="product-image"
               src={this.props.productData.imageUrl}
             />
           </figure>

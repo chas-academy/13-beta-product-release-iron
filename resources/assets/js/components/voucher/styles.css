@@ -1,13 +1,13 @@
 #voucherTitle,
 #voucherSubtitle,
 #voucherText {
-  padding-top: 30px;
+  margin-top: 25px;
   color: white;
   font-size: 20px;
 }
 
-#voucherSubtitle {
-  padding-top: 30px;
+#voucherText {
+  margin-bottom: 10px;
 }
 
 .button.is-info.is-outlined {
@@ -121,5 +121,12 @@
 @media screen and (max-width: 768px) {
   .modal-content {
     width: 60%;
+  }
+}
+
+@media screen and (max-height: 540px) {
+  .modal-content {
+    max-height: calc(100vh - 125px);
+    height: 70%;
   }
 }
