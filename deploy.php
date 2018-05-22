@@ -65,7 +65,7 @@ after('deploy:failed', 'deploy:unlock');
 // before('deploy:symlink', 'artisan:migrate:fresh');
 // after('artisan:migrate:fresh', 'dump-autoload');
 // install deps and build frontend
-before('deploy:symlink', 'build');
+// before('deploy:symlink', 'build');
 
 desc('Clear config cache');
 task('artisan:config:clear', function () {
