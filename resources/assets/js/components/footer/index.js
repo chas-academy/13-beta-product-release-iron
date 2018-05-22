@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import '../styles/styles.css';
 import './styles.css';
-import NewsletterForm from './NewsletterForm';
+import NewsletterForm from '../newsletterForm';
 
 class Footer extends Component {
 	constructor() {
