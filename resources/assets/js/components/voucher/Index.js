@@ -58,7 +58,7 @@ class Voucher extends Component {
             <div className="container has-text-centered">
               <a
                 onClick={this.handleOpenModal}
-                className="button is-large is-rounded pulse center"
+                className="button is-large is-rounded pulse center voucher-btn" 
               >
                 Get mega voucher
               </a>
@@ -97,18 +97,12 @@ class Voucher extends Component {
             >
               {this.state.voucher.subtitle}
             </h2>
-            <p className="has-text-centered animate-fallIn" id="voucherText">
+            <p className="has-text-centered animate-fallIn voucherText">
               {this.state.voucher.content}
-            </p>
-            <p className="has-text-centered animate-fallIn">
-              {this.state.voucher.startTime}
-            </p>
-            <p className="has-text-centered animate-fallIn">
-              {this.state.voucher.endTime}
             </p>
             <div className="buttons has-addons is-right">
               <button onClick={this.handleCloseModal} className="modalButton">
-                Close
+                Consume Voucher
               </button>
             </div>
           </div>
@@ -116,7 +110,7 @@ class Voucher extends Component {
 
         <div className="level-right voucher">
           <a
-            className="button is-info is-outlined"
+            className="button homepage-btn"
             href="http://localhost:8000"
           >
             Go to homepage
@@ -159,3 +153,5 @@ export default Voucher;
 if (document.getElementById("voucher")) {
   ReactDOM.render(<Voucher />, document.getElementById("voucher"));
 }
+
+

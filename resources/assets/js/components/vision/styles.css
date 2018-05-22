@@ -1,13 +1,14 @@
+.title.is-3.vision-subtitle {
+  color: #e43e28;
+  font-size: 2.3em;
+}
+
 .vision-paragraph {
   font-size: 2em;
   line-height: 1.3em;
   padding-top: 5px;
 }
 
-.title.is-3.vision-subtitle {
-  color: #e43e28;
-  font-size: 2.3em;
-}
 
 #gubbe {
   padding-top: 2rem;
@@ -49,4 +50,16 @@
   #gubbe {
     max-width: 50%;
   }
+}
+
+
+@media screen and (max-width: 420px) {
+  .title.is-3.vision-subtitle {
+    font-size: 1.6em;
+    margin-top: 1rem;
+  }
+  .vision-paragraph {
+    font-size: 1.2em;
+  }
+
 }

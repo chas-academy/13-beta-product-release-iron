@@ -1,18 +1,45 @@
 #voucherTitle,
 #voucherSubtitle,
-#voucherText {
-  margin-top: 25px;
+.voucherText,
+.voucherStartTime,
+.voucherEndTime,
+.voucher-btn {
   color: white;
-  font-size: 20px;
 }
 
-#voucherText {
-  margin-bottom: 10px;
+#voucherTitle {
+  margin-top: 1.5em;
+  font-size: 1.8em;
+  text-transform: uppercase;
 }
 
-.button.is-info.is-outlined {
-  border-color: #fab317;
+#voucherSubtitle {
+  font-size: 1.2em;
+  margin-top: 0.5em;
+  padding: 1em;
+}
+
+.voucherText {
+  margin-top: 0.6em;
+  font-size: 1em;
+}
+
+a.homepage-btn {
+  border: none;
+}
+
+.voucher-btn {
+  border: none;
+  letter-spacing: 3px;
+}
+
+a.voucher-btn:hover {
   color: #fab317;
+}
+
+.homepage-btn:hover {
+  background-color: #4B0082;
+  color: white;
 }
 
 #voucher-close-btn {
@@ -23,57 +50,6 @@
   height: 3em;
 }
 
-.Modal {
-  position: absolute;
-  background: url("../images/mega.gif");
-  background-size: cover;
-  background-repeat: repeat-y;
-  background-attachment: fixed;
-  background-position: center;
-  height: 100%;
-  width: 100%;
-}
-
-.Modal::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.6);
-}
-.Overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: white;
-}
-
-.modal-content {
-  z-index: 2;
-  height: 50%;
-  width: 30%;
-  top: 50%;
-  margin: 0 auto;
-  transform: translateY(-50%);
-  background-color: #fab317;
-}
-
-.modal-content > .title {
-  font-size: 2em;
-  text-transform: uppercase;
-}
-
-.modalButton {
-  bottom: 0;
-  margin: 0 auto;
-  margin-top: 2em;
-  color: #fab317;
-}
-
 /* background on first page */
 .voucher {
   margin: 0;
@@ -81,20 +57,15 @@
   background-color: #fab317;
 }
 
-.center {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
+/* first voucher button */ 
 .pulse {
   width: 290px;
-  height: 75px;
-  background: #ff6d4a;
+  height: 80px;
+  background: #4B0082;;
   border-radius: 50%;
   color: #fff;
-  font-size: 20px;
+  font-size: 35px;
+  font-weight: bold;
   text-align: center;
   line-height: 100px;
   text-transform: uppercase;
@@ -122,6 +93,58 @@
   }
 }
 
+
+/*when voucher clicked background */ 
+.Modal {
+  position: absolute;
+  background: url("../images/mega.gif");
+  background-size: cover;
+  background-repeat: repeat-y;
+  background-attachment: fixed;
+  background-position: center;
+  height: 100%;
+  width: 100%;
+}
+
+.Modal::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.modal-content {
+  z-index: 2;
+  height: 60%;
+  width: 60%;
+  top: 50%;
+  margin: 0 auto;
+  transform: translateY(-50%);
+  border-radius: 35px;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+/* close button */ 
+.modalButton {
+  bottom: 0;
+  margin: 0 auto;
+  margin-top: 6em;
+  color: #4B0082;
+  font-size: 20px;
+  border: none;
+  background-color: #fab317;
+  border-color: transparent;
+  width: 180px;
+  height: 40px;
+  border-radius: 8px;
+  text-transform: uppercase;
+  font-weight: bold;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.05), 0 6px 20px 0 rgba(0, 0, 0, 0.05);
+} 
+
 @media screen and (max-width: 768px) {
   .modal-content {
     width: 60%;
@@ -133,4 +156,30 @@
     max-height: calc(100vh - 125px);
     height: 70%;
   }
+}
+  @media screen and (max-height: 320px) {
+  .modalButton {
+    margin-top: 8em;
+    font-size: 10px;
+    width: 120px;
+    height: 30px;
+    border-radius: 8px;
+  }
+
+  #voucherTitle {
+    margin-top: 1.5em;
+    font-size: 1.2em;
+    text-transform: uppercase;
+  }
+  
+  #voucherSubtitle {
+    font-size: 1em;
+    margin-top: 0.5em;
+    padding: 1em;
+  }
+  
+  .voucherText {
+    margin-top: 0.6em;
+    font-size: 0.8em;
+  } 
 }
