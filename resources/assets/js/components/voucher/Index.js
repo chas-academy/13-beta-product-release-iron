@@ -65,7 +65,16 @@ class Voucher extends Component {
               <div id="offerVoucher" />
             </div>
           ) : (
-            ""
+            <div className="container has-text-centered">
+              <a
+                id="noVoucher"
+                href="http://iron.test/"
+                className="button is-large is-rounded center"
+              >
+                No voucher at the moment
+              </a>
+              <div id="offerVoucher" />
+            </div>
           )}
         </div>
 
@@ -119,7 +128,6 @@ class Voucher extends Component {
 
   checkAllVouchers() {
     for (var i = 0; i < this.state.vouchers.length; i++) {
-      console.log(this.state.vouchers[i]);
       this.checkIfVoucherIsValid(
         this.state.vouchers[i].date,
         this.state.vouchers[i].startTime,
