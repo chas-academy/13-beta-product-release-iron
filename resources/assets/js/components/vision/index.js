@@ -6,7 +6,7 @@ class Vision extends Component {
   constructor() {
     super();
     this.state = {
-      vision: [],
+      vision: []
     };
   }
   componentDidMount() {
@@ -26,8 +26,8 @@ class Vision extends Component {
   render() {
     return (
       <div id="vision" className="vision">
-        <div className="columns">
-          <div className="column is-half is-desktop">
+        <div id="vision-columns" className="columns">
+          <div className="column">
             <h1 className="title is-1 vision-title">
               {this.state.vision.title}
             </h1>
@@ -36,7 +36,7 @@ class Vision extends Component {
             </h2>
             <p className="vision-paragraph">{this.state.vision.content}</p>
           </div>
-          <div className="coloumn is-half">
+          <div id="vision-img-column" className="column">
             <figure className="image is-horizontal-center is-half">
               <img id="gubbe" src={this.state.vision.imageUrl} />
             </figure>
