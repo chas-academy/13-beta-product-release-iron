@@ -86,7 +86,7 @@ class Resellers extends Component {
         </div>
         <div>
           <section className="map">
-            <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1H_1me5Q-O9JUNyENiVQ9Y44UnqMVV8kd" />
+            <iframe src="https://www.google.com/maps/d/embed?mid=1Ibi8rJsvNJIkSezD36a1_AY__umOXe_1" />
           </section>
         </div>
       </div>
