@@ -109,13 +109,18 @@ video {
   width: 100%;
 }
 
-@media screen and (max-height: 375px) {
+@media screen and (max-width: 420px) {
   .title.is-1 {
-    font-size: 1.8em;
+    font-size: 2em;
   }
   
   p.title.is-6 {
     font-size: 1.2em;
   }
 
+  .title:not(:last-child),
+  .subtitle:not(:last-child) {
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
 }

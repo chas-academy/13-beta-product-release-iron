@@ -157,7 +157,7 @@ a.voucher-btn:hover {
     height: 70%;
   }
 }
-  @media screen and (min-height: 320px) {
+  @media screen and (max-height: 320px) {
   .modalButton {
     margin-top: 8em;
     font-size: 10px;
