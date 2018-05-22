@@ -1,36 +1,84 @@
-import React from 'react';
-import '../styles/styles.css';
-import validator from 'validator'; 
-import  { Form, Input, Icon, Button } from 'antd'; 
+import React, { Component } from "react";
+import ReactDOM from "react-dom";
+import "../styles/styles.css";
 
-const NewsletterForm  = ({email, handleOnChangeEmail, handleSendEmail}) => {
-  return  (
-    <div className="container newsletter-container">
-    <div className="content">
-      <p className="footer-news">Sign up for our newsletter</p> 
-      <Form layout='inline' className='newsletter-form' action='javascript:void(0);' method='POST'>
-        <div className="field has-addons">
+class NewsletterForm extends Component {
+  constructor() {
+    super();
+    this.state = {
+      email: "",
+      message: ""
+    };
 
-				  <div id="control-input" className="control">
-              <Form.Item id="control-input" className="control">
-                <Input id="input-field" className="input" onChange={({target}) => handleOnChangeEmail(target.value)}
-                  prefix={<Icon type='red-envelope'/>} placeholder ='Enter your email' value={email} />
-              </Form.Item>
+    this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleChange = this.handleChange.bind(this);
+  }
+
+  handleSubmit(e) {
+    e.preventDefault();
+
+    fetch("/api/newsletter", {
+      method: "POST",
+      headers: {
+        "Accept": "application/json",
+        "Content-Type": "application/json"
+      }, 
+      body: JSON.stringify({
+        email_address: this.state.email,
+        status: "subscribed"
+      })
+    }) 
+    .then((response) => response.json())
+    .then((res) => {
+      this.setState({
+        message: res.message
+      });
+    })
+    .catch(function(err) {
+      console.log(err);
+    });
+  }
+
+  handleChange(event) {
+    this.setState({
+      email: event.target.value
+    });
+  }
+
+  render() {
+    return (
+      <div className="container newsletter-container">
+        <div className="content">
+          <p className="footer-news">Sign up for our newsletter</p>
+          <form
+            className="newsletter-form"
+            // action="/api/newsletter"
+            // method="POST"
+            >
+            <div className="field has-addons">
+              <div id="control-input" className="control">
+                <input
+                  id="input-field"
+                  onChange={this.handleChange}
+                  type="text"
+                  value={this.state.email}
+                  className="input"
+                  placeholder="Enter your email"
+                  required
+                  />
+              </div>
+              <div id="control-input" className="control">
+                <button onClick={this.handleSubmit} id="news-button" type="submit">
+                  Send
+                </button> <br />
+                {this.state.message ? this.state.message : ''}
+              </div>
             </div>
-
-            <div className="control">
-            <Form.Item>
-            <Button id="news-button" onClick={() => handleSendEmail(email)} 
-            htmlType='submit' type='primary' disabled={!validator.isEmail(email)}>
-              Send</Button>
-            </Form.Item>
-            </div>
-
+          </form>
         </div>
-      </Form>
-    </div>
-    </div>
-  );
+      </div>
+    );
+  }
 }
 
-export default NewsletterForm; 
+export default NewsletterForm;

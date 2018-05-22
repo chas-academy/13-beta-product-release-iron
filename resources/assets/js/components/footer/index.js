@@ -1,28 +1,18 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import '../styles/styles.css';
-import SodaLogo from '../images/SodaFactory.png';
-import FbLogo from '../images/fb.svg';
-import InstaLogo from '../images/insta.svg';
 import './styles.css';
 import NewsletterForm from './NewsletterForm';
 
 class Footer extends Component {
-	constructor(props){
-		super(props);
+	constructor() {
+		super();
 		this.state = {
 			email: ''
 		}
 	}
-	handleSendEmail (email) {
-		console.log(email)
-	}
-	handleOnChangeEmail (email)	{
-		this.setState ({
-			email: email
-		})
 
-	}
+
 	render() {
 		return (
 			<div>
@@ -45,20 +35,7 @@ class Footer extends Component {
 							</a>
 						</div>
 					</div>
-					<div className="container newsletter-container">
-					<NewsletterForm email={this.state.email} handleOnChangeEmail={this.handleOnChangeEmail} handleSendEmail={this.handleSendEmail}/>
-
-						{/* <div className="content">
-							<p className="footer-news">Sign up for our newsletter</p>               
-								<div className="field has-addons">
-									<div className="control" id="control-input">
-									</div>
-									<div className="control">
-										<a id="news-button" className="button is-info">Submit</a>
-									</div> 
-								</div>
-							</div> */}
-						</div> 
+					<NewsletterForm email={this.state.email} />
 				</footer>
 			</div>
 			
