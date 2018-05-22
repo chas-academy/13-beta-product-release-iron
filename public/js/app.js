@@ -69458,84 +69458,96 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 
 var Footer = function (_Component) {
-	_inherits(Footer, _Component);
+  _inherits(Footer, _Component);
 
-	function Footer() {
-		_classCallCheck(this, Footer);
+  function Footer() {
+    _classCallCheck(this, Footer);
 
-		var _this = _possibleConstructorReturn(this, (Footer.__proto__ || Object.getPrototypeOf(Footer)).call(this));
+    var _this = _possibleConstructorReturn(this, (Footer.__proto__ || Object.getPrototypeOf(Footer)).call(this));
 
-		_this.state = {
-			email: ''
-		};
-		return _this;
-	}
+    _this.state = {
+      email: ""
+    };
+    return _this;
+  }
 
-	_createClass(Footer, [{
-		key: 'render',
-		value: function render() {
-			return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-				'div',
-				null,
-				__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-					'footer',
-					{ className: 'footer', id: 'contact' },
-					__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-						'div',
-						{ className: 'container footer-container' },
-						__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-							'div',
-							{ className: 'content' },
-							__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-								'p',
-								{ id: 'footer-title', className: 'footer-title' },
-								'Contact Us'
-							),
-							__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-								'p',
-								{ className: 'footer-p' },
-								'info@mega-mate.com'
-							)
-						),
-						__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-							'div',
-							{ className: 'content' },
-							__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-								'a',
-								{ className: 'logo-link', href: 'https://www.facebook.com/megamate.sodafactory/', target: '_blank' },
-								__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-									'p',
-									{ className: 'footer-logo' },
-									'Facebook'
-								)
-							),
-							__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-								'a',
-								{ className: 'logo-link', href: 'https://www.instagram.com/mega_mate/', target: '_blank' },
-								__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-									'p',
-									{ className: 'footer-logo' },
-									'Instagram'
-								)
-							),
-							__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-								'a',
-								{ className: 'logo-link', href: 'https://www.sodafactory.se', target: '_blank' },
-								__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-									'p',
-									{ className: 'footer-logo' },
-									'SodaFactory'
-								)
-							)
-						)
-					),
-					__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4__newsletterForm__["a" /* default */], { email: this.state.email })
-				)
-			);
-		}
-	}]);
+  _createClass(Footer, [{
+    key: "render",
+    value: function render() {
+      return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        "div",
+        null,
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          "footer",
+          { className: "footer", id: "contact" },
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            "div",
+            { className: "container footer-container" },
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+              "div",
+              { className: "content" },
+              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                "p",
+                { id: "footer-title", className: "footer-title" },
+                "Contact Us"
+              ),
+              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                "p",
+                { className: "footer-p" },
+                "info@mega-mate.com"
+              )
+            ),
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+              "div",
+              { className: "content" },
+              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                "a",
+                {
+                  className: "logo-link",
+                  href: "https://www.facebook.com/megamate.sodafactory/",
+                  target: "_blank"
+                },
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                  "p",
+                  { className: "footer-logo" },
+                  "Facebook"
+                )
+              ),
+              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                "a",
+                {
+                  className: "logo-link",
+                  href: "https://www.instagram.com/mega_mate/",
+                  target: "_blank"
+                },
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                  "p",
+                  { className: "footer-logo" },
+                  "Instagram"
+                )
+              ),
+              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                "a",
+                {
+                  className: "logo-link",
+                  href: "https://www.sodafactory.se",
+                  target: "_blank"
+                },
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                  "p",
+                  { className: "footer-logo" },
+                  "SodaFactory"
+                )
+              )
+            )
+          ),
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4__newsletterForm__["a" /* default */], { email: this.state.email })
+        )
+      );
+    }
+  }]);
 
-	return Footer;
+  return Footer;
 }(__WEBPACK_IMPORTED_MODULE_0_react__["Component"]);
 
 /* harmony default export */ __webpack_exports__["a"] = (Footer);
