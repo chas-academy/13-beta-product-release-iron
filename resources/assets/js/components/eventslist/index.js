@@ -20,6 +20,7 @@ class EventsList extends Component {
       })
       .then(function(data) {
         now.setState({ events: data });
+        now.orderEventDate();
       })
       .catch(function(error) {
         console.log(error);
@@ -59,6 +60,13 @@ class EventsList extends Component {
     } else {
       return false;
     }
+  }
+  orderEventDate() {
+    const orderedEvents = [].concat(this.state.events)
+    .sort((a, b) => a.date > b.date);
+    this.setState({
+      events: orderedEvents
+    })
   }
 }
 

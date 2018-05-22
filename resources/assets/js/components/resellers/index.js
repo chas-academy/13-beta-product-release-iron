@@ -19,7 +19,6 @@ class Resellers extends Component {
         return res.json();
       })
       .then(function(data) {
-        console.log(data);
         now.setState({ cities: data });
       })
       .catch(function(error) {
@@ -31,7 +30,6 @@ class Resellers extends Component {
         return res.json();
       })
       .then(function(data) {
-        console.log(data);
         now.setState({ reseller: data });
       })
       .catch(function(error) {
