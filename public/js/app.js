@@ -45247,13 +45247,13 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom__ = __webpack_require__(8);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react_dom__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__header__ = __webpack_require__(238);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__vision__ = __webpack_require__(269);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Header__ = __webpack_require__(238);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Vision__ = __webpack_require__(269);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__banner__ = __webpack_require__(272);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__productlist__ = __webpack_require__(275);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__eventslist__ = __webpack_require__(280);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__resellers__ = __webpack_require__(289);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__footer__ = __webpack_require__(292);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__Productlist__ = __webpack_require__(275);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__Eventslist__ = __webpack_require__(280);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__Resellers__ = __webpack_require__(289);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__Footer__ = __webpack_require__(292);
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -45287,13 +45287,13 @@ var Index = function (_Component) {
       return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
         "div",
         null,
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__header__["a" /* default */], null),
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__vision__["a" /* default */], null),
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__Header__["a" /* default */], null),
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__Vision__["a" /* default */], null),
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4__banner__["a" /* default */], null),
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_5__productlist__["a" /* default */], null),
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_6__eventslist__["a" /* default */], null),
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_7__resellers__["a" /* default */], null),
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_8__footer__["a" /* default */], null)
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_5__Productlist__["a" /* default */], null),
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_6__Eventslist__["a" /* default */], null),
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_7__Resellers__["a" /* default */], null),
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_8__Footer__["a" /* default */], null)
       );
     }
   }]);
@@ -68402,10 +68402,10 @@ var Vision = function (_Component) {
         { id: "vision", className: "vision" },
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
           "div",
-          { className: "columns" },
+          { id: "vision-columns", className: "columns" },
           __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
             "div",
-            { className: "column is-half is-desktop" },
+            { className: "column" },
             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
               "h1",
               { className: "title is-1 vision-title" },
@@ -68424,7 +68424,7 @@ var Vision = function (_Component) {
           ),
           __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
             "div",
-            { className: "coloumn is-half" },
+            { id: "vision-img-column", className: "column" },
             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
               "figure",
               { className: "image is-horizontal-center is-half" },
@@ -68481,7 +68481,7 @@ exports = module.exports = __webpack_require__(15)(false);
 
 
 // module
-exports.push([module.i, ".vision-paragraph {\nfont-size: 2em;\nline-height: 1.3em;\npadding-top: 5px;\n}\n\n.title.is-3.vision-subtitle {\ncolor: #e43e28;\nfont-size: 2.3em;\n}\n\n#gubbe {\npadding-top: 2rem;\nmargin-left: auto;\nmargin-right: auto;\nmax-width: 100%;\n}\n\n@media screen and (min-width: 768px) {\n  #gubbe {\n    margin-top: auto;\n    margin-bottom: auto;\n  }\n} \n\n/* mediaQuery Mobile */\n@media screen and (max-width: 910px) {\n  #gubbe {\n    display: none;\n  }\n  .column.is-half {\n    width: 100%;\n  }\n}\n  \n\n  \n\n\n", ""]);
+exports.push([module.i, ".vision-paragraph {\n  font-size: 2em;\n  line-height: 1.3em;\n  padding-top: 5px;\n}\n\n.title.is-3.vision-subtitle {\n  color: #e43e28;\n  font-size: 2.3em;\n}\n\n#gubbe {\n  padding-top: 2rem;\n  margin-left: auto;\n  margin-right: auto;\n  max-width: 75%;\n}\n\n#vision-img-column {\n  margin-top: auto;\n}\n\n@media screen and (max-width: 800px) {\n  #gubbe {\n    display: none;\n  }\n}\n\n/* mediaQuery Mobile */\n@media screen and (max-width: 910px) {\n  /*#gubbe {\n    display: none;\n  }*/\n  .column.is-half {\n    width: 100%;\n  }\n}\n\n@media screen and (max-width: 1150px) {\n  #vision-columns {\n    flex-direction: column;\n  }\n  #gubbe {\n    max-width: 50%;\n  }\n}\n\n@media screen and (min-width: 1600px) {\n  #gubbe {\n    max-width: 50%;\n  }\n}\n", ""]);
 
 // exports
 
@@ -68861,7 +68861,7 @@ exports = module.exports = __webpack_require__(15)(false);
 
 
 // module
-exports.push([module.i, "body,\nbutton,\ninput,\nselect,\ntextarea {\n  font-family: \"Oswald\", sans-serif;\n}\n\nbody {\n  padding: 0px;\n  margin: 0px;\n  overflow-x: hidden;\n}\n\n.column {\n  padding: 0em 5em 0em 5em;\n}\n\n/* Font styling */\n.title.is-1 {\n  margin-top: 2rem;\n  padding-top: 1em;\n  font-size: 2.8em;\n  text-transform: uppercase;\n  font-weight: 600;\n  margin-bottom: 0.5rem;\n}\n\n.title.is-3 {\n  text-transform: uppercase;\n}\n\np.title.is-6 {\n  font-size: 1.5em;\n  margin-top: 1em;\n  font-weight: 400;\n}\n\n\n.title:not(:last-child),\n.subtitle:not(:last-child) {\n  margin-top: 2rem;\n  margin-bottom: 0.5rem;\n}\n\n\n/* buttons */\n.button {\n  border-radius: 0;\n}\n\n/* Video*/\nheader {\n  overflow: hidden;\n  max-height: 100%;\n}\n\nvideo {\n  position: inherit;\n  min-width: 100%;\n  overflow: hidden;\n  z-index: -1;\n}\n\n.megamate-logo {\n  width: 10%;\n  margin-left: 3%;\n  margin-top: 3%;\n}\n\n.homepage-hero-module {\n  border-right: none;\n  border-left: none;\n  position: relative;\n}\n\n.no-video .video-container video,\n.touch .video-container video {\n  display: none;\n}\n\n.no-video .video-container .poster,\n.touch .video-container .poster {\n  display: block !important;\n}\n\n.video-container {\n  position: relative;\n  bottom: 0%;\n  left: 0%;\n  height: 100%;\n  width: 100%;\n  overflow: hidden;\n  background: #000;\n}\n\n.video-container .poster img {\n  width: 100%;\n  bottom: 0;\n  position: absolute;\n}\n\n.video-container .filter {\n  z-index: 100;\n  position: absolute;\n  background: rgba(0, 0, 0, 0.4);\n  width: 100%;\n}\n\n.video-container video {\n  position: absolute;\n  z-index: 0;\n  bottom: 0;\n}\n\n.video-container video.fillWidth {\n  width: 100%;\n}\n", ""]);
+exports.push([module.i, "body,\nbutton,\ninput,\nselect,\ntextarea {\n  font-family: \"Oswald\", sans-serif;\n}\n\nbody {\n  padding: 0px;\n  margin: 0px;\n  overflow-x: hidden;\n}\n\n.column {\n  padding: 0em 5em 0em 5em;\n}\n\n/* Font styling */\n.title.is-1 {\n  margin-top: 2rem;\n  padding-top: 1em;\n  font-size: 2.8em;\n  text-transform: uppercase;\n  font-weight: 600;\n  margin-bottom: 0.5rem;\n}\n\n.title.is-3 {\n  text-transform: uppercase;\n}\n\np.title.is-6 {\n  font-size: 1.5em;\n  margin-top: 1em;\n  font-weight: 400;\n}\n\n\n.title:not(:last-child),\n.subtitle:not(:last-child) {\n  margin-top: 2rem;\n  margin-bottom: 0.5rem;\n}\n\n\n/* buttons */\n.button {\n  border-radius: 0;\n}\n\n/* Video*/\nheader {\n  overflow: hidden;\n  max-height: 100%;\n}\n\nvideo {\n  position: inherit;\n  min-width: 100%;\n  overflow: hidden;\n  z-index: -1;\n}\n\n.megamate-logo {\n  width: 10%;\n  margin-left: 3%;\n  margin-top: 3%;\n}\n\n.homepage-hero-module {\n  border-right: none;\n  border-left: none;\n  position: relative;\n}\n\n.no-video .video-container video,\n.touch .video-container video {\n  display: none;\n}\n\n.no-video .video-container .poster,\n.touch .video-container .poster {\n  display: block !important;\n}\n\n.video-container {\n  position: relative;\n  bottom: 0%;\n  left: 0%;\n  height: 100%;\n  width: 100%;\n  overflow: hidden;\n  background: #000;\n}\n\n.video-container .poster img {\n  width: 100%;\n  bottom: 0;\n  position: absolute;\n}\n\n.video-container .filter {\n  z-index: 100;\n  position: absolute;\n  background: rgba(0, 0, 0, 0.4);\n  width: 100%;\n}\n\n.video-container video {\n  position: absolute;\n  z-index: 0;\n  bottom: 0;\n}\n\n.video-container video.fillWidth {\n  width: 100%;\n}\n\n@media screen and (max-height: 375px) {\n  .title.is-1 {\n    font-size: 1.8em;\n  }\n  \n  p.title.is-6 {\n    font-size: 1.2em;\n  }\n\n}", ""]);
 
 // exports
 
@@ -69771,22 +69771,12 @@ var Voucher = function (_Component) {
               this.state.voucher.content
             ),
             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-              "p",
-              { className: "has-text-centered animate-fallIn voucherStartTime" },
-              this.state.voucher.startTime
-            ),
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-              "p",
-              { className: "has-text-centered animate-fallIn voucherEndTime" },
-              this.state.voucher.endTime
-            ),
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
               "div",
               { className: "buttons has-addons is-right" },
               __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                 "button",
                 { onClick: this.handleCloseModal, className: "modalButton" },
-                "Close"
+                "Consume Voucher"
               )
             )
           )
@@ -71147,7 +71137,7 @@ exports = module.exports = __webpack_require__(15)(false);
 
 
 // module
-exports.push([module.i, "#voucherTitle,\n#voucherSubtitle,\n.voucherText,\n.voucherStartTime,\n.voucherEndTime,\n.voucher-btn {\n  color: white;\n}\n\n#voucherTitle {\n  margin-top: 1.5em;\n  font-size: 2.2em;\n  text-transform: uppercase;\n}\n\n#voucherSubtitle {\n  font-size: 1.8em;\n  margin-top: 0.5em;\n}\n\n.voucherText {\n  margin-top: 0.6em;\n  font-size: 1.5em;\n}\n\n.voucherStartTime {\n  font-size: 1.2em;\n  margin-top: 1em;\n}\n\n.voucherEndTime {\n  font-size: 1.2em;\n  margin-top: 0.2em;\n}\n\na.homepage-btn {\n  border: none;\n}\n\n.voucher-btn {\n  border: none;\n  letter-spacing: 3px;\n}\n\na.voucher-btn:hover {\n  color: #fab317;\n}\n\n.homepage-btn:hover {\n  background-color: darkslateblue;\n  color: white;\n}\n\n#voucher-close-btn {\n  position: absolute;\n  bottom: 2%;\n  color: white;\n  width: 100px;\n  height: 3em;\n}\n\n/* background on first page */\n.voucher {\n  margin: 0;\n  padding: 0;\n  background-color: #fab317;\n\n}\n\n/* first voucher button */ \n.pulse {\n  width: 290px;\n  height: 80px;\n  background: #e43e28;;\n  border-radius: 50%;\n  color: #fff;\n  font-size: 35px;\n  font-weight: bold;\n  text-align: center;\n  line-height: 100px;\n  text-transform: uppercase;\n  animation: animate 3s linear infinite;\n}\n\n@keyframes animate {\n  0% {\n    box-shadow: 0 0 0 0 rgba(255, 109, 74, 0.7), 0 0 0 0 rgba(255, 109, 74, 0.7);\n  }\n  40% {\n    box-shadow: 0 0 0 50px rgba(255, 109, 74, 0),\n      0 0 0 0 rgba(255, 109, 74, 0.7);\n  }\n  80% {\n    box-shadow: 0 0 0 50px rgba(255, 109, 74, 0),\n      0 0 0 30px rgba(255, 109, 74, 0);\n  }\n  100% {\n    box-shadow: 0 0 0 0 rgba(255, 109, 74, 0), 0 0 0 30px rgba(255, 109, 74, 0);\n  }\n}\n\n@media screen and (max-width: 768px) {\n  .modal-content {\n    width: 60%;\n  }\n}\n\n@media screen and (max-height: 540px) {\n  .modal-content {\n    max-height: calc(100vh - 125px);\n    height: 70%;\n  }\n}\n\n/*when voucher clicked background */ \n.Modal {\n  position: absolute;\n  background: url(" + escape(__webpack_require__(310)) + ");\n  background-size: cover;\n  background-repeat: repeat-y;\n  background-attachment: fixed;\n  background-position: center;\n  height: 100%;\n  width: 100%;\n}\n\n.Modal::after {\n  content: \"\";\n  position: absolute;\n  top: 0;\n  left: 0;\n  width: 100%;\n  height: 100%;\n  background: rgba(0, 0, 0, 0.6);\n}\n\n.modal-content {\n  z-index: 2;\n  height: 50%;\n  width: 30%;\n  top: 50%;\n  margin: 0 auto;\n  transform: translateY(-50%);\n  background-color: #fab317;\n}\n\n/* close button */ \n.modalButton {\n  bottom: 0;\n  margin: 0 auto;\n  margin-top: 2em;\n  color: #fab317;\n} ", ""]);
+exports.push([module.i, "#voucherTitle,\n#voucherSubtitle,\n.voucherText,\n.voucherStartTime,\n.voucherEndTime,\n.voucher-btn {\n  color: white;\n}\n\n#voucherTitle {\n  margin-top: 1.5em;\n  font-size: 1.8em;\n  text-transform: uppercase;\n}\n\n#voucherSubtitle {\n  font-size: 1.2em;\n  margin-top: 0.5em;\n  padding: 1em;\n}\n\n.voucherText {\n  margin-top: 0.6em;\n  font-size: 1em;\n}\n\na.homepage-btn {\n  border: none;\n}\n\n.voucher-btn {\n  border: none;\n  letter-spacing: 3px;\n}\n\na.voucher-btn:hover {\n  color: #fab317;\n}\n\n.homepage-btn:hover {\n  background-color: #4B0082;\n  color: white;\n}\n\n#voucher-close-btn {\n  position: absolute;\n  bottom: 2%;\n  color: white;\n  width: 100px;\n  height: 3em;\n}\n\n/* background on first page */\n.voucher {\n  margin: 0;\n  padding: 0;\n  background-color: #fab317;\n}\n\n/* first voucher button */ \n.pulse {\n  width: 290px;\n  height: 80px;\n  background: #4B0082;;\n  border-radius: 50%;\n  color: #fff;\n  font-size: 35px;\n  font-weight: bold;\n  text-align: center;\n  line-height: 100px;\n  text-transform: uppercase;\n  animation: animate 3s linear infinite;\n}\n\n@keyframes animate {\n  0% {\n    box-shadow: 0 0 0 0 rgba(255, 109, 74, 0.7), 0 0 0 0 rgba(255, 109, 74, 0.7);\n  }\n  40% {\n    box-shadow: 0 0 0 50px rgba(255, 109, 74, 0),\n      0 0 0 0 rgba(255, 109, 74, 0.7);\n  }\n  80% {\n    box-shadow: 0 0 0 50px rgba(255, 109, 74, 0),\n      0 0 0 30px rgba(255, 109, 74, 0);\n  }\n  100% {\n    box-shadow: 0 0 0 0 rgba(255, 109, 74, 0), 0 0 0 30px rgba(255, 109, 74, 0);\n  }\n}\n\n\n/*when voucher clicked background */ \n.Modal {\n  position: absolute;\n  background: url(" + escape(__webpack_require__(310)) + ");\n  background-size: cover;\n  background-repeat: repeat-y;\n  background-attachment: fixed;\n  background-position: center;\n  height: 100%;\n  width: 100%;\n}\n\n.Modal::after {\n  content: \"\";\n  position: absolute;\n  top: 0;\n  left: 0;\n  width: 100%;\n  height: 100%;\n  background: rgba(0, 0, 0, 0.6);\n}\n\n.modal-content {\n  z-index: 2;\n  height: 60%;\n  width: 60%;\n  top: 50%;\n  margin: 0 auto;\n  transform: translateY(-50%);\n  border-radius: 35px;\n  background-color: rgba(0, 0, 0, 0.6);\n}\n\n/* close button */ \n.modalButton {\n  bottom: 0;\n  margin: 0 auto;\n  margin-top: 6em;\n  color: #4B0082;\n  font-size: 20px;\n  border: none;\n  background-color: #fab317;\n  border-color: transparent;\n  width: 180px;\n  height: 40px;\n  border-radius: 8px;\n  text-transform: uppercase;\n  font-weight: bold;\n  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.05), 0 6px 20px 0 rgba(0, 0, 0, 0.05);\n} \n\n@media screen and (max-width: 768px) {\n  .modal-content {\n    width: 60%;\n  }\n}\n\n@media screen and (max-height: 540px) {\n  .modal-content {\n    max-height: calc(100vh - 125px);\n    height: 70%;\n  }\n}\n  @media screen and (min-height: 320px) {\n  .modalButton {\n    margin-top: 8em;\n    font-size: 10px;\n    width: 120px;\n    height: 30px;\n    border-radius: 8px;\n  }\n\n  #voucherTitle {\n    margin-top: 1.5em;\n    font-size: 1.2em;\n    text-transform: uppercase;\n  }\n  \n  #voucherSubtitle {\n    font-size: 1em;\n    margin-top: 0.5em;\n    padding: 1em;\n  }\n  \n  .voucherText {\n    margin-top: 0.6em;\n    font-size: 0.8em;\n  } \n}", ""]);
 
 // exports
 

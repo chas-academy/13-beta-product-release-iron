@@ -9,28 +9,19 @@
 
 #voucherTitle {
   margin-top: 1.5em;
-  font-size: 2.2em;
+  font-size: 1.8em;
   text-transform: uppercase;
 }
 
 #voucherSubtitle {
-  font-size: 1.8em;
+  font-size: 1.2em;
   margin-top: 0.5em;
+  padding: 1em;
 }
 
 .voucherText {
   margin-top: 0.6em;
-  font-size: 1.5em;
-}
-
-.voucherStartTime {
-  font-size: 1.2em;
-  margin-top: 1em;
-}
-
-.voucherEndTime {
-  font-size: 1.2em;
-  margin-top: 0.2em;
+  font-size: 1em;
 }
 
 a.homepage-btn {
@@ -47,7 +38,7 @@ a.voucher-btn:hover {
 }
 
 .homepage-btn:hover {
-  background-color: darkslateblue;
+  background-color: #4B0082;
   color: white;
 }
 
@@ -64,14 +55,13 @@ a.voucher-btn:hover {
   margin: 0;
   padding: 0;
   background-color: #fab317;
-
 }
 
 /* first voucher button */ 
 .pulse {
   width: 290px;
   height: 80px;
-  background: #e43e28;;
+  background: #4B0082;;
   border-radius: 50%;
   color: #fff;
   font-size: 35px;
@@ -103,18 +93,6 @@ a.voucher-btn:hover {
   }
 }
 
-@media screen and (max-width: 768px) {
-  .modal-content {
-    width: 60%;
-  }
-}
-
-@media screen and (max-height: 540px) {
-  .modal-content {
-    max-height: calc(100vh - 125px);
-    height: 70%;
-  }
-}
 
 /*when voucher clicked background */ 
 .Modal {
@@ -140,18 +118,68 @@ a.voucher-btn:hover {
 
 .modal-content {
   z-index: 2;
-  height: 50%;
-  width: 30%;
+  height: 60%;
+  width: 60%;
   top: 50%;
   margin: 0 auto;
   transform: translateY(-50%);
-  background-color: #fab317;
+  border-radius: 35px;
+  background-color: rgba(0, 0, 0, 0.6);
 }
 
 /* close button */ 
 .modalButton {
   bottom: 0;
   margin: 0 auto;
-  margin-top: 2em;
-  color: #fab317;
+  margin-top: 6em;
+  color: #4B0082;
+  font-size: 20px;
+  border: none;
+  background-color: #fab317;
+  border-color: transparent;
+  width: 180px;
+  height: 40px;
+  border-radius: 8px;
+  text-transform: uppercase;
+  font-weight: bold;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.05), 0 6px 20px 0 rgba(0, 0, 0, 0.05);
 } 
+
+@media screen and (max-width: 768px) {
+  .modal-content {
+    width: 60%;
+  }
+}
+
+@media screen and (max-height: 540px) {
+  .modal-content {
+    max-height: calc(100vh - 125px);
+    height: 70%;
+  }
+}
+  @media screen and (min-height: 320px) {
+  .modalButton {
+    margin-top: 8em;
+    font-size: 10px;
+    width: 120px;
+    height: 30px;
+    border-radius: 8px;
+  }
+
+  #voucherTitle {
+    margin-top: 1.5em;
+    font-size: 1.2em;
+    text-transform: uppercase;
+  }
+  
+  #voucherSubtitle {
+    font-size: 1em;
+    margin-top: 0.5em;
+    padding: 1em;
+  }
+  
+  .voucherText {
+    margin-top: 0.6em;
+    font-size: 0.8em;
+  } 
+}

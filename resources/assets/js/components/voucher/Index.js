@@ -100,15 +100,9 @@ class Voucher extends Component {
             <p className="has-text-centered animate-fallIn voucherText">
               {this.state.voucher.content}
             </p>
-            <p className="has-text-centered animate-fallIn voucherStartTime">
-              {this.state.voucher.startTime}
-            </p>
-            <p className="has-text-centered animate-fallIn voucherEndTime">
-              {this.state.voucher.endTime}
-            </p>
             <div className="buttons has-addons is-right">
               <button onClick={this.handleCloseModal} className="modalButton">
-                Close
+                Consume Voucher
               </button>
             </div>
           </div>
@@ -159,3 +153,5 @@ export default Voucher;
 if (document.getElementById("voucher")) {
   ReactDOM.render(<Voucher />, document.getElementById("voucher"));
 }
+
+

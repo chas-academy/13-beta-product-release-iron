@@ -108,3 +108,14 @@ video {
 .video-container video.fillWidth {
   width: 100%;
 }
+
+@media screen and (max-height: 375px) {
+  .title.is-1 {
+    font-size: 1.8em;
+  }
+  
+  p.title.is-6 {
+    font-size: 1.2em;
+  }
+
+}
