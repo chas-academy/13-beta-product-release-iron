@@ -26,3 +26,4 @@ Route::get('/header', 'HeaderController@getAll');
 Route::get('/vision', 'VisionController@getAll');
 Route::get('/banner', 'VisionController@getBanner');
 Route::get('/voucher', 'VoucherController@getAll');
+Route::post('/newsletter', 'NewsLetterController@store');
