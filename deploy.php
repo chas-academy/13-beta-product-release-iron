@@ -26,7 +26,7 @@ host('teamiron.me')
     ->user('web')
     ->identityFile('~/.ssh/id_rsa')
     ->stage('production')
-    ->set('branch', 'feat-deploy-kaveh')
+    ->set('branch', 'develop')
     ->set('deploy_path', '/var/www/teamiron.me');
     
 host('dev.teamiron.me')
@@ -49,9 +49,9 @@ task('build', function () {
     run('cd {{release_path}} && npm install && npm run prod');
 });
 
-task('artisan:migrate:fresh', function () {
-    run('{{bin/php}} {{release_path}}/artisan migrate:fresh --seed');
-});
+// task('artisan:migrate:fresh', function () {
+//     run('{{bin/php}} {{release_path}}/artisan migrate:fresh --seed');
+// });
 
 desc('Dump autoload before seed');
 task('dump-autoload', function () {
@@ -62,8 +62,10 @@ task('dump-autoload', function () {
 // [Optional] if deploy fails automatically unlock.
 after('deploy:failed', 'deploy:unlock');
 // Migrate database before symlink new release.
-before('deploy:symlink', 'artisan:migrate:fresh');
-after('artisan:migrate:fresh', 'dump-autoload');
+// before('deploy:symlink', 'artisan:migrate:fresh');
+// after('artisan:migrate:fresh', 'dump-autoload');
+// install deps and build frontend
+before('deploy:symlink', 'build');
 
 desc('Clear config cache');
 task('artisan:config:clear', function () {
