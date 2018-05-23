@@ -75,6 +75,8 @@ class Header extends Component {
         </Menu>
         <div className="video">
           <ReactPlayer
+            volume="0"
+            muted="true"
             playing
             id="react-video-player"
             className="react-video"
