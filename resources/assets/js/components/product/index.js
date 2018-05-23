@@ -17,6 +17,8 @@ class Product extends Component {
   }
   componentDidMount() {
     this.createIngredientsArray(this.props.productData.ingredients);
+    ScrollReveal()
+      .reveal('.fadeinRight', fadeinRight);
   }
 
   toggleShowIngredientsListClick() {
@@ -31,7 +33,7 @@ class Product extends Component {
 
   render() {
     return (
-      <div className="columns" id="products">
+      <div className="columns fadeinRight" id="products">
         <div className="column is-half">
           <h2 className={"title is-3"} id="louiJama-subtitle">{this.props.productData.name}</h2>
           <p className="title is-6">{this.props.productData.description}</p>
@@ -56,10 +58,10 @@ class Product extends Component {
           </div>
         </div>
 
-        <div className="coloumn is-half">
+        <div className="coloumn is-half fadeinRight">
           <figure className="image is-horizontal-center">
             <img
-              className="product-img"
+              className="product-img fadeinRight"
               id="product-image"
               src={this.props.productData.imageUrl}
             />

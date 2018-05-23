@@ -44,9 +44,9 @@ class ProductList extends Component {
       origin: 'left',
     }
     ScrollReveal()
+      .reveal('.fadeIn', fadeIn)
       .reveal('.fadeinLeft', fadeinLeft)
       .reveal('.fadeinRight', fadeinRight)
-      .reveal('.fadeIn', fadeIn)
       .reveal('.buttonFade', buttonFade)
   }
 
