@@ -7,6 +7,7 @@ import ProductList from "./productlist";
 import EventsList from "./eventslist";
 import Resellers from "./resellers";
 import Footer from "./footer";
+import GoogleAnalytics from "./react-ga";
 
 export default class Index extends Component {
   render() {
@@ -19,6 +20,7 @@ export default class Index extends Component {
         <EventsList />
         <Resellers />
         <Footer />
+        <GoogleAnalytics />
       </div>
     );
   }
