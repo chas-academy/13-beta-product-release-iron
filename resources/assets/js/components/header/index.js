@@ -34,6 +34,10 @@ class Header extends Component {
       .catch(function(error) {
         console.log(error);
       });
+
+    document
+      .getElementById("react-video-player")
+      .setAttribute("autoplay", true);
   }
 
   render() {
@@ -71,12 +75,15 @@ class Header extends Component {
         </Menu>
         <div className="video">
           <ReactPlayer
+            volume="0"
+            muted="true"
             playing
+            id="react-video-player"
             className="react-video"
             url={[
-              { src: "/images/header-video.mp4", type: "video/mp4" },
-              { src: "/images/header-video.ogg", type: "video/ogg" },
-              { src: "/images/header-video.webm", type: "video/webm" }
+              { src: "/images/mega-film.mp4", type: "video/mp4" },
+              { src: "/images/mega-film.ogg", type: "video/ogg" },
+              { src: "/images/mega-film.webm", type: "video/webm" }
             ]}
           />
           <a id="animated-arrow" href="#vision">
