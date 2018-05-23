@@ -27,7 +27,7 @@ class Banner extends Component {
     return (
       <div>
         {
-          <section className="containter">
+          <section className="containter fadeIn">
             <figure className="image">
               {<img id="imgBanner" src={this.state.banner.imageUrl} />}
             </figure>

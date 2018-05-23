@@ -47,7 +47,7 @@ class NewsletterForm extends Component {
 
   render() {
     return (
-      <div className="container newsletter-container">
+      <div className="container newsletter-container fadeinRight">
         <div className="content">
           <p className="footer-news">Sign up for our newsletter</p>
           <form

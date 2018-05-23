@@ -35,6 +35,7 @@ class Header extends Component {
         console.log(error);
       });
   }
+
   render() {
     return (
       <header>
@@ -87,11 +88,11 @@ class Header extends Component {
             </div>
           </a>
         </div>
-        <img
-          src={megamate_gulsvart}
-          className="megamate-logo navbar-brand is-mobile is-overlay"
-          alt="logo"
-        />
+          <img
+            src={megamate_gulsvart}
+            className="megamate-logo navbar-brand is-mobile is-overlay fadeIn"
+            alt="logo"
+          />
       </header>
     );
   }
