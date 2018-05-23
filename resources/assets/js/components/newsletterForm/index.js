@@ -65,13 +65,13 @@ class NewsletterForm extends Component {
                   className="input"
                   placeholder="Enter your email"
                   required
-                  />
+                  /> <br />
+                {this.state.message ? this.state.message : ''}
               </div>
               <div id="control-input" className="control">
                 <button onClick={this.handleSubmit} id="news-button" type="submit">
                   Send
                 </button> <br />
-                {this.state.message ? this.state.message : ''}
               </div>
             </div>
           </form>
