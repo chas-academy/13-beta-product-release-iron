@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
 import "./styles.css";
+import ScrollReveal from 'scrollReveal';
+
 
 class Product extends Component {
   constructor(props) {

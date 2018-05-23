@@ -90,7 +90,7 @@ class Header extends Component {
         </div>
           <img
             src={megamate_gulsvart}
-            className="megamate-logo navbar-brand is-mobile is-overlay fadeIn"
+            className="megamate-logo navbar-brand is-mobile is-overlay fadeinLeft"
             alt="logo"
           />
       </header>

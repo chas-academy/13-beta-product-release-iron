@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import ReactDOM from "react-dom";
 import ReactModal from "react-modal";
 import "./styles.css";
+import ScrollReveal from 'scrollReveal';
+
 
 class Voucher extends Component {
   constructor() {
@@ -29,6 +31,15 @@ class Voucher extends Component {
       .catch(function(error) {
         console.log(error);
       });
+      let fadeIn = {
+        duration: 4000,
+        origin: 'bottom',
+      }
+      ScrollReveal()
+      .reveal('.fadeinLeft', fadeinLeft)
+      .reveal('.fadeinRight', fadeinRight)
+      .reveal('.fadeIn', fadeIn)
+      .reveal('.buttonFade', buttonFade)
   }
 
   handleOpenModal() {
@@ -55,7 +66,7 @@ class Voucher extends Component {
       <section className="hero is-fullheight is-bold">
         <div className="hero-body voucher">
           {this.state.showVoucher === true ? (
-            <div className="container has-text-centered">
+            <div className="container has-text-centered fadeIn">
               <a
                 onClick={this.handleOpenModal}
                 className="button is-large is-rounded pulse center voucher-btn" 
