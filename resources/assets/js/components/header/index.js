@@ -34,10 +34,6 @@ class Header extends Component {
       .catch(function(error) {
         console.log(error);
       });
-
-    document
-      .getElementById("react-video-player")
-      .setAttribute("autoplay", true);
   }
 
   render() {
@@ -74,7 +70,7 @@ class Header extends Component {
           </a>
         </Menu>
         <div className="video">
-          <ReactPlayer
+          {/*<ReactPlayer
             volume="0"
             muted="true"
             playing
@@ -85,7 +81,16 @@ class Header extends Component {
               { src: "/images/mega-film.ogg", type: "video/ogg" },
               { src: "/images/mega-film.webm", type: "video/webm" }
             ]}
-          />
+          />*/}
+
+          <video id="react-video-player" autoPlay muted controls>
+            <source src="/images/mega-film.mp4" type="video/mp4" />
+            <source src="/images/mega-film.ogg" type="video/ogg" />
+            <source src="/images/mega-film.webm" type="video/webm" />
+          </video>
+          <audio autoPlay id="audiomf">
+            <source src="/images/mega-ljud.mp3" type="audio/mpeg" />
+          </audio>
           <a id="animated-arrow" href="#vision">
             <div className="arrow-container animated fadeInDown">
               <div className="arrow-2">
@@ -95,11 +100,11 @@ class Header extends Component {
             </div>
           </a>
         </div>
-          <img
-            src={megamate_gulsvart}
-            className="megamate-logo navbar-brand is-mobile is-overlay fadeIn"
-            alt="logo"
-          />
+        <img
+          src={megamate_gulsvart}
+          className="megamate-logo navbar-brand is-mobile is-overlay fadeIn"
+          alt="logo"
+        />
       </header>
     );
   }
