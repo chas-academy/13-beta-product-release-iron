@@ -45,7 +45,7 @@ class EventsList extends Component {
               if(this.checkIfEventDatePassed(keyName))
                 return <Event key={keyName.id} eventData={keyName}/>;
             })
-          : ""}
+          : <h3 className="no-event">No event uppcomming event at the moment</h3>}
           </div>
           </div>
       </div>
