@@ -35,10 +35,10 @@ class NewsletterController extends Controller
      */
     public function store(Request $request)
     {
-        if (!Newsletter::isSubscribed($request->input('email_address')) ) {
+        if ( ! Newsletter::isSubscribed($request->input('email_address')) ) {
             Newsletter::subscribePending($request->input('email_address'));
             return response()
-                ->json(['message' => 'Email is now subscribed!']);              
+                ->json(['message' => 'Confirmation is sent to your email!']);              
         } else {
             return response()
                 ->json(['message' => 'Email is already subscribed!'], 500);
