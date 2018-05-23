@@ -47,7 +47,7 @@ class NewsletterForm extends Component {
 
   render() {
     return (
-      <div className="container newsletter-container fadeinRight">
+      <div className="container newsletter-container">
         <div className="content">
           <p className="footer-news">Sign up for our newsletter</p>
           <form
@@ -66,12 +66,12 @@ class NewsletterForm extends Component {
                   placeholder="Enter your email"
                   required
                   />
+                  {this.state.message ? this.state.message : ''}
               </div>
               <div id="control-input" className="control">
                 <button onClick={this.handleSubmit} id="news-button" type="submit">
                   Send
                 </button> <br />
-                {this.state.message ? this.state.message : ''}
               </div>
             </div>
           </form>

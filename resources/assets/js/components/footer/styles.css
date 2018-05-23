@@ -54,6 +54,7 @@
 
 #control-input {
   width: 80%;
+  justify-content: center;
 }
 
 #input-field,
@@ -79,6 +80,10 @@
   color: #fab317;
   margin-left: 1em;
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.field.has-addons {
+  display: -webkit-inline-box;
 }
 
 /* mediaQuery Desktop */
