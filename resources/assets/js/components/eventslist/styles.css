@@ -1,7 +1,8 @@
 /* events css */
 .events,
 .events-title,
-.events-subtitle {
+.events-subtitle,
+.no-event {
   color: white;
 }
 
@@ -24,3 +25,7 @@
 	font-weight: 600;
 }
 
+.no-event {
+	padding: 4em 0;
+	font-size: 1.8em;
+}

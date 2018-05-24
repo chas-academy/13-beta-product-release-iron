@@ -9,7 +9,8 @@ class EventsList extends Component {
   constructor() {
     super();
     this.state = {
-      events: []
+      events: [],
+      onlyActiveEvents: []
     }
   }
   componentDidMount() {
@@ -40,12 +41,11 @@ class EventsList extends Component {
             </div>
        
         <div className="">
-        {this.state.events && this.state.events.length > 0
-          ? this.state.events.map((keyName, keyIndex) => {
-              if(this.checkIfEventDatePassed(keyName))
-                return <Event key={keyName.id} eventData={keyName}/>;
+        {this.state.onlyActiveEvents && this.state.onlyActiveEvents.length > 0
+          ? this.state.onlyActiveEvents.map((keyName, keyIndex) => {
+              return <Event key={keyName.id} eventData={keyName}/>;
             })
-          : ""}
+          :<h2 className="no-event fadeIn">No upcomming events</h2>}
           </div>
           </div>
       </div>
@@ -64,8 +64,15 @@ class EventsList extends Component {
   orderEventDate() {
     const orderedEvents = [].concat(this.state.events)
     .sort((a, b) => a.date > b.date);
+
+    var activeEvents = [];
+    orderedEvents.forEach(event => {
+      if(this.checkIfEventDatePassed(event)) {
+        activeEvents.push(event);
+      }
+    });
     this.setState({
-      events: orderedEvents
+      onlyActiveEvents: activeEvents
     })
   }
 }

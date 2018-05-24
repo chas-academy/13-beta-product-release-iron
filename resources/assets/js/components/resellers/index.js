@@ -54,16 +54,16 @@ class Resellers extends Component {
             <div className="city-div">
               {this.state.cities.map((val, i) => {
                 return (
-                  <div className="city-name">
-                    <h2 className="title is-3 resellers-subtitle" key={i}>
+                  <div className="city-name" key={i}>
+                    <h2 className="title is-3 resellers-subtitle">
                       {val.cityName}
                     </h2>
                     <div>
                       {this.state.reseller.map((value, index) => {
                         return (
                           this.compareId(val.id, value.cityId) == true && (
-                            <div className="locationName" key={index}>
-                              {value.name}
+                            <div key={index}>
+                              <h2 className="locationName">{value.name}</h2>
                             </div>
                           )
                         );
