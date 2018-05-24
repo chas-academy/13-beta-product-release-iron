@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import ReactDOM from "react-dom";
 import Product from "../product/";
 import "../styles/styles.css";
-//import ScrollReveal from 'scrollReveal';
+import ScrollReveal from "scrollreveal";
 
 class ProductList extends Component {
   constructor() {
