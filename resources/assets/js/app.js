@@ -12,6 +12,6 @@ require("./bootstrap");
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
-require("./components/index");
+require("./components/Index");
 
 import Voucher from "./components/voucher/Index.js";
