@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import ReactDOM from "react-dom";
 import "./styles.css";
 
+
 class Vision extends Component {
   constructor() {
     super();
@@ -21,6 +22,7 @@ class Vision extends Component {
       .catch(function(error) {
         console.log(error);
       });
+
   }
 
   render() {

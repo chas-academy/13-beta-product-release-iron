@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import ReactDOM from "react-dom";
 import "./styles.css";
 
+
 class Product extends Component {
   constructor(props) {
     super(props);
@@ -12,7 +13,10 @@ class Product extends Component {
     this.toggleShowIngredientsListClick = this.toggleShowIngredientsListClick.bind(
       this
     );
+
+    
   }
+
   componentDidMount() {
     this.createIngredientsArray(this.props.productData.ingredients);
   }
@@ -41,9 +45,9 @@ class Product extends Component {
             {(this.state.showIngredientsList && "x Close") || "+ Ingredients"}
           </button>
 
-          <div className="ingredient-container">
+          <div className="ingredient-container fadeinRight">
             {this.state.showIngredientsList && (
-              <ul className="ingredient-dropdown">
+              <ul className="ingredient-dropdown fadeinRight">
                 {this.state.ingredientsArray.map((val, i) => (
                   <li className="ingredient-li" key={i}>
                     {val}
@@ -55,7 +59,7 @@ class Product extends Component {
         </div>
 
         <div className="coloumn is-half">
-          <figure className="image is-horizontal-center">
+          <figure className="image is-horizontal-center fadeinRight">
             <img
               className="product-img"
               id="product-image"

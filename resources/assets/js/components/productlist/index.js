@@ -11,6 +11,7 @@ class ProductList extends Component {
       productList: []
     };
   }
+
   componentDidMount() {
     const now = this;
     fetch("/api/products")
@@ -24,30 +25,31 @@ class ProductList extends Component {
         console.log(error);
       });
 
-    let fadeIn = {
-      duration: 4000,
-      origin: "bottom"
-    };
-    let fadeinLeft = {
-      duration: 3000,
-      origin: "left",
-      distance: "300px"
-    };
-    let fadeinRight = {
-      duration: 3000,
-      origin: "right",
-      distance: "300px"
-    };
-    let buttonFade = {
-      duration: 4000,
-      delay: 2000,
-      origin: "left"
-    };
-    ScrollReveal()
-      .reveal(".fadeinLeft", fadeinLeft)
-      .reveal(".fadeinRight", fadeinRight)
-      .reveal(".fadeIn", fadeIn)
-      .reveal(".buttonFade", buttonFade);
+      let fadeIn = {
+        duration: 3000,
+        origin: "bottom"
+      };
+      let fadeinLeft = {
+        duration: 2000,
+        origin: "left",
+        distance: "300px"
+      };
+      let fadeinRight = {
+        duration: 2000,
+        origin: "right",
+        distance: "300px"
+      };
+      let buttonFade = {
+        duration: 3000,
+        delay: 2000,
+        origin: "left"
+      };
+      ScrollReveal()
+        .reveal(".fadeinLeft", fadeinLeft)
+        .reveal(".fadeinRight", fadeinRight)
+        .reveal(".fadeIn", fadeIn)
+        .reveal(".buttonFade", buttonFade);
+    
   }
 
   render() {

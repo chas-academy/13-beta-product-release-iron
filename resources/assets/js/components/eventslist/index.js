@@ -45,7 +45,7 @@ class EventsList extends Component {
           ? this.state.onlyActiveEvents.map((keyName, keyIndex) => {
               return <Event key={keyName.id} eventData={keyName}/>;
             })
-          :<h2 className="no-event fadeIn">No upcomming events</h2>}
+          :<h2 className="no-event">No upcoming events</h2>}
           </div>
           </div>
       </div>

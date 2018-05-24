@@ -122,5 +122,9 @@ video {
   .subtitle:not(:last-child) {
   margin-top: 1rem;
   margin-bottom: 0.5rem;
-}
+  }
+
+  .column {
+    padding: 0em 2.2em 0em 2.2em;
+  }
 }
