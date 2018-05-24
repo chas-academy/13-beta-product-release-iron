@@ -50,7 +50,7 @@ class Resellers extends Component {
       <div className="resellers" id="resellers">
         <div className="columns">
           <div className="column">
-            <h1 className="title is-1 resellers-title fadeIn">Drink Us</h1>
+            <h1 className="title is-1 resellers-title">Drink Us</h1>
             <div className="city-div">
               {this.state.cities.map((val, i) => {
                 return (
@@ -73,7 +73,7 @@ class Resellers extends Component {
                 );
               })}
             </div>
-            <button className="button buyOnline buttonFade">
+            <button className="button buyOnline">
               <a
                 id="buyOnline-btn"
                 href="https://www.mat.se/butik/loui-jama-mega-mate-soda-factory-sthlm-33cl"
@@ -85,7 +85,7 @@ class Resellers extends Component {
           </div>
         </div>
         <div>
-          <section className="map fadeIn">
+          <section className="map">
             <iframe src="https://www.google.com/maps/d/embed?mid=1Ibi8rJsvNJIkSezD36a1_AY__umOXe_1" />
           </section>
         </div>

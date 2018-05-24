@@ -29,9 +29,6 @@
 
 /* mediaQuery Mobile */
 @media screen and (max-width: 910px) {
-  /*#gubbe {
-    display: none;
-  }*/
   .column.is-half {
     width: 100%;
   }

@@ -51,12 +51,12 @@ class Event extends Component {
               ) : (
                 ""
               )}
-              <button
+            {/*  <button
                 className="toggle-events-btn"
                 onClick={this.toggleshowEventDetailClick}
               >
                 x
-              </button>
+            </button> */}
             </div>
           )}
         </div>

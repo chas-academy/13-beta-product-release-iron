@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
 import "../styles/styles.css";
+import "../footer/styles.css";
 
 class NewsletterForm extends Component {
   constructor() {
@@ -47,7 +48,7 @@ class NewsletterForm extends Component {
 
   render() {
     return (
-      <div className="container newsletter-container fadeinRight">
+      <div className="container newsletter-container">
         <div className="content">
           <p className="footer-news">Sign up for our newsletter</p>
           <form
@@ -68,7 +69,7 @@ class NewsletterForm extends Component {
                   /> <br />
                 {this.state.message ? this.state.message : ''}
               </div>
-              <div id="control-input" className="control">
+              <div className="control">
                 <button onClick={this.handleSubmit} id="news-button" type="submit">
                   Send
                 </button> <br />
