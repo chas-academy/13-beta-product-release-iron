@@ -22,20 +22,6 @@ class Header extends Component {
     this.setState({ menuOpen: false });
   }
 
-  componentDidMount() {
-    const now = this;
-    fetch("/api/header")
-      .then(function(response) {
-        return response.json();
-      })
-      .then(function(data) {
-        now.setState({ header: data[0].videoUrl });
-      })
-      .catch(function(error) {
-        console.log(error);
-      });
-  }
-
   render() {
     return (
       <header>
