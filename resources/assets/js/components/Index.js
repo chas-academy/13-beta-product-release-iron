@@ -8,6 +8,7 @@ import EventsList from "./eventslist";
 import Resellers from "./resellers";
 import Footer from "./footer";
 
+
 export default class Index extends Component {
   render() {
     return (
