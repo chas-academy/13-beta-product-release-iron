@@ -64,6 +64,7 @@ after('deploy:failed', 'deploy:unlock');
 // Migrate database before symlink new release.
 // before('deploy:symlink', 'artisan:migrate:fresh');
 // after('artisan:migrate:fresh', 'dump-autoload');
+before('deploy:symlink', 'dump-autoload');
 // install deps and build frontend
 // before('deploy:symlink', 'build');
 
