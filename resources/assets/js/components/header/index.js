@@ -83,7 +83,13 @@ class Header extends Component {
             ]}
           />*/}
 
-          <video id="react-video-player" autoPlay muted controls>
+          <video
+            id="react-video-player"
+            autoPlay
+            muted
+            controls
+            controlsList="nodownload"
+          >
             <source src="/images/mega-film.mp4" type="video/mp4" />
             <source src="/images/mega-film.ogg" type="video/ogg" />
             <source src="/images/mega-film.webm" type="video/webm" />

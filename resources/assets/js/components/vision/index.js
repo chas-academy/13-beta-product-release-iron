@@ -29,23 +29,13 @@ class Vision extends Component {
         <div id="vision-columns" className="columns">
           <div className="column">
             <h1 className="title is-1 vision-title fadeIn">
-              {this.state.vision.title} MEGA VISION
+              {this.state.vision.title}
             </h1>
             <h2 className="title is-3 vision-subtitle fadeinLeft">
-              {this.state.vision.subtitle} Lorem ipsum dolor sit amet,
-              consectetur adipiscing elit. Mauris bibendum elementum egestas. In
-              in rhoncus tortor. Nunc eget fringilla augue. Integer vitae
-              efficitur lacus.
+              {this.state.vision.subtitle}
             </h2>
             <p className="vision-paragraph fadeinLeft">
-              {this.state.vision.content} Aenean in massa velit. Phasellus risus
-              sapien, luctus nec elit at, consequat luctus urna. Proin ac
-              suscipit risus, vitae convallis eros. Aenean orci nunc, accumsan
-              eu lectus in, malesuada venenatis nibh. Ut varius augue non nulla
-              blandit dapibus. Cras viverra bibendum libero, et euismod est
-              posuere id. Fusce id augue nec justo varius imperdiet id luctus
-              ex. Etiam vehicula interdum porttitor. Curabitur at diam
-              scelerisque mi ullamcorper sagittis.
+              {this.state.vision.content}
             </p>
           </div>
           <div id="vision-img-column" className="column">
