@@ -82,28 +82,32 @@ class Voucher extends Component {
           isOpen={this.state.showModal}
           contentLabel="Voucher for mega maté"
           onRequestClose={this.handleCloseModal}
+          onClick={this.handleCloseModal}
           className="Modal"
+
         >
           <div className="modal-content">
-            <h1
-              className="title has-text-centered animate-fallIn"
-              id="voucherTitle"
-            >
-              {this.state.voucher.title}
-            </h1>
-            <h2
-              className="subtitle has-text-centered animate-fallIn"
-              id="voucherSubtitle"
-            >
-              {this.state.voucher.subtitle}
-            </h2>
-            <p className="has-text-centered animate-fallIn voucherText">
-              {this.state.voucher.content}
-            </p>
-            <div className="buttons has-addons is-right">
-              <button onClick={this.handleCloseModal} className="modalButton">
-                Consume Voucher
-              </button>
+            <div className="modal-text">
+              <h1
+                className="title has-text-centered animate-fallIn"
+                id="voucherTitle"
+              >
+                {this.state.voucher.title}
+              </h1>
+              <h2
+                className="subtitle has-text-centered animate-fallIn"
+                id="voucherSubtitle"
+              >
+                {this.state.voucher.subtitle}
+              </h2>
+              <p className="has-text-centered animate-fallIn voucherText">
+                {this.state.voucher.content}
+              </p>
+              {/* <div className="buttons has-addons is-right">
+                <button onClick={this.handleCloseModal} className="modalButton">
+                  Consume Voucher
+                </button>
+              </div> */}
             </div>
           </div>
         </ReactModal>

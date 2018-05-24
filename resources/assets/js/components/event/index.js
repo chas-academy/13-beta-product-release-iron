@@ -38,7 +38,7 @@ class Event extends Component {
           )}
 
           {this.state.showEventDetail && (
-            <div>
+            <div className="events-container">
               <p className="events-p">{this.props.eventData.eventInfo}</p>
               {this.props.eventData.facebookUrl != null ? (
                 <a
