@@ -28,17 +28,17 @@ class Vision extends Component {
       <div id="vision" className="vision">
         <div id="vision-columns" className="columns">
           <div className="column">
-            <h1 className="title is-1 vision-title fadeIn">
+            <h1 className="title is-1 vision-title">
               {this.state.vision.title}
             </h1>
-            <h2 className="title is-3 vision-subtitle fadeinLeft">
+            <h2 className="title is-3 vision-subtitle">
               {this.state.vision.subtitle}
             </h2>
-            <p className="vision-paragraph fadeinLeft">
+            <p className="vision-paragraph">
               {this.state.vision.content}
             </p>
           </div>
-          <div id="vision-img-column" className="column">
+          <div id="vision-img-column" className="column fadeinRight">
             <figure className="image is-horizontal-center is-half">
               <img id="gubbe" src={this.state.vision.imageUrl} />
             </figure>

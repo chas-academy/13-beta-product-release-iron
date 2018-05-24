@@ -34,8 +34,8 @@ class EventsList extends Component {
             <div className="">                 
             <div className="">
               <div className="" id="eventsHeading">
-                <h1 className="title is-1 events-title fadeIn">Mega Events</h1>
-                <h2 className="title is-3 events-subtitle fadeIn">Upcoming</h2>
+                <h1 className="title is-1 events-title">Mega Events</h1>
+                <h2 className="title is-3 events-subtitle">Upcoming</h2>
               </div>
             </div>
        

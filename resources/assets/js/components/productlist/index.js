@@ -55,7 +55,7 @@ class ProductList extends Component {
       <div className="products" id="products">
         <div className="columns">
           <div className="column is-half">
-            <h1 className="title is-1 fadeIn">Mega Products</h1>
+            <h1 className="title is-1">Mega Products</h1>
           </div>
         </div>
         {this.state.productList.map((val, i) => {
