@@ -68,7 +68,7 @@ class Voucher extends Component {
             <div className="container has-text-centered">
               <a
                 id="noVoucher"
-                href="http://iron.test/"
+                href="http://teamiron.me"
                 className="button is-large is-rounded center"
               >
                 No voucher at the moment
@@ -115,7 +115,7 @@ class Voucher extends Component {
         <div className="level-right voucher">
           <a
             className="button homepage-btn"
-            href="http://localhost:8000"
+            href="http://teamiron.me"
           >
             Go to homepage
           </a>
