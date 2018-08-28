@@ -8,8 +8,26 @@ import EventsList from "./eventslist";
 import Resellers from "./resellers";
 import Footer from "./footer";
 
+class Index extends Component {
+  constructor() {
+    super();
 
-export default class Index extends Component {
+    this.state = {
+      modalIsOpen: true
+    };
+
+  }
+  
+  componentWillMount() {
+    if (window.confirm("Are u over 21, motherfcker?!")) {
+      // This setState will show all drinks      
+    } else {
+      console.log("is false")
+      // this setState will filter out alcohol drinks
+    }
+  }
+
+
   render() {
     return (
       <div>
@@ -28,3 +46,5 @@ export default class Index extends Component {
 if (document.getElementById("app")) {
   ReactDOM.render(<Index />, document.getElementById("app"));
 }
+
+export default index;
