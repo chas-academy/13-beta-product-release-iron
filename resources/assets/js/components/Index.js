@@ -7,30 +7,33 @@ import ProductList from "./productlist";
 import EventsList from "./eventslist";
 import Resellers from "./resellers";
 import Footer from "./footer";
+import Verification from "./verification";
+
 
 class Index extends Component {
   constructor() {
     super();
 
     this.state = {
-      modalIsOpen: true
+      
     };
 
   }
   
-  componentWillMount() {
-    if (window.confirm("Are u over 21, motherfcker?!")) {
-      // This setState will show all drinks      
-    } else {
-      console.log("is false")
-      // this setState will filter out alcohol drinks
-    }
-  }
+  // componentWillMount() {
+  //   if (window.confirm("Are u over 21, motherfcker?!")) {
+  //     // This setState will show all drinks      
+  //   } else {
+  //     console.log("is false")
+  //     // this setState will filter out alcohol drinks
+  //   }
+  // }
 
 
   render() {
     return (
       <div>
+        <Verification />
         <Header />
         <Vision />
         <Banner />

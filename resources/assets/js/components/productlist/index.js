@@ -1,14 +1,15 @@
 import React, { Component } from "react";
-import ReactDOM from "react-dom";
 import Product from "../product/";
 import "../styles/styles.css";
 import ScrollReveal from "scrollreveal";
+
+
 
 class ProductList extends Component {
   constructor() {
     super();
     this.state = {
-      productList: []
+      productList: [],
     };
   }
 
@@ -25,10 +26,6 @@ class ProductList extends Component {
         console.log(error);
       });
 
-      let fadeIn = {
-        duration: 3000,
-        origin: "bottom"
-      };
       let fadeinLeft = {
         duration: 2000,
         origin: "left",
@@ -39,16 +36,9 @@ class ProductList extends Component {
         origin: "right",
         distance: "300px"
       };
-      let buttonFade = {
-        duration: 3000,
-        delay: 2000,
-        origin: "left"
-      };
       ScrollReveal()
         .reveal(".fadeinLeft", fadeinLeft)
         .reveal(".fadeinRight", fadeinRight)
-        .reveal(".fadeIn", fadeIn)
-        .reveal(".buttonFade", buttonFade);
     
   }
 
