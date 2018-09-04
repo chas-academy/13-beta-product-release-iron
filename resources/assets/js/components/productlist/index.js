@@ -41,6 +41,19 @@ class ProductList extends Component {
         .reveal(".fadeinRight", fadeinRight)
     
   }
+  overTwenty() {
+    if (document.cookie.split(";").filter(function(item) {
+      return item.indexOf("overTwenty=true") >= 0
+   }).length) {
+      return true
+   }
+  }
+
+  checkForAlcohol(val) {
+    if (val.ingredients.includes("Alcohol")) {
+      return false
+    }
+  }
 
   render() {
     return (
@@ -51,7 +64,13 @@ class ProductList extends Component {
           </div>
         </div>
         {this.state.productList.map((val, i) => {
-          return <Product key={val.id} productData={val} />;
+          if (!this.overTwenty) {
+            if (this.checkForAlcohol(val)) {
+              return <Product key={val.id} productData={val} />;
+            }
+          } else {
+            return <Product key={val.id} productData={val} />;
+          }
         })}
       </div>
     );

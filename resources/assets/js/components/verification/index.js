@@ -9,14 +9,21 @@ class Verification extends Component {
     super(props)
 
     this.state = {
-      open: true
+      open: true 
     }
-    this.handleClose = this.handleClose.bind(this);
+    this.handleOver = this.handleOver.bind(this);
+    this.handleUnder = this.handleUnder.bind(this);
   }
 
 
-  handleClose() {
+  handleOver() {
     this.setState({ open: false });
+    document.cookie = `overTwenty=${true}`;
+  };
+
+  handleUnder() {
+    this.setState({ open: false });
+    document.cookie = `overTwenty=${false}`;
   };
   
   render() {
@@ -26,6 +33,7 @@ class Verification extends Component {
           disableBackdropClick
           open={this.state.open}
           onClose={this.handleClose}
+          style={{background: "yellow"}}
         >
           <h1>Are you over 20 years old?</h1>
           <DialogContent>
@@ -34,10 +42,10 @@ class Verification extends Component {
             </h3>
           </DialogContent>
           <DialogActions>
-            <Button onClick={this.handleClose} color="primary">
+            <Button onClick={this.handleOver} color="primary">
               Yes
             </Button>
-            <Button onClick={this.handleClose} color="primary">
+            <Button onClick={this.handleUnder} color="primary">
               No
             </Button>
           </DialogActions>
